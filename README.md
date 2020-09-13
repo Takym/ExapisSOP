@@ -14,7 +14,7 @@ This library provides the service-oriented programming.
 |Version |Code Name|Date      |Description       |
 |:------:|:--------|:---------|:-----------------|
 |v0.0.0.0|xsop00a0 |2020/00/00|The first release.|
-For more history, please see [CHANGES.en.md](./CHANGES.en.md) file.
+||||For more history, please see [CHANGES.en.md](./CHANGES.en.md) file.|
 
 ## Terms of Use
 This library is released and distributed under the MIT License.
@@ -41,7 +41,7 @@ Please note below when you propose a pull request (PR):
 |バージョン|開発コード名|日付      |説明                |
 |:--------:|:-----------|:---------|:-------------------|
 |v0.0.0.0  |xsop00a0    |2020/00/00|最初のリリースです。|
-過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。
+||||過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。|
 
 ## 利用規約
 このライブラリはMITライセンスの下で公開・配布されています。
