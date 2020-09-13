@@ -2,6 +2,6 @@
 Copyright (C) 2020 Takym.
 
 ## Core Collaborators
-* Takym (GitHub: @Takym)
+* Takym (GitHub: [@Takym](https://github.com/Takym))
 
 ## Contributors

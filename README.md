@@ -1,7 +1,7 @@
 # ExapisSOP
 Copyright (C) 2020 Takym.
 
-[���{��](#ja)
+[日本語](#ja)
 [English](#en)
 
 # <a id="en"></a>English
@@ -26,33 +26,33 @@ suggestions of new feature.
 Please note below when you propose a pull request (PR):
 * **One PR** can have only **one change**.
 * Do not use/refer other libraries.
-* Copyrights will be transferred to @Takym when the PR is merged.
+* Copyrights will be transferred to [@Takym](https://github.com/Takym) when the PR is merged.
 * Not always merge your PR.
-* Write your name and GitHub ID in [CONTRIBUTORS.md](../CONTRIBUTORS.md).
+* Write your name and GitHub ID in [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 
 
-# <a id="ja"></a>���{��
-## �T�v
-�T�[�r�X�w���v���O���~���O�ɕK�v�ȋ@�\��񋟂��܂��B
+# <a id="ja"></a>日本語
+## 概要
+サービス指向プログラミングに必要な機能を提供します。
 
-## �g����
+## 使い方
 
-## �ŋ߂̍X�V����
-|�o�[�W����|�J���R�[�h��|���t      |����                |
+## 最近の更新履歴
+|バージョン|開発コード名|日付      |説明                |
 |:--------:|:-----------|:---------|:-------------------|
-|v0.0.0.0  |xsop00a0    |2020/00/00|�ŏ��̃����[�X�ł��B|
-||||�ߋ��̍X�V��[CHANGES.ja.md](./CHANGES.ja.md)���������������B|
+|v0.0.0.0  |xsop00a0    |2020/00/00|最初のリリースです。|
+||||過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。|
 
-## ���p�K��
-���̃��C�u������MIT���C�Z���X�̉��Ō��J�E�z�z����Ă��܂��B
-�ڍׂ�[LICENSE.txt](./LICENSE.txt)����m�F���Ă��������B
+## 利用規約
+このライブラリはMITライセンスの下で公開・配布されています。
+詳細は[LICENSE.txt](./LICENSE.txt)から確認してください。
 
-## �v�����@
-��肪������ΐ���C�y�� Issue �̓��e�����Ă��������B
-�V�K�@�\�̒�Ă��󂯕t���Ă��܂��B
-�v���E���N�G�X�g(PR)���󂯕t���Ă��܂����ȉ��̓_�ɒ��ӂ��Ă��������B
-* **���PR**��**��̕ύX**�݂̂ɂ��Ă��������B
-* ���̊����̃��C�u�������Q�Ƃ��Ȃ��ł��������B
-* �}�[�W���ꂽ�ꍇ�A���쌠�A�m�I���Y���� @Takym �ɏ��n����܂��B
-* �K���}�[�W�����킯�ł͂���܂���B
-* �M���̖��O�� GitHub ID ��[CONTRIBUTORS.md](../CONTRIBUTORS.md)�ɋL�����Ă��������B
+## 貢献方法
+問題が見つかれば是非気軽に Issue の投稿をしてください。
+新規機能の提案も受け付けています。
+プル・リクエスト(PR)も受け付けていますが以下の点に注意してください。
+* **一つのPR**は**一つの変更**のみにしてください。
+* 他の既存のライブラリを参照しないでください。
+* マージされた場合、著作権、知的財産権は[@Takym](https://github.com/Takym)に譲渡されます。
+* 必ずマージされるわけではありません。
+* 貴方の名前を GitHub ID を[CONTRIBUTORS.md](./CONTRIBUTORS.md)に記入してください。
