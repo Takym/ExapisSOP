@@ -361,3 +361,6 @@ MigrationBackup/
 
 # desktop.ini
 desktop.ini
+
+# XML Documentation Comments
+/ExapisSOP.xml

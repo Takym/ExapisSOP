@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP</AssemblyName>
-		<RootNamespace></RootNamespace>
+		<RootNamespace>ExapisSOP</RootNamespace>
 		<TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
 		<OutputType>Library</OutputType>
+		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,13 +37,33 @@
 		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
 	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
 		<Content Include="README.md" Pack="true" PackagePath="">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="LICENSE.txt" Pack="true" PackagePath="">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
-		<Content Include="Exapis\Resources\Logo.png" Pack="true" PackagePath="">
+		<Content Include="CONTRIBUTORS.md" Pack="true" PackagePath="">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CHANGES.en.md" Pack="true" PackagePath="">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CHANGES.ja.md" Pack="true" PackagePath="">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Logo.png" Pack="true" PackagePath="">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
