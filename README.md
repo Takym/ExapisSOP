@@ -26,7 +26,7 @@ suggestions of new feature.
 Please note below when you propose a pull request (PR):
 * **One PR** can have only **one change**.
 * Do not use/refer other libraries.
-* Copyrights will be transferred to @Takym when the PR is merged.
+* Copyrights will be transferred to [@Takym](https://github.com/Takym) when the PR is merged.
 * Not always merge your PR.
 * Write your name and GitHub ID in [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 
@@ -53,6 +53,6 @@ Please note below when you propose a pull request (PR):
 プル・リクエスト(PR)も受け付けていますが以下の点に注意してください。
 * **一つのPR**は**一つの変更**のみにしてください。
 * 他の既存のライブラリを参照しないでください。
-* マージされた場合、著作権、知的財産権は @Takym に譲渡されます。
+* マージされた場合、著作権、知的財産権は[@Takym](https://github.com/Takym)に譲渡されます。
 * 必ずマージされるわけではありません。
 * 貴方の名前を GitHub ID を[CONTRIBUTORS.md](./CONTRIBUTORS.md)に記入してください。
