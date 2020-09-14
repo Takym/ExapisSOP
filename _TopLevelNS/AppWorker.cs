@@ -17,9 +17,19 @@ namespace ExapisSOP
 	public abstract class AppWorker : IService
 	{
 		/// <summary>
-		///  メインイベントループ内から呼び出されます。
+		///  プログラム開始時に<see cref="ExapisSOP.AppWorker.InitializeAsync(IContext)"/>より後に呼び出されます。
 		/// </summary>
-		public event EventHandler<EventLoopEventArgs>? MainLoop;
+		public event EventHandler<ContextEventArgs>? Startup;
+
+		/// <summary>
+		///  メインイベントループ内から更新時に呼び出されます。
+		/// </summary>
+		public event EventHandler<ContextEventArgs>? Update;
+
+		/// <summary>
+		///  プログラム終了時に<see cref="ExapisSOP.AppWorker.FinalizeAsync(IContext)"/>より前に呼び出されます。
+		/// </summary>
+		public event EventHandler<ContextEventArgs>? Shutdown;
 
 		/// <summary>
 		///  処理されない例外が発生した場合に呼び出されます。
@@ -34,7 +44,7 @@ namespace ExapisSOP
 		/// <summary>
 		///  オーバーライドされた場合、非同期でサービスを初期化します。
 		/// </summary>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		/// <returns>サービスの初期化処理を格納した非同期操作です。</returns>
 		public virtual async Task InitializeAsync(IContext context)
 		{
@@ -44,7 +54,7 @@ namespace ExapisSOP
 		/// <summary>
 		///  オーバーライドされた場合、非同期でサービスを破棄します。
 		/// </summary>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		/// <returns>サービスの破棄処理を格納した非同期操作です。</returns>
 		public virtual async Task FinalizeAsync(IContext context)
 		{
@@ -52,12 +62,30 @@ namespace ExapisSOP
 		}
 
 		/// <summary>
-		///  <see cref="ExapisSOP.AppWorker.MainLoop"/>イベントを発生させます。
+		///  <see cref="ExapisSOP.AppWorker.Startup"/>イベントを発生させます。
 		/// </summary>
-		/// <param name="e">コンテキスト情報を格納しているイベントデータです。</param>
-		protected virtual void OnMainLoop(EventLoopEventArgs e)
+		/// <param name="e">文脈情報を格納しているイベントデータです。</param>
+		protected virtual void OnStartup(ContextEventArgs e)
 		{
-			this.MainLoop?.Invoke(this, e);
+			this.Startup?.Invoke(this, e);
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.AppWorker.Update"/>イベントを発生させます。
+		/// </summary>
+		/// <param name="e">文脈情報を格納しているイベントデータです。</param>
+		protected virtual void OnUpdate(ContextEventArgs e)
+		{
+			this.Update?.Invoke(this, e);
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.AppWorker.Shutdown"/>イベントを発生させます。
+		/// </summary>
+		/// <param name="e">文脈情報を格納しているイベントデータです。</param>
+		protected virtual void OnShutdown(ContextEventArgs e)
+		{
+			this.Shutdown?.Invoke(this, e);
 		}
 
 		/// <summary>
@@ -69,10 +97,30 @@ namespace ExapisSOP
 			this.UnhandledError?.Invoke(this, e);
 		}
 
+		internal async Task OnStartup(IContext context)
+		{
+			try {
+				this.OnStartup(new ContextEventArgs(context));
+				await Task.CompletedTask;
+			} catch (TerminationException e) {
+				await Task.FromException(e);
+			}
+		}
+
 		internal async Task OnMainLoop(IContext context)
 		{
 			try {
-				this.OnMainLoop(new EventLoopEventArgs(context));
+				this.OnUpdate(new ContextEventArgs(context));
+				await Task.CompletedTask;
+			} catch (TerminationException e) {
+				await Task.FromException(e);
+			}
+		}
+
+		internal async Task OnShutdown(IContext context)
+		{
+			try {
+				this.OnShutdown(new ContextEventArgs(context));
 				await Task.CompletedTask;
 			} catch (TerminationException e) {
 				await Task.FromException(e);

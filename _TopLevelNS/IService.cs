@@ -22,23 +22,26 @@ namespace ExapisSOP
 	{
 		/// <summary>
 		///  非同期でサービスを初期化します。
+		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		/// <returns>サービスの初期化処理を格納した非同期操作です。</returns>
 		Task InitializeAsync(IContext context);
 
 		/// <summary>
 		///  非同期でサービスを破棄します。
+		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		/// <returns>サービスの破棄処理を格納した非同期操作です。</returns>
 		Task FinalizeAsync(IContext context);
 
 #if NETSTANDARD2_1 || NETCOREAPP3_1
 		/// <summary>
 		///  サービスの初期化処理を同期的に実行します。
+		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		public void Initialize(IContext context)
 		{
 			this.InitializeAsync(context).Wait();
@@ -46,8 +49,9 @@ namespace ExapisSOP
 
 		/// <summary>
 		///  サービスの破棄処理を同期的に実行します。
+		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		public void Finalize(IContext context)
 		{
 			this.FinalizeAsync(context).Wait();
@@ -103,9 +107,10 @@ namespace ExapisSOP
 
 		/// <summary>
 		///  サービスの初期化処理を同期的に実行します。
+		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
 		/// <param name="service">初期化するサービスオブジェクトです。</param>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		public static void Initialize(this IService service, IContext context)
 		{
 			var m = GetInitializeMethod(service);
@@ -118,9 +123,10 @@ namespace ExapisSOP
 
 		/// <summary>
 		///  サービスの破棄処理を同期的に実行します。
+		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
 		/// <param name="service">破棄するサービスオブジェクトです。</param>
-		/// <param name="context">コンテキスト情報です。</param>
+		/// <param name="context">文脈情報です。</param>
 		public static void Finalize(this IService service, IContext context)
 		{
 			var m = GetFinalizeMethod(service);

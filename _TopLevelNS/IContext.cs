@@ -8,7 +8,7 @@
 namespace ExapisSOP
 {
 	/// <summary>
-	///  実行中の処理にコンテキスト情報を提供します。
+	///  実行中の処理に文脈情報を提供します。
 	/// </summary>
 	public interface IContext
 	{
@@ -23,16 +23,16 @@ namespace ExapisSOP
 		/// </summary>
 		/// <typeparam name="T">サービスの種類です。</typeparam>
 		/// <returns>サービスが存在する場合はサービスオブジェクトを返し、存在しない場合は<see langword="null"/>を返します。</returns>
-		T GetService<T>() where T: IService?;
+		T? GetService<T>() where T: class, IService?;
 
 		/// <summary>
-		///  現在のコンテキスト情報に設定されているメッセージを取得します。
+		///  現在の文脈情報に設定されているメッセージを取得します。
 		/// </summary>
 		/// <returns>メッセージを表すオブジェクトです。</returns>
-		object GetMessage();
+		object? GetMessage();
 
 		/// <summary>
-		///  指定されたオブジェクトをメッセージとして現在のコンテキスト情報に設定します。
+		///  指定されたオブジェクトをメッセージとして現在の文脈情報に設定します。
 		/// </summary>
 		/// <param name="data">メッセージを表すオブジェクトです。</param>
 		void SetMessage(object data);

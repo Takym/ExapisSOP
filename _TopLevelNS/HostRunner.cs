@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ExapisSOP.Core;
 using ExapisSOP.Properties;
 
 namespace ExapisSOP
@@ -68,12 +69,20 @@ namespace ExapisSOP
 		///  オーバーライドされた場合、プログラムの実行を非同期で開始します。
 		/// </summary>
 		/// <returns>OSへの戻り値を含む非同期操作です。</returns>
+		/// <exception cref="System.Exception">
+		///  正しく実行されなかった場合に発生します。
+		///  通常は内部で処理されます。
+		/// </exception>
 		public abstract Task<int> RunAsync();
 
 		/// <summary>
 		///  プログラムの実行を同期的に開始します。
 		/// </summary>
 		/// <returns>OSへの戻り値です。</returns>
+		/// <exception cref="System.Exception">
+		///  正しく実行されなかった場合に発生します。
+		///  通常は内部で処理されます。
+		/// </exception>
 		public int Run()
 		{
 			return this.RunAsync().Result;
@@ -86,14 +95,14 @@ namespace ExapisSOP
 		/// <returns>新しく生成された実行環境を表すオブジェクトです。</returns>
 		public static HostRunner? Create(params string[] cmdline)
 		{
-			return Create<HostRunner>(cmdline);
+			return Create<DefaultHostRunner>(cmdline);
 		}
 
 		/// <summary>
 		///  指定した種類のプログラムの実行環境を生成します。
 		/// </summary>
-		/// <param name="cmdline">OSから渡されたコマンド行引数です。</param>
 		/// <typeparam name="T">実行環境を表すクラスです。文字列配列を受け入れるコンストラクタを持っている必要があります。</typeparam>
+		/// <param name="cmdline">OSから渡されたコマンド行引数です。</param>
 		/// <returns>新しく生成された実行環境を表すオブジェクトです。</returns>
 		/// <exception cref="System.ArgumentException" />
 		/// <exception cref="System.MemberAccessException" />

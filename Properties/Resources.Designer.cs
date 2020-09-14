@@ -61,6 +61,24 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   DefaultHostRunner_Exception に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DefaultHostRunner_Exception {
+            get {
+                return ResourceManager.GetString("DefaultHostRunner_Exception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   EventLoopContext_InvalidOperationException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string EventLoopContext_InvalidOperationException {
+            get {
+                return ResourceManager.GetString("EventLoopContext_InvalidOperationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HostRunner_Create_ArgumentException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HostRunner_Create_ArgumentException {
@@ -75,6 +93,15 @@ namespace ExapisSOP.Properties {
         internal static string HostRunner_Create_InvalidOperationException {
             get {
                 return ResourceManager.GetString("HostRunner_Create_InvalidOperationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   InitFinalContext_InvalidOperationException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InitFinalContext_InvalidOperationException {
+            get {
+                return ResourceManager.GetString("InitFinalContext_InvalidOperationException", resourceCulture);
             }
         }
         

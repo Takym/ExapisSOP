@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DefaultHostRunner_Exception" xml:space="preserve">
+    <value>The unknown and unhandled error occurred. The program cannot continue to process. This is unexpected.</value>
+  </data>
+  <data name="EventLoopContext_InvalidOperationException" xml:space="preserve">
+    <value>Could not create a new instance of an event-loop context information object. A finalization context cannot be used as an initialization context.</value>
+  </data>
   <data name="HostRunner_Create_ArgumentException" xml:space="preserve">
     <value>The specified type is invalid.</value>
   </data>
   <data name="HostRunner_Create_InvalidOperationException" xml:space="preserve">
     <value>Failed to create a new host runner.</value>
+  </data>
+  <data name="InitFinalContext_InvalidOperationException" xml:space="preserve">
+    <value>Could not create a new instance of a finalization context information object. A finalization context cannot be used as an initialization context.</value>
   </data>
   <data name="TerminationException" xml:space="preserve">
     <value>Terminated the current processing.</value>

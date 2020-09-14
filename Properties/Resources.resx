@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DefaultHostRunner_Exception" xml:space="preserve">
+    <value>DefaultHostRunner_Exception</value>
+  </data>
+  <data name="EventLoopContext_InvalidOperationException" xml:space="preserve">
+    <value>EventLoopContext_InvalidOperationException</value>
+  </data>
   <data name="HostRunner_Create_ArgumentException" xml:space="preserve">
     <value>HostRunner_Create_ArgumentException</value>
   </data>
   <data name="HostRunner_Create_InvalidOperationException" xml:space="preserve">
     <value>HostRunner_Create_InvalidOperationException</value>
+  </data>
+  <data name="InitFinalContext_InvalidOperationException" xml:space="preserve">
+    <value>InitFinalContext_InvalidOperationException</value>
   </data>
   <data name="TerminationException" xml:space="preserve">
     <value>TerminationException</value>

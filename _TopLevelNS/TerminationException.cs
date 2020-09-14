@@ -34,7 +34,7 @@ namespace ExapisSOP
 		///  型'<see cref="ExapisSOP.TerminationException"/>'を逆直列化します。
 		/// </summary>
 		/// <param name="info">直列化されたデータを含むオブジェクトです。</param>
-		/// <param name="context">ストリームの転送先または転送元に関するコンテキスト情報です。</param>
+		/// <param name="context">ストリームの転送先または転送元に関する文脈情報です。</param>
 		protected TerminationException(SerializationInfo info, StreamingContext context)
 			: base(info, context) { }
 	}
