@@ -123,4 +123,10 @@
   <data name="HostRunner_Create_InvalidOperationException" xml:space="preserve">
     <value>HostRunner_Create_InvalidOperationException</value>
   </data>
+  <data name="TerminationException" xml:space="preserve">
+    <value>TerminationException</value>
+  </data>
+  <data name="TerminationException_withInnerError" xml:space="preserve">
+    <value>TerminationException_withInnerError</value>
+  </data>
 </root>

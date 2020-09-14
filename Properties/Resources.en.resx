@@ -123,4 +123,10 @@
   <data name="HostRunner_Create_InvalidOperationException" xml:space="preserve">
     <value>Failed to create a new host runner.</value>
   </data>
+  <data name="TerminationException" xml:space="preserve">
+    <value>Terminated the current processing.</value>
+  </data>
+  <data name="TerminationException_withInnerError" xml:space="preserve">
+    <value>Terminated the current processing by the occurred exception.</value>
+  </data>
 </root>

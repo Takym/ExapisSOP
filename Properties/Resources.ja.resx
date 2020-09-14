@@ -123,4 +123,10 @@
   <data name="HostRunner_Create_InvalidOperationException" xml:space="preserve">
     <value>実行環境の生成に失敗しました。</value>
   </data>
+  <data name="TerminationException" xml:space="preserve">
+    <value>実行中の処理が終了しました。</value>
+  </data>
+  <data name="TerminationException_withInnerError" xml:space="preserve">
+    <value>発生した例外によって、実行中の処理が終了しました。</value>
+  </data>
 </root>

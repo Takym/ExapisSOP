@@ -6,6 +6,7 @@
 ****/
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExapisSOP.Properties;
 
@@ -18,22 +19,35 @@ namespace ExapisSOP
 	public abstract class HostRunner
 	{
 		/// <summary>
+		///  OSから渡されたコマンド行引数を取得します。
+		/// </summary>
+		public IReadOnlyList<string> Arguments { get; }
+
+		/// <summary>
 		///  構成設定を実際に設定する非同期コールバック関数です。
 		/// </summary>
 		protected Func<IConfiguration, Task>? ConfigureCallBackFunc { get; private set; }
 
 		/// <summary>
+		///  型'<see cref="ExapisSOP.HostRunner"/>'の新しいインスタンスを生成します。
+		/// </summary>
+		/// <param name="cmdline">OSから渡されたコマンド行引数です。</param>
+		protected HostRunner(string[] cmdline)
+		{
+			this.Arguments = new List<string>(cmdline).AsReadOnly();
+		}
+
+		/// <summary>
 		///  構成設定を現在の実行環境に対して設定します。
 		/// </summary>
 		/// <param name="callBackFunc">実際に設定を行う非同期コールバック関数です。</param>
-		/// <returns>このインスタンスを返します。</returns>
+		/// <returns>現在のインスタンスを返します。</returns>
 		public virtual HostRunner Configure(Func<IConfiguration, Task> callBackFunc)
 		{
 			this.ConfigureCallBackFunc = callBackFunc;
 			return this;
 		}
 
-#pragma warning disable CS1998 // 非同期メソッドは、'await' 演算子がないため、同期的に実行されます
 		/// <summary>
 		///  構成設定を現在の実行環境に対して設定します。
 		/// </summary>
@@ -41,12 +55,14 @@ namespace ExapisSOP
 		///  実際に設定を行うコールバック関数です。
 		///  内部で非同期操作に変換されます。
 		/// </param>
-		/// <returns>このインスタンスを返します。</returns>
+		/// <returns>現在のインスタンスを返します。</returns>
 		public HostRunner Configure(Action<IConfiguration> callBackAction)
 		{
-			return this.Configure(async (config) => callBackAction(config));
+			return this.Configure(async (config) => {
+				callBackAction(config);
+				await Task.CompletedTask;
+			});
 		}
-#pragma warning restore CS1998 // 非同期メソッドは、'await' 演算子がないため、同期的に実行されます
 
 		/// <summary>
 		///  オーバーライドされた場合、プログラムの実行を非同期で開始します。
@@ -66,17 +82,17 @@ namespace ExapisSOP
 		/// <summary>
 		///  新しい既定の種類のプログラムの実行環境を生成します。
 		/// </summary>
-		/// <param name="args">OSから渡されたコマンド行引数です。</param>
+		/// <param name="cmdline">OSから渡されたコマンド行引数です。</param>
 		/// <returns>新しく生成された実行環境を表すオブジェクトです。</returns>
-		public static HostRunner? Create(params string[] args)
+		public static HostRunner? Create(params string[] cmdline)
 		{
-			return Create<HostRunner>(args);
+			return Create<HostRunner>(cmdline);
 		}
 
 		/// <summary>
 		///  指定した種類のプログラムの実行環境を生成します。
 		/// </summary>
-		/// <param name="args">OSから渡されたコマンド行引数です。</param>
+		/// <param name="cmdline">OSから渡されたコマンド行引数です。</param>
 		/// <typeparam name="T">実行環境を表すクラスです。文字列配列を受け入れるコンストラクタを持っている必要があります。</typeparam>
 		/// <returns>新しく生成された実行環境を表すオブジェクトです。</returns>
 		/// <exception cref="System.ArgumentException" />
@@ -84,10 +100,10 @@ namespace ExapisSOP
 		/// <exception cref="System.MissingMemberException" />
 		/// <exception cref="System.TypeLoadException" />
 		/// <exception cref="System.InvalidOperationException" />
-		public static T? Create<T>(params string[] args) where T: HostRunner
+		public static T? Create<T>(params string[] cmdline) where T: HostRunner
 		{
 			try {
-				return ((T?)(Activator.CreateInstance(typeof(T), new object[] { args })));
+				return ((T?)(Activator.CreateInstance(typeof(T), new object[] { cmdline })));
 			} catch (ArgumentException ae) when (ae.ParamName == "type") {
 				throw new ArgumentException(Resources.HostRunner_Create_ArgumentException, nameof(T), ae);
 			} catch (NotSupportedException nse) {

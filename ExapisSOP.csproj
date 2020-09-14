@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP</AssemblyName>
 		<RootNamespace>ExapisSOP</RootNamespace>
-		<TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+		<TargetFrameworks>netstandard2.1;netcoreapp3.1;net48</TargetFrameworks>
 		<OutputType>Library</OutputType>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>

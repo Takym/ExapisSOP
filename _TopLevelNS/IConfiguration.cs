@@ -12,5 +12,17 @@ namespace ExapisSOP
 	/// </summary>
 	public interface IConfiguration
 	{
+		/// <summary>
+		///  指定されたサービスを実行環境に対して登録します。
+		/// </summary>
+		/// <param name="service">登録するサービスオブジェクトです。</param>
+		/// <returns>現在のインスタンス、または、現在のインスタンスに指定されたサービスを追加した新しいオブジェクトを返します。</returns>
+		IConfiguration AddService(IService service);
+
+		/// <summary>
+		///  現在登録されている全てのサービスを取得します。
+		/// </summary>
+		/// <returns>複数のサービスオブジェクトを含む配列です。</returns>
+		IService[] GetServices();
 	}
 }

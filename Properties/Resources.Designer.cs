@@ -77,5 +77,23 @@ namespace ExapisSOP.Properties {
                 return ResourceManager.GetString("HostRunner_Create_InvalidOperationException", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   TerminationException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TerminationException {
+            get {
+                return ResourceManager.GetString("TerminationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   TerminationException_withInnerError に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TerminationException_withInnerError {
+            get {
+                return ResourceManager.GetString("TerminationException_withInnerError", resourceCulture);
+            }
+        }
     }
 }
