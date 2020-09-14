@@ -30,6 +30,8 @@ Please note below when you propose a pull request (PR):
 * Not always merge your PR.
 * Write your name and GitHub ID in [CONTRIBUTORS.md](./CONTRIBUTORS.md).
 
+***
+
 
 # <a id="ja"></a>日本語
 ## 概要
