@@ -19,6 +19,7 @@ This library provides the service-oriented programming.
 ## Terms of Use
 This library is released and distributed under the MIT License.
 Please see [LICENSE.txt](./LICENSE.txt) file.
+<!-- Special thanks to all [core collaborators and contributors](./CONTRIBUTORS.md) for this project. -->
 
 ## Contribution
 Feel free to submit an issue if the library have bugs, vulnerabilities, or
@@ -48,6 +49,7 @@ Please note below when you propose a pull request (PR):
 ## 利用規約
 このライブラリはMITライセンスの下で公開・配布されています。
 詳細は[LICENSE.txt](./LICENSE.txt)から確認してください。
+<!-- この場を借りてお礼を申し上げます。全ての[協力者さんと貢献者さん](./CONTRIBUTORS.md)に感謝致します。 -->
 
 ## 貢献方法
 問題が見つかれば是非気軽に Issue の投稿をしてください。

@@ -15,9 +15,10 @@
 		<InformationalVersion>xsop00a0</InformationalVersion>
 		<Authors>Takym</Authors>
 		<Copyright>Copyright (C) 2020 Takym.</Copyright>
-		<PackageIcon>Logo.png</PackageIcon>
+		<PackageIcon>Resources/Logo.png</PackageIcon>
 		<PackageTags>Service-Oriented, Framework</PackageTags>
 		<PackageProjectUrl>https://github.com/Takym/ExapisSOP</PackageProjectUrl>
+		<PackageReleaseNotes>Please see README.md, CHANGES.en.md, or CHANGES.ja.md.</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Description>Extensible APIs for the Service-Oriented Programming.</Description>
@@ -63,7 +64,7 @@
 		<Content Include="CHANGES.ja.md" Pack="true" PackagePath="">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
-		<Content Include="Resources\Logo.png" Pack="true" PackagePath="">
+		<Content Include="Resources\Logo.png" Pack="true" PackagePath="Resources">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
