@@ -54,7 +54,6 @@ namespace ExapisSOP.Core
 		private async Task<int> MainEventLoopPhase()
 		{
 			if (_app_workers.Count == 0) return 0;
-
 			EventLoopContext? context = null;
 			try {
 				int  ret  = 0;
