@@ -25,6 +25,10 @@
 		<RepositoryUrl>https://github.com/Takym/ExapisSOP.git</RepositoryUrl>
 		<RepositoryType>Public, Sources, C#, CSharp</RepositoryType>
 	</PropertyGroup>
+	<PropertyGroup>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>StrongNameKey.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DefineConstants>DEBUG;TRACE</DefineConstants>
 		<Optimize>false</Optimize>
