@@ -107,7 +107,7 @@ namespace ExapisSOP
 			}
 		}
 
-		internal async Task OnMainLoop(IContext context)
+		internal async Task OnUpdate(IContext context)
 		{
 			try {
 				this.OnUpdate(new ContextEventArgs(context));

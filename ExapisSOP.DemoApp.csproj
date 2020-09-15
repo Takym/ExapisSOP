@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>ExapisSOP.DemoApp</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<DocumentationFile>ExapisSOP.DemoApp.xml</DocumentationFile>
+	</PropertyGroup>
+	<Import Project="ExapisSOP.ProjectSettings.csproj" />
+	<ItemGroup>
+		<ProjectReference Include="ExapisSOP.csproj" />
+		<Compile Remove="_TopLevelNS\*" />
+		<Compile Remove="Core\*" />
+		<Content Include="ExapisSOP.DemoApp.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+</Project>

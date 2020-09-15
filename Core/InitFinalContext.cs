@@ -20,6 +20,7 @@ namespace ExapisSOP.Core
 		{
 			_runner      = runner;
 			_initContext = initContext;
+			_msg         = initContext?._msg;
 			if (initContext?.IsFinalizationPhase() ?? false) {
 				throw new InvalidOperationException(Resources.InitFinalContext_InvalidOperationException);
 			}
@@ -27,12 +28,12 @@ namespace ExapisSOP.Core
 
 		internal bool IsInitializationPhase()
 		{
-			return _initContext != null;
+			return _initContext == null;
 		}
 
 		internal bool IsFinalizationPhase()
 		{
-			return _initContext == null;
+			return _initContext != null;
 		}
 
 		internal InitFinalContext GetInitContext()

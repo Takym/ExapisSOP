@@ -22,6 +22,7 @@ namespace ExapisSOP.Core
 		{
 			_runner = runner;
 			_init   = initContext;
+			_msg    = initContext.GetMessage();
 			if (initContext?.IsFinalizationPhase() ?? false) {
 				throw new InvalidOperationException(Resources.EventLoopContext_InvalidOperationException);
 			}
@@ -33,6 +34,7 @@ namespace ExapisSOP.Core
 			_runner         = runner;
 			_init           = prevContext._init;
 			_prev           = prevContext;
+			_msg            = prevContext._msg;
 			this.IsDisposed = false;
 
 			// 2つ前の文脈情報を削除してメモリ節約

@@ -76,10 +76,10 @@ namespace ExapisSOP.Core
 				}
 				while (loop) {
 					context = new EventLoopContext(this, context);
-					for (int i = _app_workers.Count - 1; i >= 0; --i) {
+					for (int i = 0; i < _app_workers.Count; ++i) {
 						var task = Task.CompletedTask;
 						try {
-							await (task = _app_workers[i].OnShutdown(context));
+							await (task = _app_workers[i].OnUpdate(context));
 						} catch (TerminationException) {
 							loop = false;
 							break;

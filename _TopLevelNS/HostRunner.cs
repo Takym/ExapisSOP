@@ -93,9 +93,9 @@ namespace ExapisSOP
 		/// </summary>
 		/// <param name="cmdline">OSから渡されたコマンド行引数です。</param>
 		/// <returns>新しく生成された実行環境を表すオブジェクトです。</returns>
-		public static HostRunner? Create(params string[] cmdline)
+		public static HostRunner Create(params string[] cmdline)
 		{
-			return Create<DefaultHostRunner>(cmdline);
+			return Create<DefaultHostRunner>(cmdline) ?? new DefaultHostRunner(cmdline);
 		}
 
 		/// <summary>

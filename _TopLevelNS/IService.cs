@@ -36,7 +36,7 @@ namespace ExapisSOP
 		/// <returns>サービスの破棄処理を格納した非同期操作です。</returns>
 		Task FinalizeAsync(IContext context);
 
-#if NETSTANDARD2_1 || NETCOREAPP3_1
+#if NETCOREAPP3_1
 		/// <summary>
 		///  サービスの初期化処理を同期的に実行します。
 		///  この関数内で例外を発生させてはいけません。
