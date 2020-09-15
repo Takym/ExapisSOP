@@ -9,6 +9,47 @@ Copyright (C) 2020 Takym.
 This library provides the service-oriented programming.
 
 ## Get Started
+```csharp
+using System;
+using System.Threading.Tasks;
+using ExapisSOP;
+using ExapisSOP.Core;
+
+namespace Example
+{
+	internal class Program : AppWorker // Needs to extend AppWorker class.
+	{
+		// This function is called when initializing.
+		// Sets the update event method.
+		public override async Task InitializeAsync(IContext context)
+		{
+			this.Update += this.Program_Update;
+			await base.InitializeAsync(context);
+		}
+
+		// Update event
+		private void Program_Update(object? sender, ContextEventArgs e)
+		{
+			// TODO: write your code in here:
+			Console.WriteLine("Hello, World!!");
+			Console.ReadKey(true);
+
+			// Terminate the program:
+			throw new TerminationException();
+		}
+
+		// Entry point
+		[STAThread()]
+		private static async Task<int> Main(string[] args)
+		{
+			// Configure how to run the application:
+			return await HostRunner.Create(args).Configure(
+				config => config.AddAppWorker<Program>() // Adds Program as an AppWorker
+			).RunAsync();
+		}
+	}
+}
+```
 
 ## Latest Version History
 |Version |Code Name|Date      |Description       |
@@ -39,6 +80,47 @@ Please note below when you propose a pull request (PR):
 サービス指向プログラミングに必要な機能を提供します。
 
 ## 使い方
+```csharp
+using System;
+using System.Threading.Tasks;
+using ExapisSOP;
+using ExapisSOP.Core;
+
+namespace Example
+{
+	internal class Program : AppWorker // AppWorker クラスを継承する必要があります。
+	{
+		// この関数は初期化時に呼び出されます。
+		// 更新イベントを設定しています。
+		public override async Task InitializeAsync(IContext context)
+		{
+			this.Update += this.Program_Update;
+			await base.InitializeAsync(context);
+		}
+
+		// 更新イベント
+		private void Program_Update(object? sender, ContextEventArgs e)
+		{
+			// TODO: ここにコードを書いてください：
+			Console.WriteLine("Hello, World!!");
+			Console.ReadKey(true);
+
+			// プログラムを終了させます。
+			throw new TerminationException();
+		}
+
+		// 開始地点
+		[STAThread()]
+		private static async Task<int> Main(string[] args)
+		{
+			// アプリケーションの実行に関する設定を行います。
+			return await HostRunner.Create(args).Configure(
+				config => config.AddAppWorker<Program>() // Program を AppWorker として追加します。
+			).RunAsync();
+		}
+	}
+}
+```
 
 ## 最近の更新履歴
 |バージョン|開発コード名|日付      |説明                |
