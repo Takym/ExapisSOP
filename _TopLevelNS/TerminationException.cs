@@ -12,7 +12,7 @@ using ExapisSOP.Properties;
 namespace ExapisSOP
 {
 	/// <summary>
-	///  処理を終了させる時に発生します。
+	///  処理を終了させる時に発生させます。
 	/// </summary>
 	[Serializable()]
 	public class TerminationException : OperationCanceledException

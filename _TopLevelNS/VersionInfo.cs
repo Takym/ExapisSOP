@@ -25,17 +25,17 @@ namespace ExapisSOP
 	/// </summary>
 	public static class VersionInfo
 	{
-		private readonly static Assembly _asm = Assembly.GetExecutingAssembly();
+		private readonly static Assembly _asm = typeof(VersionInfo).Assembly;
 
 		/// <summary>
 		///  バージョン情報を含んだ<see cref="ExapisSOP"/>の題名を取得します。
 		/// </summary>
-		public static readonly string Caption = $"{DisplayName} [v{VersionString}, cn:{CodeName}]";
+		public static readonly string Caption = $"{Name} [v{VersionString}, cn:{CodeName}]";
 
 		/// <summary>
-		///  表示名を表す定数です。
+		///  このライブラリの名前を表す定数です。
 		/// </summary>
-		public const string DisplayName = nameof(ExapisSOP);
+		public const string Name = nameof(ExapisSOP);
 
 		/// <summary>
 		///  このアセンブリの一意識別子の文字列形式を取得します。

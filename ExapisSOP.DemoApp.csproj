@@ -9,8 +9,14 @@
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<Compile Remove="_TopLevelNS\*" />
 		<Compile Remove="Core\*" />
+		<Compile Remove="IO\*" />
 		<Content Include="ExapisSOP.DemoApp.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	  </Compile>
 	</ItemGroup>
 </Project>

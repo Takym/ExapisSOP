@@ -1,0 +1,69 @@
+﻿/****
+ * ExapisSOP
+ * Copyright (C) 2020 Takym.
+ * 
+ * distributed under the MIT License.
+****/
+
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using ExapisSOP.Properties;
+
+namespace ExapisSOP.IO
+{
+	/// <summary>
+	///  無効なパス文字列を検出した時に発生させます。
+	/// </summary>
+	[Serializable()]
+	public class InvalidPathFormatException : IOException
+	{
+		/// <summary>
+		///  この例外の原因となった無効なパス文字列を取得します。
+		/// </summary>
+		public string? InvalidPath { get; }
+
+		/// <summary>
+		///  型'<see cref="ExapisSOP.IO.InvalidPathFormatException"/>'の新しいインスタンスを生成します。
+		/// </summary>
+		/// <param name="path">この例外の原因となった無効なパス文字列です。</param>
+		public InvalidPathFormatException(string? path)
+			: base(string.Format(Resources.InvalidPathFormatException, path ?? "<UNKNOWN>"))
+		{
+			this.InvalidPath = path;
+		}
+
+		/// <summary>
+		///  型'<see cref="ExapisSOP.IO.InvalidPathFormatException"/>'の新しいインスタンスを生成します。
+		/// </summary>
+		/// <param name="path">この例外の原因となった無効なパス文字列です。</param>
+		/// <param name="innerException">内部例外です。</param>
+		public InvalidPathFormatException(string? path, Exception innerException)
+			: base(string.Format(Resources.InvalidPathFormatException, path ?? "<UNKNOWN>"), innerException)
+		{
+			this.InvalidPath = path;
+		}
+
+		/// <summary>
+		///  型'<see cref="ExapisSOP.IO.InvalidPathFormatException"/>'を逆直列化します。
+		/// </summary>
+		/// <param name="info">直列化されたデータを含むオブジェクトです。</param>
+		/// <param name="context">ストリームの転送先または転送元に関する文脈情報です。</param>
+		protected InvalidPathFormatException(SerializationInfo info, StreamingContext context)
+			: base(info, context)
+		{
+			this.InvalidPath = info.GetString(nameof(this.InvalidPath));
+		}
+
+		/// <summary>
+		///  現在の例外を直列化します。
+		/// </summary>
+		/// <param name="info">直列化されたデータを含むオブジェクトです。</param>
+		/// <param name="context">ストリームの転送先または転送元に関する文脈情報です。</param>
+		public override void GetObjectData(SerializationInfo info, StreamingContext context)
+		{
+			base.GetObjectData(info, context);
+			info.AddValue(nameof(this.InvalidPath), this.InvalidPath);
+		}
+	}
+}

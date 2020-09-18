@@ -138,4 +138,10 @@
   <data name="TerminationException_withInnerError" xml:space="preserve">
     <value>Terminated the current processing by the occurred exception.</value>
   </data>
+  <data name="InvalidPathFormatException" xml:space="preserve">
+    <value>The specified string "{0}" is an invalid path string.</value>
+  </data>
+  <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
+    <value>Could not get a relative path on .NET Framework 4.8. Please use .NET Core 3.1 instead.</value>
+  </data>
 </root>

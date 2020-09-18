@@ -132,6 +132,12 @@
   <data name="InitFinalContext_InvalidOperationException" xml:space="preserve">
     <value>InitFinalContext_InvalidOperationException</value>
   </data>
+  <data name="InvalidPathFormatException" xml:space="preserve">
+    <value>InvalidPathFormatException {0}</value>
+  </data>
+  <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
+    <value>PathString_PlatformNotSupportedException</value>
+  </data>
   <data name="TerminationException" xml:space="preserve">
     <value>TerminationException</value>
   </data>

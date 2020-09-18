@@ -106,6 +106,24 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   InvalidPathFormatException {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InvalidPathFormatException {
+            get {
+                return ResourceManager.GetString("InvalidPathFormatException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   PathString_PlatformNotSupportedException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PathString_PlatformNotSupportedException {
+            get {
+                return ResourceManager.GetString("PathString_PlatformNotSupportedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   TerminationException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TerminationException {

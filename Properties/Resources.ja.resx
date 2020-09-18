@@ -138,4 +138,10 @@
   <data name="TerminationException_withInnerError" xml:space="preserve">
     <value>発生した例外によって、実行中の処理が終了しました。</value>
   </data>
+  <data name="InvalidPathFormatException" xml:space="preserve">
+    <value>指定された文字列「{0}」は無効なパス文字列です。</value>
+  </data>
+  <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
+    <value>.NET Framework 4.8 では相対パスを取得できません。.NET Core 3.1 をご利用ください。</value>
+  </data>
 </root>
