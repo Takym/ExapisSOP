@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 
 #if NET48
@@ -22,6 +23,7 @@ namespace ExapisSOP.IO
 	/// <remarks>
 	///  <see cref="System.IO.Path"/>クラスと併用してください。
 	/// </remarks>
+	[TypeConverter(typeof(PathStringConverter))]
 	public sealed class PathString : IFormattable, IEquatable<PathString?>, IEquatable<string?>, IComparable, IComparable<PathString?>, IComparable<string?>
 	{
 		private readonly string _org_path;
