@@ -93,7 +93,7 @@ namespace ExapisSOP.IO
 			_org_path = path;
 			try {
 				_path = Path.GetFullPath(path);
-				if (_path.EndsWith(Path.DirectorySeparatorChar)) {
+				if (_path.EndsWith(Path.DirectorySeparatorChar.ToString())) {
 					_path.Remove(_path.Length - 1);
 				}
 				_uri = new Uri(_path);
