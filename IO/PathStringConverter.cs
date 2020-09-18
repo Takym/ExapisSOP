@@ -5,7 +5,9 @@
  * distributed under the MIT License.
 ****/
 
+using System;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace ExapisSOP.IO
 {
@@ -16,7 +18,7 @@ namespace ExapisSOP.IO
 			return typeof(string) == sourceType || base.CanConvertFrom(context, sourceType);
 		}
 
-	 	public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
+		public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
 		{
 			if (value is PathString path) {
 				return path;
@@ -29,7 +31,7 @@ namespace ExapisSOP.IO
 
 		public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
 		{
-			return typeof(PathString) == destinationType || base.CanConvertFrom(context, destinationType);
+			return typeof(PathString) == destinationType || base.CanConvertTo(context, destinationType);
 		}
 
 	 	public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
