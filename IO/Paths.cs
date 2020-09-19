@@ -6,6 +6,7 @@
 ****/
 
 using System;
+using System.IO;
 using System.Reflection;
 
 namespace ExapisSOP.IO
@@ -14,7 +15,7 @@ namespace ExapisSOP.IO
 	///  データディレクトリのパス情報を取得します。
 	///  このクラスは継承できません。
 	/// </summary>
-	public sealed class Paths
+	public sealed class Paths : IPathList
 	{
 		private static string AsmName => Assembly.GetExecutingAssembly().GetName().Name ?? VersionInfo.Name;
 
@@ -37,6 +38,39 @@ namespace ExapisSOP.IO
 			}
 		}
 
-		internal Paths(PathString path) { }
+		/// <summary>
+		///  管理するデータが格納されたディレクトリを取得します。
+		/// </summary>
+		public PathString DataRoot { get; }
+
+		/// <summary>
+		///  ログファイルが格納されたディレクトリを取得します。
+		/// </summary>
+		public PathString Logs => this.DataRoot + "logs";
+
+		/// <summary>
+		///  一時ファイルが格納されたディレクトリを取得します。
+		/// </summary>
+		public PathString Temporary => this.DataRoot + "temp";
+
+		/// <summary>
+		///  キャッシュファイルが格納されたディレクトリを取得します。
+		/// </summary>
+		public PathString Caches => this.Temporary + "_caches";
+
+		/// <summary>
+		///  設定ファイルが格納されたディレクトリを取得します。
+		/// </summary>
+		public PathString Settings => this.DataRoot + "settings";
+
+		internal Paths(PathString path)
+		{
+			this.DataRoot = path;
+			Directory.CreateDirectory(this.DataRoot .ToString());
+			Directory.CreateDirectory(this.Logs     .ToString());
+			Directory.CreateDirectory(this.Temporary.ToString());
+			Directory.CreateDirectory(this.Caches   .ToString());
+			Directory.CreateDirectory(this.Settings .ToString());
+		}
 	}
 }

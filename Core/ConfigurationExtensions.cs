@@ -6,6 +6,8 @@
 ****/
 
 using System;
+using System.Threading.Tasks;
+using ExapisSOP.IO;
 
 namespace ExapisSOP.Core
 {
@@ -23,7 +25,8 @@ namespace ExapisSOP.Core
 		/// </typeparam>
 		/// <param name="config">登録先の構成設定です。</param>
 		/// <returns>
-		///  <paramref name="config"/>、または、指定された<see cref="ExapisSOP.AppWorker"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		///  <paramref name="config"/>、または、
+		///  指定された<see cref="ExapisSOP.AppWorker"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
 		/// <exception cref="System.MissingMemberException" />
 		public static IConfiguration AddAppWorker<TAppWorker>(this IConfiguration config) where TAppWorker : AppWorker
@@ -33,6 +36,33 @@ namespace ExapisSOP.Core
 			} catch (MissingMethodException mme) {
 				throw new MissingMemberException(mme.Message, mme);
 			}
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>をサービスとして実行環境に登録します。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <returns>
+		///  <paramref name="config"/>、または、
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		public static IConfiguration AddFileSystem(this IConfiguration config)
+		{
+			return config.AddService(new FileSystemService(_ => Task.CompletedTask));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>をサービスとして実行環境に登録します。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <param name="callBackFunc">サービスの設定を行います。</param>
+		/// <returns>
+		///  <paramref name="config"/>、または、
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		public static IConfiguration AddFileSystem(this IConfiguration config, Func<FileSystemServiceOptions, Task> callBackFunc)
+		{
+			return config.AddService(new FileSystemService(callBackFunc));
 		}
 	}
 }

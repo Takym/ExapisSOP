@@ -8,6 +8,7 @@
 using System;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
+using ExapisSOP.IO;
 
 namespace ExapisSOP.DemoApp
 {
@@ -41,7 +42,13 @@ namespace ExapisSOP.DemoApp
 		private static async Task<int> Main(string[] args)
 		{
 			return await HostRunner.Create(args).Configure(
-				config => config.AddAppWorker<Program>()
+				config => config
+					.AddFileSystem(async (options) => {
+						options.SetDataPath(DefaultPath.Application);
+						options.CreateLockFile = true;
+						await Task.CompletedTask;
+					})
+					.AddAppWorker<Program>()
 			).RunAsync();
 		}
 	}

@@ -5,6 +5,8 @@
  * distributed under the MIT License.
 ****/
 
+using ExapisSOP.IO;
+
 namespace ExapisSOP.Core
 {
 	/// <summary>
@@ -13,6 +15,19 @@ namespace ExapisSOP.Core
 	/// </summary>
 	public static class ContextExtensions
 	{
+		/// <summary>
+		///  データディレクトリへのパスを格納したオブジェクトを取得します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  <see cref="ExapisSOP.IContext.Paths"/>を<see cref="ExapisSOP.IO.Paths"/>へ変換して返します。
+		///  変換に失敗した場合は<see langword="null"/>が返ります。
+		/// </returns>
+		public static Paths? GetPaths(this IContext context)
+		{
+			return context?.Paths as Paths;
+		}
+
 		/// <summary>
 		///  プログラム初期化時に利用された文脈情報を取得します。
 		/// </summary>
@@ -54,6 +69,18 @@ namespace ExapisSOP.Core
 			} else {
 				return null;
 			}
+		}
+
+		/// <summary>
+		///  サービスリストから最初に見つかった<see cref="ExapisSOP.IO.IFileSystemService"/>を取得します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>を実装したサービスオブジェクトです。
+		/// </returns>
+		public static IFileSystemService? GetFileSystem(this IContext context)
+		{
+			return context.GetService<IFileSystemService>();
 		}
 	}
 }

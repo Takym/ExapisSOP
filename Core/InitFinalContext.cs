@@ -6,6 +6,7 @@
 ****/
 
 using System;
+using ExapisSOP.IO;
 using ExapisSOP.Properties;
 
 namespace ExapisSOP.Core
@@ -15,12 +16,14 @@ namespace ExapisSOP.Core
 		private readonly DefaultHostRunner _runner;
 		private readonly InitFinalContext? _initContext;
 		private          object?           _msg;
+		public           IPathList?        Paths { get; internal set; }
 
 		internal InitFinalContext(DefaultHostRunner runner, InitFinalContext? initContext)
 		{
 			_runner      = runner;
 			_initContext = initContext;
 			_msg         = initContext?._msg;
+			this.Paths   = initContext?.Paths;
 			if (initContext?.IsFinalizationPhase() ?? false) {
 				throw new InvalidOperationException(Resources.InitFinalContext_InvalidOperationException);
 			}

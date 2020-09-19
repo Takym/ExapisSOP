@@ -5,6 +5,8 @@
  * distributed under the MIT License.
 ****/
 
+using ExapisSOP.IO;
+
 namespace ExapisSOP
 {
 	/// <summary>
@@ -12,6 +14,12 @@ namespace ExapisSOP
 	/// </summary>
 	public interface IContext
 	{
+		/// <summary>
+		///  データディレクトリへのパスを格納したオブジェクトを取得します。
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>が初期化されていない場合は<see langword="null"/>を返します。
+		/// </summary>
+		IPathList? Paths { get; }
+
 		/// <summary>
 		///  現在実行中の実行環境を取得します。
 		/// </summary>

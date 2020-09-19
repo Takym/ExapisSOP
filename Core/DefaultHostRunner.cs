@@ -58,14 +58,13 @@ namespace ExapisSOP.Core
 			try {
 				int  ret  = 0;
 				bool loop = true;
-
 				context = new EventLoopContext(this, _initContext!);
 				for (int i = 0; i < _app_workers.Count; ++i) {
 					var task = Task.CompletedTask;
 					try {
 						await (task = _app_workers[i].OnStartup(context));
 					} catch (TerminationException) {
-						break;
+						loop = false;
 					} catch (Exception e) {
 						if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
 							ret = e.HResult;
@@ -99,7 +98,7 @@ namespace ExapisSOP.Core
 					try {
 						await (task = _app_workers[i].OnShutdown(context));
 					} catch (TerminationException) {
-						break;
+						// do nothing, ignore
 					} catch (Exception e) {
 						if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
 							ret = e.HResult;
