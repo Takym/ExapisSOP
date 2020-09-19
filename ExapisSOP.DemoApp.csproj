@@ -7,16 +7,21 @@
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
+		<EmbeddedResource Remove="Properties\*" />
+		<EmbeddedResource Remove="_TopLevelNS\*" />
+		<EmbeddedResource Remove="Core\*" />
+		<EmbeddedResource Remove="IO\*" />
+		<Compile Remove="Properties\*" />
 		<Compile Remove="_TopLevelNS\*" />
 		<Compile Remove="Core\*" />
 		<Compile Remove="IO\*" />
+		<None Remove="Properties\*" />
+		<None Remove="_TopLevelNS\*" />
+		<None Remove="Core\*" />
+		<None Remove="IO\*" />
+		<None Remove="ExapisSOP.xml" />
 		<Content Include="ExapisSOP.DemoApp.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
-	</ItemGroup>
-	<ItemGroup>
-	  <Compile Update="Properties\Resources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	  </Compile>
 	</ItemGroup>
 </Project>

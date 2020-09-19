@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.DemoApp", "Exapis
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBC0FDDE-4044-4DC6-BFAC-EC0CEBC40E89}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 		ExapisSOP.ProjectSettings.csproj = ExapisSOP.ProjectSettings.csproj
 	EndProjectSection
 EndProject
@@ -31,8 +33,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_Rules = {"EnabledRules":[]}
-		RESX_NeutralResourcesLanguage = iv-IV
 		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
+		RESX_NeutralResourcesLanguage = iv-IV
+		RESX_Rules = {"EnabledRules":[]}
 	EndGlobalSection
 EndGlobal
