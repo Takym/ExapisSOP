@@ -7,6 +7,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace ExapisSOP.Utils
 {
@@ -86,6 +87,39 @@ namespace ExapisSOP.Utils
 		{
 			if (this.IsDisposed) {
 				throw new ObjectDisposedException(this.GetType().Name);
+			}
+		}
+
+		/// <summary>
+		///  指定したオブジェクトを削除します。
+		///  <see cref="System.IDisposable"/>を継承しているクラスの場合、<see cref="System.IDisposable.Dispose"/>を呼び出し、
+		///  それ以外のクラスはリフレクションを利用し強制的にデストラクタ(例：<see cref="object.Finalize"/>)を強制的に実行します。
+		/// </summary>
+		/// <remarks>
+		///  この関数を利用して削除したオブジェクトは利用しないでください。
+		/// </remarks>
+		/// <param name="obj">削除対象のオブジェクトです。</param>
+		/// <exception cref="System.Exception">
+		///  処理が失敗しました。
+		/// </exception>
+		[Obsolete("予期せぬ不具合が発生する可能性がある為、この関数は呼び出さないでください。")]
+		public static void Delete(object obj)
+		{
+			try {
+				var t = obj.GetType();
+				if (obj is IDisposable disp) {
+					disp.Dispose();
+				} else {
+					var mi = obj.GetType().GetMethod(
+						nameof(Finalize),
+						BindingFlags.NonPublic    |
+						BindingFlags.InvokeMethod |
+						BindingFlags.Instance);
+					mi?.Invoke(obj, null);
+					GC.SuppressFinalize(obj);
+				}
+			} catch (Exception e) {
+				throw new Exception(e.Message, e);
 			}
 		}
 	}
