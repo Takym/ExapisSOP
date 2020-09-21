@@ -5,6 +5,7 @@
  * distributed under the MIT License.
 ****/
 
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -47,6 +48,17 @@ namespace ExapisSOP.IO
 		/// <returns>バッファストリームです。</returns>
 		/// <exception cref="System.IO.IOException" />
 		BufferedStream AddBufferingLayer(Stream s);
+
+		/// <summary>
+		///  キャッシュされたメモリを開きます。
+		/// </summary>
+		/// <remarks>
+		///  閉じる時は<see cref="ExapisSOP.IO.IFileSystemService.CloseStream(Stream)"/>を呼び出してください。
+		/// </remarks>
+		/// <returns>キャッシュストリームです。</returns>
+		/// <exception cref="System.IO.IOException" />
+		[Obsolete("現在、充分に動作確認がされていません。ご利用の際は注意してください。")]
+		CachedStream OpenCachedMemory();
 
 		/// <summary>
 		///  指定したストリームを閉じます。

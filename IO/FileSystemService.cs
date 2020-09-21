@@ -85,6 +85,19 @@ namespace ExapisSOP.IO
 			}
 		}
 
+		public CachedStream OpenCachedMemory()
+		{
+			try {
+				var cs = new CachedStream((_paths.Caches + Path.GetRandomFileName()).ToString(), new byte[0]);
+				lock (_streams) {
+					_streams.Add(cs);
+				}
+				return cs;
+			} catch (Exception e) {
+				throw new IOException(e.Message, e);
+			}
+		}
+
 		public BufferedStream AddBufferingLayer(Stream s)
 		{
 			try {

@@ -17,6 +17,7 @@ namespace ExapisSOP.IO
 	/// <summary>
 	///  キャッシュされたストリームを表します。
 	/// </summary>
+	[Obsolete("現在、充分に動作確認がされていません。ご利用の際は注意してください。")]
 	public sealed class CachedStream : Stream
 	{
 		private readonly string     _cache_file;
