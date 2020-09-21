@@ -13,12 +13,14 @@
 		<EmbeddedResource Remove="Core\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
+		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
 		<Compile Remove="_TopLevelNS\*" />
 		<Compile Remove="Core\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
+		<Compile Remove="Utils\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
 		<None Remove="_TopLevelNS\*" />
@@ -26,6 +28,7 @@
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
 		<None Remove="ExapisSOP.xml" />
+		<None Remove="Utils\*" />
 		<Content Include="ExapisSOP.DemoApp.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>

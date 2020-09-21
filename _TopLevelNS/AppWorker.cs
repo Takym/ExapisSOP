@@ -42,7 +42,7 @@ namespace ExapisSOP
 		protected AppWorker() { }
 
 		/// <summary>
-		///  オーバーライドされた場合、非同期でサービスを初期化します。
+		///  上書きされた場合、非同期でサービスを初期化します。
 		/// </summary>
 		/// <param name="context">文脈情報です。</param>
 		/// <returns>サービスの初期化処理を格納した非同期操作です。</returns>
@@ -52,7 +52,7 @@ namespace ExapisSOP
 		}
 
 		/// <summary>
-		///  オーバーライドされた場合、非同期でサービスを破棄します。
+		///  上書きされた場合、非同期でサービスを破棄します。
 		/// </summary>
 		/// <param name="context">文脈情報です。</param>
 		/// <returns>サービスの破棄処理を格納した非同期操作です。</returns>

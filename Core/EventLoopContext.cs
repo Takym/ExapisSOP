@@ -8,17 +8,17 @@
 using System;
 using ExapisSOP.IO;
 using ExapisSOP.Properties;
+using ExapisSOP.Utils;
 
 namespace ExapisSOP.Core
 {
-	internal class EventLoopContext : IContext, IDisposable
+	internal class EventLoopContext : DisposableBase, IContext
 	{
 		private  readonly DefaultHostRunner _runner;
 		internal readonly InitFinalContext  _init;
 		private           EventLoopContext? _prev;
 		private           object?           _msg;
-		public            IPathList?        Paths      { get; internal set; }
-		internal          bool              IsDisposed { get; private  set; }
+		public            IPathList?        Paths { get; internal set; }
 
 		internal EventLoopContext(DefaultHostRunner runner, InitFinalContext initContext)
 		{
@@ -29,7 +29,6 @@ namespace ExapisSOP.Core
 			if (initContext?.IsFinalizationPhase() ?? false) {
 				throw new InvalidOperationException(Resources.EventLoopContext_InvalidOperationException);
 			}
-			this.IsDisposed = false;
 		}
 
 		internal EventLoopContext(DefaultHostRunner runner, EventLoopContext prevContext)
@@ -38,16 +37,10 @@ namespace ExapisSOP.Core
 			_init           = prevContext._init;
 			_prev           = prevContext;
 			_msg            = prevContext._msg;
-			this.IsDisposed = false;
 
 			// 2つ前の文脈情報を削除してメモリ節約
 			prevContext._prev?.Dispose();
 			prevContext._prev = null;
-		}
-
-		~EventLoopContext()
-		{
-			this.Dispose(false);
 		}
 
 		internal EventLoopContext? GetPrev()
@@ -92,13 +85,7 @@ namespace ExapisSOP.Core
 			_msg = data;
 		}
 
-		public void Dispose()
-		{
-			this.Dispose(true);
-			GC.SuppressFinalize(this);
-		}
-
-		private void Dispose(bool disposing)
+		protected override void Dispose(bool disposing)
 		{
 			if (!this.IsDisposed) {
 				if (disposing) {
@@ -111,7 +98,7 @@ namespace ExapisSOP.Core
 				}
 				_prev = null;
 				_msg  = null;
-				this.IsDisposed = true;
+				base.Dispose(disposing);
 			}
 		}
 	}

@@ -66,7 +66,7 @@ namespace ExapisSOP
 		}
 
 		/// <summary>
-		///  オーバーライドされた場合、プログラムの実行を非同期で開始します。
+		///  上書きされた場合、プログラムの実行を非同期で開始します。
 		/// </summary>
 		/// <returns>OSへの戻り値を含む非同期操作です。</returns>
 		/// <exception cref="System.Exception">
