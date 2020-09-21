@@ -103,9 +103,11 @@ namespace ExapisSOP.Core
 			if (!this.IsDisposed) {
 				if (disposing) {
 					_prev?.Dispose();
+					/* // _msg の自動削除は廃止
 					if (_msg is IDisposable disposable) {
 						disposable.Dispose();
 					}
+					//*/
 				}
 				_prev = null;
 				_msg  = null;
