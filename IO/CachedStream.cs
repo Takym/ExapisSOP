@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using ExapisSOP.IO.DataFlowModel;
+using ExapisSOP.Properties;
 
 namespace ExapisSOP.IO
 {
@@ -18,7 +20,7 @@ namespace ExapisSOP.IO
 	///  キャッシュされたストリームを表します。
 	/// </summary>
 	[Obsolete("現在、充分に動作確認がされていません。ご利用の際は注意してください。")]
-	public sealed class CachedStream : Stream
+	public sealed class CachedStream : Stream, IStream
 	{
 		private readonly string     _cache_file;
 		private readonly List<byte> _data;
@@ -144,6 +146,26 @@ namespace ExapisSOP.IO
 			int result = this.ReadByteCore();
 			--this.Position;
 			return result;
+		}
+
+		/// <summary>
+		///  現在のストリームから1バイトだけ読み取ります。
+		///  ただし、ストリーム位置は進めません。
+		/// </summary>
+		/// <returns>
+		///  読み取ったデータ、または、
+		///  ストリームの現在位置が末尾を超えている場合は<c>-1</c>を戻り値として含む非同期操作です。
+		/// </returns>
+		/// <exception cref="System.ObjectDisposedException" />
+		public Task<int> PeekAsync()
+		{
+			try {
+				this.Refresh();
+				int result = this.Peek();
+				return Task.FromResult(result);
+			} catch (Exception e) {
+				return Task.FromException<int>(e);
+			}
 		}
 
 		/// <summary>
@@ -370,16 +392,16 @@ namespace ExapisSOP.IO
 		private void ThrowOnOutOfRange(int bufferLength, int offset, int count)
 		{
 			if (offset < 0) {
-				throw new ArgumentOutOfRangeException(nameof(offset), offset, );
+				throw new ArgumentOutOfRangeException(nameof(offset), offset, Resources.CachedStream_ThrowOnOutOfRange);
 			}
 			if (count < 0) {
-				throw new ArgumentOutOfRangeException(nameof(count), count, );
+				throw new ArgumentOutOfRangeException(nameof(count), count, Resources.CachedStream_ThrowOnOutOfRange);
 			}
 			if (bufferLength < offset) {
-				throw new ArgumentOutOfRangeException(nameof(offset), offset, );
+				throw new ArgumentOutOfRangeException(nameof(offset), offset, Resources.CachedStream_ThrowOnOutOfRange);
 			}
 			if (bufferLength < offset + count) {
-				throw new ArgumentOutOfRangeException(nameof(count), count, );
+				throw new ArgumentOutOfRangeException(nameof(count), count, Resources.CachedStream_ThrowOnOutOfRange);
 			}
 		}
 	}

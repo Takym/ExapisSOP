@@ -8,17 +8,23 @@
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
+		<EmbeddedResource Remove="_SystemAttributes\*" />
 		<EmbeddedResource Remove="_TopLevelNS\*" />
 		<EmbeddedResource Remove="Core\*" />
 		<EmbeddedResource Remove="IO\*" />
+		<EmbeddedResource Remove="IO\*\*" />
 		<Compile Remove="Properties\*" />
+		<Compile Remove="_SystemAttributes\*" />
 		<Compile Remove="_TopLevelNS\*" />
 		<Compile Remove="Core\*" />
 		<Compile Remove="IO\*" />
+		<Compile Remove="IO\*\*" />
 		<None Remove="Properties\*" />
+		<None Remove="_SystemAttributes\*" />
 		<None Remove="_TopLevelNS\*" />
 		<None Remove="Core\*" />
 		<None Remove="IO\*" />
+		<None Remove="IO\*\*" />
 		<None Remove="ExapisSOP.xml" />
 		<Content Include="ExapisSOP.DemoApp.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>

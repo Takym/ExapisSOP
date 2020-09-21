@@ -61,6 +61,15 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   CachedStream_ThrowOnOutOfRange に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CachedStream_ThrowOnOutOfRange {
+            get {
+                return ResourceManager.GetString("CachedStream_ThrowOnOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   DefaultHostRunner_Exception に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DefaultHostRunner_Exception {

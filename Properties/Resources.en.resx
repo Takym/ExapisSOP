@@ -144,4 +144,7 @@
   <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
     <value>Could not get a relative path on .NET Framework 4.8. Please use .NET Core 3.1 instead.</value>
   </data>
+  <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
+    <value>The argument is out of the buffer.</value>
+  </data>
 </root>
