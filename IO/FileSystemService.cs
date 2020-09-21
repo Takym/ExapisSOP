@@ -43,7 +43,7 @@ namespace ExapisSOP.IO
 					_abort = true;
 				} else {
 					lock (_streams) {
-						_streams.Add(new FileStream(_lockfile.ToString(), FileMode.OpenOrCreate, FileAccess.Read, FileShare.None));
+						_streams.Add(new FileStream(_lockfile, FileMode.OpenOrCreate, FileAccess.Read, FileShare.None));
 					}
 				}
 			}
@@ -60,7 +60,7 @@ namespace ExapisSOP.IO
 		public FileStream OpenDataFile(string name)
 		{
 			try {
-				var fs = new FileStream((_paths.DataRoot + name).ToString(), FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read);
+				var fs = new FileStream(_paths.DataRoot + name, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read);
 				lock (_streams) {
 					_streams.Add(fs);
 				}
@@ -88,7 +88,7 @@ namespace ExapisSOP.IO
 		public CachedStream OpenCachedMemory()
 		{
 			try {
-				var cs = new CachedStream((_paths.Caches + Path.GetRandomFileName()).ToString(), new byte[0]);
+				var cs = new CachedStream(_paths.Caches + Path.GetRandomFileName(), new byte[0]);
 				lock (_streams) {
 					_streams.Add(cs);
 				}
@@ -168,7 +168,7 @@ namespace ExapisSOP.IO
 #endif
 
 			if (!(_lockfile is null || _abort)) {
-				File.Delete(_lockfile.ToString());
+				File.Delete(_lockfile);
 			}
 		}
 	}

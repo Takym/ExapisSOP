@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.IO;
 
 #if NET48
+using System.Text;
 using ExapisSOP.Properties;
 #endif
 
@@ -253,6 +254,36 @@ namespace ExapisSOP.IO
 		}
 
 		/// <summary>
+		///  パス文字列の拡張子を含むファイル名を変更します。
+		/// </summary>
+		/// <param name="filename">変更後の拡張子を含むファイル名、または、親ディレクトリを取得する場合は空値を指定してください。</param>
+		/// <returns>
+		///  ファイル名が変更されたパス文字列、または、
+		///  ファイル名が変更されなかった場合は現在のインスタンスを返します。
+		///  親ディレクトリの情報が存在しない場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="ExapisSOP.IO.InvalidPathFormatException">
+		///  無効なパス文字列が渡されました。
+		/// </exception>
+		/// <exception cref="System.Security.SecurityException" />
+		public PathString? ChangeFileName(string? filename)
+		{
+			var dir = this.GetDirectoryName();
+			if (dir is null) {
+				return null;
+			} else if (string.IsNullOrEmpty(filename)) {
+				return dir;
+			} else {
+				var newpath = dir + filename;
+				if (newpath == this) {
+					return this;
+				} else {
+					return newpath;
+				}
+			}
+		}
+
+		/// <summary>
 		///  パス文字列の拡張子を変更します。
 		/// </summary>
 		/// <param name="extension">変更後の拡張子、または、拡張子を削除する場合は空値を指定してください。</param>
@@ -260,6 +291,10 @@ namespace ExapisSOP.IO
 		///  拡張子が変更されたパス文字列、または、
 		///  拡張子が変更されなかった場合は現在のインスタンスを返します。
 		/// </returns>
+		/// <exception cref="ExapisSOP.IO.InvalidPathFormatException">
+		///  無効なパス文字列が渡されました。
+		/// </exception>
+		/// <exception cref="System.ArgumentException" />
 		/// <exception cref="System.Security.SecurityException" />
 		public PathString ChangeExtension(string? extension)
 		{
@@ -268,6 +303,22 @@ namespace ExapisSOP.IO
 				return this;
 			}
 			return new PathString(newpath);
+		}
+
+		/// <summary>
+		///  現在のパス文字列の拡張子を変更し実際に存在しないパス文字列を取得します。
+		/// </summary>
+		/// <returns>新しい実際にファイルまたはディレクトリが存在しないパス文字列です。</returns>
+		/// <exception cref="System.Security.SecurityException" />
+		public PathString EnsureNotFound()
+		{
+			int i = 0;
+			var path = this;
+			string? ext = this.GetExtension();
+			while (path.Exists) {
+				path = this.ChangeExtension(++i + ext);
+			}
+			return path;
 		}
 
 		/// <summary>
@@ -309,7 +360,10 @@ namespace ExapisSOP.IO
 		/// <exception cref="System.ArgumentNullException">
 		///  <paramref name="relativeTo"/>が<see langword="null"/>に設定されています。
 		/// </exception>
-		/// <exception cref="System.PlatformNotSupportedException" />
+		/// <exception cref="System.PlatformNotSupportedException">
+		///  .NET Framework v4.8 上で相対パスの生成に失敗した場合に発生します。
+		///  .NET Core 3.1 以上のランタイムで実行し直してください。
+		/// </exception>
 		public string? GetRelativePath(PathString relativeTo)
 		{
 			if (relativeTo == null) {
@@ -318,7 +372,24 @@ namespace ExapisSOP.IO
 #if NETCOREAPP3_1
 			return Path.GetRelativePath(relativeTo._path, _path);
 #elif NET48
-			throw new PlatformNotSupportedException(Resources.PathString_PlatformNotSupportedException);
+			try {
+				string[] tp =            _path.Split(Path.DirectorySeparatorChar);
+				string[] bp = relativeTo._path.Split(Path.DirectorySeparatorChar);
+				var rp = new StringBuilder();
+				int i = 0;
+				while (i < tp.Length && i < bp.Length && tp[i] == bp[i]) ++i;
+				int j = i;
+				for (; i < bp.Length; ++i) {
+					rp.Append("..\\");
+				}
+				for (; j < tp.Length; ++j) {
+					rp.Append(tp[j]).Append("\\");
+				}
+				rp.Remove(rp.Length - 1, 1);
+				return rp.ToString();
+			} catch (Exception e) {
+				throw new PlatformNotSupportedException(Resources.PathString_PlatformNotSupportedException, e);
+			}
 #endif
 		}
 
@@ -569,13 +640,13 @@ namespace ExapisSOP.IO
 			=> left.CompareTo(right) >= 0;
 
 		/// <summary>
-		///  パス文字列を通常の文字列へ変換(キャスト)します。
+		///  パス文字列を通常の文字列へ暗黙的に変換(キャスト)します。
 		/// </summary>
 		/// <param name="path">通常の文字列へ変換するパス文字列です。</param>
-		public static explicit operator string(PathString path) => path._path;
+		public static implicit operator string(PathString path) => path._path;
 
 		/// <summary>
-		///  通常の文字列をパス文字列へ変換(キャスト)します。
+		///  通常の文字列をパス文字列へ明示的に変換(キャスト)します。
 		/// </summary>
 		/// <param name="path">パス文字列へ変換する通常の文字列です。</param>
 		/// <exception cref="System.ArgumentNullException">

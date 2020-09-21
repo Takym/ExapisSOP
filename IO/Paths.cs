@@ -66,11 +66,11 @@ namespace ExapisSOP.IO
 		internal Paths(PathString path)
 		{
 			this.DataRoot = path;
-			Directory.CreateDirectory(this.DataRoot .ToString());
-			Directory.CreateDirectory(this.Logs     .ToString());
-			Directory.CreateDirectory(this.Temporary.ToString());
-			Directory.CreateDirectory(this.Caches   .ToString());
-			Directory.CreateDirectory(this.Settings .ToString());
+			Directory.CreateDirectory(this.DataRoot);
+			Directory.CreateDirectory(this.Logs);
+			Directory.CreateDirectory(this.Temporary);
+			Directory.CreateDirectory(this.Caches);
+			Directory.CreateDirectory(this.Settings);
 		}
 	}
 }
