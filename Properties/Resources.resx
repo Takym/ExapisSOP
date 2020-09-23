@@ -120,6 +120,12 @@
   <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
     <value>CachedStream_ThrowOnOutOfRange</value>
   </data>
+  <data name="ConsoleUtils_Pause" xml:space="preserve">
+    <value>ConsoleUtils_Pause</value>
+  </data>
+  <data name="ConsoleUtils_ReadPassword" xml:space="preserve">
+    <value>ConsoleUtils_ReadPassword</value>
+  </data>
   <data name="DefaultHostRunner_Exception" xml:space="preserve">
     <value>DefaultHostRunner_Exception</value>
   </data>
@@ -143,6 +149,9 @@
   </data>
   <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
     <value>PathString_PlatformNotSupportedException</value>
+  </data>
+  <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
+    <value>SecureStringExtensions_SecurityException</value>
   </data>
   <data name="TerminationException" xml:space="preserve">
     <value>TerminationException</value>

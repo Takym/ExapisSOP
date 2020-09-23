@@ -70,6 +70,24 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   ConsoleUtils_Pause に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ConsoleUtils_Pause {
+            get {
+                return ResourceManager.GetString("ConsoleUtils_Pause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ConsoleUtils_ReadPassword に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ConsoleUtils_ReadPassword {
+            get {
+                return ResourceManager.GetString("ConsoleUtils_ReadPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   DefaultHostRunner_Exception に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DefaultHostRunner_Exception {
@@ -138,6 +156,15 @@ namespace ExapisSOP.Properties {
         internal static string PathString_PlatformNotSupportedException {
             get {
                 return ResourceManager.GetString("PathString_PlatformNotSupportedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SecureStringExtensions_SecurityException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SecureStringExtensions_SecurityException {
+            get {
+                return ResourceManager.GetString("SecureStringExtensions_SecurityException", resourceCulture);
             }
         }
         
