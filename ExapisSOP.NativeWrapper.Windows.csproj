@@ -1,44 +1,54 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<AssemblyName>ExapisSOP.DemoApp</AssemblyName>
-		<OutputType>Exe</OutputType>
-		<DocumentationFile>ExapisSOP.DemoApp.xml</DocumentationFile>
+		<AssemblyName>ExapisSOP.NativeWrapper.Windows</AssemblyName>
+		<OutputType>Library</OutputType>
+		<DocumentationFile>ExapisSOP.NativeWrapper.Windows.xml</DocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoWarn>CS1591;CS1701;CS1702</NoWarn>
 	</PropertyGroup>
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
-		<ProjectReference Include="ExapisSOP.NativeWrapper.Windows.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
 		<EmbeddedResource Remove="_SystemAttributes\*" />
 		<EmbeddedResource Remove="_TopLevelNS\*" />
 		<EmbeddedResource Remove="Core\*" />
+		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
-		<EmbeddedResource Remove="NativeWrapper\*" />
-		<EmbeddedResource Remove="NativeWrapper\*\*" />
 		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
 		<Compile Remove="_TopLevelNS\*" />
 		<Compile Remove="Core\*" />
+		<Compile Remove="DemoApp\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
-		<Compile Remove="NativeWrapper\*" />
-		<Compile Remove="NativeWrapper\*\*" />
 		<Compile Remove="Utils\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
 		<None Remove="_TopLevelNS\*" />
 		<None Remove="Core\*" />
+		<None Remove="DemoApp\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
-		<None Remove="NativeWrapper\*" />
-		<None Remove="NativeWrapper\*\*" />
 		<None Remove="Utils\*" />
 		<None Remove="ExapisSOP.xml" />
-		<None Remove="ExapisSOP.NativeWrapper.Windows.xml" />
-		<Content Include="ExapisSOP.DemoApp.xml">
+		<None Remove="ExapisSOP.DemoApp.xml" />
+		<Content Include="ExapisSOP.NativeWrapper.Windows.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="NativeWrapper\WinRes.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>WinRes.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<Compile Update="NativeWrapper\WinRes.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>WinRes.resx</DependentUpon>
+		</Compile>
+		<Compile Remove="NativeWrapper\INativeCaller.cs" />
 	</ItemGroup>
 </Project>

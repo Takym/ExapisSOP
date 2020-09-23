@@ -4,15 +4,19 @@
 		<OutputType>Library</OutputType>
 		<DocumentationFile>ExapisSOP.xml</DocumentationFile>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(TargetFramework)'=='net48'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	</PropertyGroup>
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
 		<EmbeddedResource Remove="DemoApp\*" />
+		<EmbeddedResource Remove="NativeWrapper\*" />
+		<EmbeddedResource Remove="NativeWrapper\*\*" />
 		<Compile Remove="DemoApp\*" />
+		<Compile Remove="NativeWrapper\*" />
+		<Compile Remove="NativeWrapper\*\*" />
 		<None Remove="DemoApp\*" />
+		<None Remove="NativeWrapper\*" />
+		<None Remove="NativeWrapper\*\*" />
 		<None Remove="ExapisSOP.DemoApp.xml" />
+		<None Remove="ExapisSOP.NativeWrapper.Windows.xml" />
 		<Content Include="ExapisSOP.xml">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
@@ -27,5 +31,6 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>Resources.resx</DependentUpon>
 		</Compile>
+		<Compile Include="NativeWrapper\INativeCaller.cs" />
 	</ItemGroup>
 </Project>

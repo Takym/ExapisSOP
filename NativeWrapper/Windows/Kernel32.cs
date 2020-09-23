@@ -5,33 +5,21 @@
  * distributed under the MIT License.
 ****/
 
-#if NET48
 using System;
 using System.Runtime.InteropServices;
 
-namespace ExapisSOP.Utils
+namespace ExapisSOP.NativeWrapper.Windows
 {
 	/// <summary>
-	///  ネイティブコードを呼び出します。
+	///  <see langword="kernel32.dll"/>内のプログラムを呼び出します。
+	///  このクラスは静的です。
 	/// </summary>
-	internal unsafe static class Native
+	public static class Kernel32
 	{
-		public const string Kernel32 = "C:\\Windows\\System32\\kernel32.dll";
-
-		public static string? GetErrorMessage(int hResult)
-		{
-			var lpBuf = IntPtr.Zero;
-			FormatMessageW(
-				FORMAT_MESSAGE_ALLOCATE_BUFFER |
-				FORMAT_MESSAGE_FROM_SYSTEM |
-				FORMAT_MESSAGE_IGNORE_INSERTS,
-				IntPtr.Zero,
-				unchecked((uint)(hResult)),
-				MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-				new IntPtr(&lpBuf),
-				0, IntPtr.Zero);
-			return Marshal.PtrToStringUni(lpBuf)?.Trim();
-		}
+		/// <summary>
+		///  <see langword="kernel32.dll"/>への絶対パスを取得します。
+		/// </summary>
+		public const string Path = "C:\\Windows\\System32\\kernel32.dll";
 
 		public const ushort LANG_NEUTRAL    = 0x00;
 		public const ushort SUBLANG_DEFAULT = 0x01;
@@ -53,7 +41,7 @@ namespace ExapisSOP.Utils
 		//   DWORD   nSize,
 		//   va_list *Arguments
 		// );
-		[DllImport(Kernel32)]
+		[DllImport(Path)]
 		public static extern uint FormatMessageW(
 			uint   dwFlags,
 			IntPtr lpSource,
@@ -65,20 +53,19 @@ namespace ExapisSOP.Utils
 		);
 
 		// _Post_equals_last_error_ DWORD GetLastError();
-		[DllImport(Kernel32)]
+		[DllImport(Path)]
 		public static extern int GetLastError();
 
 		// BOOL WINAPI AllocConsole(void);
-		[DllImport(Kernel32)]
+		[DllImport(Path)]
 		public static extern bool AllocConsole();
 
 		// BOOL WINAPI FreeConsole(void);
-		[DllImport(Kernel32)]
+		[DllImport(Path)]
 		public static extern bool FreeConsole();
 
 		// HWND WINAPI GetConsoleWindow(void);
-		[DllImport(Kernel32)]
+		[DllImport(Path)]
 		public static extern IntPtr GetConsoleWindow();
 	}
 }
-#endif

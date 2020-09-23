@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ExapisSOP.ProjectSettings.csproj = ExapisSOP.ProjectSettings.csproj
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.NativeWrapper.Windows", "ExapisSOP.NativeWrapper.Windows.csproj", "{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,13 +31,17 @@ Global
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_Rules = {"EnabledRules":[]}
-		RESX_NeutralResourcesLanguage = iv-IV
 		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
+		RESX_NeutralResourcesLanguage = iv-IV
+		RESX_Rules = {"EnabledRules":[]}
 	EndGlobalSection
 EndGlobal

@@ -10,6 +10,7 @@ using System.Security;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.IO;
+using ExapisSOP.NativeWrapper;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.DemoApp
