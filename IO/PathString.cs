@@ -459,11 +459,10 @@ namespace ExapisSOP.IO
 		public string ToString(string? format, IFormatProvider? formatProvider)
 		{
 			formatProvider ??= new PathStringFormatter();
-			var formatter = formatProvider.GetFormat(typeof(PathStringFormatter)) as PathStringFormatter;
-			if (formatter == null) {
-				return this.ToString();
-			} else {
+			if (formatProvider.GetFormat(typeof(PathStringFormatter)) is PathStringFormatter formatter) {
 				return formatter.Format(format, this, formatProvider);
+			} else {
+				return this.ToString();
 			}
 		}
 
@@ -643,7 +642,7 @@ namespace ExapisSOP.IO
 		///  パス文字列を通常の文字列へ暗黙的に変換(キャスト)します。
 		/// </summary>
 		/// <param name="path">通常の文字列へ変換するパス文字列です。</param>
-		public static implicit operator string(PathString path) => path._path;
+		public static implicit operator string(PathString? path) => path?._path ?? string.Empty;
 
 		/// <summary>
 		///  通常の文字列をパス文字列へ明示的に変換(キャスト)します。

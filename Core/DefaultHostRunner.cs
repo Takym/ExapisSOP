@@ -29,11 +29,17 @@ namespace ExapisSOP.Core
 		public override async Task<int> RunAsync()
 		{
 			try {
+				int ret = 0;
 				await (this.ConfigureCallBackFunc?.Invoke(_config) ?? Task.CompletedTask);
-				await this.InitializationPhase();
-				_initContext!.ToString(); // nullチェック // 確実に通る
-				int ret = await this.MainEventLoopPhase();
-				await this.FinalizationPhase();
+				try {
+					await this.InitializationPhase();
+					_initContext!.ToString(); // nullチェック // 確実に通る
+					ret = await this.MainEventLoopPhase();
+				} catch (Exception e) {
+					throw new Exception(Resources.DefaultHostRunner_Exception, e);
+				} finally {
+					await this.FinalizationPhase();
+				}
 				return ret;
 			} catch (Exception e) {
 				throw new Exception(Resources.DefaultHostRunner_Exception, e);
@@ -58,52 +64,55 @@ namespace ExapisSOP.Core
 			try {
 				int  ret  = 0;
 				bool loop = true;
-				context = new EventLoopContext(this, _initContext!);
-				for (int i = 0; i < _app_workers.Count; ++i) {
-					var task = Task.CompletedTask;
-					try {
-						await (task = _app_workers[i].OnStartup(context));
-					} catch (TerminationException) {
-						loop = false;
-					} catch (Exception e) {
-						if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
-							ret = e.HResult;
-							if (ret == 0) ret = -1;
-							break;
-						}
-					}
-				}
-				while (loop) {
-					context = new EventLoopContext(this, context);
+				try {
+					context = new EventLoopContext(this, _initContext!);
 					for (int i = 0; i < _app_workers.Count; ++i) {
 						var task = Task.CompletedTask;
 						try {
-							await (task = _app_workers[i].OnUpdate(context));
+							await (task = _app_workers[i].OnStartup(context));
 						} catch (TerminationException) {
 							loop = false;
-							break;
 						} catch (Exception e) {
 							if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
-								ret  = e.HResult;
-								loop = false;
+								ret = e.HResult;
 								if (ret == 0) ret = -1;
 								break;
 							}
 						}
 					}
-				}
-				context = new EventLoopContext(this, context);
-				for (int i = _app_workers.Count - 1; i >= 0; --i) {
-					var task = Task.CompletedTask;
-					try {
-						await (task = _app_workers[i].OnShutdown(context));
-					} catch (TerminationException) {
-						// do nothing, ignore
-					} catch (Exception e) {
-						if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
-							ret = e.HResult;
-							if (ret == 0) ret = -1;
-							break;
+					while (loop) {
+						context = new EventLoopContext(this, context);
+						for (int i = 0; i < _app_workers.Count; ++i) {
+							var task = Task.CompletedTask;
+							try {
+								await (task = _app_workers[i].OnUpdate(context));
+							} catch (TerminationException) {
+								loop = false;
+								break;
+							} catch (Exception e) {
+								if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
+									ret = e.HResult;
+									loop = false;
+									if (ret == 0) ret = -1;
+									break;
+								}
+							}
+						}
+					}
+				} finally {
+					context = new EventLoopContext(this, ((IContext?)(context)) ?? _initContext!);
+					for (int i = _app_workers.Count - 1; i >= 0; --i) {
+						var task = Task.CompletedTask;
+						try {
+							await (task = _app_workers[i].OnShutdown(context));
+						} catch (TerminationException) {
+							// do nothing, ignore
+						} catch (Exception e) {
+							if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
+								ret = e.HResult;
+								if (ret == 0) ret = -1;
+								break;
+							}
 						}
 					}
 				}

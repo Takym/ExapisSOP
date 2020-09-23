@@ -123,6 +123,9 @@
   <data name="DefaultHostRunner_Exception" xml:space="preserve">
     <value>DefaultHostRunner_Exception</value>
   </data>
+  <data name="EventLoopContext_ArgumentException" xml:space="preserve">
+    <value>EventLoopContext_ArgumentException</value>
+  </data>
   <data name="EventLoopContext_InvalidOperationException" xml:space="preserve">
     <value>EventLoopContext_InvalidOperationException</value>
   </data>

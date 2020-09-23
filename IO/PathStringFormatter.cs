@@ -165,11 +165,10 @@ namespace ExapisSOP.IO
 				}
 				return formatted.ToString();
 			} else {
-				var formattable = arg as IFormattable;
-				if (formattable == null) {
-					return arg?.ToString() ?? string.Empty;
-				} else {
+				if (arg is IFormattable formattable) {
 					return formattable.ToString(format, formatProvider ?? _provider) ?? string.Empty;
+				} else {
+					return arg?.ToString() ?? string.Empty;
 				}
 			}
 		}

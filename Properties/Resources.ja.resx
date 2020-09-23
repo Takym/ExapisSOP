@@ -147,4 +147,7 @@
   <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
     <value>渡された引数がバッファの範囲外です。</value>
   </data>
+  <data name="EventLoopContext_ArgumentException" xml:space="preserve">
+    <value>イベントループ文脈情報が正しく生成されませんでした。指定された文脈は不正です。</value>
+  </data>
 </root>

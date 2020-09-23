@@ -6,6 +6,7 @@
 ****/
 
 using System;
+using System.Diagnostics.Contracts;
 using ExapisSOP.IO;
 using ExapisSOP.Properties;
 using ExapisSOP.Utils;
@@ -18,29 +19,31 @@ namespace ExapisSOP.Core
 		internal readonly InitFinalContext  _init;
 		private           EventLoopContext? _prev;
 		private           object?           _msg;
-		public            IPathList?        Paths { get; internal set; }
+		public            IPathList?        Paths { get; }
 
-		internal EventLoopContext(DefaultHostRunner runner, InitFinalContext initContext)
+		internal EventLoopContext(DefaultHostRunner runner, IContext context)
 		{
-			_runner    = runner;
-			_init      = initContext;
-			_msg       = initContext.GetMessage();
-			this.Paths = initContext.Paths;
-			if (initContext?.IsFinalizationPhase() ?? false) {
-				throw new InvalidOperationException(Resources.EventLoopContext_InvalidOperationException);
+			_runner = runner  ?? throw new ArgumentNullException(nameof(runner));
+			context = context ?? throw new ArgumentNullException(nameof(context));
+			if (context is InitFinalContext initContext) {
+				_init      = initContext;
+				_msg       = initContext.GetMessage();
+				this.Paths = initContext.Paths;
+				if (initContext?.IsFinalizationPhase() ?? false) {
+					throw new InvalidOperationException(Resources.EventLoopContext_InvalidOperationException);
+				}
+			} else if (context is EventLoopContext prevContext) {
+				_init      = prevContext._init;
+				_prev      = prevContext;
+				_msg       = prevContext._msg;
+				this.Paths = prevContext.Paths;
+
+				// 2つ前の文脈情報を削除してメモリ節約
+				prevContext._prev?.Dispose();
+				prevContext._prev = null;
+			} else {
+				throw new ArgumentException(Resources.EventLoopContext_ArgumentException, nameof(context));
 			}
-		}
-
-		internal EventLoopContext(DefaultHostRunner runner, EventLoopContext prevContext)
-		{
-			_runner         = runner;
-			_init           = prevContext._init;
-			_prev           = prevContext;
-			_msg            = prevContext._msg;
-
-			// 2つ前の文脈情報を削除してメモリ節約
-			prevContext._prev?.Dispose();
-			prevContext._prev = null;
 		}
 
 		internal EventLoopContext? GetPrev()

@@ -2,6 +2,8 @@
 	<PropertyGroup>
 		<RootNamespace>ExapisSOP</RootNamespace>
 		<TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+		<RuntimeIdentifiers>any;win7-x86</RuntimeIdentifiers>
+		<!-- win7-86 is to suppress a build error. -->
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -39,6 +41,7 @@
 		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
 	<ItemGroup>
+		<None Remove=".editorconfig" />
 		<None Remove=".gitattributes" />
 		<None Remove=".gitignore" />
 	</ItemGroup>

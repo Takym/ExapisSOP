@@ -79,6 +79,15 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   EventLoopContext_ArgumentException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string EventLoopContext_ArgumentException {
+            get {
+                return ResourceManager.GetString("EventLoopContext_ArgumentException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   EventLoopContext_InvalidOperationException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string EventLoopContext_InvalidOperationException {

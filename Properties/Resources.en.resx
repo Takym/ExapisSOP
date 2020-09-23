@@ -147,4 +147,7 @@
   <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
     <value>The argument is out of the buffer.</value>
   </data>
+  <data name="EventLoopContext_ArgumentException" xml:space="preserve">
+    <value>Could not create a new instance of an event-loop context information object. The specified context is not valid.</value>
+  </data>
 </root>
