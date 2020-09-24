@@ -28,6 +28,39 @@ namespace ExapisSOP.IO
 		FileStream OpenDataFile(string name);
 
 		/// <summary>
+		///  ログファイルを開きます。
+		/// </summary>
+		/// <remarks>
+		///  閉じる時は<see cref="ExapisSOP.IO.IFileSystemService.CloseStream(Stream)"/>を呼び出してください。
+		/// </remarks>
+		/// <param name="name">開くログファイルの名前です。</param>
+		/// <returns>開いたファイルの読み書きを行うファイルストリームです。</returns>
+		/// <exception cref="System.IO.IOException" />
+		FileStream OpenLogFile(string name);
+
+		/// <summary>
+		///  一時ファイルを開きます。
+		/// </summary>
+		/// <remarks>
+		///  閉じる時は<see cref="ExapisSOP.IO.IFileSystemService.CloseStream(Stream)"/>を呼び出してください。
+		/// </remarks>
+		/// <param name="name">開く一時ファイルの名前です。</param>
+		/// <returns>開いたファイルの読み書きを行うファイルストリームです。</returns>
+		/// <exception cref="System.IO.IOException" />
+		FileStream OpenTempFile(string name);
+
+		/// <summary>
+		///  設定ファイルを開きます。
+		/// </summary>
+		/// <remarks>
+		///  閉じる時は<see cref="ExapisSOP.IO.IFileSystemService.CloseStream(Stream)"/>を呼び出してください。
+		/// </remarks>
+		/// <param name="name">開く設定ファイルの名前です。</param>
+		/// <returns>開いたファイルの読み書きを行うファイルストリームです。</returns>
+		/// <exception cref="System.IO.IOException" />
+		FileStream OpenSettingFile(string name);
+
+		/// <summary>
 		///  メモリを開きます。
 		/// </summary>
 		/// <remarks>

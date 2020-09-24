@@ -31,12 +31,18 @@ namespace ExapisSOP.IO
 		public override async Task InitializeAsync(IContext context)
 		{
 			await base.InitializeAsync(context);
+
+			// Load the options
 			var opt = new FileSystemServiceOptions();
 			await _options(opt);
 			_paths = new Paths(opt.DataPath);
+
+			// Set the path list to the context
 			if (context is InitFinalContext initContext && initContext.IsInitializationPhase()) {
 				initContext.Paths = _paths;
 			}
+
+			// Create and check the lock file
 			if (opt.CreateLockFile) {
 				_lockfile = _paths.DataRoot + ".lock";
 				if (_lockfile.Exists) {
@@ -57,10 +63,14 @@ namespace ExapisSOP.IO
 			}
 		}
 
-		public FileStream OpenDataFile(string name)
+		public  FileStream OpenDataFile   (string name) => this.OpenFileStreamPrivate(_paths.DataRoot  + name);
+		public  FileStream OpenLogFile    (string name) => this.OpenFileStreamPrivate(_paths.Logs      + name);
+		public  FileStream OpenTempFile   (string name) => this.OpenFileStreamPrivate(_paths.Temporary + name);
+		public  FileStream OpenSettingFile(string name) => this.OpenFileStreamPrivate(_paths.Settings  + name);
+		private FileStream OpenFileStreamPrivate(PathString path)
 		{
 			try {
-				var fs = new FileStream(_paths.DataRoot + name, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read);
+				var fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read);
 				lock (_streams) {
 					_streams.Add(fs);
 				}
@@ -114,7 +124,11 @@ namespace ExapisSOP.IO
 		public bool CloseStream(Stream s)
 		{
 			try {
-				if (_streams.Contains(s)) {
+				bool contains;
+				lock (_streams) {
+					contains = _streams.Contains(s);
+				}
+				if (contains) {
 					s.Close();
 					lock (_streams) {
 						return _streams.Remove(s);
@@ -133,7 +147,11 @@ namespace ExapisSOP.IO
 #if NET48
 				return await Task.FromResult(this.CloseStream(s));
 #elif NETCOREAPP3_1
-				if (_streams.Contains(s)) {
+				bool contains;
+				lock (_streams) {
+					contains = _streams.Contains(s);
+				}
+				if (contains) {
 					await s.DisposeAsync();
 					lock (_streams) {
 						return _streams.Remove(s);

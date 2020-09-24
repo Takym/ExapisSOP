@@ -51,6 +51,11 @@ namespace ExapisSOP.Core
 
 		public T? GetService<T>() where T : class, IService?
 		{
+			for (int i = 0; i < _runner._services.Count; ++i) {
+				if (_runner._services[i] is T result) {
+					return result;
+				}
+			}
 			return null;
 		}
 

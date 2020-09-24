@@ -8,6 +8,7 @@
 using System;
 using System.Threading.Tasks;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Settings;
 
 namespace ExapisSOP.Core
 {
@@ -25,7 +26,7 @@ namespace ExapisSOP.Core
 		/// </typeparam>
 		/// <param name="config">登録先の構成設定です。</param>
 		/// <returns>
-		///  <paramref name="config"/>、または、
+		///  <paramref name="config"/>そのもの、または、
 		///  指定された<see cref="ExapisSOP.AppWorker"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
 		/// <exception cref="System.MissingMemberException" />
@@ -43,7 +44,7 @@ namespace ExapisSOP.Core
 		/// </summary>
 		/// <param name="config">登録先の構成設定です。</param>
 		/// <returns>
-		///  <paramref name="config"/>、または、
+		///  <paramref name="config"/>そのもの、または、
 		///  <see cref="ExapisSOP.IO.IFileSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
 		public static IConfiguration AddFileSystem(this IConfiguration config)
@@ -57,12 +58,41 @@ namespace ExapisSOP.Core
 		/// <param name="config">登録先の構成設定です。</param>
 		/// <param name="callBackFunc">サービスの設定を行います。</param>
 		/// <returns>
-		///  <paramref name="config"/>、または、
+		///  <paramref name="config"/>そのもの、または、
 		///  <see cref="ExapisSOP.IO.IFileSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
 		public static IConfiguration AddFileSystem(this IConfiguration config, Func<FileSystemServiceOptions, Task> callBackFunc)
 		{
 			return config.AddService(new FileSystemService(callBackFunc));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>をサービスとして実行環境に登録します。
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>より後に登録しなければなりません。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		public static IConfiguration AddSettingsSystem(this IConfiguration config)
+		{
+			return config.AddService(new SettingsSystemService(_ => Task.CompletedTask));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>をサービスとして実行環境に登録します。
+		///  <see cref="ExapisSOP.IO.IFileSystemService"/>より後に登録しなければなりません。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <param name="callBackFunc">サービスの設定を行います。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		public static IConfiguration AddSettingsSystem(this IConfiguration config, Func<SettingsSystemServiceOptions, Task> callBackFunc)
+		{
+			return config.AddService(new SettingsSystemService(callBackFunc));
 		}
 	}
 }

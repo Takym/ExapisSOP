@@ -6,6 +6,7 @@
 ****/
 
 using ExapisSOP.IO;
+using ExapisSOP.IO.Settings;
 
 namespace ExapisSOP.Core
 {
@@ -81,6 +82,18 @@ namespace ExapisSOP.Core
 		public static IFileSystemService? GetFileSystem(this IContext context)
 		{
 			return context.GetService<IFileSystemService>();
+		}
+
+		/// <summary>
+		///  サービスリストから最初に見つかった<see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>を取得します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>を実装したサービスオブジェクトです。
+		/// </returns>
+		public static ISettingsSystemService? GetSettingsSystem(this IContext context)
+		{
+			return context.GetService<ISettingsSystemService>();
 		}
 	}
 }

@@ -11,6 +11,8 @@ using ExapisSOP.Properties;
 
 namespace ExapisSOP
 {
+	// TODO: 終了の種類追加
+
 	/// <summary>
 	///  処理を終了させる時に発生させます。
 	/// </summary>
