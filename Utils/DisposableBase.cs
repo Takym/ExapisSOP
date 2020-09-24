@@ -6,6 +6,7 @@
 ****/
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
 
@@ -16,6 +17,13 @@ namespace ExapisSOP.Utils
 	/// </summary>
 	public abstract class DisposableBase : IDisposable
 	{
+		private readonly List<IDisposable> _objs;
+
+		/// <summary>
+		///  破棄可能なオブジェクトを格納したリストを取得します。
+		/// </summary>
+		protected IList<IDisposable> DisposableObjects => _objs;
+
 		/// <summary>
 		///  このオブジェクトが破棄されている場合は<see langword="true"/>、有効な場合は<see langword="false"/>を返します。
 		/// </summary>
@@ -26,6 +34,7 @@ namespace ExapisSOP.Utils
 		/// </summary>
 		public DisposableBase()
 		{
+			_objs           = new List<IDisposable>();
 			this.IsDisposed = false;
 		}
 
@@ -35,6 +44,53 @@ namespace ExapisSOP.Utils
 		~DisposableBase()
 		{
 			this.Dispose(false);
+		}
+
+		/// <summary>
+		///  現在のインスタンスと<see cref="ExapisSOP.Utils.DisposableBase.DisposableObjects"/>が破棄されていない事を確認します。
+		///  実行速度を優先する場合は<see cref="ExapisSOP.Utils.DisposableBase.ThrowOnObjectDisposed"/>を呼び出してください。
+		/// </summary>
+		/// <remarks>
+		///  論理値を返す公開された<c>IsDisposed</c>が実装されていない場合、判定する事はできません。
+		/// </remarks>
+		/// <exception cref="System.ObjectDisposedException" />
+		[DebuggerHidden()]
+		[StackTraceHidden()]
+		protected void EnsureNotDisposed()
+		{
+			this.ThrowOnObjectDisposed();
+			for (int i = 0; i < _objs.Count; ++i) {
+				if (_objs[i] is DisposableBase disp) {
+					disp.EnsureNotDisposed();
+				} else {
+					var t = _objs[i]?.GetType();
+					if (t != null) {
+						var m = t.GetMember(nameof(this.IsDisposed));
+						for (int j = 0; j < m.Length; ++j) {
+							bool var  = m[j] is FieldInfo    fi && fi.FieldType    == typeof(bool) && (fi.GetValue(_objs[i])       as bool? ?? false);
+							bool prop = m[j] is PropertyInfo pi && pi.PropertyType == typeof(bool) && (pi.GetValue(_objs[i])       as bool? ?? false);
+							bool func = m[j] is MethodInfo   mi && mi.ReturnType   == typeof(bool) && (mi.Invoke  (_objs[i], null) as bool? ?? false);
+							if (var || prop || func) {
+								throw new ObjectDisposedException(t.Name);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		///  現在のインスタンスが破棄されている場合に例外を発生させます。
+		///  堅牢性を優先する場合は<see cref="ExapisSOP.Utils.DisposableBase.EnsureNotDisposed"/>を呼び出してください。
+		/// </summary>
+		/// <exception cref="System.ObjectDisposedException" />
+		[DebuggerHidden()]
+		[StackTraceHidden()]
+		protected void ThrowOnObjectDisposed()
+		{
+			if (this.IsDisposed) {
+				throw new ObjectDisposedException(this.GetType().Name);
+			}
 		}
 
 		/// <summary>
@@ -73,20 +129,14 @@ namespace ExapisSOP.Utils
 		protected virtual void Dispose(bool disposing)
 		{
 			if (!this.IsDisposed) {
+				if (disposing) {
+					for (int i = 0; i < _objs.Count; ++i) {
+						_objs[i]?.Dispose();
+					}
+				}
+				_objs.Clear();
+				_objs.Capacity = 0;
 				this.IsDisposed = true;
-			}
-		}
-
-		/// <summary>
-		///  現在のインスタンスが破棄されている場合に例外を発生させます。
-		/// </summary>
-		/// <exception cref="System.ObjectDisposedException" />
-		[DebuggerHidden()]
-		[StackTraceHidden()]
-		protected void ThrowOnObjectDisposed()
-		{
-			if (this.IsDisposed) {
-				throw new ObjectDisposedException(this.GetType().Name);
 			}
 		}
 
