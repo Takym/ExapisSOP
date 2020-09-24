@@ -20,7 +20,7 @@ namespace ExapisSOP.NativeWrapper
 	public interface INativeCaller
 	{
 		/// <summary>
-		///  Windows API の呼び出しが実行できる環境かどうか判定します。
+		///  ネイティブコードの呼び出しが実行できる環境かどうか判定します。
 		/// </summary>
 		/// <param name="reason">サポートされない場合、その理由を表す例外オブジェクトを返します。</param>
 		/// <returns>サポートされる場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
@@ -28,7 +28,7 @@ namespace ExapisSOP.NativeWrapper
 
 #if NETCOREAPP3_1
 		/// <summary>
-		///  Windows API の呼び出しが実行できる環境かどうか判定します。
+		///  ネイティブコードの呼び出しが実行できる環境かどうか判定します。
 		/// </summary>
 		/// <returns>サポートされる場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
 		public bool IsSupported()
@@ -74,7 +74,7 @@ namespace ExapisSOP.NativeWrapper
 		}
 
 		/// <summary>
-		///  Windows API の呼び出しが実行できる環境かどうか判定します。
+		///  ネイティブコードの呼び出しが実行できる環境かどうか判定します。
 		/// </summary>
 		/// <param name="nativeCaller">実際の処理を格納したオブジェクトです。</param>
 		/// <returns>サポートされる場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>

@@ -2,7 +2,6 @@
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP</AssemblyName>
 		<OutputType>Library</OutputType>
-		<DocumentationFile>ExapisSOP.xml</DocumentationFile>
 	</PropertyGroup>
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
@@ -15,11 +14,6 @@
 		<None Remove="DemoApp\*" />
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />
-		<None Remove="ExapisSOP.DemoApp.xml" />
-		<None Remove="ExapisSOP.NativeWrapper.Windows.xml" />
-		<Content Include="ExapisSOP.xml">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
 	</ItemGroup>
 	<ItemGroup>
 		<EmbeddedResource Update="Properties\Resources.resx">

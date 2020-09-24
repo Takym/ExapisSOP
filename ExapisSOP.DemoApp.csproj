@@ -2,7 +2,6 @@
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP.DemoApp</AssemblyName>
 		<OutputType>Exe</OutputType>
-		<DocumentationFile>ExapisSOP.DemoApp.xml</DocumentationFile>
 	</PropertyGroup>
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
@@ -35,10 +34,5 @@
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />
 		<None Remove="Utils\*" />
-		<None Remove="ExapisSOP.xml" />
-		<None Remove="ExapisSOP.NativeWrapper.Windows.xml" />
-		<Content Include="ExapisSOP.DemoApp.xml">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
 	</ItemGroup>
 </Project>

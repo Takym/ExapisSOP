@@ -2,7 +2,6 @@
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP.NativeWrapper.Windows</AssemblyName>
 		<OutputType>Library</OutputType>
-		<DocumentationFile>ExapisSOP.NativeWrapper.Windows.xml</DocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<NoWarn>CS1591;CS1701;CS1702</NoWarn>
 	</PropertyGroup>
@@ -33,11 +32,6 @@
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
 		<None Remove="Utils\*" />
-		<None Remove="ExapisSOP.xml" />
-		<None Remove="ExapisSOP.DemoApp.xml" />
-		<Content Include="ExapisSOP.NativeWrapper.Windows.xml">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
 	</ItemGroup>
 	<ItemGroup>
 		<EmbeddedResource Update="NativeWrapper\WinRes.resx">
