@@ -10,15 +10,12 @@ using System.Security;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.IO;
-using ExapisSOP.IO.Settings;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.DemoApp
 {
 	internal sealed class Program : AppWorker
 	{
-		private readonly SecureString _correct_password = new SecureString();
-
 		public override async Task InitializeAsync(IContext context)
 		{
 			this.Startup  += this.Program_Startup;
@@ -31,28 +28,18 @@ namespace ExapisSOP.DemoApp
 		{
 			Console.WriteLine(VersionInfo.Caption);
 			Console.WriteLine(VersionInfo.Copyright);
-			ConsoleUtils.WriteHorizontalRule();
-			_correct_password.AppendChar('e');
-			_correct_password.AppendChar('x');
-			_correct_password.AppendChar('i');
-			_correct_password.AppendChar('t');
-			_correct_password.MakeReadOnly();
+			ConsoleUtil.WriteHorizontalRule();
 		}
 
 		private void Program_Update(object? sender, ContextEventArgs e)
 		{
-			using (var pass = ConsoleUtils.ReadPassword()) {
-				if (pass.IsEqualWith(_correct_password) && ConsoleUtils.ReadYesNo("Close?")) {
-					ConsoleUtils.WriteHorizontalRule('-');
-					throw new TerminationException();
-				}
-			}
+			Console.WriteLine("Hello, World!!");
+			throw new TerminationException();
 		}
 
 		private void Program_Shutdown(object? sender, ContextEventArgs e)
 		{
-			_correct_password.Dispose();
-			ConsoleUtils.Pause();
+			ConsoleUtil.Pause();
 		}
 
 		[STAThread()]

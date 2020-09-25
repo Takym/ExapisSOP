@@ -70,20 +70,20 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
-        ///   ConsoleUtils_Pause に類似しているローカライズされた文字列を検索します。
+        ///   ConsoleUtil_Pause に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ConsoleUtils_Pause {
+        internal static string ConsoleUtil_Pause {
             get {
-                return ResourceManager.GetString("ConsoleUtils_Pause", resourceCulture);
+                return ResourceManager.GetString("ConsoleUtil_Pause", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   ConsoleUtils_ReadPassword に類似しているローカライズされた文字列を検索します。
+        ///   ConsoleUtil_ReadPassword に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ConsoleUtils_ReadPassword {
+        internal static string ConsoleUtil_ReadPassword {
             get {
-                return ResourceManager.GetString("ConsoleUtils_ReadPassword", resourceCulture);
+                return ResourceManager.GetString("ConsoleUtil_ReadPassword", resourceCulture);
             }
         }
         

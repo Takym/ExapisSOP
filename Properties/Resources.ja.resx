@@ -150,10 +150,10 @@
   <data name="EventLoopContext_ArgumentException" xml:space="preserve">
     <value>イベントループ文脈情報が正しく生成されませんでした。指定された文脈は不正です。</value>
   </data>
-  <data name="ConsoleUtils_Pause" xml:space="preserve">
+  <data name="ConsoleUtil_Pause" xml:space="preserve">
     <value>続行するには何かキーを押してください...</value>
   </data>
-  <data name="ConsoleUtils_ReadPassword" xml:space="preserve">
+  <data name="ConsoleUtil_ReadPassword" xml:space="preserve">
     <value>パスワードを入力してください：</value>
   </data>
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">

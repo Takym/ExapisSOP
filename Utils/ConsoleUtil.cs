@@ -15,14 +15,14 @@ namespace ExapisSOP.Utils
 	///  標準入出力ストリームをより便利に扱う為の機能を提供します。
 	///  このクラスは静的です。
 	/// </summary>
-	public static class ConsoleUtils
+	public static class ConsoleUtil
 	{
 		/// <summary>
 		///  利用者がキーを押すまでプログラムの処理を中断します。
 		/// </summary>
 		public static void Pause()
 		{
-			Console.Write(Resources.ConsoleUtils_Pause);
+			Console.Write(Resources.ConsoleUtil_Pause);
 			Console.Write(' ');
 			Console.ReadKey(true);
 			Console.WriteLine();
@@ -53,7 +53,7 @@ namespace ExapisSOP.Utils
 		public static SecureString ReadPassword(char secretChar = '*')
 		{
 			var ss = new SecureString();
-			Console.Write(Resources.ConsoleUtils_ReadPassword);
+			Console.Write(Resources.ConsoleUtil_ReadPassword);
 			Console.Write(' ');
 			while (true) {
 				var cki = Console.ReadKey(true);

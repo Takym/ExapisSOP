@@ -120,11 +120,11 @@
   <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
     <value>CachedStream_ThrowOnOutOfRange</value>
   </data>
-  <data name="ConsoleUtils_Pause" xml:space="preserve">
-    <value>ConsoleUtils_Pause</value>
+  <data name="ConsoleUtil_Pause" xml:space="preserve">
+    <value>ConsoleUtil_Pause</value>
   </data>
-  <data name="ConsoleUtils_ReadPassword" xml:space="preserve">
-    <value>ConsoleUtils_ReadPassword</value>
+  <data name="ConsoleUtil_ReadPassword" xml:space="preserve">
+    <value>ConsoleUtil_ReadPassword</value>
   </data>
   <data name="DefaultHostRunner_Exception" xml:space="preserve">
     <value>DefaultHostRunner_Exception</value>
