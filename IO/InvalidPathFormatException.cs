@@ -18,6 +18,8 @@ namespace ExapisSOP.IO
 	[Serializable()]
 	public class InvalidPathFormatException : IOException
 	{
+		private const string PREFIX = "InvalidPathFormat";
+
 		/// <summary>
 		///  この例外の原因となった無効なパス文字列を取得します。
 		/// </summary>
@@ -52,7 +54,7 @@ namespace ExapisSOP.IO
 		protected InvalidPathFormatException(SerializationInfo info, StreamingContext context)
 			: base(info, context)
 		{
-			this.InvalidPath = info.GetString(nameof(this.InvalidPath));
+			this.InvalidPath = info.GetString($"{PREFIX}_{nameof(this.InvalidPath)}");
 		}
 
 		/// <summary>
@@ -63,7 +65,7 @@ namespace ExapisSOP.IO
 		public override void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
 			base.GetObjectData(info, context);
-			info.AddValue(nameof(this.InvalidPath), this.InvalidPath);
+			info.AddValue($"{PREFIX}_{nameof(this.InvalidPath)}", this.InvalidPath);
 		}
 	}
 }

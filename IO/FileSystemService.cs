@@ -8,8 +8,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
+using ExapisSOP.Properties;
 
 namespace ExapisSOP.IO
 {
@@ -59,7 +61,10 @@ namespace ExapisSOP.IO
 		{
 			base.OnStartup(e);
 			if (_abort) {
-				throw new TerminationException();
+				throw new TerminationException(
+					string.Format(Resources.FileSystemService_TerminationException, _lockfile),
+					TerminationReason.ProcessLocked,
+					CancellationToken.None);
 			}
 		}
 

@@ -159,4 +159,13 @@
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
     <value>セキュリティで保護された文字列の比較時に未知のエラーが発生しました。</value>
   </data>
+  <data name="FileSystemService_TerminationException" xml:space="preserve">
+    <value>ロックファイルが既に存在しアクセスが拒否されています。ロックファイルへのパス：「{0}」</value>
+  </data>
+  <data name="SettingsSystemService_TerminationException1" xml:space="preserve">
+    <value>ファイルシステム管理サービスが正常に初期化されていないか、設定情報に互換性がありません。</value>
+  </data>
+  <data name="SettingsSystemService_TerminationException2" xml:space="preserve">
+    <value>設定情報の互換性が失われました。</value>
+  </data>
 </root>

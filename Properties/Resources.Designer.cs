@@ -115,6 +115,15 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   FileSystemService_TerminationException {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FileSystemService_TerminationException {
+            get {
+                return ResourceManager.GetString("FileSystemService_TerminationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HostRunner_Create_ArgumentException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HostRunner_Create_ArgumentException {
@@ -165,6 +174,24 @@ namespace ExapisSOP.Properties {
         internal static string SecureStringExtensions_SecurityException {
             get {
                 return ResourceManager.GetString("SecureStringExtensions_SecurityException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SettingsSystemService_TerminationException1 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsSystemService_TerminationException1 {
+            get {
+                return ResourceManager.GetString("SettingsSystemService_TerminationException1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SettingsSystemService_TerminationException2 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsSystemService_TerminationException2 {
+            get {
+                return ResourceManager.GetString("SettingsSystemService_TerminationException2", resourceCulture);
             }
         }
         

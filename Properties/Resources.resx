@@ -135,6 +135,9 @@
   <data name="EventLoopContext_InvalidOperationException" xml:space="preserve">
     <value>EventLoopContext_InvalidOperationException</value>
   </data>
+  <data name="FileSystemService_TerminationException" xml:space="preserve">
+    <value>FileSystemService_TerminationException {0}</value>
+  </data>
   <data name="HostRunner_Create_ArgumentException" xml:space="preserve">
     <value>HostRunner_Create_ArgumentException</value>
   </data>
@@ -152,6 +155,12 @@
   </data>
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
     <value>SecureStringExtensions_SecurityException</value>
+  </data>
+  <data name="SettingsSystemService_TerminationException1" xml:space="preserve">
+    <value>SettingsSystemService_TerminationException1</value>
+  </data>
+  <data name="SettingsSystemService_TerminationException2" xml:space="preserve">
+    <value>SettingsSystemService_TerminationException2</value>
   </data>
   <data name="TerminationException" xml:space="preserve">
     <value>TerminationException</value>

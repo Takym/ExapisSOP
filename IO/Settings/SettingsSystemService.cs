@@ -9,10 +9,12 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using ExapisSOP.Core;
+using ExapisSOP.Properties;
 
 namespace ExapisSOP.IO.Settings
 {
@@ -73,7 +75,21 @@ namespace ExapisSOP.IO.Settings
 		{
 			base.OnStartup(e);
 			if (_abort) {
-				throw new TerminationException();
+				throw new TerminationException(
+					Resources.SettingsSystemService_TerminationException1,
+					TerminationReason.NoCompatible,
+					CancellationToken.None);
+			}
+		}
+
+		protected override void OnUpdate(ContextEventArgs e)
+		{
+			base.OnUpdate(e);
+			if (_abort) {
+				throw new TerminationException(
+					Resources.SettingsSystemService_TerminationException2,
+					TerminationReason.NoCompatible,
+					CancellationToken.None);
 			}
 		}
 
@@ -98,7 +114,7 @@ namespace ExapisSOP.IO.Settings
 				firstBoot = true;
 				await this.WriteSavedVersion();
 			} else if (!_options.HasCompatibleWith(appversion, appcodename) ||
-				libversion != VersionInfo.VersionString ||
+				libversion  != VersionInfo.VersionString ||
 				libcodename != VersionInfo.CodeName) {
 				_abort = true;
 				return;

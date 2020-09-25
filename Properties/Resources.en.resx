@@ -159,4 +159,13 @@
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
     <value>The unexpected exception occurred when comparing secure strings.</value>
   </data>
+  <data name="FileSystemService_TerminationException" xml:space="preserve">
+    <value>The lock file already exists and denies access. The path to lock file: "{0}"</value>
+  </data>
+  <data name="SettingsSystemService_TerminationException1" xml:space="preserve">
+    <value>The file system management service is not initialized, or the settings files have no compatible.</value>
+  </data>
+  <data name="SettingsSystemService_TerminationException2" xml:space="preserve">
+    <value>The settings files lost compatible.</value>
+  </data>
 </root>
