@@ -116,18 +116,6 @@ namespace ExapisSOP.IO.Settings
 
 		private void EnsureStreams()
 		{
-#if false
-			if (_ver == null) {
-				_ver = _fss!.OpenSettingFile("last_saved_version.txt");
-				_ver_r = new StreamReader(_ver, true);
-				_ver_w = new StreamWriter(_ver, _ver_r.CurrentEncoding);
-			}
-			if (_env == null) {
-				_env = _fss!.OpenSettingFile("envconfig.xml");
-			}
-			_ver.Seek(0, SeekOrigin.Begin);
-			_env.Seek(0, SeekOrigin.Begin);
-#else
 			if (_ver == null) {
 				_ver = _fss?.OpenSettingFile("last_saved_version.txt");
 				if (_ver != null) {
@@ -140,7 +128,6 @@ namespace ExapisSOP.IO.Settings
 			}
 			_ver?.Seek(0, SeekOrigin.Begin);
 			_env?.Seek(0, SeekOrigin.Begin);
-#endif
 		}
 
 		private async Task WriteSavedVersion()
@@ -155,17 +142,12 @@ namespace ExapisSOP.IO.Settings
 
 		private async Task DisposeStreams()
 		{
-#if false
-			await _fss!.CloseStreamAsync(_ver!);
-			await _fss!.CloseStreamAsync(_env!);
-#else
 			if (_ver != null) {
 				await (_fss?.CloseStreamAsync(_ver) ?? Task.FromResult(false));
 			}
 			if (_env != null) {
 				await (_fss?.CloseStreamAsync(_env) ?? Task.FromResult(false));
 			}
-#endif
 		}
 	}
 }
