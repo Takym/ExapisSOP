@@ -30,8 +30,12 @@ namespace ExapisSOP.Core
 		///  指定された<see cref="ExapisSOP.AppWorker"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
 		/// <exception cref="System.MissingMemberException" />
+		/// <exception cref="System.ArgumentNullException" />
 		public static IConfiguration AddAppWorker<TAppWorker>(this IConfiguration config) where TAppWorker : AppWorker
 		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
 			try {
 				return config.AddService(Activator.CreateInstance<TAppWorker>());
 			} catch (MissingMethodException mme) {
@@ -47,8 +51,12 @@ namespace ExapisSOP.Core
 		///  <paramref name="config"/>そのもの、または、
 		///  <see cref="ExapisSOP.IO.IFileSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
 		public static IConfiguration AddFileSystem(this IConfiguration config)
 		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
 			return config.AddService(new FileSystemService(_ => Task.CompletedTask));
 		}
 
@@ -61,8 +69,15 @@ namespace ExapisSOP.Core
 		///  <paramref name="config"/>そのもの、または、
 		///  <see cref="ExapisSOP.IO.IFileSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
 		public static IConfiguration AddFileSystem(this IConfiguration config, Func<FileSystemServiceOptions, Task> callBackFunc)
 		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			if (callBackFunc == null) {
+				throw new ArgumentNullException(nameof(callBackFunc));
+			}
 			return config.AddService(new FileSystemService(callBackFunc));
 		}
 
@@ -75,8 +90,12 @@ namespace ExapisSOP.Core
 		///  <paramref name="config"/>そのもの、または、
 		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
 		public static IConfiguration AddSettingsSystem(this IConfiguration config)
 		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
 			return config.AddService(new SettingsSystemService(_ => Task.CompletedTask));
 		}
 
@@ -90,8 +109,15 @@ namespace ExapisSOP.Core
 		///  <paramref name="config"/>そのもの、または、
 		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
 		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
 		public static IConfiguration AddSettingsSystem(this IConfiguration config, Func<SettingsSystemServiceOptions, Task> callBackFunc)
 		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			if (callBackFunc == null) {
+				throw new ArgumentNullException(nameof(callBackFunc));
+			}
 			return config.AddService(new SettingsSystemService(callBackFunc));
 		}
 	}
