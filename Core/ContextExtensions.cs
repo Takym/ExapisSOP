@@ -5,6 +5,7 @@
  * distributed under the MIT License.
 ****/
 
+using System.Collections.Generic;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Settings;
 
@@ -83,6 +84,49 @@ namespace ExapisSOP.Core
 				return eventLoopContext.GetPrev();
 			} else {
 				return null;
+			}
+		}
+
+		/// <summary>
+		///  文脈情報からメッセージデータを取得します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <param name="key">メッセージデータに関連付けられている名前です。</param>
+		/// <returns>文脈情報に登録されているオブジェクト、または、存在しない場合は<see langword="null"/>を返します。</returns>
+		public static object? GetData(this IContext context, string key)
+		{
+			if (context.GetMessage() is IDictionary<string, object> dict) {
+				dict.TryGetValue(key, out object? result);
+				return result;
+			} else {
+				return null;
+			}
+		}
+
+		/// <summary>
+		///  文脈情報に指定されたメッセージデータを設定します。
+		///  辞書以外のオブジェクトが設定されている場合は上書きされます。
+		///  <paramref name="value"/>が<see langword="null"/>の場合、値は削除されます。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <param name="key">メッセージデータに関連付ける名前です。</param>
+		/// <param name="value">メッセージデータの値です。</param>
+		public static void SetData(this IContext context, string key, object? value)
+		{
+			if (context.GetMessage() is IDictionary<string, object> dict) {
+				if (value == null) {
+					dict.Remove(key);
+				} else {
+					if (dict.ContainsKey(key)) {
+						dict[key] = value;
+					} else {
+						dict.Add(key, value);
+					}
+				}
+			} else if (value != null) {
+				var newdict = new Dictionary<string, object>();
+				newdict.Add(key, value);
+				context.SetMessage(newdict);
 			}
 		}
 
