@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xsd:schema>
+<!--
+	ExapisSOP
+	Copyright (C) 2020 Takym.
+
+	distributed under the MIT License.
+-->
 <xsd:schema
 	id="EnvironmentSettings"
 	targetNamespace="https://github.com/Takym/ExapisSOP/blob/master/IO/Settings/EnvironmentSettings.xsd"
@@ -8,13 +14,53 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 >
-	<xsd:element name="envconfig" type="settings" />
+	<xsd:annotation>
+		<xsd:documentation>
+			環境設定ファイルのXMLスキーマです。
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="envconfig" type="settings">
+		<xsd:annotation>
+			<xsd:documentation>
+				設定ファイルのルート要素です。
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 	<xsd:complexType name="settings">
+		<xsd:annotation>
+			<xsd:documentation>
+				設定データを保持する要素です。
+			</xsd:documentation>
+		</xsd:annotation>
 		<xsd:all>
-			<xsd:element name="saveReadable" minOccurs="1" maxOccurs="1" type="xsd:boolean" />
-			<xsd:element name="lang"         minOccurs="1" maxOccurs="1" type="xsd:language" />
-			<xsd:element name="enableLog"    minOccurs="1" maxOccurs="1" type="xsd:boolean" />
-			<xsd:element name="default"      minOccurs="0" maxOccurs="1" type="settings" />
+			<xsd:element name="saveReadable" minOccurs="1" maxOccurs="1" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>
+						可読なXML設定ファイルを出力するかどうかを設定します。
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="lang" minOccurs="1" maxOccurs="1" type="xsd:language">
+				<xsd:annotation>
+					<xsd:documentation>
+						プログラムで利用する言語の言語コードを設定します。
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="enableLog" minOccurs="1" maxOccurs="1" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>
+						ログ出力を有効にするかどうかを設定します。
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="default" minOccurs="0" maxOccurs="1" type="settings" nillable="true">
+				<xsd:annotation>
+					<xsd:documentation>
+						既定の設定を保持する要素です。
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:all>
 	</xsd:complexType>
 </xsd:schema>

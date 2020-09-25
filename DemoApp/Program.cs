@@ -65,10 +65,7 @@ namespace ExapisSOP.DemoApp
 						options.CreateLockFile = true;
 						await Task.CompletedTask;
 					})
-					.AddSettingsSystem(async (options) => {
-						options.CreateNewSettings = () => new DefaultSettings();
-						await Task.CompletedTask;
-					})
+					.AddSettingsSystem()
 					.AddAppWorker<Program>()
 			).RunAsync();
 		}
