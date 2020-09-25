@@ -5,6 +5,7 @@
  * distributed under the MIT License.
 ****/
 
+using System;
 using System.Collections.Generic;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Settings;
@@ -17,6 +18,13 @@ namespace ExapisSOP.Core
 	/// </summary>
 	public static class ContextExtensions
 	{
+		/// <summary>
+		///  <see cref="ExapisSOP.Core.ContextExtensions.GetData(IContext, string)"/>及び
+		///  <see cref="ExapisSOP.Core.ContextExtensions.SetData(IContext, string, object?)"/>で
+		///  利用される既定のキー名を取得します。
+		/// </summary>
+		public const string DefaultKeyName = "_(*)";
+
 		/// <summary>
 		///  データディレクトリへのパスを格納したオブジェクトを取得します。
 		/// </summary>
@@ -93,8 +101,15 @@ namespace ExapisSOP.Core
 		/// <param name="context">現在の文脈情報です。</param>
 		/// <param name="key">メッセージデータに関連付けられている名前です。</param>
 		/// <returns>文脈情報に登録されているオブジェクト、または、存在しない場合は<see langword="null"/>を返します。</returns>
+		/// <exception cref="System.ArgumentNullException" />
 		public static object? GetData(this IContext context, string key)
 		{
+			if (context == null) {
+				throw new ArgumentNullException(nameof(context));
+			}
+			if (string.IsNullOrEmpty(key)) {
+				key = DefaultKeyName;
+			}
 			if (context.GetMessage() is IDictionary<string, object> dict) {
 				dict.TryGetValue(key, out object? result);
 				return result;
@@ -111,8 +126,15 @@ namespace ExapisSOP.Core
 		/// <param name="context">現在の文脈情報です。</param>
 		/// <param name="key">メッセージデータに関連付ける名前です。</param>
 		/// <param name="value">メッセージデータの値です。</param>
+		/// <exception cref="System.ArgumentNullException" />
 		public static void SetData(this IContext context, string key, object? value)
 		{
+			if (context == null) {
+				throw new ArgumentNullException(nameof(context));
+			}
+			if (string.IsNullOrEmpty(key)) {
+				key = DefaultKeyName;
+			}
 			if (context.GetMessage() is IDictionary<string, object> dict) {
 				if (value == null) {
 					dict.Remove(key);
@@ -139,7 +161,7 @@ namespace ExapisSOP.Core
 		/// </returns>
 		public static IFileSystemService? GetFileSystem(this IContext context)
 		{
-			return context.GetService<IFileSystemService>();
+			return context?.GetService<IFileSystemService>();
 		}
 
 		/// <summary>
@@ -151,7 +173,7 @@ namespace ExapisSOP.Core
 		/// </returns>
 		public static ISettingsSystemService? GetSettingsSystem(this IContext context)
 		{
-			return context.GetService<ISettingsSystemService>();
+			return context?.GetService<ISettingsSystemService>();
 		}
 	}
 }
