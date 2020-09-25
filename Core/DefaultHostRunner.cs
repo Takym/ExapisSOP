@@ -69,11 +69,18 @@ namespace ExapisSOP.Core
 					for (int i = 0; i < _app_workers.Count; ++i) {
 						var task = Task.CompletedTask;
 						try {
-							await (task = _app_workers[i].OnStartup(context));
-						} catch (TerminationException) {
+							await (task = _app_workers[i].OnStartupAsync(context));
+						} catch (TerminationException te) {
 							loop = false;
+							var e1 = await _app_workers[i].OnTerminateAsync(te);
+							var e2 = await _config        .OnTerminateAsync(te);
+							if (e1 != null) ret = e1.HResult;
+							if (e2 != null) ret = e2.HResult;
 						} catch (Exception e) {
-							if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
+							var error = task.Exception ?? e;
+							bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error);
+							bool cfg  = await _config        .OnUnhandledErrorAsync(error);
+							if (aw || cfg) {
 								ret = e.HResult;
 								if (ret == 0) ret = -1;
 								break;
@@ -85,13 +92,20 @@ namespace ExapisSOP.Core
 						for (int i = 0; i < _app_workers.Count; ++i) {
 							var task = Task.CompletedTask;
 							try {
-								await (task = _app_workers[i].OnUpdate(context));
-							} catch (TerminationException) {
+								await (task = _app_workers[i].OnUpdateAsync(context));
+							} catch (TerminationException te) {
 								loop = false;
+								var e1 = await _app_workers[i].OnTerminateAsync(te);
+								var e2 = await _config        .OnTerminateAsync(te);
+								if (e1 != null) ret = e1.HResult;
+								if (e2 != null) ret = e2.HResult;
 								break;
 							} catch (Exception e) {
-								if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
-									ret = e.HResult;
+								var error = task.Exception ?? e;
+								bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error);
+								bool cfg  = await _config        .OnUnhandledErrorAsync(error);
+								if (aw || cfg) {
+									ret  = e.HResult;
 									loop = false;
 									if (ret == 0) ret = -1;
 									break;
@@ -104,11 +118,19 @@ namespace ExapisSOP.Core
 					for (int i = _app_workers.Count - 1; i >= 0; --i) {
 						var task = Task.CompletedTask;
 						try {
-							await (task = _app_workers[i].OnShutdown(context));
-						} catch (TerminationException) {
-							// do nothing, ignore
+							await (task = _app_workers[i].OnShutdownAsync(context));
+						} catch (TerminationException te) {
+							await _app_workers[i].OnTerminateAsync(te);
+							await _config        .OnTerminateAsync(te);
+							var e1 = await _app_workers[i].OnTerminateAsync(te);
+							var e2 = await _config        .OnTerminateAsync(te);
+							if (e1 != null) ret = e1.HResult;
+							if (e2 != null) ret = e2.HResult;
 						} catch (Exception e) {
-							if (await _app_workers[i].OnUnhandledError(task.Exception ?? e)) {
+							var error = task.Exception ?? e;
+							bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error);
+							bool cfg  = await _config        .OnUnhandledErrorAsync(error);
+							if (aw || cfg) {
 								ret = e.HResult;
 								if (ret == 0) ret = -1;
 								break;

@@ -32,9 +32,16 @@ namespace ExapisSOP
 		public event EventHandler<ContextEventArgs>? Shutdown;
 
 		/// <summary>
-		///  処理されない例外が発生した場合に呼び出されます。
+		///  現在のインスタンスで、処理されない例外が発生した場合に呼び出されます。
+		///  <see cref="ExapisSOP.IConfiguration.UnhandledError"/>より先に呼び出されます。
 		/// </summary>
 		public event EventHandler<UnhandledErrorEventArgs>? UnhandledError;
+
+		/// <summary>
+		///  現在のインスタンスで、処理が終了する時に呼び出されます。
+		///  <see cref="ExapisSOP.IConfiguration.Terminate"/>より先に呼び出されます。
+		/// </summary>
+		public event EventHandler<TerminationEventArgs>? Terminate;
 
 		/// <summary>
 		///  型'<see cref="ExapisSOP.AppWorker"/>'の新しいインスタンスを生成します。
@@ -97,7 +104,16 @@ namespace ExapisSOP
 			this.UnhandledError?.Invoke(this, e);
 		}
 
-		internal async Task OnStartup(IContext context)
+		/// <summary>
+		///  <see cref="ExapisSOP.AppWorker.Terminate"/>イベントを発生させます。
+		/// </summary>
+		/// <param name="e">終了例外オブジェクトを格納しているイベントデータです。</param>
+		protected virtual void OnTerminate(TerminationEventArgs e)
+		{
+			this.Terminate?.Invoke(this, e);
+		}
+
+		internal async Task OnStartupAsync(IContext context)
 		{
 			try {
 				this.OnStartup(new ContextEventArgs(context));
@@ -107,7 +123,7 @@ namespace ExapisSOP
 			}
 		}
 
-		internal async Task OnUpdate(IContext context)
+		internal async Task OnUpdateAsync(IContext context)
 		{
 			try {
 				this.OnUpdate(new ContextEventArgs(context));
@@ -117,7 +133,7 @@ namespace ExapisSOP
 			}
 		}
 
-		internal async Task OnShutdown(IContext context)
+		internal async Task OnShutdownAsync(IContext context)
 		{
 			try {
 				this.OnShutdown(new ContextEventArgs(context));
@@ -127,11 +143,22 @@ namespace ExapisSOP
 			}
 		}
 
-		internal async Task<bool> OnUnhandledError(Exception e)
+		internal async Task<bool> OnUnhandledErrorAsync(Exception e)
 		{
 			var args = new UnhandledErrorEventArgs(e);
 			this.OnUnhandledError(args);
 			return await Task.FromResult(args.Abort);
+		}
+
+		internal async Task<Exception?> OnTerminateAsync(TerminationException te)
+		{
+			try {
+				this.OnTerminate(new TerminationEventArgs(te));
+				return null;
+			} catch (Exception e) {
+				await this.OnUnhandledErrorAsync(e);
+				return e;
+			}
 		}
 	}
 }

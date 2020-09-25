@@ -5,6 +5,8 @@
  * distributed under the MIT License.
 ****/
 
+using System;
+
 namespace ExapisSOP
 {
 	/// <summary>
@@ -24,5 +26,17 @@ namespace ExapisSOP
 		/// </summary>
 		/// <returns>複数のサービスオブジェクトを含む配列です。</returns>
 		IService[] GetServices();
+
+		/// <summary>
+		///  プログラム実行中に処理されない例外が発生した場合に呼び出されます。
+		///  <see cref="ExapisSOP.AppWorker.UnhandledError"/>より後に呼び出されます。
+		/// </summary>
+		event EventHandler<UnhandledErrorEventArgs>? UnhandledError;
+
+		/// <summary>
+		///  プログラム実行中に処理が終了する時に呼び出されます。
+		///  <see cref="ExapisSOP.AppWorker.Terminate"/>より後に呼び出されます。
+		/// </summary>
+		event EventHandler<TerminationEventArgs>? Terminate;
 	}
 }

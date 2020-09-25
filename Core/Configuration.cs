@@ -5,11 +5,17 @@
  * distributed under the MIT License.
 ****/
 
+using System;
+using System.Threading.Tasks;
+
 namespace ExapisSOP.Core
 {
 	internal class Configuration : IConfiguration
 	{
 		private readonly DefaultHostRunner _runner;
+
+		public event EventHandler<UnhandledErrorEventArgs>? UnhandledError;
+		public event EventHandler<TerminationEventArgs>?    Terminate;
 
 		internal Configuration(DefaultHostRunner runner)
 		{
@@ -25,6 +31,24 @@ namespace ExapisSOP.Core
 		public IService[] GetServices()
 		{
 			return _runner._services.ToArray();
+		}
+
+		internal async Task<bool> OnUnhandledErrorAsync(Exception e)
+		{
+			var args = new UnhandledErrorEventArgs(e);
+			this.UnhandledError?.Invoke(this, args);
+			return await Task.FromResult(args.Abort);
+		}
+
+		internal async Task<Exception?> OnTerminateAsync(TerminationException te)
+		{
+			try {
+				this.Terminate?.Invoke(this, new TerminationEventArgs(te));
+				return null;
+			} catch (Exception e) {
+				await this.OnUnhandledErrorAsync(e);
+				return e;
+			}
 		}
 	}
 }
