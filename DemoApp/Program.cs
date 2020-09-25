@@ -54,7 +54,7 @@ namespace ExapisSOP.DemoApp
 					})
 					.AddSettingsSystem()
 					.AddAppWorker<Program>()
-			).RunAsync();
+			).Build().RunAsync();
 		}
 	}
 }

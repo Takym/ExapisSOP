@@ -66,6 +66,16 @@ namespace ExapisSOP
 		}
 
 		/// <summary>
+		///  上書きされた場合、実行可能な状態の実行環境を構築します。
+		/// </summary>
+		/// <returns>実行可能な状態の新しい実行環境のインスタンス、または、現在のインスタンスを返します。</returns>
+		public virtual HostRunner Build()
+		{
+			// for a third-party library
+			return this;
+		}
+
+		/// <summary>
 		///  上書きされた場合、プログラムの実行を非同期で開始します。
 		/// </summary>
 		/// <returns>OSへの戻り値を含む非同期操作です。</returns>

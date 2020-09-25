@@ -45,7 +45,7 @@ namespace Example
 			// Configure how to run the application:
 			return await HostRunner.Create(args).Configure(
 				config => config.AddAppWorker<Program>() // Adds Program as an AppWorker
-			).RunAsync();
+			).Build().RunAsync();
 		}
 	}
 }
@@ -116,7 +116,7 @@ namespace Example
 			// アプリケーションの実行に関する設定を行います。
 			return await HostRunner.Create(args).Configure(
 				config => config.AddAppWorker<Program>() // Program を AppWorker として追加します。
-			).RunAsync();
+			).Build().RunAsync();
 		}
 	}
 }
