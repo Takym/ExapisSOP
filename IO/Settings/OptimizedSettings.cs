@@ -6,29 +6,27 @@
 ****/
 
 using System.Globalization;
-using System.Xml.Serialization;
 
 namespace ExapisSOP.IO.Settings
 {
 	/// <summary>
-	///  既定の環境設定を表します。
+	///  最適化された環境設定を表します。
 	/// </summary>
-	[XmlInclude(typeof(OptimizedSettings))]
-	public class DefaultSettings : EnvironmentSettings
+	public class OptimizedSettings : DefaultSettings
 	{
 		/// <summary>
-		///  型'<see cref="ExapisSOP.IO.Settings.DefaultSettings"/>'の新しいインスタンスを生成します。
+		///  型'<see cref="ExapisSOP.IO.Settings.OptimizedSettings"/>'の新しいインスタンスを生成します。
 		/// </summary>
-		public DefaultSettings() : base() { }
+		public OptimizedSettings() : base() { }
 
 		/// <summary>
 		///  設定を既定値へ戻します。
 		/// </summary>
 		public override void Reset()
 		{
-			this.OutputReadableXML = true;
+			this.OutputReadableXML = false;
 			this.Locale            = CultureInfo.InstalledUICulture.Name;
-			this.EnableLogging     = true;
+			this.EnableLogging     = false;
 		}
 	}
 }

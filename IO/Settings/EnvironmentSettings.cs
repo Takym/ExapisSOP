@@ -5,6 +5,7 @@
  * distributed under the MIT License.
 ****/
 
+using System;
 using System.Globalization;
 using System.Xml.Serialization;
 
@@ -13,20 +14,28 @@ namespace ExapisSOP.IO.Settings
 	/// <summary>
 	///  システムに関する環境設定を表します。
 	/// </summary>
-	[XmlRoot(nameof(EnvironmentSettings))]
+	[XmlRoot("envconfig")]
+	[XmlInclude(typeof(CustomSettings))]
 	[XmlInclude(typeof(DefaultSettings))]
+	[XmlInclude(typeof(OptimizedSettings))]
 	public class EnvironmentSettings
 	{
 		/// <summary>
+		///  可読なXMLファイルを出力する場合は<see langword="true"/>、しない場合は<see langword="false"/>を設定します。
+		/// </summary>
+		[XmlElement("saveReadable")]
+		public bool OutputReadableXML { get; set; }
+
+		/// <summary>
 		///  現在の言語コードを取得または設定します。
 		/// </summary>
-		[XmlElement(nameof(Locale))]
+		[XmlElement("lang")]
 		public string? Locale { get; set; }
 
 		/// <summary>
 		///  ログ出力を有効にする場合は<see langword="true"/>、しない場合は<see langword="false"/>を設定します。
 		/// </summary>
-		[XmlElement(nameof(EnableLogging))]
+		[XmlElement("enableLog")]
 		public bool EnableLogging { get; set; }
 
 		/// <summary>
@@ -48,8 +57,28 @@ namespace ExapisSOP.IO.Settings
 		/// </summary>
 		public virtual void Reset()
 		{
-			this.Locale        = default;
-			this.EnableLogging = default;
+			this.OutputReadableXML = default;
+			this.Locale            = default;
+			this.EnableLogging     = default;
+		}
+
+		/// <summary>
+		///  指定された設定情報から現在インスタンスへ設定情報をコピーします。
+		/// </summary>
+		/// <param name="settings">コピー元の設定情報です。</param>
+		/// <param name="copyFirstBoot"><see cref="ExapisSOP.IO.Settings.EnvironmentSettings.FirstBoot"/>の値をコピーするかどうかを表す論理値です。</param>
+		/// <exception cref="System.ArgumentNullException" />
+		public virtual void CopyFrom(EnvironmentSettings settings, bool copyFirstBoot = true)
+		{
+			if (settings == null) {
+				throw new ArgumentNullException(nameof(settings));
+			}
+			this.OutputReadableXML = settings.OutputReadableXML;
+			this.Locale            = settings.Locale;
+			this.EnableLogging     = settings.EnableLogging;
+			if (copyFirstBoot) {
+				this.FirstBoot = settings.FirstBoot;
+			}
 		}
 
 		/// <summary>

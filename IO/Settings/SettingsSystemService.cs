@@ -6,8 +6,11 @@
 ****/
 
 using System;
+using System.Globalization;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 using ExapisSOP.Core;
 
@@ -15,16 +18,21 @@ namespace ExapisSOP.IO.Settings
 {
 	internal sealed class SettingsSystemService : AppWorker, ISettingsSystemService
 	{
-		private readonly Func<SettingsSystemServiceOptions, Task> _optionsCallBack;
-		private          SettingsSystemServiceOptions             _options;
-		private          IFileSystemService?                      _fss;
-		private          FileStream?                              _ver;
-		private          StreamReader?                            _ver_r;
-		private          StreamWriter?                            _ver_w;
-		private          FileStream?                              _env;
-		private          EnvironmentSettings?                     _settings;
-		private          XmlSerializer                            _xs;
-		private          bool                                     _abort;
+		private readonly static Encoding                                 _enc = Encoding.Unicode;
+		private readonly        Func<SettingsSystemServiceOptions, Task> _optionsCallBack;
+		private                 SettingsSystemServiceOptions             _options;
+		private                 IFileSystemService?                      _fss;
+		private                 FileStream?                              _ver;
+		private                 StreamReader?                            _ver_r;
+		private                 StreamWriter?                            _ver_w;
+		private                 FileStream?                              _env;
+		private                 XmlReader?                               _env_r;
+		private                 XmlWriter?                               _env_w;
+		private                 FileStream?                              _envr;
+		private                 XmlWriter?                               _envr_w;
+		private                 EnvironmentSettings?                     _settings;
+		private                 XmlSerializer                            _xs;
+		private                 bool                                     _abort;
 
 		internal SettingsSystemService(Func<SettingsSystemServiceOptions, Task> callBackFunc)
 		{
@@ -46,9 +54,17 @@ namespace ExapisSOP.IO.Settings
 				_abort = true;
 				return;
 			}
-			this.EnsureStreams();
 
+			// Load the settings
 			await this.Reload(context);
+
+			// Apply the language configuration
+			var culture = _settings?.GetCulture() ?? CultureInfo.InstalledUICulture;
+			CultureInfo.DefaultThreadCurrentCulture   = culture;
+			CultureInfo.DefaultThreadCurrentUICulture = culture;
+			CultureInfo.CurrentCulture                = culture;
+			CultureInfo.CurrentUICulture              = culture;
+			culture.ClearCachedData();
 		}
 
 		protected override void OnStartup(ContextEventArgs e)
@@ -62,8 +78,6 @@ namespace ExapisSOP.IO.Settings
 		public override async Task FinalizeAsync(IContext context)
 		{
 			await base.FinalizeAsync(context);
-			this.EnsureStreams();
-
 			await this.Save();
 			await this.DisposeStreams();
 		}
@@ -71,6 +85,7 @@ namespace ExapisSOP.IO.Settings
 		public async Task Reload(IContext context)
 		{
 			bool firstBoot = false;
+			this.EnsureStreams();
 
 			// Get the saved version
 			string? libversion  = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("?.?.?.?"));
@@ -92,42 +107,66 @@ namespace ExapisSOP.IO.Settings
 				_settings = _options.CreateNewSettings();
 				_settings.FirstBoot = firstBoot;
 			} else {
-				_settings = _xs.Deserialize(_env) as EnvironmentSettings
+				_settings = _xs.Deserialize(_env_r) as EnvironmentSettings
 					?? _options.CreateNewSettings();
 			}
 
 			// Set the settings to the context
 			if (context is InitFinalContext initContext && initContext.IsInitializationPhase()) {
 				initContext.Settings = _settings;
+			} else if (context.Settings != null) {
+				context.Settings.CopyFrom(_settings);
+				_settings = context.Settings;
 			}
 		}
 
 		public async Task Save()
 		{
-			// Save the current version
 			if (!_abort) {
+				this.EnsureStreams();
+
+				// Save the current version
 				_ver?.SetLength(0);
 				await this.WriteSavedVersion();
-			}
 
-			// Save the current settings
-			_xs.Serialize(_env, _settings ?? _options.CreateNewSettings());
+				// Save the current settings
+				_env?.SetLength(0);
+				var settings = _settings ?? _options.CreateNewSettings();
+				_xs.Serialize(_env_w, settings);
+				if (settings.OutputReadableXML) {
+					_xs.Serialize(_envr_w, settings);
+					byte[] buf = XmlSettings.ReadableEncoding.GetBytes(Environment.NewLine);
+					_envr?.Write(buf, 0, buf.Length);
+				}
+			}
 		}
 
 		private void EnsureStreams()
 		{
+			bool saveReadable = _settings?.OutputReadableXML ?? false;
 			if (_ver == null) {
 				_ver = _fss?.OpenSettingFile("last_saved_version.txt");
-				if (_ver != null) {
-					_ver_r = new StreamReader(_ver, true);
-					_ver_w = new StreamWriter(_ver, _ver_r.CurrentEncoding);
-				}
 			}
 			if (_env == null) {
 				_env = _fss?.OpenSettingFile("envconfig.xml");
 			}
-			_ver?.Seek(0, SeekOrigin.Begin);
-			_env?.Seek(0, SeekOrigin.Begin);
+			if (_envr == null && saveReadable) {
+				_envr = _fss?.OpenSettingFile("envconfig.readable.xml");
+			}
+			_ver ?.Seek(0, SeekOrigin.Begin);
+			_env ?.Seek(0, SeekOrigin.Begin);
+			_envr?.Seek(0, SeekOrigin.Begin);
+			if (_ver != null) {
+				_ver_r ??= new StreamReader(_ver, _enc, true);
+				_ver_w ??= new StreamWriter(_ver, _ver_r.CurrentEncoding);
+			}
+			if (_env != null) {
+				_env_r ??= XmlReader.Create(new StreamReader(_env, XmlSettings.Encoding, true), XmlSettings.Reader);
+				_env_w ??= XmlWriter.Create(new StreamWriter(_env, XmlSettings.Encoding),       XmlSettings.Writer);
+			}
+			if (_envr != null && saveReadable) {
+				_envr_w ??= XmlWriter.Create(new StreamWriter(_envr, XmlSettings.ReadableEncoding), XmlSettings.ReadableWriter);
+			}
 		}
 
 		private async Task WriteSavedVersion()
