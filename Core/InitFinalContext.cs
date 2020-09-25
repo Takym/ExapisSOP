@@ -7,23 +7,26 @@
 
 using System;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Settings;
 using ExapisSOP.Properties;
 
 namespace ExapisSOP.Core
 {
 	internal class InitFinalContext : IContext
 	{
-		private readonly DefaultHostRunner _runner;
-		private readonly InitFinalContext? _initContext;
-		private          object?           _msg;
-		public           IPathList?        Paths { get; internal set; }
+		private readonly DefaultHostRunner    _runner;
+		private readonly InitFinalContext?    _initContext;
+		private          object?              _msg;
+		public           IPathList?           Paths    { get; internal set; }
+		public           EnvironmentSettings? Settings { get; internal set; }
 
 		internal InitFinalContext(DefaultHostRunner runner, InitFinalContext? initContext)
 		{
-			_runner      = runner;
-			_initContext = initContext;
-			_msg         = initContext?._msg;
-			this.Paths   = initContext?.Paths;
+			_runner       = runner;
+			_initContext  = initContext;
+			_msg          = initContext?._msg;
+			this.Paths    = initContext?.Paths;
+			this.Settings = initContext?.Settings;
 			if (initContext?.IsFinalizationPhase() ?? false) {
 				throw new InvalidOperationException(Resources.InitFinalContext_InvalidOperationException);
 			}

@@ -5,6 +5,8 @@
  * distributed under the MIT License.
 ****/
 
+using System;
+
 namespace ExapisSOP.IO.Settings
 {
 	/// <summary>
@@ -23,12 +25,18 @@ namespace ExapisSOP.IO.Settings
 		public GetVersionInfo GetCurrentVersion { get; set; }
 
 		/// <summary>
+		///  新しい設定情報を作成する関数を取得または設定します。
+		/// </summary>
+		public Func<EnvironmentSettings> CreateNewSettings { get; set; }
+
+		/// <summary>
 		///  型'<see cref="ExapisSOP.IO.Settings.SettingsSystemServiceOptions"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		public SettingsSystemServiceOptions()
 		{
 			this.HasCompatibleWith = (v, cn) => true;
 			this.GetCurrentVersion = ()      => ("?.?.?.?", "no app ver");
+			this.CreateNewSettings = ()      => new DefaultSettings();
 		}
 
 		/// <summary>

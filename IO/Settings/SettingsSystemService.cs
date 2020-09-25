@@ -8,6 +8,7 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using ExapisSOP.Core;
 
 namespace ExapisSOP.IO.Settings
@@ -21,12 +22,15 @@ namespace ExapisSOP.IO.Settings
 		private          StreamReader?                            _ver_r;
 		private          StreamWriter?                            _ver_w;
 		private          FileStream?                              _env;
+		private          EnvironmentSettings?                     _settings;
+		private          XmlSerializer                            _xs;
 		private          bool                                     _abort;
 
 		internal SettingsSystemService(Func<SettingsSystemServiceOptions, Task> callBackFunc)
 		{
 			_optionsCallBack = callBackFunc;
 			_options         = new SettingsSystemServiceOptions();
+			_xs              = new XmlSerializer(typeof(EnvironmentSettings));
 		}
 
 		public override async Task InitializeAsync(IContext context)
@@ -44,19 +48,70 @@ namespace ExapisSOP.IO.Settings
 			}
 			this.EnsureStreams();
 
-			// Saved version
+			await this.Reload(context);
+		}
+
+		protected override void OnStartup(ContextEventArgs e)
+		{
+			base.OnStartup(e);
+			if (_abort) {
+				throw new TerminationException();
+			}
+		}
+
+		public override async Task FinalizeAsync(IContext context)
+		{
+			await base.FinalizeAsync(context);
+			this.EnsureStreams();
+
+			await this.Save();
+			await this.DisposeStreams();
+		}
+
+		public async Task Reload(IContext context)
+		{
+			bool firstBoot = false;
+
+			// Get the saved version
 			string? libversion  = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("?.?.?.?"));
 			string? libcodename = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("no lib ver"));
 			string? appversion  = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("?.?.?.?"));
 			string? appcodename = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("no app ver"));
 			if (libversion == null) {
+				firstBoot = true;
 				await this.WriteSavedVersion();
 			} else if (!_options.HasCompatibleWith(appversion, appcodename) ||
-				libversion  != VersionInfo.VersionString ||
+				libversion != VersionInfo.VersionString ||
 				libcodename != VersionInfo.CodeName) {
 				_abort = true;
 				return;
 			}
+
+			// Load or create a settings
+			if (firstBoot) {
+				_settings = _options.CreateNewSettings();
+				_settings.FirstBoot = firstBoot;
+			} else {
+				_settings = _xs.Deserialize(_env) as EnvironmentSettings
+					?? _options.CreateNewSettings();
+			}
+
+			// Set the settings to the context
+			if (context is InitFinalContext initContext && initContext.IsInitializationPhase()) {
+				initContext.Settings = _settings;
+			}
+		}
+
+		public async Task Save()
+		{
+			// Save the current version
+			if (!_abort) {
+				_ver?.SetLength(0);
+				await this.WriteSavedVersion();
+			}
+
+			// Save the current settings
+			_xs.Serialize(_env, _settings ?? _options.CreateNewSettings());
 		}
 
 		private void EnsureStreams()
@@ -86,28 +141,6 @@ namespace ExapisSOP.IO.Settings
 			_ver?.Seek(0, SeekOrigin.Begin);
 			_env?.Seek(0, SeekOrigin.Begin);
 #endif
-		}
-
-		protected override void OnStartup(ContextEventArgs e)
-		{
-			base.OnStartup(e);
-			if (_abort) {
-				throw new TerminationException();
-			}
-		}
-
-		public override async Task FinalizeAsync(IContext context)
-		{
-			await base.FinalizeAsync(context);
-			this.EnsureStreams();
-
-			// Saved version
-			if (!_abort) {
-				_ver?.SetLength(0);
-				await this.WriteSavedVersion();
-			}
-
-			await this.DisposeStreams();
 		}
 
 		private async Task WriteSavedVersion()

@@ -8,7 +8,7 @@
 namespace ExapisSOP.IO
 {
 	/// <summary>
-	///  <see cref="ExapisSOP.IConfiguration"/>の機能を拡張します。
+	///  <see cref="ExapisSOP.IO.FileSystemServiceOptions"/>の機能を拡張します。
 	///  このクラスは静的です。
 	/// </summary>
 	public static class FileSystemServiceOptionsExtensions

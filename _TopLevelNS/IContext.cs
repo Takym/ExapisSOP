@@ -6,6 +6,7 @@
 ****/
 
 using ExapisSOP.IO;
+using ExapisSOP.IO.Settings;
 
 namespace ExapisSOP
 {
@@ -19,6 +20,12 @@ namespace ExapisSOP
 		///  <see cref="ExapisSOP.IO.IFileSystemService"/>が初期化されていない場合は<see langword="null"/>を返します。
 		/// </summary>
 		IPathList? Paths { get; }
+
+		/// <summary>
+		///  環境設定を取得します。
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>が初期化されていない場合は<see langword="null"/>を返します。
+		/// </summary>
+		EnvironmentSettings? Settings { get; }
 
 		/// <summary>
 		///  現在実行中の実行環境を取得します。

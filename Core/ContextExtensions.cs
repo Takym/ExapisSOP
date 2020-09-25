@@ -30,6 +30,20 @@ namespace ExapisSOP.Core
 		}
 
 		/// <summary>
+		///  プログラムが初回起動かどうか判定します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  初回起動である場合は<see langword="true"/>、
+		///  初回起動でない場合は<see langword="false"/>、
+		///  判定できなかった場合は<see langword="null"/>を返します。
+		/// </returns>
+		public static bool? IsFirstBoot(this IContext context)
+		{
+			return context?.Settings?.FirstBoot;
+		}
+
+		/// <summary>
 		///  プログラム初期化時に利用された文脈情報を取得します。
 		/// </summary>
 		/// <remarks>

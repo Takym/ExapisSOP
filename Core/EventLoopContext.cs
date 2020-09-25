@@ -6,8 +6,8 @@
 ****/
 
 using System;
-using System.Diagnostics.Contracts;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Settings;
 using ExapisSOP.Properties;
 using ExapisSOP.Utils;
 
@@ -15,28 +15,31 @@ namespace ExapisSOP.Core
 {
 	internal class EventLoopContext : DisposableBase, IContext
 	{
-		private  readonly DefaultHostRunner _runner;
-		internal readonly InitFinalContext  _init;
-		private           EventLoopContext? _prev;
-		private           object?           _msg;
-		public            IPathList?        Paths { get; }
+		private  readonly DefaultHostRunner    _runner;
+		internal readonly InitFinalContext     _init;
+		private           EventLoopContext?    _prev;
+		private           object?              _msg;
+		public            IPathList?           Paths    { get; }
+		public            EnvironmentSettings? Settings { get; }
 
 		internal EventLoopContext(DefaultHostRunner runner, IContext context)
 		{
 			_runner = runner  ?? throw new ArgumentNullException(nameof(runner));
 			context = context ?? throw new ArgumentNullException(nameof(context));
 			if (context is InitFinalContext initContext) {
-				_init      = initContext;
-				_msg       = initContext.GetMessage();
-				this.Paths = initContext.Paths;
+				_init         = initContext;
+				_msg          = initContext.GetMessage();
+				this.Paths    = initContext.Paths;
+				this.Settings = initContext.Settings;
 				if (initContext?.IsFinalizationPhase() ?? false) {
 					throw new InvalidOperationException(Resources.EventLoopContext_InvalidOperationException);
 				}
 			} else if (context is EventLoopContext prevContext) {
-				_init      = prevContext._init;
-				_prev      = prevContext;
-				_msg       = prevContext._msg;
-				this.Paths = prevContext.Paths;
+				_init         = prevContext._init;
+				_prev         = prevContext;
+				_msg          = prevContext._msg;
+				this.Paths    = prevContext.Paths;
+				this.Settings = prevContext.Settings;
 
 				// 2つ前の文脈情報を削除してメモリ節約
 				prevContext._prev?.Dispose();
