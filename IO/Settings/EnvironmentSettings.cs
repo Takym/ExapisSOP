@@ -7,6 +7,8 @@
 
 using System;
 using System.Globalization;
+using System.Xml;
+using System.Xml.Schema;
 using System.Xml.Serialization;
 
 namespace ExapisSOP.IO.Settings
@@ -14,7 +16,8 @@ namespace ExapisSOP.IO.Settings
 	/// <summary>
 	///  システムに関する環境設定を表します。
 	/// </summary>
-	[XmlRoot("envconfig")]
+	[XmlRoot(RootElementName)]
+	[XmlSchemaProvider(nameof(GetSchema))]
 	[XmlInclude(typeof(CustomSettings))]
 	[XmlInclude(typeof(DefaultSettings))]
 	[XmlInclude(typeof(OptimizedSettings))]
@@ -100,5 +103,32 @@ namespace ExapisSOP.IO.Settings
 		{
 			this.Locale = culture?.Name ?? CultureInfo.InstalledUICulture.Name;
 		}
+
+		#region 静的
+
+		internal const string RootElementName = "envconfig";
+
+		private static XmlSchema? _schema;
+
+		internal static XmlQualifiedName GetSchema(XmlSchemaSet xss)
+		{
+			xss.XmlResolver = new XmlUrlResolver();
+			xss.Add(LoadSchema());
+			return new XmlQualifiedName(RootElementName, _schema!.TargetNamespace);
+		}
+
+		internal static XmlSchema LoadSchema()
+		{
+			if (_schema == null) {
+				using (var s = VersionInfo._asm.GetManifestResourceStream(
+					$"{nameof(ExapisSOP)}.{nameof(IO)}.{nameof(Settings)}.{nameof(EnvironmentSettings)}.xsd"
+				)) {
+					_schema = XmlSchema.Read(s, (e, sender) => { /* do nothing */ });
+				}
+			}
+			return _schema;
+		}
+
+		#endregion
 	}
 }

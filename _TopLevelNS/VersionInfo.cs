@@ -25,7 +25,7 @@ namespace ExapisSOP
 	/// </summary>
 	public static class VersionInfo
 	{
-		private readonly static Assembly _asm = typeof(VersionInfo).Assembly;
+		internal readonly static Assembly _asm = typeof(VersionInfo).Assembly;
 
 		/// <summary>
 		///  バージョン情報を含んだ<see cref="ExapisSOP"/>の題名を取得します。

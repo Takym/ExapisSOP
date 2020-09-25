@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xsd:schema>
+<xsd:schema
+	id="EnvironmentSettings"
+	targetNamespace="https://github.com/Takym/ExapisSOP/blob/master/IO/Settings/EnvironmentSettings.xsd"
+	elementFormDefault="qualified"
+	xmlns="https://github.com/Takym/ExapisSOP/blob/master/IO/Settings/EnvironmentSettings.xsd"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+	<xsd:element name="envconfig" type="settings" />
+	<xsd:complexType name="settings">
+		<xsd:all>
+			<xsd:element name="saveReadable" minOccurs="1" maxOccurs="1" type="xsd:boolean" />
+			<xsd:element name="lang"         minOccurs="1" maxOccurs="1" type="xsd:language" />
+			<xsd:element name="enableLog"    minOccurs="1" maxOccurs="1" type="xsd:boolean" />
+			<xsd:element name="default"      minOccurs="0" maxOccurs="1" type="settings" />
+		</xsd:all>
+	</xsd:complexType>
+</xsd:schema>

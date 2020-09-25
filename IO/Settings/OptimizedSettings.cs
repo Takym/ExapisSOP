@@ -6,12 +6,15 @@
 ****/
 
 using System.Globalization;
+using System.Xml.Serialization;
 
 namespace ExapisSOP.IO.Settings
 {
 	/// <summary>
 	///  最適化された環境設定を表します。
 	/// </summary>
+	[XmlRoot(RootElementName)]
+	[XmlSchemaProvider(nameof(GetSchema))]
 	public class OptimizedSettings : DefaultSettings
 	{
 		/// <summary>

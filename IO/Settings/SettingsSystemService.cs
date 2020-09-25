@@ -32,6 +32,7 @@ namespace ExapisSOP.IO.Settings
 		private                 XmlWriter?                               _envr_w;
 		private                 EnvironmentSettings?                     _settings;
 		private                 XmlSerializer                            _xs;
+		private                 XmlSerializer                            _xsr;
 		private                 bool                                     _abort;
 
 		internal SettingsSystemService(Func<SettingsSystemServiceOptions, Task> callBackFunc)
@@ -39,6 +40,7 @@ namespace ExapisSOP.IO.Settings
 			_optionsCallBack = callBackFunc;
 			_options         = new SettingsSystemServiceOptions();
 			_xs              = new XmlSerializer(typeof(EnvironmentSettings));
+			_xsr             = new XmlSerializer(typeof(EnvironmentSettings), EnvironmentSettings.LoadSchema().TargetNamespace);
 		}
 
 		public override async Task InitializeAsync(IContext context)
@@ -134,7 +136,7 @@ namespace ExapisSOP.IO.Settings
 				var settings = _settings ?? _options.CreateNewSettings();
 				_xs.Serialize(_env_w, settings);
 				if (settings.OutputReadableXML) {
-					_xs.Serialize(_envr_w, settings);
+					_xsr.Serialize(_envr_w, settings);
 					byte[] buf = XmlSettings.ReadableEncoding.GetBytes(Environment.NewLine);
 					_envr?.Write(buf, 0, buf.Length);
 				}
@@ -148,10 +150,10 @@ namespace ExapisSOP.IO.Settings
 				_ver = _fss?.OpenSettingFile("last_saved_version.txt");
 			}
 			if (_env == null) {
-				_env = _fss?.OpenSettingFile("envconfig.xml");
+				_env = _fss?.OpenSettingFile(EnvironmentSettings.RootElementName + ".xml");
 			}
 			if (_envr == null && saveReadable) {
-				_envr = _fss?.OpenSettingFile("envconfig.readable.xml");
+				_envr = _fss?.OpenSettingFile(EnvironmentSettings.RootElementName + ".readable.xml");
 			}
 			_ver ?.Seek(0, SeekOrigin.Begin);
 			_env ?.Seek(0, SeekOrigin.Begin);

@@ -26,5 +26,11 @@
 			<DependentUpon>Resources.resx</DependentUpon>
 		</Compile>
 		<Compile Include="NativeWrapper\INativeCaller.cs" />
+		<EmbeddedResource Include="IO\Settings\EnvironmentSettings.xsd">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<Compile Update="IO\Settings\EnvironmentSettings.cs">
+			<DependentUpon>EnvironmentSettings.xsd</DependentUpon>
+		</Compile>
 	</ItemGroup>
 </Project>
