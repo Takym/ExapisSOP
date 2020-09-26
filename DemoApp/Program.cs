@@ -49,21 +49,31 @@ namespace ExapisSOP.DemoApp
 				config => config
 					.AddFileSystem(async (options) => {
 						options.SetDataPath(DefaultPath.Application);
-						options.CreateLockFile = true;
+						options.CreateLockFile = false;//true;
 						await Task.CompletedTask;
 					})
 					.AddSettingsSystem(async (options) => {
-						options.CreateNewSettings = () => new CustomSettings() {
+						options.CreateNewSettings = () => new CustomSettings(new EnvironmentSettings() {
 							OutputReadableXML = true,
 							Locale = "ja",
 							DataStore = new DataStore() {
 								["aaa"] = "string value",
 								[12345] = new OptimizedSettings(),
 								["dat"] = new DataStore() {
-									[0] = 0
+									[0] = 0,
+									[1] = 1,
+									["null"] = null,
+									["empty"] = string.Empty,
+									["object"] = new DataStore() {
+										["default"] = new DefaultSettings(),
+										["env"] = new EnvironmentSettings(),
+										["custom"] = new CustomSettings() {
+											Default = new EnvironmentSettings()
+										}
+									}
 								}
 							}
-						};
+						});
 						await Task.CompletedTask;
 					})
 					.AddAppWorker<Program>()

@@ -7,6 +7,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -113,26 +115,27 @@ namespace ExapisSOP.IO.Settings
 		/// <param name="reader">XMLリーダーです。</param>
 		public void ReadXml(XmlReader reader)
 		{
-			/*
-			while (reader.NodeType != XmlNodeType.Element) {
-				if (!reader.Read()) {
+			this.Dictionary.Clear();
+			if (reader.IsEmptyElement) return;
+			while (reader.Read()) {
+				if (reader.NodeType == XmlNodeType.EndElement) {
+					reader.ReadEndElement();
 					return;
 				}
-			}
-			//*/
-			//reader.ReadStartElement();
-			//while (reader.NodeType == XmlNodeType.Element) {
-			while (reader.Read()) {
-				reader.ReadStartElement("data");
 				reader.MoveToContent();
 				string key = reader.GetAttribute("name");
 				var    t   = Type.GetType(reader.GetAttribute("type"), false);
+				reader.ReadStartElement("data");
 				if (t != null) {
 					object? obj;
-					if (typeof(IXmlSerializable).IsAssignableFrom(t)) {
-						var serializable = Activator.CreateInstance(typeof(IXmlSerializable)) as IXmlSerializable;
+					if (reader.IsEmptyElement) continue;
+					/*if (typeof(IXmlSerializable).IsAssignableFrom(t)) {
+						var serializable = Activator.CreateInstance(t) as IXmlSerializable;
 						serializable?.ReadXml(reader);
 						obj = serializable;
+					} else*/ if (t.IsPrimitive || t == typeof(string)) {
+						//reader.Read();
+						obj = reader.ReadContentAsObject();
 					} else {
 						var xs = new XmlSerializer(t);
 						obj = xs.Deserialize(reader);
@@ -141,9 +144,8 @@ namespace ExapisSOP.IO.Settings
 						this.Dictionary.Add(key, obj);
 					}
 				}
-				reader.ReadEndElement();
+				//reader.ReadEndElement();
 			}
-			//reader.ReadEndElement();
 		}
 
 		/// <summary>
@@ -153,13 +155,16 @@ namespace ExapisSOP.IO.Settings
 		public void WriteXml(XmlWriter writer)
 		{
 			foreach (var pair in this.Dictionary) {
+				var t = pair.Value.GetType();
 				writer.WriteStartElement("data");
 				writer.WriteAttributeString("name", pair.Key);
-				writer.WriteAttributeString("type", pair.Value.GetType().FullName);
-				if (pair.Value is IXmlSerializable serializable) {
+				writer.WriteAttributeString("type", t.FullName);
+				/*if (pair.Value is IXmlSerializable serializable) {
 					serializable.WriteXml(writer);
+				} else*/ if (t.IsPrimitive || t == typeof(string)) {
+					writer.WriteValue(pair.Value);
 				} else {
-					var xs = new XmlSerializer(pair.Value.GetType());
+					var xs = new XmlSerializer(t);
 					xs.Serialize(writer, pair.Value);
 				}
 				writer.WriteEndElement();
@@ -169,7 +174,7 @@ namespace ExapisSOP.IO.Settings
 		/// <summary>
 		///  XMLスキーマ情報を取得します。
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>XMLスキーマを表すオブジェクトです。</returns>
 		public XmlSchema GetSchema()
 		{
 			return EnvironmentSettings.LoadSchema();

@@ -152,6 +152,7 @@ namespace ExapisSOP.IO.Settings
 				var settings = _settings ?? _options.CreateNewSettings();
 				_xs.Serialize(_env_w, settings);
 				if (settings.OutputReadableXML) {
+					_envr?.SetLength(0);
 					_xsr.Serialize(_envr_w, settings);
 					byte[] buf = XmlSettings.ReadableEncoding.GetBytes(Environment.NewLine);
 					_envr?.Write(buf, 0, buf.Length);
