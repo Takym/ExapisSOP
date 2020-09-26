@@ -7,8 +7,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -129,12 +127,7 @@ namespace ExapisSOP.IO.Settings
 				if (t != null) {
 					object? obj;
 					if (reader.IsEmptyElement) continue;
-					/*if (typeof(IXmlSerializable).IsAssignableFrom(t)) {
-						var serializable = Activator.CreateInstance(t) as IXmlSerializable;
-						serializable?.ReadXml(reader);
-						obj = serializable;
-					} else*/ if (t.IsPrimitive || t == typeof(string)) {
-						//reader.Read();
+					if (t.IsPrimitive || t == typeof(string)) {
 						obj = reader.ReadContentAsObject();
 					} else {
 						var xs = new XmlSerializer(t);
@@ -144,7 +137,6 @@ namespace ExapisSOP.IO.Settings
 						this.Dictionary.Add(key, obj);
 					}
 				}
-				//reader.ReadEndElement();
 			}
 		}
 
@@ -159,9 +151,7 @@ namespace ExapisSOP.IO.Settings
 				writer.WriteStartElement("data");
 				writer.WriteAttributeString("name", pair.Key);
 				writer.WriteAttributeString("type", t.FullName);
-				/*if (pair.Value is IXmlSerializable serializable) {
-					serializable.WriteXml(writer);
-				} else*/ if (t.IsPrimitive || t == typeof(string)) {
+				if (t.IsPrimitive || t == typeof(string)) {
 					writer.WriteValue(pair.Value);
 				} else {
 					var xs = new XmlSerializer(t);

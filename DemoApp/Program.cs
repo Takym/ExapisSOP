@@ -9,7 +9,6 @@ using System;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.IO;
-using ExapisSOP.IO.Settings;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.DemoApp
@@ -52,30 +51,7 @@ namespace ExapisSOP.DemoApp
 						options.CreateLockFile = false;//true;
 						await Task.CompletedTask;
 					})
-					.AddSettingsSystem(async (options) => {
-						options.CreateNewSettings = () => new CustomSettings(new EnvironmentSettings() {
-							OutputReadableXML = true,
-							Locale = "ja",
-							DataStore = new DataStore() {
-								["aaa"] = "string value",
-								[12345] = new OptimizedSettings(),
-								["dat"] = new DataStore() {
-									[0] = 0,
-									[1] = 1,
-									["null"] = null,
-									["empty"] = string.Empty,
-									["object"] = new DataStore() {
-										["default"] = new DefaultSettings(),
-										["env"] = new EnvironmentSettings(),
-										["custom"] = new CustomSettings() {
-											Default = new EnvironmentSettings()
-										}
-									}
-								}
-							}
-						});
-						await Task.CompletedTask;
-					})
+					.AddSettingsSystem()
 					.AddAppWorker<Program>()
 			).Build().RunAsync();
 		}
