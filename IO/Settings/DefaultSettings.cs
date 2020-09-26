@@ -14,7 +14,6 @@ namespace ExapisSOP.IO.Settings
 	///  既定の環境設定を表します。
 	/// </summary>
 	[XmlRoot(RootElementName)]
-	[XmlSchemaProvider(nameof(GetSchema))]
 	[XmlInclude(typeof(OptimizedSettings))]
 	public class DefaultSettings : EnvironmentSettings
 	{
@@ -31,6 +30,7 @@ namespace ExapisSOP.IO.Settings
 			this.OutputReadableXML = true;
 			this.Locale            = CultureInfo.InstalledUICulture.Name;
 			this.EnableLogging     = true;
+			this.DataStore         = new DataStore();
 		}
 	}
 }

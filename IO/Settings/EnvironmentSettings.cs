@@ -17,7 +17,6 @@ namespace ExapisSOP.IO.Settings
 	///  システムに関する環境設定を表します。
 	/// </summary>
 	[XmlRoot(RootElementName)]
-	[XmlSchemaProvider(nameof(GetSchema))]
 	[XmlInclude(typeof(CustomSettings))]
 	[XmlInclude(typeof(DefaultSettings))]
 	[XmlInclude(typeof(OptimizedSettings))]
@@ -42,6 +41,12 @@ namespace ExapisSOP.IO.Settings
 		public bool EnableLogging { get; set; }
 
 		/// <summary>
+		///  その他のユーザー定義の設定情報を取得または設定します。
+		/// </summary>
+		[XmlElement(DataStore.RootElementName, IsNullable = true)]
+		public DataStore? DataStore { get; set; }
+
+		/// <summary>
 		///  プログラムが初回起動の場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。
 		/// </summary>
 		[XmlIgnore()]
@@ -63,6 +68,7 @@ namespace ExapisSOP.IO.Settings
 			this.OutputReadableXML = default;
 			this.Locale            = default;
 			this.EnableLogging     = default;
+			this.DataStore         = default;
 		}
 
 		/// <summary>
@@ -79,6 +85,7 @@ namespace ExapisSOP.IO.Settings
 			this.OutputReadableXML = settings.OutputReadableXML;
 			this.Locale            = settings.Locale;
 			this.EnableLogging     = settings.EnableLogging;
+			this.DataStore         = settings.DataStore?.Clone();
 			if (copyFirstBoot) {
 				this.FirstBoot = settings.FirstBoot;
 			}
@@ -105,18 +112,8 @@ namespace ExapisSOP.IO.Settings
 		}
 
 		#region 静的
-
-		internal const string RootElementName = "envconfig";
-
-		private static XmlSchema? _schema;
-
-		internal static XmlQualifiedName GetSchema(XmlSchemaSet xss)
-		{
-			xss.XmlResolver = new XmlUrlResolver();
-			xss.Add(LoadSchema());
-			return new XmlQualifiedName(RootElementName, _schema!.TargetNamespace);
-		}
-
+		internal const  string     RootElementName = "envconfig";
+		private  static XmlSchema? _schema;
 		internal static XmlSchema LoadSchema()
 		{
 			if (_schema == null) {
@@ -128,7 +125,6 @@ namespace ExapisSOP.IO.Settings
 			}
 			return _schema;
 		}
-
 		#endregion
 	}
 }

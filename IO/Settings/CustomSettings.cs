@@ -13,7 +13,6 @@ namespace ExapisSOP.IO.Settings
 	///  アプリケーション定義の環境設定を表します。
 	/// </summary>
 	[XmlRoot(RootElementName)]
-	[XmlSchemaProvider(nameof(GetSchema))]
 	public class CustomSettings : EnvironmentSettings
 	{
 		/// <summary>

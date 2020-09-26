@@ -54,6 +54,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			<xsd:element ref="datalist" minOccurs="1" maxOccurs="1" />
 			<xsd:element name="default" minOccurs="0" maxOccurs="1" type="settings" nillable="true">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -63,7 +64,7 @@
 			</xsd:element>
 		</xsd:all>
 	</xsd:complexType>
-	<xsd:element name="datalist">
+	<xsd:element name="datalist" nillable="true">
 		<xsd:annotation>
 			<xsd:documentation>
 				データストアの親要素です。
@@ -71,170 +72,33 @@
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="data" minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="data" minOccurs="0" maxOccurs="unbounded" nillable="true">
 					<xsd:annotation>
 						<xsd:documentation>
 							データストアの値です。
 						</xsd:documentation>
 					</xsd:annotation>
-					<xsd:complexType>
-						<xsd:simpleContent>
-							<xsd:extension base="anyObject">
-								<xsd:attribute name="name" type="xsd:string" use="required">
-									<xsd:annotation>
-										<xsd:documentation>
-											データ値の名前です。
-										</xsd:documentation>
-									</xsd:annotation>
-								</xsd:attribute>
-								<xsd:attribute name="type" type="xsd:NCName" use="required">
-									<xsd:annotation>
-										<xsd:documentation>
-											データ値の種類です。.NET上での名前空間を含む型名です。
-										</xsd:documentation>
-									</xsd:annotation>
-								</xsd:attribute>
-							</xsd:extension>
-						</xsd:simpleContent>
+					<xsd:complexType mixed="true">
+						<xsd:choice>
+							<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="lax" />
+						</xsd:choice>
+						<xsd:attribute name="name" type="xsd:string" use="required">
+							<xsd:annotation>
+								<xsd:documentation>
+									データ値の名前です。
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="type" type="xsd:NCName" use="required">
+							<xsd:annotation>
+								<xsd:documentation>
+									データ値の種類です。.NET上での名前空間を含む型名です。
+								</xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
 					</xsd:complexType>
 				</xsd:element>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-	<xsd:simpleType name="anyObject">
-		<xsd:union>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:anyURI" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:base64Binary" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:boolean" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:byte" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:date" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:dateTime" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:decimal" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:double" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:duration" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:ENTITIES" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:ENTITY" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:float" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:gDay" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:gMonth" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:gMonthDay" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:gYear" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:gYearMonth" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:hexBinary" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:ID" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:IDREF" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:IDREFS" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:int" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:integer" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:language" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:long" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:Name" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:NCName" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:negativeInteger" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:NMTOKEN" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:NMTOKENS" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:nonNegativeInteger" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:nonPositiveInteger" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:normalizedString" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:NOTATION" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:positiveInteger" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:QName" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:short" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:string" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:time" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:token" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:unsignedByte" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:unsignedInt" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:unsignedLong" />
-			</xsd:simpleType>
-			<xsd:simpleType>
-				<xsd:restriction base="xsd:unsignedShort" />
-			</xsd:simpleType>
-		</xsd:union>
-	</xsd:simpleType>
 </xsd:schema>

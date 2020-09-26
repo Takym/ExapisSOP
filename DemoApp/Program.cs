@@ -6,10 +6,10 @@
 ****/
 
 using System;
-using System.Security;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Settings;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.DemoApp
@@ -52,7 +52,20 @@ namespace ExapisSOP.DemoApp
 						options.CreateLockFile = true;
 						await Task.CompletedTask;
 					})
-					.AddSettingsSystem()
+					.AddSettingsSystem(async (options) => {
+						options.CreateNewSettings = () => new CustomSettings() {
+							OutputReadableXML = true,
+							Locale = "ja",
+							DataStore = new DataStore() {
+								["aaa"] = "string value",
+								[12345] = new OptimizedSettings(),
+								["dat"] = new DataStore() {
+									[0] = 0
+								}
+							}
+						};
+						await Task.CompletedTask;
+					})
 					.AddAppWorker<Program>()
 			).Build().RunAsync();
 		}
