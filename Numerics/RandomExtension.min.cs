@@ -58,54 +58,6 @@ namespace ExapisSOP.Numerics
 		}
 
 		/// <summary>
-		///  最大値と最小値を指定して8ビット符号付き整数値を生成します。
-		/// </summary>
-		/// <param name="random">疑似乱数生成器です。</param>
-		/// <param name="max">最大値です。</param>
-		/// <param name="min">最小値です。</param>
-		/// <returns>結果の分からない値を返します。</returns>
-		public static sbyte NextSInt8(this IRandom random, sbyte max, sbyte min)
-		{
-			return ((sbyte)(random.NextSInt8((sbyte)(max - min)) + min));
-		}
-
-		/// <summary>
-		///  最大値と最小値を指定して16ビット符号付き整数値を生成します。
-		/// </summary>
-		/// <param name="random">疑似乱数生成器です。</param>
-		/// <param name="max">最大値です。</param>
-		/// <param name="min">最小値です。</param>
-		/// <returns>結果の分からない値を返します。</returns>
-		public static short NextSInt16(this IRandom random, short max, short min)
-		{
-			return ((short)(random.NextSInt16((short)(max - min)) + min));
-		}
-
-		/// <summary>
-		///  最大値と最小値を指定して32ビット符号付き整数値を生成します。
-		/// </summary>
-		/// <param name="random">疑似乱数生成器です。</param>
-		/// <param name="max">最大値です。</param>
-		/// <param name="min">最小値です。</param>
-		/// <returns>結果の分からない値を返します。</returns>
-		public static int NextSInt32(this IRandom random, int max, int min)
-		{
-			return random.NextSInt32(max - min) + min;
-		}
-
-		/// <summary>
-		///  最大値と最小値を指定して64ビット符号付き整数値を生成します。
-		/// </summary>
-		/// <param name="random">疑似乱数生成器です。</param>
-		/// <param name="max">最大値です。</param>
-		/// <param name="min">最小値です。</param>
-		/// <returns>結果の分からない値を返します。</returns>
-		public static long NextSInt64(this IRandom random, long max, long min)
-		{
-			return random.NextSInt64(max - min) + min;
-		}
-
-		/// <summary>
 		///  最大値と最小値を指定して単精度浮動小数点数値を生成します。
 		/// </summary>
 		/// <param name="random">疑似乱数生成器です。</param>

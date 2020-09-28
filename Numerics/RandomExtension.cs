@@ -97,14 +97,14 @@ namespace ExapisSOP.Numerics
 		}
 
 		/// <summary>
-		///  10進数数値を生成します。
+		///  10進数数値を0～1の範囲生成します。
 		/// </summary>
 		/// <param name="random">疑似乱数生成器です。</param>
 		/// <returns>結果の分からない値を返します。</returns>
 		public static decimal NextDecimal(this IRandom random)
 		{
-			//return 1.0M / random.NextSInt64() + random.NextSInt64();
-			return new decimal(random.NextDouble()) + new decimal(random.NextSInt64());
+			//return 1.0M / random.NextSInt64();
+			return new decimal(random.NextDouble());
 		}
 	}
 }
