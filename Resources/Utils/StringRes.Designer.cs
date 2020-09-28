@@ -61,11 +61,29 @@ namespace ExapisSOP.Resources.Utils {
         }
         
         /// <summary>
+        ///   Random_ArgumentOutOfRangeException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Random_ArgumentOutOfRangeException {
+            get {
+                return ResourceManager.GetString("Random_ArgumentOutOfRangeException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   SecureStringExtensions_SecurityException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SecureStringExtensions_SecurityException {
             get {
                 return ResourceManager.GetString("SecureStringExtensions_SecurityException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SystemRandom_InvalidOperationException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SystemRandom_InvalidOperationException {
+            get {
+                return ResourceManager.GetString("SystemRandom_InvalidOperationException", resourceCulture);
             }
         }
     }

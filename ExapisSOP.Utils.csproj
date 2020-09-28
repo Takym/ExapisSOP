@@ -52,7 +52,6 @@
 		</Compile>
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Numerics\" />
 		<Folder Include="Text\" />
 		<Compile Remove="Utils\ConsoleUtil.cs" />
 		<Compile Remove="Utils\DisposableBase.cs" />

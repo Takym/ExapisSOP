@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Random_ArgumentOutOfRangeException" xml:space="preserve">
+    <value>0未満の大きさの配列は作成できません。</value>
+  </data>
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
     <value>セキュリティで保護された文字列の比較時に未知のエラーが発生しました。</value>
+  </data>
+  <data name="SystemRandom_InvalidOperationException" xml:space="preserve">
+    <value>既存の型'System.Random'オブジェクトをラップしてインスタンスを作成した場合、シード値を取得する事はできません。</value>
   </data>
 </root>

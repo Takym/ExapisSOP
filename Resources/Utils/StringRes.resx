@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Random_ArgumentOutOfRangeException" xml:space="preserve">
+    <value>Random_ArgumentOutOfRangeException</value>
+  </data>
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
     <value>SecureStringExtensions_SecurityException</value>
+  </data>
+  <data name="SystemRandom_InvalidOperationException" xml:space="preserve">
+    <value>SystemRandom_InvalidOperationException</value>
   </data>
 </root>

@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Random_ArgumentOutOfRangeException" xml:space="preserve">
+    <value>Cannot create an array that the length is under 0.</value>
+  </data>
   <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
     <value>The unexpected exception occurred when comparing secure strings.</value>
+  </data>
+  <data name="SystemRandom_InvalidOperationException" xml:space="preserve">
+    <value>The wrapper instance of the type 'System.Random' cannot return a seed value.</value>
   </data>
 </root>
