@@ -48,7 +48,7 @@ namespace ExapisSOP.DemoApp
 				config => config
 					.AddFileSystem(async (options) => {
 						options.SetDataPath(DefaultPath.Application);
-						options.CreateLockFile = false;//true;
+						options.CreateLockFile = true;
 						await Task.CompletedTask;
 					})
 					.AddSettingsSystem()

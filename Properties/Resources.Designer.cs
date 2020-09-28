@@ -169,15 +169,6 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
-        ///   SecureStringExtensions_SecurityException に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SecureStringExtensions_SecurityException {
-            get {
-                return ResourceManager.GetString("SecureStringExtensions_SecurityException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   SettingsSystemService_TerminationException1 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsSystemService_TerminationException1 {

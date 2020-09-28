@@ -153,9 +153,6 @@
   <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
     <value>PathString_PlatformNotSupportedException</value>
   </data>
-  <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
-    <value>SecureStringExtensions_SecurityException</value>
-  </data>
   <data name="SettingsSystemService_TerminationException1" xml:space="preserve">
     <value>SettingsSystemService_TerminationException1</value>
   </data>

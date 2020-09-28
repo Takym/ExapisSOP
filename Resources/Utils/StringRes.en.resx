@@ -117,52 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DefaultHostRunner_Exception" xml:space="preserve">
-    <value>原因不明の未処理のエラーが発生しました。処理を正しく実行できません。これは予期されていません。</value>
-  </data>
-  <data name="EventLoopContext_InvalidOperationException" xml:space="preserve">
-    <value>イベントループ文脈情報が正しく生成されませんでした。破棄文脈情報を初期化文脈情報として扱う事はできません。</value>
-  </data>
-  <data name="HostRunner_Create_ArgumentException" xml:space="preserve">
-    <value>指定された型は無効です。</value>
-  </data>
-  <data name="HostRunner_Create_InvalidOperationException" xml:space="preserve">
-    <value>実行環境の生成に失敗しました。</value>
-  </data>
-  <data name="InitFinalContext_InvalidOperationException" xml:space="preserve">
-    <value>破棄文脈情報が正しく生成されませんでした。破棄文脈情報を初期化文脈情報として扱う事はできません。</value>
-  </data>
-  <data name="TerminationException" xml:space="preserve">
-    <value>実行中の処理が終了しました。</value>
-  </data>
-  <data name="TerminationException_withInnerError" xml:space="preserve">
-    <value>発生した例外によって、実行中の処理が終了しました。</value>
-  </data>
-  <data name="InvalidPathFormatException" xml:space="preserve">
-    <value>指定された文字列「{0}」は無効なパス文字列です。</value>
-  </data>
-  <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
-    <value>.NET Framework 4.8 では相対パスを取得できません。.NET Core 3.1 をご利用ください。</value>
-  </data>
-  <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
-    <value>渡された引数がバッファの範囲外です。</value>
-  </data>
-  <data name="EventLoopContext_ArgumentException" xml:space="preserve">
-    <value>イベントループ文脈情報が正しく生成されませんでした。指定された文脈は不正です。</value>
-  </data>
-  <data name="ConsoleUtil_Pause" xml:space="preserve">
-    <value>続行するには何かキーを押してください...</value>
-  </data>
-  <data name="ConsoleUtil_ReadPassword" xml:space="preserve">
-    <value>パスワードを入力してください：</value>
-  </data>
-  <data name="FileSystemService_TerminationException" xml:space="preserve">
-    <value>ロックファイルが既に存在しアクセスが拒否されています。ロックファイルへのパス：「{0}」</value>
-  </data>
-  <data name="SettingsSystemService_TerminationException1" xml:space="preserve">
-    <value>ファイルシステム管理サービスが正常に初期化されていないか、設定情報に互換性がありません。</value>
-  </data>
-  <data name="SettingsSystemService_TerminationException2" xml:space="preserve">
-    <value>設定情報の互換性が失われました。</value>
+  <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
+    <value>The unexpected exception occurred when comparing secure strings.</value>
   </data>
 </root>

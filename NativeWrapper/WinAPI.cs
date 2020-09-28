@@ -9,6 +9,7 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using ExapisSOP.NativeWrapper.Windows;
+using ExapisSOP.Resources.NativeWrapper.Windows;
 
 namespace ExapisSOP.NativeWrapper
 {

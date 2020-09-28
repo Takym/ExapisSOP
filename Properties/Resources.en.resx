@@ -156,9 +156,6 @@
   <data name="ConsoleUtil_ReadPassword" xml:space="preserve">
     <value>Type a password here:</value>
   </data>
-  <data name="SecureStringExtensions_SecurityException" xml:space="preserve">
-    <value>The unexpected exception occurred when comparing secure strings.</value>
-  </data>
   <data name="FileSystemService_TerminationException" xml:space="preserve">
     <value>The lock file already exists and denies access. The path to lock file: "{0}"</value>
   </data>

@@ -7,6 +7,7 @@
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<ProjectReference Include="ExapisSOP.NativeWrapper.Windows.csproj" />
+		<ProjectReference Include="ExapisSOP.Utils.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
 		<EmbeddedResource Remove="_SystemAttributes\*" />
 		<EmbeddedResource Remove="_TopLevelNS\*" />
@@ -15,6 +16,11 @@
 		<EmbeddedResource Remove="IO\*\*" />
 		<EmbeddedResource Remove="NativeWrapper\*" />
 		<EmbeddedResource Remove="NativeWrapper\*\*" />
+		<EmbeddedResource Remove="Numerics\*" />
+		<EmbeddedResource Remove="Resources\NativeWrapper\*" />
+		<EmbeddedResource Remove="Resources\NativeWrapper\*\*" />
+		<EmbeddedResource Remove="Resources\Utils\*" />
+		<EmbeddedResource Remove="Texts\*" />
 		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
@@ -24,6 +30,11 @@
 		<Compile Remove="IO\*\*" />
 		<Compile Remove="NativeWrapper\*" />
 		<Compile Remove="NativeWrapper\*\*" />
+		<Compile Remove="Numerics\*" />
+		<Compile Remove="Resources\NativeWrapper\*" />
+		<Compile Remove="Resources\NativeWrapper\*\*" />
+		<Compile Remove="Resources\Utils\*" />
+		<Compile Remove="Texts\*" />
 		<Compile Remove="Utils\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
@@ -33,6 +44,11 @@
 		<None Remove="IO\*\*" />
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />
+		<None Remove="Numerics\*" />
+		<None Remove="Resources\NativeWrapper\*" />
+		<None Remove="Resources\NativeWrapper\*\*" />
+		<None Remove="Resources\Utils\*" />
+		<None Remove="Texts\*" />
 		<None Remove="Utils\*" />
 	</ItemGroup>
 </Project>

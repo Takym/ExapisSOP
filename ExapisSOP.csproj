@@ -8,12 +8,30 @@
 		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="NativeWrapper\*" />
 		<EmbeddedResource Remove="NativeWrapper\*\*" />
+		<EmbeddedResource Remove="Numerics\*" />
+		<EmbeddedResource Remove="Resources\NativeWrapper\*" />
+		<EmbeddedResource Remove="Resources\NativeWrapper\*\*" />
+		<EmbeddedResource Remove="Resources\Utils\*" />
+		<EmbeddedResource Remove="Texts\*" />
+		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="DemoApp\*" />
 		<Compile Remove="NativeWrapper\*" />
 		<Compile Remove="NativeWrapper\*\*" />
+		<Compile Remove="Numerics\*" />
+		<Compile Remove="Resources\NativeWrapper\*" />
+		<Compile Remove="Resources\NativeWrapper\*\*" />
+		<Compile Remove="Resources\Utils\*" />
+		<Compile Remove="Texts\*" />
+		<Compile Remove="Utils\*" />
 		<None Remove="DemoApp\*" />
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />
+		<None Remove="Numerics\*" />
+		<None Remove="Resources\NativeWrapper\*" />
+		<None Remove="Resources\NativeWrapper\*\*" />
+		<None Remove="Resources\Utils\*" />
+		<None Remove="Texts\*" />
+		<None Remove="Utils\*" />
 	</ItemGroup>
 	<ItemGroup>
 		<EmbeddedResource Update="Properties\Resources.resx">
@@ -25,12 +43,16 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>Resources.resx</DependentUpon>
 		</Compile>
-		<Compile Include="NativeWrapper\INativeCaller.cs" />
 		<EmbeddedResource Include="IO\Settings\EnvironmentSettings.xsd">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</EmbeddedResource>
 		<Compile Update="IO\Settings\EnvironmentSettings.cs">
 			<DependentUpon>EnvironmentSettings.xsd</DependentUpon>
 		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="NativeWrapper\INativeCaller.cs" />
+		<Compile Include="Utils\ConsoleUtil.cs" />
+		<Compile Include="Utils\DisposableBase.cs" />
 	</ItemGroup>
 </Project>

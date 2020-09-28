@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Security;
-using ExapisSOP.Properties;
+using ExapisSOP.Resources.Utils;
 
 namespace ExapisSOP.Utils
 {
@@ -53,7 +53,7 @@ namespace ExapisSOP.Utils
 					Marshal.ZeroFreeBSTR(p2);
 				}
 			} catch (Exception e) {
-				throw new SecurityException(Resources.SecureStringExtensions_SecurityException, e);
+				throw new SecurityException(StringRes.SecureStringExtensions_SecurityException, e);
 			}
 		}
 	}

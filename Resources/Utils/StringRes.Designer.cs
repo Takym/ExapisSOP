@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExapisSOP.NativeWrapper {
+namespace ExapisSOP.Resources.Utils {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ExapisSOP.NativeWrapper {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class WinRes {
+    internal class StringRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal WinRes() {
+        internal StringRes() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ExapisSOP.NativeWrapper {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExapisSOP.NativeWrapper.WinRes", typeof(WinRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExapisSOP.Resources.Utils.StringRes", typeof(StringRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,11 @@ namespace ExapisSOP.NativeWrapper {
         }
         
         /// <summary>
-        ///   PlatformNotSupportedException に類似しているローカライズされた文字列を検索します。
+        ///   SecureStringExtensions_SecurityException に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string PlatformNotSupportedException {
+        internal static string SecureStringExtensions_SecurityException {
             get {
-                return ResourceManager.GetString("PlatformNotSupportedException", resourceCulture);
+                return ResourceManager.GetString("SecureStringExtensions_SecurityException", resourceCulture);
             }
         }
     }

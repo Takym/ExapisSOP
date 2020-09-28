@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<AssemblyName>ExapisSOP.NativeWrapper.Windows</AssemblyName>
+		<AssemblyName>ExapisSOP.Utils</AssemblyName>
 		<OutputType>Library</OutputType>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<NoWarn>CS1591;CS1701;CS1702</NoWarn>
 	</PropertyGroup>
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
@@ -15,10 +13,10 @@
 		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
-		<EmbeddedResource Remove="Numerics\*" />
-		<EmbeddedResource Remove="Resources\Utils\*" />
-		<EmbeddedResource Remove="Texts\*" />
-		<EmbeddedResource Remove="Utils\*" />
+		<EmbeddedResource Remove="NativeWrapper\*" />
+		<EmbeddedResource Remove="NativeWrapper\*\*" />
+		<EmbeddedResource Remove="Resources\NativeWrapper\*" />
+		<EmbeddedResource Remove="Resources\NativeWrapper\*\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
 		<Compile Remove="_TopLevelNS\*" />
@@ -26,10 +24,10 @@
 		<Compile Remove="DemoApp\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
-		<Compile Remove="Numerics\*" />
-		<Compile Remove="Resources\Utils\*" />
-		<Compile Remove="Texts\*" />
-		<Compile Remove="Utils\*" />
+		<Compile Remove="NativeWrapper\*" />
+		<Compile Remove="NativeWrapper\*\*" />
+		<Compile Remove="Resources\NativeWrapper\*" />
+		<Compile Remove="Resources\NativeWrapper\*\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
 		<None Remove="_TopLevelNS\*" />
@@ -37,23 +35,26 @@
 		<None Remove="DemoApp\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
-		<None Remove="Numerics\*" />
-		<None Remove="Resources\Utils\*" />
-		<None Remove="Texts\*" />
-		<None Remove="Utils\*" />
+		<None Remove="NativeWrapper\*" />
+		<None Remove="NativeWrapper\*\*" />
+		<None Remove="Resources\NativeWrapper\*" />
+		<None Remove="Resources\NativeWrapper\*\*" />
 	</ItemGroup>
 	<ItemGroup>
-		<EmbeddedResource Update="Resources\NativeWrapper\Windows\WinRes.resx">
+		<EmbeddedResource Update="Resources\Utils\StringRes.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>WinRes.Designer.cs</LastGenOutput>
+			<LastGenOutput>StringRes.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
-		<Compile Update="Resources\NativeWrapper\Windows\WinRes.Designer.cs">
+		<Compile Update="Resources\Utils\StringRes.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
-			<DependentUpon>WinRes.resx</DependentUpon>
+			<DependentUpon>StringRes.resx</DependentUpon>
 		</Compile>
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Remove="NativeWrapper\INativeCaller.cs" />
+		<Folder Include="Numerics\" />
+		<Folder Include="Text\" />
+		<Compile Remove="Utils\ConsoleUtil.cs" />
+		<Compile Remove="Utils\DisposableBase.cs" />
 	</ItemGroup>
 </Project>
