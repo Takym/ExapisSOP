@@ -31,7 +31,8 @@ namespace ExapisSOP
 		public TerminationException()
 			: base(Resources.TerminationException)
 		{
-			this.Reason = TerminationReason.WorkCompleted;
+			this.Reason  = TerminationReason.WorkCompleted;
+			this.HResult = 0;
 		}
 
 		/// <summary>
@@ -41,7 +42,8 @@ namespace ExapisSOP
 		public TerminationException(Exception innerException)
 			: base(Resources.TerminationException_withInnerError, innerException)
 		{
-			this.Reason = TerminationReason.ThrewException;
+			this.Reason  = TerminationReason.ThrewException;
+			this.HResult = innerException.HResult;
 		}
 
 		/// <summary>
@@ -54,6 +56,17 @@ namespace ExapisSOP
 			: base(message, token)
 		{
 			this.Reason = reason;
+			switch (reason) {
+			case TerminationReason.ProcessLocked:
+				this.HResult = 5; // アクセスが拒否されました。
+				break;
+			case TerminationReason.NoCompatible:
+				this.HResult = 13; // データが無効です。
+				break;
+			case TerminationReason.InvalidCommandLine:
+				this.HResult = 1; // ファンクションが間違っています。
+				break;
+			}
 		}
 
 		/// <summary>

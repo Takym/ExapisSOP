@@ -30,6 +30,11 @@ namespace ExapisSOP
 		/// <summary>
 		///  設定ファイルに互換性が存在しない、または、正常に設定情報を読み込めない事を表します。
 		/// </summary>
-		NoCompatible
+		NoCompatible,
+
+		/// <summary>
+		///  コマンド行引数が誤っている事を表します。
+		/// </summary>
+		InvalidCommandLine
 	}
 }

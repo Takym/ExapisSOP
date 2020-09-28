@@ -74,6 +74,7 @@ namespace ExapisSOP.Core
 							loop = false;
 							var e1 = await _app_workers[i].OnTerminateAsync(te);
 							var e2 = await _config        .OnTerminateAsync(te);
+							if (te.HResult != 0) ret = te.HResult;
 							if (e1 != null) ret = e1.HResult;
 							if (e2 != null) ret = e2.HResult;
 						} catch (Exception e) {
@@ -97,6 +98,7 @@ namespace ExapisSOP.Core
 								loop = false;
 								var e1 = await _app_workers[i].OnTerminateAsync(te);
 								var e2 = await _config        .OnTerminateAsync(te);
+								if (te.HResult != 0) ret = te.HResult;
 								if (e1 != null) ret = e1.HResult;
 								if (e2 != null) ret = e2.HResult;
 								break;
@@ -124,6 +126,7 @@ namespace ExapisSOP.Core
 							await _config        .OnTerminateAsync(te);
 							var e1 = await _app_workers[i].OnTerminateAsync(te);
 							var e2 = await _config        .OnTerminateAsync(te);
+							if (te.HResult != 0) ret = te.HResult;
 							if (e1 != null) ret = e1.HResult;
 							if (e2 != null) ret = e2.HResult;
 						} catch (Exception e) {
