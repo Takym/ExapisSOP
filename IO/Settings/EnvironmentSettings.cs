@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
+using ExapisSOP.IO.Settings.CommandLine;
 
 namespace ExapisSOP.IO.Settings
 {
@@ -20,24 +21,28 @@ namespace ExapisSOP.IO.Settings
 	[XmlInclude(typeof(CustomSettings))]
 	[XmlInclude(typeof(DefaultSettings))]
 	[XmlInclude(typeof(OptimizedSettings))]
+	[Switch("Settings", "S")]
 	public class EnvironmentSettings
 	{
 		/// <summary>
 		///  可読なXMLファイルを出力する場合は<see langword="true"/>、しない場合は<see langword="false"/>を設定します。
 		/// </summary>
 		[XmlElement("saveReadable")]
+		[Option("output-readable-xml", "x")]
 		public bool OutputReadableXML { get; set; }
 
 		/// <summary>
 		///  現在の言語コードを取得または設定します。
 		/// </summary>
 		[XmlElement("lang")]
+		[Option("lang", "l")]
 		public string? Locale { get; set; }
 
 		/// <summary>
 		///  ログ出力を有効にする場合は<see langword="true"/>、しない場合は<see langword="false"/>を設定します。
 		/// </summary>
 		[XmlElement("enableLog")]
+		[Option("logging", "g")]
 		public bool EnableLogging { get; set; }
 
 		/// <summary>

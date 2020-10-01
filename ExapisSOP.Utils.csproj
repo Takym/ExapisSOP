@@ -13,6 +13,7 @@
 		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
+		<EmbeddedResource Remove="IO\*\*\*" />
 		<EmbeddedResource Remove="NativeWrapper\*" />
 		<EmbeddedResource Remove="NativeWrapper\*\*" />
 		<EmbeddedResource Remove="Resources\NativeWrapper\*" />
@@ -24,6 +25,7 @@
 		<Compile Remove="DemoApp\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
+		<Compile Remove="IO\*\*\*" />
 		<Compile Remove="NativeWrapper\*" />
 		<Compile Remove="NativeWrapper\*\*" />
 		<Compile Remove="Resources\NativeWrapper\*" />
@@ -35,6 +37,7 @@
 		<None Remove="DemoApp\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
+		<None Remove="IO\*\*\*" />
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />
 		<None Remove="Resources\NativeWrapper\*" />
@@ -55,5 +58,6 @@
 		<Compile Include="_SystemAttributes\attrs.cs" />
 		<Compile Remove="Utils\ConsoleUtil.cs" />
 		<Compile Remove="Utils\DisposableBase.cs" />
+		<Compile Remove="Utils\StringExtensions.cs" />
 	</ItemGroup>
 </Project>

@@ -16,6 +16,7 @@
 		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
+		<EmbeddedResource Remove="IO\*\*\*" />
 		<EmbeddedResource Remove="Numerics\*" />
 		<EmbeddedResource Remove="Resources\Utils\*" />
 		<EmbeddedResource Remove="Text\*" />
@@ -28,6 +29,7 @@
 		<Compile Remove="DemoApp\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
+		<Compile Remove="IO\*\*\*" />
 		<Compile Remove="Numerics\*" />
 		<Compile Remove="Resources\Utils\*" />
 		<Compile Remove="Text\*" />
@@ -40,6 +42,7 @@
 		<None Remove="DemoApp\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
+		<None Remove="IO\*\*\*" />
 		<None Remove="Numerics\*" />
 		<None Remove="Resources\Utils\*" />
 		<None Remove="Text\*" />

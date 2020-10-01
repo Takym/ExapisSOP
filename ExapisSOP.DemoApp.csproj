@@ -15,6 +15,7 @@
 		<EmbeddedResource Remove="Core\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
+		<EmbeddedResource Remove="IO\*\*\*" />
 		<EmbeddedResource Remove="NativeWrapper\*" />
 		<EmbeddedResource Remove="NativeWrapper\*\*" />
 		<EmbeddedResource Remove="Numerics\*" />
@@ -30,6 +31,7 @@
 		<Compile Remove="Core\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
+		<Compile Remove="IO\*\*\*" />
 		<Compile Remove="NativeWrapper\*" />
 		<Compile Remove="NativeWrapper\*\*" />
 		<Compile Remove="Numerics\*" />
@@ -45,6 +47,7 @@
 		<None Remove="Core\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
+		<None Remove="IO\*\*\*" />
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />
 		<None Remove="Numerics\*" />
