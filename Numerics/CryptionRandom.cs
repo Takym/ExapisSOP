@@ -39,7 +39,7 @@ namespace ExapisSOP.Numerics
 		{
 			get
 			{
-				throw new InvalidOperationException(StringRes.SystemRandom_InvalidOperationException);
+				throw new InvalidOperationException(StringRes.CryptionRandom_InvalidOperationException);
 			}
 			protected set { }
 		}

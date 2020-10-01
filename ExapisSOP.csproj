@@ -5,6 +5,7 @@
 	</PropertyGroup>
 	<Import Project="ExapisSOP.ProjectSettings.csproj" />
 	<ItemGroup>
+		<EmbeddedResource Remove="Binary\*" />
 		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="NativeWrapper\*" />
 		<EmbeddedResource Remove="NativeWrapper\*\*" />
@@ -14,6 +15,7 @@
 		<EmbeddedResource Remove="Resources\Utils\*" />
 		<EmbeddedResource Remove="Text\*" />
 		<EmbeddedResource Remove="Utils\*" />
+		<Compile Remove="Binary\*" />
 		<Compile Remove="DemoApp\*" />
 		<Compile Remove="NativeWrapper\*" />
 		<Compile Remove="NativeWrapper\*\*" />
@@ -23,6 +25,7 @@
 		<Compile Remove="Resources\Utils\*" />
 		<Compile Remove="Text\*" />
 		<Compile Remove="Utils\*" />
+		<None Remove="Binary\*" />
 		<None Remove="DemoApp\*" />
 		<None Remove="NativeWrapper\*" />
 		<None Remove="NativeWrapper\*\*" />

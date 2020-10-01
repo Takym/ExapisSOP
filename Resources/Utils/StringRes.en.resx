@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CryptionRandom_InvalidOperationException" xml:space="preserve">
+    <value>The wrapper instance of the type "System.Security.Cryptography.RandomNumberGenerator" cannot return a seed value.</value>
+  </data>
+  <data name="DataValue_NotSupportedException" xml:space="preserve">
+    <value>Does not support conversion of the specified type "{0}".</value>
+  </data>
   <data name="RandomExtension_ArgumentOutOfRangeException" xml:space="preserve">
     <value>The maximum value "{0}" should be greater than the minimum value "{1}".</value>
   </data>
@@ -127,6 +133,6 @@
     <value>The unexpected exception occurred when comparing secure strings.</value>
   </data>
   <data name="SystemRandom_InvalidOperationException" xml:space="preserve">
-    <value>The wrapper instance of the type 'System.Random' cannot return a seed value.</value>
+    <value>The wrapper instance of the type "System.Random" cannot return a seed value.</value>
   </data>
 </root>

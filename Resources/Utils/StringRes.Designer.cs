@@ -61,6 +61,24 @@ namespace ExapisSOP.Resources.Utils {
         }
         
         /// <summary>
+        ///   CryptionRandom_InvalidOperationException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CryptionRandom_InvalidOperationException {
+            get {
+                return ResourceManager.GetString("CryptionRandom_InvalidOperationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   DataValue_NotSupportedException {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DataValue_NotSupportedException {
+            get {
+                return ResourceManager.GetString("DataValue_NotSupportedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Random_ArgumentOutOfRangeException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string Random_ArgumentOutOfRangeException {
