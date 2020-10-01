@@ -314,7 +314,7 @@ namespace ExapisSOP.Binary
 				sb2.Append("datavalue list: count = ").Append(list.Count).AppendLine();
 				for (int i = 0; i < list.Count; ++i) {
 					sb2.Append($"list value[{i}]:").AppendLine();
-					string[] lines = list[i].ToString().Replace('\r', '\n').Split('\n', StringSplitOptions.RemoveEmptyEntries);
+					string[] lines = list[i].ToString().Replace('\r', '\n').Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 					for (int j = 0; j < lines.Length; ++j) {
 						sb2.Append("    " + lines[j]).AppendLine();
 					}
@@ -325,7 +325,7 @@ namespace ExapisSOP.Binary
 				sb3.Append("datavalue dictionary: count = ").Append(dict.Count).AppendLine();
 				foreach (var pair in dict) {
 					sb3.Append($"dictionary value[{pair.Key}]:").AppendLine();
-					string[] lines = pair.Value.ToString().Replace('\r', '\n').Split('\n', StringSplitOptions.RemoveEmptyEntries);
+					string[] lines = pair.Value.ToString().Replace('\r', '\n').Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 					for (int j = 0; j < lines.Length; ++j) {
 						sb3.Append("    " + lines[j]).AppendLine();
 					}

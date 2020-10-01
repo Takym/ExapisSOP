@@ -121,7 +121,7 @@
     <value>既存の型「System.Security.Cryptography.RandomNumberGenerator」オブジェクトをラップしてインスタンスを作成した場合、シード値を取得する事はできません。</value>
   </data>
   <data name="DataValue_NotSupportedException" xml:space="preserve">
-    <value>指定した型「{0}」の変換はサポートしていません。</value>
+    <value>指定された型「{0}」の変換はサポートしていません。</value>
   </data>
   <data name="RandomExtension_ArgumentOutOfRangeException" xml:space="preserve">
     <value>最大値「{0}」は最小値「{1}」より大きい必要があります。</value>

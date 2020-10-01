@@ -126,7 +126,7 @@ namespace ExapisSOP.Numerics
 			if (this.IsDisposed) {
 				throw new ObjectDisposedException(nameof(CryptionRandom));
 			}
-			return BitConverter.ToInt64(this.NextBytes(8));
+			return BitConverter.ToInt64(this.NextBytes(8), 0);
 		}
 
 		/// <summary>
