@@ -52,7 +52,6 @@
 		</Compile>
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Text\" />
 		<Compile Include="_SystemAttributes\attrs.cs" />
 		<Compile Remove="Utils\ConsoleUtil.cs" />
 		<Compile Remove="Utils\DisposableBase.cs" />

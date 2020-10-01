@@ -20,7 +20,7 @@
 		<EmbeddedResource Remove="Resources\NativeWrapper\*" />
 		<EmbeddedResource Remove="Resources\NativeWrapper\*\*" />
 		<EmbeddedResource Remove="Resources\Utils\*" />
-		<EmbeddedResource Remove="Texts\*" />
+		<EmbeddedResource Remove="Text\*" />
 		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
@@ -34,7 +34,7 @@
 		<Compile Remove="Resources\NativeWrapper\*" />
 		<Compile Remove="Resources\NativeWrapper\*\*" />
 		<Compile Remove="Resources\Utils\*" />
-		<Compile Remove="Texts\*" />
+		<Compile Remove="Text\*" />
 		<Compile Remove="Utils\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
@@ -48,7 +48,7 @@
 		<None Remove="Resources\NativeWrapper\*" />
 		<None Remove="Resources\NativeWrapper\*\*" />
 		<None Remove="Resources\Utils\*" />
-		<None Remove="Texts\*" />
+		<None Remove="Text\*" />
 		<None Remove="Utils\*" />
 	</ItemGroup>
 </Project>
