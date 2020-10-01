@@ -70,6 +70,15 @@ namespace ExapisSOP.Resources.Utils {
         }
         
         /// <summary>
+        ///   RandomExtension_ArgumentOutOfRangeException {0} {1} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RandomExtension_ArgumentOutOfRangeException {
+            get {
+                return ResourceManager.GetString("RandomExtension_ArgumentOutOfRangeException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   SecureStringExtensions_SecurityException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SecureStringExtensions_SecurityException {

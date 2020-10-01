@@ -6,6 +6,8 @@
 ****/
 
 using System;
+using System.Diagnostics;
+using ExapisSOP.Resources.Utils;
 
 namespace ExapisSOP.Numerics
 {
@@ -32,7 +34,7 @@ namespace ExapisSOP.Numerics
 		/// <returns>結果の分からない値を返します。</returns>
 		public static ushort NextUInt16(this IRandom random)
 		{
-			return BitConverter.ToUInt16(random.NextBytes(2));
+			return BitConverter.ToUInt16(random.NextBytes(2), 0);
 		}
 
 		/// <summary>
@@ -42,7 +44,7 @@ namespace ExapisSOP.Numerics
 		/// <returns>結果の分からない値を返します。</returns>
 		public static uint NextUInt32(this IRandom random)
 		{
-			return BitConverter.ToUInt32(random.NextBytes(4));
+			return BitConverter.ToUInt32(random.NextBytes(4), 0);
 		}
 
 		/// <summary>
@@ -72,7 +74,7 @@ namespace ExapisSOP.Numerics
 		/// <returns>結果の分からない値を返します。</returns>
 		public static short NextSInt16(this IRandom random)
 		{
-			return BitConverter.ToInt16(random.NextBytes(2));
+			return BitConverter.ToInt16(random.NextBytes(2), 0);
 		}
 
 		/// <summary>
@@ -82,7 +84,7 @@ namespace ExapisSOP.Numerics
 		/// <returns>結果の分からない値を返します。</returns>
 		public static int NextSInt32(this IRandom random)
 		{
-			return BitConverter.ToInt32(random.NextBytes(4));
+			return BitConverter.ToInt32(random.NextBytes(4), 0);
 		}
 
 		/// <summary>
@@ -97,14 +99,23 @@ namespace ExapisSOP.Numerics
 		}
 
 		/// <summary>
-		///  10進数数値を0～1の範囲生成します。
+		///  10進数数値を生成します。
 		/// </summary>
 		/// <param name="random">疑似乱数生成器です。</param>
 		/// <returns>結果の分からない値を返します。</returns>
 		public static decimal NextDecimal(this IRandom random)
 		{
-			//return 1.0M / random.NextSInt64();
-			return new decimal(random.NextDouble());
+			//return 1.0M / random.NextSInt64() + random.NextSInt64();
+			return new decimal(random.NextDouble()) + new decimal(random.NextSInt64());
+		}
+
+		[StackTraceHidden()]
+		private static void ThrowOutOfRange(object max, object min)
+		{
+			throw new ArgumentOutOfRangeException(
+				nameof(max), max,
+				string.Format(StringRes.RandomExtension_ArgumentOutOfRangeException, max, min)
+			);
 		}
 	}
 }
