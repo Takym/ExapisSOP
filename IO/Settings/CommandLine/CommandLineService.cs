@@ -7,10 +7,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.Properties;
+using ExapisSOP.Utils;
 
 namespace ExapisSOP.IO.Settings.CommandLine
 {
@@ -18,6 +20,8 @@ namespace ExapisSOP.IO.Settings.CommandLine
 	{
 		private readonly CommandLineServiceOptions             _options;
 		private readonly Func<CommandLineServiceOptions, Task> _optionsCallBack;
+		private          CommandLineConverter?                 _conv;
+		private          CLManualsCore?                        _man;
 		private          IDictionary<Type, object>?            _converterResult;
 		private          bool                                  _hasError;
 
@@ -41,25 +45,25 @@ namespace ExapisSOP.IO.Settings.CommandLine
 
 			// Convert switches to objects
 			if (_options.ConvertToObject) {
-				var conv = new CommandLineConverter();
+				_conv = new CommandLineConverter();
 				for (int i = 0; i < _options.ResultTypes.Count; ++i) {
-					conv.ResultTypes.Add(_options.ResultTypes[i]);
+					_conv.ResultTypes.Add(_options.ResultTypes[i]);
 				}
 				if (_options.AllowOverrideSettings) {
-					conv.ResultTypes.Add(typeof(EnvironmentSettings));
+					_conv.ResultTypes.Add(typeof(EnvironmentSettings));
 				}
 				var dict = _options.GetConverters();
 				if (dict != null) {
 					foreach (var pair in dict) {
-						if (conv.Converters.ContainsKey(pair.Key)) {
-							conv.Converters[pair.Key] = pair.Value;
+						if (_conv.Converters.ContainsKey(pair.Key)) {
+							_conv.Converters[pair.Key] = pair.Value;
 						} else {
-							conv.Converters.Add(pair.Key, pair.Value);
+							_conv.Converters.Add(pair.Key, pair.Value);
 						}
 					}
 				}
-				conv.CaseSensitive = _options.CaseSensitive;
-				_hasError = !conv.TryConvert(switches, out _converterResult);
+				_conv.CaseSensitive = _options.CaseSensitive;
+				_hasError = !_conv.TryConvert(switches, out _converterResult);
 
 				// Apply settings
 				if (_options.AllowOverrideSettings) {
@@ -89,6 +93,32 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		public IDictionary<Type, object>? GetValues()
 		{
 			return _converterResult;
+		}
+
+		public void PrintManuals(IContext context, string copyright)
+		{
+			if (_conv != null) {
+				if (_conv.ResetCache || _man == null) {
+					_man = new CLManualsCore(_conv, CultureInfo.CurrentCulture);
+				}
+				if (context.Arguments?.DoShowHelp() ?? false) {
+					ConsoleUtil.WriteHorizontalRule('-');
+					Console.WriteLine(Resources.CommandLineService_PrintManuals_Help);
+					Console.WriteLine(_man.GetHelpText());
+					ConsoleUtil.WriteHorizontalRule('-');
+				}
+				if (context.Arguments?.DoShowVersion() ?? false) {
+					var lib = context.GetSettingsSystem()?.GetLibraryVersion();
+					var app = context.GetSettingsSystem()?.GetApplicationVersion();
+					ConsoleUtil.WriteHorizontalRule('-');
+					Console.WriteLine(Resources.CommandLineService_PrintManuals_Version);
+					Console.WriteLine(_man.GetVersionText(
+						lib?.version ?? VersionInfo.VersionString, lib?.codename ?? VersionInfo.CodeName, VersionInfo.Copyright,
+						app?.version ?? "?.?.?.?",                 app?.codename ?? "unknown",            copyright
+					));
+					ConsoleUtil.WriteHorizontalRule('-');
+				}
+			}
 		}
 	}
 }

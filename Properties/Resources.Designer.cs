@@ -70,6 +70,24 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   CommandLineService_PrintManuals_Help に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CommandLineService_PrintManuals_Help {
+            get {
+                return ResourceManager.GetString("CommandLineService_PrintManuals_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   CommandLineService_PrintManuals_Version に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CommandLineService_PrintManuals_Version {
+            get {
+                return ResourceManager.GetString("CommandLineService_PrintManuals_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   CommandLineService_TerminationException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CommandLineService_TerminationException {

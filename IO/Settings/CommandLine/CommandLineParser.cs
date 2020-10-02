@@ -108,6 +108,90 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		}
 
 		/// <summary>
+		///  コマンド行説明書を表示する事が求められているかどうかを表す論理値を取得します。
+		/// </summary>
+		/// <param name="switches">コマンド行引数を表すスイッチの配列です。</param>
+		/// <returns>求められている場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
+		/// <exception cref="System.ArgumentNullException"/>
+		public static bool DoShowHelp(this Switch[] switches)
+		{
+			if (switches == null) {
+				throw new ArgumentNullException(nameof(switches));
+			}
+			var cmd = switches.GetCommandName()?.ToLower();
+			if (cmd == "?" || cmd == "h" || cmd == "help" || cmd == "man" || cmd == "manuals") {
+				return true;
+			} else if (string.IsNullOrEmpty(cmd)) {
+				return
+					(
+						switches                     .Length > 0 &&
+						switches[0].Options          .Length > 1 &&
+						switches[0].Options[1].Values.Length > 0 &&
+						(
+							switches[0].Options[1].Values[0].Text           == "?"    ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "h"    ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "help" ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "man"  ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "manuals"
+						)
+					) || (
+						switches.Length > 1 &&
+						(
+							switches[1].Name           == "?"    ||
+							switches[1].Name.ToLower() == "h"    ||
+							switches[1].Name.ToLower() == "help" ||
+							switches[1].Name.ToLower() == "man"  ||
+							switches[1].Name.ToLower() == "manuals"
+						)
+					);
+			} else {
+				return false;
+			}
+		}
+
+		/// <summary>
+		///  バージョン情報を表示する事が求められているかどうかを表す論理値を取得します。
+		/// </summary>
+		/// <param name="switches">コマンド行引数を表すスイッチの配列です。</param>
+		/// <returns>求められている場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
+		/// <exception cref="System.ArgumentNullException"/>
+		public static bool DoShowVersion(this Switch[] switches)
+		{
+			if (switches == null) {
+				throw new ArgumentNullException(nameof(switches));
+			}
+			var cmd = switches.GetCommandName()?.ToLower();
+			if (cmd == "v" || cmd == "ver" || cmd == "version" || cmd == "a" || cmd == "about") {
+				return true;
+			} else if (string.IsNullOrEmpty(cmd)) {
+				return
+					(
+						switches.Length > 0 &&
+						switches[0].Options.Length > 1 &&
+						switches[0].Options[1].Values.Length > 0 &&
+						(
+							switches[0].Options[1].Values[0].Text.ToLower() == "v"       ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "ver"     ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "version" ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "a"       ||
+							switches[0].Options[1].Values[0].Text.ToLower() == "about"
+						)
+					) || (
+						switches.Length > 1 &&
+						(
+							switches[1].Name.ToLower() == "v"       ||
+							switches[1].Name.ToLower() == "ver"     ||
+							switches[1].Name.ToLower() == "version" ||
+							switches[1].Name.ToLower() == "a"       ||
+							switches[1].Name.ToLower() == "about"
+						)
+					);
+			} else {
+				return false;
+			}
+		}
+
+		/// <summary>
 		///  コマンド行引数をオブジェクトへ変換します。
 		/// </summary>
 		/// <param name="converter">実際に変換を行うオブジェクトです。</param>

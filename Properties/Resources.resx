@@ -120,6 +120,12 @@
   <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
     <value>CachedStream_ThrowOnOutOfRange</value>
   </data>
+  <data name="CommandLineService_PrintManuals_Help" xml:space="preserve">
+    <value>CommandLineService_PrintManuals_Help</value>
+  </data>
+  <data name="CommandLineService_PrintManuals_Version" xml:space="preserve">
+    <value>CommandLineService_PrintManuals_Version</value>
+  </data>
   <data name="CommandLineService_TerminationException" xml:space="preserve">
     <value>CommandLineService_TerminationException</value>
   </data>

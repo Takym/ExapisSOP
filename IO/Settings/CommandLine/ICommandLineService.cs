@@ -28,5 +28,12 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		///  オブジェクトを格納した辞書、または、変換が実行されなかった場合は<see langword="null"/>を返します。
 		/// </returns>
 		IDictionary<Type, object>? GetValues();
+
+		/// <summary>
+		///  コマンド行引数説明書またはバージョン情報を標準出力ストリームへ書き込みます。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <param name="copyright">アプリケーションの著作権情報です。</param>
+		void PrintManuals(IContext context, string copyright);
 	}
 }

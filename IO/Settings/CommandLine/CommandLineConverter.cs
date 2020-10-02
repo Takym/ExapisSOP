@@ -22,6 +22,8 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		private bool             _caseSensitive;
 		private CLConverterCore? _cache;
 
+		internal bool ResetCache => _cache == null;
+
 		/// <summary>
 		///  スイッチ配列の変換後の型を取得します。
 		/// </summary>

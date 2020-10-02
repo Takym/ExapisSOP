@@ -166,6 +166,16 @@ namespace ExapisSOP.IO.Settings
 			}
 		}
 
+		public (string version, string codename) GetApplicationVersion()
+		{
+			return _options.GetCurrentVersion();
+		}
+
+		public (string version, string codename) GetLibraryVersion()
+		{
+			return (VersionInfo.VersionString, VersionInfo.CodeName);
+		}
+
 		private void EnsureStreams()
 		{
 			bool saveReadable = _settings?.OutputReadableXML ?? false;

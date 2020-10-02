@@ -53,5 +53,17 @@ namespace ExapisSOP.IO.Settings
 		/// <param name="settings">コピー元の設定情報です。</param>
 		/// <returns>適用処理の非同期操作です。</returns>
 		Task Apply(EnvironmentSettings settings);
+
+		/// <summary>
+		///  アプリケーションのバージョン情報を取得します。
+		/// </summary>
+		/// <returns>1番目の要素にバージョン情報を表す文字列、2番目の要素に開発コード名を返します。</returns>
+		(string version, string codename) GetApplicationVersion();
+
+		/// <summary>
+		///  ライブラリのバージョン情報を取得します。
+		/// </summary>
+		/// <returns>1番目の要素にバージョン情報を表す文字列、2番目の要素に開発コード名を返します。</returns>
+		(string version, string codename) GetLibraryVersion();
 	}
 }

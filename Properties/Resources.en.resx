@@ -168,4 +168,10 @@
   <data name="CommandLineService_TerminationException" xml:space="preserve">
     <value>The specified command line arguments have some errors.</value>
   </data>
+  <data name="CommandLineService_PrintManuals_Help" xml:space="preserve">
+    <value>Command-Line Manuals</value>
+  </data>
+  <data name="CommandLineService_PrintManuals_Version" xml:space="preserve">
+    <value>Version Information of This Program</value>
+  </data>
 </root>
