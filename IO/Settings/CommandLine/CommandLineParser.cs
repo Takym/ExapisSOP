@@ -48,7 +48,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 					} else {
 						cur_o = args[i].Substring(1).Trim();
 					}
-				} else if (args[i].StartsWith('$')) {
+				} else if (args[i].StartsWith("$")) {
 					values.Add(args[i].Substring(1));
 				} else {
 					values.Add(args[i]);

@@ -18,31 +18,41 @@ namespace ExapisSOP.Core
 		private  readonly List<AppWorker>   _app_workers;
 		private  readonly Configuration     _config;
 		private           InitFinalContext? _initContext;
+		private           bool              _ready_to_run;
 
 		public DefaultHostRunner(string[] cmdline) : base(cmdline)
 		{
-			_services    = new List<IService>();
-			_app_workers = new List<AppWorker>();
-			_config      = new Configuration(this);
+			_services     = new List<IService>();
+			_app_workers  = new List<AppWorker>();
+			_config       = new Configuration(this);
+			_ready_to_run = false;
+		}
+
+		public override HostRunner Build()
+		{
+			_ready_to_run = true;
+			return base.Build();
 		}
 
 		public override async Task<int> RunAsync()
 		{
-			try {
-				int ret = 0;
-				await (this.ConfigureCallBackFunc?.Invoke(_config) ?? Task.CompletedTask);
+			if (_ready_to_run) {
 				try {
-					await this.InitializationPhase();
-					_initContext!.ToString(); // nullチェック // 確実に通る
-					ret = await this.MainEventLoopPhase();
+					int ret = 0;
+					await (this.ConfigureCallBackFunc?.Invoke(_config) ?? Task.CompletedTask);
+					try {
+						await this.InitializationPhase();
+						_initContext!.ToString(); // nullチェック // 確実に通る
+						ret = await this.MainEventLoopPhase();
+					} finally {
+						await this.FinalizationPhase();
+					}
+					return ret;
 				} catch (Exception e) {
 					throw new Exception(Resources.DefaultHostRunner_Exception, e);
-				} finally {
-					await this.FinalizationPhase();
 				}
-				return ret;
-			} catch (Exception e) {
-				throw new Exception(Resources.DefaultHostRunner_Exception, e);
+			} else {
+				return -1;
 			}
 		}
 
