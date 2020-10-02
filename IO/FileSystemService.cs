@@ -49,10 +49,12 @@ namespace ExapisSOP.IO
 				_lockfile = _paths.DataRoot + ".lock";
 				if (_lockfile.Exists) {
 					_abort = true;
+					_paths.ExistsLockFile = true;
 				} else {
 					lock (_streams) {
 						_streams.Add(new FileStream(_lockfile, FileMode.OpenOrCreate, FileAccess.Read, FileShare.None));
 					}
+					_paths.ExistsLockFile = false;
 				}
 			}
 		}

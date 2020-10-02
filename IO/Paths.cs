@@ -63,6 +63,11 @@ namespace ExapisSOP.IO
 		/// </summary>
 		public PathString Settings => this.DataRoot + "settings";
 
+		/// <summary>
+		///  ロックファイルが存在するかどうかを表す論理値を取得します。
+		/// </summary>
+		public bool ExistsLockFile { get; internal set; }
+
 		internal Paths(PathString path)
 		{
 			this.DataRoot = path;

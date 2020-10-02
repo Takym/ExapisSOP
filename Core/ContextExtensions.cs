@@ -54,6 +54,20 @@ namespace ExapisSOP.Core
 		}
 
 		/// <summary>
+		///  プログラムが多重起動しているかどうか判定します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  多重起動している場合は<see langword="true"/>、
+		///  多重起動していない場合は<see langword="false"/>、
+		///  判定できなかった場合は<see langword="null"/>を返します。
+		/// </returns>
+		public static bool? IsMultipleBoot(this IContext context)
+		{
+			return context?.GetPaths()?.ExistsLockFile;
+		}
+
+		/// <summary>
 		///  プログラム初期化時に利用された文脈情報を取得します。
 		/// </summary>
 		/// <remarks>
