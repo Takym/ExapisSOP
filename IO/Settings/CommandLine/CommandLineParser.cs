@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ExapisSOP.IO.Settings.CommandLine
 {
@@ -21,8 +22,12 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// </summary>
 		/// <param name="args">解析するコマンド行引数です。</param>
 		/// <returns>指定されたコマンド行引数と同じ内容を表すスイッチの配列です。</returns>
-		public static Switch[] Parse(string[] args)
+		/// <exception cref="System.ArgumentNullException"/>
+		public static Switch[] Parse(params string[] args)
 		{
+			if (args == null) {
+				throw new ArgumentNullException(nameof(args));
+			}
 			var result  = new List<Switch>();
 			var options = new List<Option>();
 			var values  = new List<string>();
@@ -70,6 +75,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// <returns>
 		///  コマンド行引数で指定されているコマンド名、または、指定されていない場合は<see langword="null"/>を返します。
 		/// </returns>
+		/// <exception cref="System.ArgumentNullException"/>
 		public static string? GetCommandName(this Switch[] switches)
 		{
 			if (switches == null) {
@@ -81,6 +87,43 @@ namespace ExapisSOP.IO.Settings.CommandLine
 				return switches[0].Options[0].Values[0];
 			}
 			return null;
+		}
+
+		/// <summary>
+		///  コマンド行引数をオブジェクトへ変換します。
+		/// </summary>
+		/// <param name="converter">実際に変換を行うオブジェクトです。</param>
+		/// <param name="args">コマンド行引数の全部または一部を表す文字列の列挙体です。</param>
+		/// <returns>変換結果を表す新しいオブジェクトです。</returns>
+		/// <exception cref="System.ArgumentNullException"/>
+		public static object? Convert(this IArgumentConverter converter, IEnumerable<string> args)
+		{
+			if (converter == null) {
+				throw new ArgumentNullException(nameof(converter));
+			}
+			if (args == null) {
+				throw new ArgumentNullException(nameof(args));
+			}
+			return converter.Convert(args.ToArray());
+		}
+
+		/// <summary>
+		///  コマンド行引数を指定された型'<typeparamref name="T"/>'へ変換します。
+		/// </summary>
+		/// <param name="converter">実際に変換を行うオブジェクトです。</param>
+		/// <param name="args">コマンド行引数の全部または一部を表す文字列配列です。</param>
+		/// <typeparam name="T">変換後のオブジェクトです。</typeparam>
+		/// <returns>変換結果を表す新しい指定された型'<typeparamref name="T"/>'のオブジェクトです。</returns>
+		/// <exception cref="System.ArgumentNullException"/>
+		public static T Convert<T>(this IArgumentConverter<T> converter, IEnumerable<string> args)
+		{
+			if (converter == null) {
+				throw new ArgumentNullException(nameof(converter));
+			}
+			if (args == null) {
+				throw new ArgumentNullException(nameof(args));
+			}
+			return converter.Convert(args.ToArray());
 		}
 	}
 }

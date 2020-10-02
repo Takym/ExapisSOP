@@ -44,7 +44,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		//*/
 
 		/// <summary>
-		///  型'<see cref="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter"/>'
+		///  型'<see cref="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		public CommandLineConverter()
 		{
@@ -64,7 +64,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// </summary>
 		/// <param name="args">コマンド行引数の全部または一部を表す文字列配列です。</param>
 		/// <returns>変換結果を表す新しいスイッチ配列です。</returns>
-		public Switch[] Convert(string[] args)
+		public Switch[] Convert(params string[] args)
 		{
 			return CommandLineParser.Parse(args);
 		}
@@ -75,11 +75,11 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// <param name="switches">スイッチ配列です。</param>
 		/// <param name="result">変換後のオブジェクトです。失敗した場合でも一部の値を格納します。</param>
 		/// <returns>変換に成功した場合は<see langword="true"/>、失敗した場合は<see langword="false"/>を返します。</returns>
-		public bool TryConvert(Switch[] switches, out IDictionary<string, object> result)
+		public bool TryConvert(Switch[] switches, out IDictionary<Type, object> result)
 		{
 			this.ResetCache();
 			bool ret = true;
-			result = new Dictionary<string, object>();
+			result = new Dictionary<Type, object>();
 			for (int i = 0; i < switches.Length; ++i) {
 				if (_switch_table.ContainsKey(switches[i].Name)) {
 					try {
@@ -123,7 +123,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 						if (obj == null) {
 							ret = false;
 						} else {
-							result.Add(switches[i].Name, obj);
+							result.Add(t, obj);
 						}
 					} catch {
 						ret = false;

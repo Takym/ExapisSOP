@@ -17,7 +17,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// </summary>
 		/// <param name="args">コマンド行引数の全部または一部を表す文字列配列です。</param>
 		/// <returns>変換結果を表す新しいオブジェクトです。</returns>
-		object? Convert(string[] args);
+		object? Convert(params string[] args);
 	}
 
 	/// <summary>
@@ -31,10 +31,10 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// </summary>
 		/// <param name="args">コマンド行引数の全部または一部を表す文字列配列です。</param>
 		/// <returns>変換結果を表す新しい指定された型'<typeparamref name="T"/>'のオブジェクトです。</returns>
-		new T Convert(string[] args);
+		new T Convert(params string[] args);
 
 #if NETCOREAPP3_1
-		object? IArgumentConverter.Convert(string[] args)
+		object? IArgumentConverter.Convert(params string[] args)
 		{
 			return this.Convert(args);
 		}
