@@ -27,6 +27,11 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		public string? ShortName { get; }
 
 		/// <summary>
+		///  オプションの別の名前を取得します。
+		/// </summary>
+		public string? AltName { get; }
+
+		/// <summary>
 		///  値の型変換に利用する<see cref="ExapisSOP.IO.Settings.CommandLine.IArgumentConverter"/>の種類を取得または設定します。
 		/// </summary>
 		public Type? ArgumentConverter { get; set; }
@@ -49,6 +54,19 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		{
 			this.LongName  = longName;
 			this.ShortName = shortName;
+		}
+
+		/// <summary>
+		///  型'<see cref="ExapisSOP.IO.Settings.CommandLine.OptionAttribute"/>'の新しいインスタンスを生成します。
+		/// </summary>
+		/// <param name="longName">オプションの長い名前です。</param>
+		/// <param name="shortName">オプションの短い名前です。</param>
+		/// <param name="altName">オプションの別の名前です。</param>
+		public OptionAttribute(string longName, string shortName, string altName)
+		{
+			this.LongName  = longName;
+			this.ShortName = shortName;
+			this.AltName   = altName;
 		}
 	}
 }

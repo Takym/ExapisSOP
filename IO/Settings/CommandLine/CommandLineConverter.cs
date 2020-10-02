@@ -153,6 +153,9 @@ namespace ExapisSOP.IO.Settings.CommandLine
 						if (sattr.ShortName != null) {
 							_switch_table.Add(sattr.ShortName, this.ResultTypes[i]);
 						}
+						if (sattr.AltName != null) {
+							_switch_table.Add(sattr.AltName, this.ResultTypes[i]);
+						}
 						var members = this.ResultTypes[i].GetMembers();
 						for (int j = 0; j < members.Length; ++j) {
 							var oattr = members[j].GetCustomAttribute<OptionAttribute>();
@@ -162,6 +165,9 @@ namespace ExapisSOP.IO.Settings.CommandLine
 									_option_table.Add((this.ResultTypes[i], oattr.LongName), members[j]);
 									if (oattr.ShortName != null) {
 										_option_table.Add((this.ResultTypes[i], oattr.ShortName), members[j]);
+									}
+									if (oattr.AltName != null) {
+										_option_table.Add((this.ResultTypes[i], oattr.AltName), members[j]);
 									}
 									var ac = oattr.ArgumentConverter;
 									if (ac != null && !ac.IsAbstract && (ac.IsClass || ac.IsValueType) &&
