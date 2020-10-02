@@ -23,7 +23,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		private CLConverterCore? _cache;
 
 		/// <summary>
-		///  スイッチ配列の変換後の型を表します。
+		///  スイッチ配列の変換後の型を取得します。
 		/// </summary>
 		public ObservableCollection<Type> ResultTypes { get; }
 

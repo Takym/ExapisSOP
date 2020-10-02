@@ -9,6 +9,7 @@ using System;
 using System.Threading.Tasks;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Settings;
+using ExapisSOP.IO.Settings.CommandLine;
 
 namespace ExapisSOP.Core
 {
@@ -119,6 +120,46 @@ namespace ExapisSOP.Core
 				throw new ArgumentNullException(nameof(callBackFunc));
 			}
 			return config.AddService(new SettingsSystemService(callBackFunc));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>をサービスとして実行環境に登録します。
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>より後に登録しなければなりません。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
+		public static IConfiguration AddCommandLine(this IConfiguration config)
+		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			return config.AddService(new CommandLineService(_ => Task.CompletedTask));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>をサービスとして実行環境に登録します。
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>より後に登録しなければなりません。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <param name="callBackFunc">サービスの設定を行います。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
+		public static IConfiguration AddCommandLine(this IConfiguration config, Func<CommandLineServiceOptions, Task> callBackFunc)
+		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			if (callBackFunc == null) {
+				throw new ArgumentNullException(nameof(callBackFunc));
+			}
+			return config.AddService(new CommandLineService(callBackFunc));
 		}
 	}
 }

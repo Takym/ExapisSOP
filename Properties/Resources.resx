@@ -120,6 +120,9 @@
   <data name="CachedStream_ThrowOnOutOfRange" xml:space="preserve">
     <value>CachedStream_ThrowOnOutOfRange</value>
   </data>
+  <data name="CommandLineService_TerminationException" xml:space="preserve">
+    <value>CommandLineService_TerminationException</value>
+  </data>
   <data name="ConsoleUtil_Pause" xml:space="preserve">
     <value>ConsoleUtil_Pause</value>
   </data>

@@ -21,7 +21,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// <summary>
 		///  指定されたコマンド行引数を表す配列を解析し、スイッチの配列へ変換します。
 		/// </summary>
-		/// <param name="args">解析するコマンド行引数です。</param>
+		/// <param name="args">解析するコマンド行引数を格納した配列です。</param>
 		/// <returns>指定されたコマンド行引数と同じ内容を表すスイッチの配列です。</returns>
 		/// <exception cref="System.ArgumentNullException"/>
 		public static Switch[] Parse(params string[] args)
@@ -70,6 +70,20 @@ namespace ExapisSOP.IO.Settings.CommandLine
 			options.Add(new Option(cur_o, values .ToArray()));
 			result .Add(new Switch(cur_s, options.ToArray()));
 			return result.ToArray();
+		}
+
+		/// <summary>
+		///  指定されたコマンド行引数を表す配列を解析し、スイッチの配列へ変換します。
+		/// </summary>
+		/// <param name="args">解析するコマンド行引数を格納した列挙体です。</param>
+		/// <returns>指定されたコマンド行引数と同じ内容を表すスイッチの配列です。</returns>
+		/// <exception cref="System.ArgumentNullException"/>
+		public static Switch[] Parse(IEnumerable<string> args)
+		{
+			if (args == null) {
+				throw new ArgumentNullException(nameof(args));
+			}
+			return Parse(args.ToArray());
 		}
 
 		/// <summary>

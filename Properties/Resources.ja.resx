@@ -165,4 +165,7 @@
   <data name="SettingsSystemService_TerminationException2" xml:space="preserve">
     <value>設定情報の互換性が失われました。</value>
   </data>
+  <data name="CommandLineService_TerminationException" xml:space="preserve">
+    <value>指定されたコマンド行引数に誤りがあります。</value>
+  </data>
 </root>

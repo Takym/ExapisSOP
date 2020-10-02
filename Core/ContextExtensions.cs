@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Settings;
+using ExapisSOP.IO.Settings.CommandLine;
 
 namespace ExapisSOP.Core
 {
@@ -174,6 +175,18 @@ namespace ExapisSOP.Core
 		public static ISettingsSystemService? GetSettingsSystem(this IContext context)
 		{
 			return context?.GetService<ISettingsSystemService>();
+		}
+
+		/// <summary>
+		///  サービスリストから最初に見つかった<see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>を取得します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>を実装したサービスオブジェクトです。
+		/// </returns>
+		public static ICommandLineService? GetCommandLine(this IContext context)
+		{
+			return context?.GetService<ICommandLineService>();
 		}
 	}
 }

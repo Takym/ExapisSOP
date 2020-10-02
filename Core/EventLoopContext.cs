@@ -8,6 +8,7 @@
 using System;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Settings;
+using ExapisSOP.IO.Settings.CommandLine;
 using ExapisSOP.Properties;
 using ExapisSOP.Utils;
 
@@ -19,34 +20,33 @@ namespace ExapisSOP.Core
 		internal readonly InitFinalContext     _init;
 		private           EventLoopContext?    _prev;
 		private           object?              _msg;
-		public            IPathList?           Paths    { get; }
-		public            EnvironmentSettings? Settings { get; }
+		public            IPathList?           Paths     { get; }
+		public            EnvironmentSettings? Settings  { get; }
+		public            Switch[]?            Arguments { get; }
 
 		internal EventLoopContext(DefaultHostRunner runner, IContext context)
 		{
 			_runner = runner  ?? throw new ArgumentNullException(nameof(runner));
 			context = context ?? throw new ArgumentNullException(nameof(context));
 			if (context is InitFinalContext initContext) {
-				_init         = initContext;
-				_msg          = initContext.GetMessage();
-				this.Paths    = initContext.Paths;
-				this.Settings = initContext.Settings;
+				_init          = initContext;
+				_msg           = initContext.GetMessage();
 				if (initContext?.IsFinalizationPhase() ?? false) {
 					throw new InvalidOperationException(Resources.EventLoopContext_InvalidOperationException);
 				}
 			} else if (context is EventLoopContext prevContext) {
-				_init         = prevContext._init;
-				_prev         = prevContext;
-				_msg          = prevContext._msg;
-				this.Paths    = prevContext.Paths;
-				this.Settings = prevContext.Settings;
-
+				_init          = prevContext._init;
+				_prev          = prevContext;
+				_msg           = prevContext._msg;
 				// 2つ前の文脈情報を削除してメモリ節約
 				prevContext._prev?.Dispose();
 				prevContext._prev = null;
 			} else {
 				throw new ArgumentException(Resources.EventLoopContext_ArgumentException, nameof(context));
 			}
+			this.Paths     = context.Paths;
+			this.Settings  = context.Settings;
+			this.Arguments = context.Arguments;
 		}
 
 		internal EventLoopContext? GetPrev()

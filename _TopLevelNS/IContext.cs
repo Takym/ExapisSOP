@@ -7,6 +7,7 @@
 
 using ExapisSOP.IO;
 using ExapisSOP.IO.Settings;
+using ExapisSOP.IO.Settings.CommandLine;
 
 namespace ExapisSOP
 {
@@ -26,6 +27,12 @@ namespace ExapisSOP
 		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>が初期化されていない場合は<see langword="null"/>を返します。
 		/// </summary>
 		EnvironmentSettings? Settings { get; }
+
+		/// <summary>
+		///  解析済みのコマンド行引数を取得します。
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>が初期化されていない場合は<see langword="null"/>を返します。
+		/// </summary>
+		Switch[]? Arguments { get; }
 
 		/// <summary>
 		///  現在実行中の実行環境を取得します。

@@ -165,4 +165,7 @@
   <data name="SettingsSystemService_TerminationException2" xml:space="preserve">
     <value>The settings files lost compatible.</value>
   </data>
+  <data name="CommandLineService_TerminationException" xml:space="preserve">
+    <value>The specified command line arguments have some errors.</value>
+  </data>
 </root>

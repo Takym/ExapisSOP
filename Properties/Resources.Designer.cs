@@ -70,6 +70,15 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   CommandLineService_TerminationException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CommandLineService_TerminationException {
+            get {
+                return ResourceManager.GetString("CommandLineService_TerminationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ConsoleUtil_Pause に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ConsoleUtil_Pause {
