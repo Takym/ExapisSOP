@@ -35,17 +35,15 @@ namespace ExapisSOP.IO.Settings.CommandLine
 			string cur_o = string.Empty;
 			for (int i = 0; i < args.Length; ++i) {
 				if (args[i].StartsWith("/")) {
-					if (options.Count != 0) {
-						result.Add(new Switch(cur_s, options.ToArray()));
-						options.Clear();
-					}
+					options.Add(new Option(cur_o, values.ToArray()));
+					values .Clear();
+					result .Add(new Switch(cur_s, options.ToArray()));
+					options.Clear();
 					cur_s = args[i].Substring(1).Trim();
 					cur_o = string.Empty;
 				} else if (args[i].StartsWith("-")) {
-					if (values.Count != 0) {
-						options.Add(new Option(cur_o, values.ToArray()));
-						values.Clear();
-					}
+					options.Add(new Option(cur_o, values.ToArray()));
+					values .Clear();
 					int a = args[i].IndexOf(":");
 					if (a > 0) {
 						cur_o = args[i].Substring(1, a - 1);
@@ -59,12 +57,8 @@ namespace ExapisSOP.IO.Settings.CommandLine
 					values.Add(args[i]);
 				}
 			}
-			if (values.Count != 0) {
-				options.Add(new Option(cur_o, values.ToArray()));
-			}
-			if (options.Count != 0) {
-				result.Add(new Switch(cur_s, options.ToArray()));
-			}
+			options.Add(new Option(cur_o, values.ToArray()));
+			result .Add(new Switch(cur_s, options.ToArray()));
 			return result.ToArray();
 		}
 

@@ -42,9 +42,9 @@ namespace ExapisSOP.IO.Settings.CommandLine
 						if (oattr != null) {
 							if ((members[j] is FieldInfo    fi && fi.IsPublic && !fi.IsInitOnly) ||
 								(members[j] is PropertyInfo pi && (pi.SetMethod?.IsPublic ?? false))) {
-								this.AddOptionType(sattr.LongName,  _owner.ResultTypes[i], members[j]);
-								this.AddOptionType(sattr.ShortName, _owner.ResultTypes[i], members[j]);
-								this.AddOptionType(sattr.AltName,   _owner.ResultTypes[i], members[j]);
+								this.AddOptionType(oattr.LongName,  _owner.ResultTypes[i], members[j]);
+								this.AddOptionType(oattr.ShortName, _owner.ResultTypes[i], members[j]);
+								this.AddOptionType(oattr.AltName,   _owner.ResultTypes[i], members[j]);
 								var ac = oattr.ArgumentConverter;
 								if (ac != null && !ac.IsAbstract && (ac.IsClass || ac.IsValueType) &&
 									typeof(IArgumentConverter).IsAssignableFrom(ac)) {
@@ -60,21 +60,21 @@ namespace ExapisSOP.IO.Settings.CommandLine
 			}
 		}
 
-		internal bool SwitchesToDictionary(Switch[] switches, out IDictionary<Type, object> result)
+		internal bool SwitchesToDictionary(Switch[] swt, out IDictionary<Type, object> result)
 		{
 			bool ret = true;
 			result = new Dictionary<Type, object>();
-			for (int i = 0; i < switches.Length; ++i) {
-				if (_switch_table.ContainsKey(switches[i].Name)) {
+			for (int i = 0; i < swt.Length; ++i) {
+				if (_switch_table.ContainsKey(swt[i].Name)) {
 					try {
-						var t   = _switch_table[switches[i].Name];
+						var t   = _switch_table[swt[i].Name];
 						var obj = Activator.CreateInstance(t);
-						var opt = switches[i].Options;
+						var opt = swt[i].Options;
 						for (int j = 0; j < opt.Length; ++j) {
 							var key = (t, opt[j].Name);
 							if (_option_table.ContainsKey(key)) {
 								var mi  = _option_table[key];
-								var ac  = _val_conv[mi];
+								var ac  = _val_conv.ContainsKey(mi) ? _val_conv[mi] : null;
 								var miw = new MemberInfoWrapper(mi);
 								if (miw.Valid) {
 									if (ac == null && _owner.Converters.ContainsKey(miw.MemberType)) {
@@ -89,6 +89,8 @@ namespace ExapisSOP.IO.Settings.CommandLine
 										miw.SetValue(obj, ac.Convert(opt[j].Values));
 									}
 								}
+							} else if (string.IsNullOrEmpty(opt[j].Name)) {
+								continue;
 							} else {
 								ret = false;
 							}
@@ -101,6 +103,8 @@ namespace ExapisSOP.IO.Settings.CommandLine
 					} catch {
 						ret = false;
 					}
+				} else if (string.IsNullOrEmpty(swt[i].Name)) {
+					continue;
 				} else {
 					ret = false;
 				}

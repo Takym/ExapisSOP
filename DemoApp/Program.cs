@@ -33,10 +33,11 @@ namespace ExapisSOP.DemoApp
 
 			var conv = new CommandLineConverter();
 			conv.ResultTypes.Add(typeof(EnvironmentSettings));
-			//bool isValid = conv.TryConvert(conv.Convert("/Settings", "-output-readable-xml", "-lang", "zh-CN", "-logging:enabled"), out var result);
+			bool isValid = conv.TryConvert(conv.Convert("/Settings", "-output-readable-xml", "-lang", "zh-CN", "-logging:enabled"), out var result);
 			//bool isValid = conv.TryConvert(conv.Convert("/S", "-x", "-l", "en", "-g"), out var result);
 			//bool isValid = conv.TryConvert(conv.Convert("cmd", "-opt", "/S", "-x", "/hello"), out var result);
-			bool isValid = conv.TryConvert(conv.Convert(e.Context.GetHostRunner().Arguments), out var result);
+			//bool isValid = conv.TryConvert(conv.Convert("cmd", "-opt", "/S", "$-aaa", "-x"), out var result);
+			//bool isValid = conv.TryConvert(conv.Convert(e.Context.GetHostRunner().Arguments), out var result);
 			if (isValid) {
 				Console.WriteLine("Valid!");
 			} else {
