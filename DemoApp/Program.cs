@@ -32,8 +32,9 @@ namespace ExapisSOP.DemoApp
 			ConsoleUtil.WriteHorizontalRule();
 
 			var conv = new CommandLineConverter();
+			conv.CaseSensitive = false;
 			conv.ResultTypes.Add(typeof(EnvironmentSettings));
-			bool isValid = conv.TryConvert(conv.Convert("/Settings", "-output-readable-xml", "-lang", "zh-CN", "-logging:enabled"), out var result);
+			bool isValid = conv.TryConvert(conv.Convert("/settIngs", "-output-readable-xml", "-lang", "zh-CN", "-logging:enabled"), out var result);
 			//bool isValid = conv.TryConvert(conv.Convert("/S", "-x", "-l", "en", "-g"), out var result);
 			//bool isValid = conv.TryConvert(conv.Convert("cmd", "-opt", "/S", "-x", "/hello"), out var result);
 			//bool isValid = conv.TryConvert(conv.Convert("cmd", "-opt", "/S", "$-aaa", "-x"), out var result);
@@ -47,6 +48,9 @@ namespace ExapisSOP.DemoApp
 			Console.WriteLine($"OutputReadableXML: {result2?.OutputReadableXML}");
 			Console.WriteLine($"Locale           : {result2?.Locale}");
 			Console.WriteLine($"EnableLogging    : {result2?.EnableLogging}");
+			ConsoleUtil.WriteHorizontalRule();
+			Console.WriteLine(CommandLineParser.Parse("@README.md").GetCommandName());
+			ConsoleUtil.WriteHorizontalRule();
 		}
 
 		private void Program_Update(object? sender, ContextEventArgs e)

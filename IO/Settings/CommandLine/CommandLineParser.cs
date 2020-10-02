@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace ExapisSOP.IO.Settings.CommandLine
@@ -30,7 +31,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 			}
 			var result  = new List<Switch>();
 			var options = new List<Option>();
-			var values  = new List<string>();
+			var values  = new List<Option.Value>();
 			string cur_s = string.Empty;
 			string cur_o = string.Empty;
 			for (int i = 0; i < args.Length; ++i) {
@@ -47,17 +48,26 @@ namespace ExapisSOP.IO.Settings.CommandLine
 					int a = args[i].IndexOf(":");
 					if (a > 0) {
 						cur_o = args[i].Substring(1, a - 1);
-						values.Add(args[i].Substring(a + 1));
+						values.Add(new Option.Value(args[i].Substring(a + 1)));
 					} else {
 						cur_o = args[i].Substring(1).Trim();
 					}
 				} else if (args[i].StartsWith("$")) {
-					values.Add(args[i].Substring(1));
+					values.Add(new Option.Value(args[i].Substring(1)));
+				} else if (args[i].StartsWith("@")) {
+					var fname = args[i].Substring(1);
+					if (File.Exists(fname)) {
+						using (var fs = new FileStream(fname, FileMode.Open, FileAccess.Read, FileShare.Read)) {
+							values.Add(new Option.Value(fs));
+						}
+					} else {
+						values.Add(new Option.Value(fname));
+					}
 				} else {
-					values.Add(args[i]);
+					values.Add(new Option.Value(args[i]));
 				}
 			}
-			options.Add(new Option(cur_o, values.ToArray()));
+			options.Add(new Option(cur_o, values .ToArray()));
 			result .Add(new Switch(cur_s, options.ToArray()));
 			return result.ToArray();
 		}
@@ -78,7 +88,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 			if (switches                     .Length > 0 && switches[0]           .Name == string.Empty &&
 				switches[0].Options          .Length > 0 && switches[0].Options[0].Name == string.Empty &&
 				switches[0].Options[0].Values.Length > 0) {
-				return switches[0].Options[0].Values[0];
+				return switches[0].Options[0].Values[0].Text;
 			}
 			return null;
 		}

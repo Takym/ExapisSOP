@@ -81,12 +81,12 @@ namespace ExapisSOP.IO.Settings.CommandLine
 										ac = _owner.Converters[miw.MemberType];
 									}
 									if (ac == null) {
-										var val = this.StringArrayToObject(miw.MemberType, opt[j].Values);
+										var val = this.StringArrayToObject(miw.MemberType, this.OptionValuesToStrings(opt[j].Values));
 										if (val != null) {
 											miw.SetValue(obj, val);
 										}
 									} else {
-										miw.SetValue(obj, ac.Convert(opt[j].Values));
+										miw.SetValue(obj, ac.Convert(this.OptionValuesToStrings(opt[j].Values)));
 									}
 								}
 							} else if (string.IsNullOrEmpty(opt[j].Name)) {
@@ -250,6 +250,15 @@ namespace ExapisSOP.IO.Settings.CommandLine
 			if (name != null) {
 				_option_table.Add((type, name), mi);
 			}
+		}
+
+		private string[] OptionValuesToStrings(Option.Value[] values)
+		{
+			var result = new string[values.Length];
+			for (int i = 0; i < result.Length; ++i) {
+				result[i] = values[i].Text;
+			}
+			return result;
 		}
 
 		private class MemberInfoWrapper
