@@ -49,7 +49,7 @@ namespace ExapisSOP.IO.Settings
 		/// </summary>
 		[XmlElement("enableLog")]
 		[Option("logging", "g")]
-		[Manual("en", "Enable a log output. Specify \"-logging:disable\" or \"-g:disable\" to disable.")]
+		[Manual("en", "Enables a log output. Specify \"-logging:disable\" or \"-g:disable\" to disable.")]
 		[Manual("ja", "ログ出力を有効にします。「-logging:disable」または「-g:disable」で無効にします。")]
 		public bool EnableLogging { get; set; }
 

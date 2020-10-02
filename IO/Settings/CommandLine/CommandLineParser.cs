@@ -114,9 +114,9 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		/// <summary>
 		///  コマンド行引数を指定された型'<typeparamref name="T"/>'へ変換します。
 		/// </summary>
+		/// <typeparam name="T">変換後のオブジェクトです。</typeparam>
 		/// <param name="converter">実際に変換を行うオブジェクトです。</param>
 		/// <param name="args">コマンド行引数の全部または一部を表す文字列配列です。</param>
-		/// <typeparam name="T">変換後のオブジェクトです。</typeparam>
 		/// <returns>変換結果を表す新しい指定された型'<typeparamref name="T"/>'のオブジェクトです。</returns>
 		/// <exception cref="System.ArgumentNullException"/>
 		public static T Convert<T>(this IArgumentConverter<T> converter, IEnumerable<string> args)
@@ -128,6 +128,28 @@ namespace ExapisSOP.IO.Settings.CommandLine
 				throw new ArgumentNullException(nameof(args));
 			}
 			return converter.Convert(args.ToArray());
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter"/>の変換結果から値を取得します。
+		/// </summary>
+		/// <typeparam name="T">取得する値の種類です。</typeparam>
+		/// <param name="converterResult">変換結果を格納している辞書です。</param>
+		/// <returns>
+		///  指定された型の値が存在する場合は有効なインスタンス、
+		///  または、存在しない場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.ArgumentNullException"/>
+		public static T GetValue<T>(this IDictionary<Type, object> converterResult)
+		{
+			if (converterResult == null) {
+				throw new ArgumentNullException(nameof(converterResult));
+			}
+			if (converterResult.ContainsKey(typeof(T))) {
+				return ((T)(converterResult[typeof(T)]));
+			} else {
+				return default!;
+			}
 		}
 	}
 }
