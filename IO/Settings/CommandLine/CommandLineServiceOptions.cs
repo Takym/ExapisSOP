@@ -36,14 +36,20 @@ namespace ExapisSOP.IO.Settings.CommandLine
 		public bool CaseSensitive { get; set; }
 
 		/// <summary>
+		///  コマンド行引数から設定情報を上書きできるかどうかを表す論理値を取得または設定します。
+		/// </summary>
+		public bool AllowOverrideSettings { get; set; }
+
+		/// <summary>
 		///  型'<see cref="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		public CommandLineServiceOptions()
 		{
-			this.ConvertToObject = false;
-			this.ResultTypes     = new List<Type>();
-			this.GetConverters   = () => null;
-			this.CaseSensitive   = true;
+			this.ConvertToObject       = false;
+			this.ResultTypes           = new List<Type>();
+			this.GetConverters         = () => null;
+			this.CaseSensitive         = true;
+			this.AllowOverrideSettings = false;
 		}
 
 		/// <summary>

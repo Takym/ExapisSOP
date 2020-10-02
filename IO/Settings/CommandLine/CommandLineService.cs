@@ -45,6 +45,9 @@ namespace ExapisSOP.IO.Settings.CommandLine
 				for (int i = 0; i < _options.ResultTypes.Count; ++i) {
 					conv.ResultTypes.Add(_options.ResultTypes[i]);
 				}
+				if (_options.AllowOverrideSettings) {
+					conv.ResultTypes.Add(typeof(EnvironmentSettings));
+				}
 				var dict = _options.GetConverters();
 				if (dict != null) {
 					foreach (var pair in dict) {
@@ -57,6 +60,14 @@ namespace ExapisSOP.IO.Settings.CommandLine
 				}
 				conv.CaseSensitive = _options.CaseSensitive;
 				_hasError = !conv.TryConvert(switches, out _converterResult);
+
+				// Apply settings
+				if (_options.AllowOverrideSettings) {
+					var envcfg = _converterResult.GetValue<EnvironmentSettings?>();
+					if (envcfg != null) {
+						context.GetSettingsSystem()?.Apply(envcfg);
+					}
+				}
 			}
 		}
 

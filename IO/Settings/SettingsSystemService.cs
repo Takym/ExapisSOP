@@ -63,12 +63,7 @@ namespace ExapisSOP.IO.Settings
 			await this.Reload(context);
 
 			// Apply the language configuration
-			var culture = _settings?.GetCulture() ?? CultureInfo.InstalledUICulture;
-			CultureInfo.DefaultThreadCurrentCulture   = culture;
-			CultureInfo.DefaultThreadCurrentUICulture = culture;
-			CultureInfo.CurrentCulture                = culture;
-			CultureInfo.CurrentUICulture              = culture;
-			culture.ClearCachedData();
+			await this.ApplyCore();
 		}
 
 		protected override void OnStartup(ContextEventArgs e)
@@ -138,6 +133,17 @@ namespace ExapisSOP.IO.Settings
 			}
 		}
 
+		public async Task Apply()
+		{
+			await this.ApplyCore();
+		}
+
+		public async Task Apply(EnvironmentSettings settings)
+		{
+			_settings?.CopyFrom(settings);
+			await this.ApplyCore();
+		}
+
 		public async Task Save()
 		{
 			if (!_abort) {
@@ -196,6 +202,17 @@ namespace ExapisSOP.IO.Settings
 			await (_ver_w?.WriteLineAsync(appversion               ) ?? Task.CompletedTask);
 			await (_ver_w?.WriteLineAsync(appcodename              ) ?? Task.CompletedTask);
 			await (_ver_w?.FlushAsync()                              ?? Task.CompletedTask);
+		}
+
+		private async Task ApplyCore()
+		{
+			var culture = _settings?.GetCulture() ?? CultureInfo.InstalledUICulture;
+			CultureInfo.DefaultThreadCurrentCulture   = culture;
+			CultureInfo.DefaultThreadCurrentUICulture = culture;
+			CultureInfo.CurrentCulture                = culture;
+			CultureInfo.CurrentUICulture              = culture;
+			culture.ClearCachedData();
+			await Task.CompletedTask;
 		}
 
 		private async Task DisposeStreams()
