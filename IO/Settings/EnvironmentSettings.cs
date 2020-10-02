@@ -22,6 +22,8 @@ namespace ExapisSOP.IO.Settings
 	[XmlInclude(typeof(DefaultSettings))]
 	[XmlInclude(typeof(OptimizedSettings))]
 	[Switch("Settings", "S")]
+	[Manual("en", "Overrides the environment settings.")]
+	[Manual("ja", "環境設定を上書きします。")]
 	public class EnvironmentSettings
 	{
 		/// <summary>
@@ -29,6 +31,8 @@ namespace ExapisSOP.IO.Settings
 		/// </summary>
 		[XmlElement("saveReadable")]
 		[Option("output-readable-xml", "x")]
+		[Manual("en", "Indicates to save the environment settings as a readable XML format.")]
+		[Manual("ja", "環境設定を可読なXMLファイルとして出力する様に指示します。")]
 		public bool OutputReadableXML { get; set; }
 
 		/// <summary>
@@ -36,6 +40,8 @@ namespace ExapisSOP.IO.Settings
 		/// </summary>
 		[XmlElement("lang")]
 		[Option("lang", "l")]
+		[Manual("en", "Sets a display language.")]
+		[Manual("ja", "表示言語を設定します。")]
 		public string? Locale { get; set; }
 
 		/// <summary>
@@ -43,6 +49,8 @@ namespace ExapisSOP.IO.Settings
 		/// </summary>
 		[XmlElement("enableLog")]
 		[Option("logging", "g")]
+		[Manual("en", "Enable a log output. Specify \"-logging:disable\" or \"-g:disable\" to disable.")]
+		[Manual("ja", "ログ出力を有効にします。「-logging:disable」または「-g:disable」で無効にします。")]
 		public bool EnableLogging { get; set; }
 
 		/// <summary>
