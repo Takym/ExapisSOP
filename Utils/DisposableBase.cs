@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace ExapisSOP.Utils
 {
@@ -16,13 +17,16 @@ namespace ExapisSOP.Utils
 	///  破棄可能なオブジェクトの基底クラスです。
 	/// </summary>
 	public abstract class DisposableBase : IDisposable
+#if NETCOREAPP3_1
+		, IAsyncDisposable
+#endif
 	{
-		private readonly List<IDisposable> _objs;
+		private readonly List<object> _objs;
 
 		/// <summary>
 		///  破棄可能なオブジェクトを格納したリストを取得します。
 		/// </summary>
-		protected IList<IDisposable> DisposableObjects => _objs;
+		protected IList<object> DisposableObjects => _objs;
 
 		/// <summary>
 		///  このオブジェクトが破棄されている場合は<see langword="true"/>、有効な場合は<see langword="false"/>を返します。
@@ -34,7 +38,7 @@ namespace ExapisSOP.Utils
 		/// </summary>
 		public DisposableBase()
 		{
-			_objs           = new List<IDisposable>();
+			_objs = new List<object>();
 			this.IsDisposed = false;
 		}
 
@@ -67,10 +71,9 @@ namespace ExapisSOP.Utils
 					if (t != null) {
 						var m = t.GetMember(nameof(this.IsDisposed));
 						for (int j = 0; j < m.Length; ++j) {
-							bool var  = m[j] is FieldInfo    fi && fi.FieldType    == typeof(bool) && (fi.GetValue(_objs[i])       as bool? ?? false);
-							bool prop = m[j] is PropertyInfo pi && pi.PropertyType == typeof(bool) && (pi.GetValue(_objs[i])       as bool? ?? false);
-							bool func = m[j] is MethodInfo   mi && mi.ReturnType   == typeof(bool) && (mi.Invoke  (_objs[i], null) as bool? ?? false);
-							if (var || prop || func) {
+							if ((m[j] is FieldInfo    fi && fi.FieldType    == typeof(bool) && (fi.GetValue(_objs[i])       as bool? ?? false)) ||
+								(m[j] is PropertyInfo pi && pi.PropertyType == typeof(bool) && (pi.GetValue(_objs[i])       as bool? ?? false)) ||
+								(m[j] is MethodInfo   mi && mi.ReturnType   == typeof(bool) && (mi.Invoke  (_objs[i], null) as bool? ?? false))) {
 								throw new ObjectDisposedException(t.Name);
 							}
 						}
@@ -103,6 +106,15 @@ namespace ExapisSOP.Utils
 		}
 
 		/// <summary>
+		///  現在のオブジェクトインスタンスと利用しているリソースを非同期的に破棄します。
+		/// </summary>
+		public async ValueTask DisposeAsync()
+		{
+			this.Dispose();
+			await Task.CompletedTask;
+		}
+
+		/// <summary>
 		///  現在のオブジェクトインスタンスと利用しているリソースを破棄します。
 		///  この関数内で例外を発生させてはいけません。
 		/// </summary>
@@ -131,7 +143,9 @@ namespace ExapisSOP.Utils
 			if (!this.IsDisposed) {
 				if (disposing) {
 					for (int i = 0; i < _objs.Count; ++i) {
-						_objs[i]?.Dispose();
+#pragma warning disable CS0618 // 型またはメンバーが旧型式です
+						Delete(_objs[i]);
+#pragma warning restore CS0618 // 型またはメンバーが旧型式です
 					}
 				}
 				_objs.Clear();
@@ -155,11 +169,19 @@ namespace ExapisSOP.Utils
 		[Obsolete("予期せぬ不具合が発生する可能性がある為、この関数は呼び出さないでください。")]
 		public static void Delete(object obj)
 		{
+			if (obj is null) return;
 			try {
-				var t = obj.GetType();
-				if (obj is IDisposable disp) {
-					disp.Dispose();
-				} else {
+				switch (obj) {
+				case IDisposable disp1:
+					disp1.Dispose();
+					break;
+#if NETCOREAPP3_1
+				case IAsyncDisposable disp2:
+					// 破棄処理なので完了を待つ必要は無い
+					disp2.DisposeAsync();
+					break;
+#endif
+				default:
 					var mi = obj.GetType().GetMethod(
 						nameof(Finalize),
 						BindingFlags.NonPublic    |
@@ -167,6 +189,7 @@ namespace ExapisSOP.Utils
 						BindingFlags.Instance);
 					mi?.Invoke(obj, null);
 					GC.SuppressFinalize(obj);
+					break;
 				}
 			} catch (Exception e) {
 				throw new Exception(e.Message, e);

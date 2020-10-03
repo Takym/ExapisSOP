@@ -109,6 +109,7 @@ namespace ExapisSOP.Numerics
 			return new decimal(random.NextDouble()) + new decimal(random.NextSInt64());
 		}
 
+		[DebuggerHidden()]
 		[StackTraceHidden()]
 		private static void ThrowOutOfRange(object max, object min)
 		{
