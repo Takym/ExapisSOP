@@ -32,7 +32,7 @@ namespace ExapisSOP.Utils
 		///  取得した値を型<typeparamref name="T"/>に変換する事ができません。
 		/// </exception>
 		/// <exception cref="System.Runtime.Serialization.SerializationException" />
-		public static T? GetValue<T>(this SerializationInfo info, string name) where T: class
+		public static T GetValue<T>(this SerializationInfo info, string name)
 		{
 			if (info == null) {
 				throw new ArgumentNullException(nameof(info));
@@ -41,7 +41,12 @@ namespace ExapisSOP.Utils
 				throw new ArgumentNullException(nameof(name));
 			}
 			try {
-				return ((T?)(info.GetValue(name, typeof(T))));
+				var result = info.GetValue(name, typeof(T));
+				if (result == null) {
+					return default!;
+				} else {
+					return ((T)(result));
+				}
 			} catch (InvalidCastException) {
 				throw;
 			} catch (Exception e) {

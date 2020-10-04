@@ -11,6 +11,7 @@ using System.IO;
 using System.Text;
 using ExapisSOP.Resources.Utils;
 using ExapisSOP.Text;
+using ExapisSOP.Utils;
 
 namespace ExapisSOP.Binary
 {
@@ -277,7 +278,7 @@ namespace ExapisSOP.Binary
 			case char c:
 				return $"datavalue char: \'{c}\'";
 			case string s:
-				return $"datavalue string: \"{s}\"";
+				return $"datavalue string: \"{s.FitToLine()}\"";
 			case bool b:
 				return $"datavalue bool: {b}";
 			case byte u8:
@@ -332,7 +333,7 @@ namespace ExapisSOP.Binary
 				}
 				return sb3.ToString().Trim();
 			case SimpleString ys:
-				return $"datavalue simple string: \"{ys.ToStringWithoutNull().Replace("\r", "[[CR]]").Replace("\n", "[[LF]]")}\"";
+				return $"datavalue simple string: \"{ys.ToStringWithoutNull().FitToLine()}\"";
 			case Guid guid:
 				return $"datavalue guid: {{{guid}}}";
 			case DateTime dt:

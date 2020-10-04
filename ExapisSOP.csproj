@@ -57,6 +57,7 @@
 		<Compile Include="NativeWrapper\INativeCaller.cs" />
 		<Compile Include="Utils\ConsoleUtil.cs" />
 		<Compile Include="Utils\DisposableBase.cs" />
+		<Compile Include="Utils\SerializationInfoExtensions.cs" />
 		<Compile Include="Utils\StringExtensions.cs" />
 	</ItemGroup>
 </Project>
