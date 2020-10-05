@@ -174,4 +174,10 @@
   <data name="CommandLineService_PrintManuals_Version" xml:space="preserve">
     <value>このプログラムのバージョン情報</value>
   </data>
+  <data name="LogFile_ArgumentOutOfRangeException" xml:space="preserve">
+    <value>指定された番号のログ情報は存在しません。</value>
+  </data>
+  <data name="LoggerExtension_ArgumentException" xml:space="preserve">
+    <value>指定されたログレベル「{0}」は無効です。</value>
+  </data>
 </root>

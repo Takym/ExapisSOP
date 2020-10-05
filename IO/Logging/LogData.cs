@@ -8,7 +8,6 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using ExapisSOP.Utils;
 
@@ -21,8 +20,6 @@ namespace ExapisSOP.IO.Logging
 	[Serializable()]
 	public sealed class LogData : ISerializable
 	{
-		private static readonly BinaryFormatter _bf = new BinaryFormatter();
-
 		/// <summary>
 		///  このログ情報を作成した日時を取得します。
 		/// </summary>
@@ -114,7 +111,7 @@ namespace ExapisSOP.IO.Logging
 				if (type == "!base64_serialized") {
 					reader.ReadContentAsBase64(buf, 0, buf.Length);
 					using (var ms = new MemoryStream(buf)) {
-						this.Data = _bf.Deserialize(ms) as ILoggable;
+						this.Data = VersionInfo._bf.Deserialize(ms) as ILoggable;
 					}
 				} else {
 					reader.ReadContentAsBinHex(buf, 0, buf.Length);
@@ -167,7 +164,7 @@ namespace ExapisSOP.IO.Logging
 				byte[] buf;
 				if (this.Data.GetType().IsSerializable) {
 					using (var ms = new MemoryStream()) {
-						_bf.Serialize(ms, this.Data);
+						VersionInfo._bf.Serialize(ms, this.Data);
 						buf = ms.ToArray();
 					}
 					writer.WriteAttributeString("size", buf.Length.ToString());

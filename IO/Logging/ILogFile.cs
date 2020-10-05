@@ -26,6 +26,12 @@ namespace ExapisSOP.IO.Logging
 		ILogger CreateLogger();
 
 		/// <summary>
+		///  標準出力ストリームへの出力を行うロガーを取得します。
+		/// </summary>
+		/// <returns>既定のコンソールロガーです。</returns>
+		ILogger GetConsoleLogger();
+
+		/// <summary>
 		///  指定されたログ情報を末尾に追加します。
 		/// </summary>
 		/// <param name="data">追加するログ情報です。</param>

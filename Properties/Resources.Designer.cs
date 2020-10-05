@@ -187,6 +187,24 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   LogFile_ArgumentOutOfRangeException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogFile_ArgumentOutOfRangeException {
+            get {
+                return ResourceManager.GetString("LogFile_ArgumentOutOfRangeException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   LoggerExtension_ArgumentException {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoggerExtension_ArgumentException {
+            get {
+                return ResourceManager.GetString("LoggerExtension_ArgumentException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   PathString_PlatformNotSupportedException に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PathString_PlatformNotSupportedException {

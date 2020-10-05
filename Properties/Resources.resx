@@ -159,6 +159,12 @@
   <data name="InvalidPathFormatException" xml:space="preserve">
     <value>InvalidPathFormatException {0}</value>
   </data>
+  <data name="LogFile_ArgumentOutOfRangeException" xml:space="preserve">
+    <value>LogFile_ArgumentOutOfRangeException</value>
+  </data>
+  <data name="LoggerExtension_ArgumentException" xml:space="preserve">
+    <value>LoggerExtension_ArgumentException {0}</value>
+  </data>
   <data name="PathString_PlatformNotSupportedException" xml:space="preserve">
     <value>PathString_PlatformNotSupportedException</value>
   </data>

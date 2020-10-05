@@ -48,7 +48,7 @@ namespace ExapisSOP.IO.Settings.CommandLine
 								var ac = oattr.ArgumentConverter;
 								if (ac != null && !ac.IsAbstract && (ac.IsClass || ac.IsValueType) &&
 									typeof(IArgumentConverter).IsAssignableFrom(ac)) {
-									var obj = ac.GetConstructor(new Type[0])?.Invoke(null) as IArgumentConverter;
+									var obj = ac.GetConstructor(Array.Empty<Type>())?.Invoke(null) as IArgumentConverter;
 									if (obj != null) {
 										_val_conv.Add(members[j], obj);
 									}

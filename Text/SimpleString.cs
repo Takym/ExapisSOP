@@ -5,6 +5,8 @@
  * distributed under the MIT License.
 ****/
 
+using System;
+
 namespace ExapisSOP.Text
 {
 	/// <summary>
@@ -26,7 +28,7 @@ namespace ExapisSOP.Text
 		/// </summary>
 		public SimpleString()
 		{
-			this.Value = new byte[0];
+			this.Value = Array.Empty<byte>();
 		}
 
 		/// <summary>

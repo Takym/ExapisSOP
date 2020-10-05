@@ -105,7 +105,7 @@ namespace ExapisSOP.IO
 		public CachedStream OpenCachedMemory()
 		{
 			try {
-				var cs = new CachedStream(_paths.Caches + Path.GetRandomFileName(), new byte[0]);
+				var cs = new CachedStream(_paths.Caches + Path.GetRandomFileName(), Array.Empty<byte>());
 				lock (_streams) {
 					_streams.Add(cs);
 				}

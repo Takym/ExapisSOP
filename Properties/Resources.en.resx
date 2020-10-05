@@ -174,4 +174,10 @@
   <data name="CommandLineService_PrintManuals_Version" xml:space="preserve">
     <value>Version Information of This Program</value>
   </data>
+  <data name="LogFile_ArgumentOutOfRangeException" xml:space="preserve">
+    <value>A log data of the specified index does not exists.</value>
+  </data>
+  <data name="LoggerExtension_ArgumentException" xml:space="preserve">
+    <value>The specified log level "{0}" is invalid.</value>
+  </data>
 </root>

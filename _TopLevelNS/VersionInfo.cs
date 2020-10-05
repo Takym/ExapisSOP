@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization.Formatters.Binary;
 using InfoVer   = System.Reflection.AssemblyInformationalVersionAttribute;
 using Copyright = System.Reflection.AssemblyCopyrightAttribute;
 using Authors   = System.Reflection.AssemblyCompanyAttribute;
@@ -25,7 +26,8 @@ namespace ExapisSOP
 	/// </summary>
 	public static class VersionInfo
 	{
-		internal readonly static Assembly _asm = typeof(VersionInfo).Assembly;
+		internal readonly static Assembly        _asm = typeof(VersionInfo).Assembly;
+		internal readonly static BinaryFormatter _bf  = new BinaryFormatter();
 
 		/// <summary>
 		///  バージョン情報を含んだ<see cref="ExapisSOP"/>の題名を取得します。

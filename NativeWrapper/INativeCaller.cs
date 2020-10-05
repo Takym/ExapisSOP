@@ -62,7 +62,7 @@ namespace ExapisSOP.NativeWrapper
 				try {
 					var m = type.GetMethod(
 						nameof(IsSupported), BindingFlags.Instance | BindingFlags.Public,
-						null, new Type[0], null
+						null, Array.Empty<Type>(), null
 					);
 					var result = m?.CreateDelegate(typeof(Method), obj) as Method;
 					_cache.Add(type, result);

@@ -74,7 +74,7 @@ namespace ExapisSOP.IO
 		public CachedStream(string cacheFile, IEnumerable<byte> data)
 		{
 			_cache_file     = cacheFile;
-			_data           = new List<byte>(data ?? new byte[0]);
+			_data           = new List<byte>(data ?? Array.Empty<byte>());
 			_data_available = true;
 			this.IsDisposed = false;
 		}
