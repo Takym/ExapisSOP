@@ -6,7 +6,7 @@ Copyright (C) 2020 Takym.
 
 # <a id="en"></a>English
 ## Summary
-This library provides the service-oriented programming.
+This framework library, also known as TakymLib or DotnetExlib, provides the service-oriented programming.
 
 ## Get Started
 ```csharp
@@ -78,7 +78,7 @@ Please note below when you propose a pull request (PR):
 
 # <a id="ja"></a>日本語
 ## 概要
-サービス指向プログラミングに必要な機能を提供します。
+このフレームワークライブラリ(TakymLib、DotnetExlibとも呼びます)はサービス指向プログラミングに必要な機能を提供します。
 
 ## 使い方
 ```csharp
