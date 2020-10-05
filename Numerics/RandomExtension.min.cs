@@ -113,7 +113,7 @@ namespace ExapisSOP.Numerics
 		/// <param name="min">最小値です。</param>
 		/// <returns>結果の分からない値を返します。</returns>
 		/// <exception cref="System.ArgumentOutOfRangeException" />
-		public static int NextUInt32(this IRandom random, int max, int min)
+		public static int NextSInt32(this IRandom random, int max, int min)
 		{
 			if (max <= min) {
 				ThrowOutOfRange(max, min);
