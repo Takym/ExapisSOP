@@ -135,6 +135,9 @@
   <data name="ConsoleUtil_ReadPassword" xml:space="preserve">
     <value>ConsoleUtil_ReadPassword</value>
   </data>
+  <data name="CustomPipelineProcess_InvalidOperationException" xml:space="preserve">
+    <value>CustomPipelineProcess_InvalidOperationException {0}</value>
+  </data>
   <data name="DefaultHostRunner_Exception" xml:space="preserve">
     <value>DefaultHostRunner_Exception</value>
   </data>

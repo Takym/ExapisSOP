@@ -180,4 +180,7 @@
   <data name="LoggerExtension_ArgumentException" xml:space="preserve">
     <value>The specified log level "{0}" is invalid.</value>
   </data>
+  <data name="CustomPipelineProcess_InvalidOperationException" xml:space="preserve">
+    <value>The process object "{0}" does not have been run because it was not initialized.</value>
+  </data>
 </root>

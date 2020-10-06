@@ -58,6 +58,8 @@
 		<Compile Include="_SystemAttributes\attrs.cs" />
 		<Compile Remove="Utils\ConsoleUtil.cs" />
 		<Compile Remove="Utils\DisposableBase.cs" />
+		<Compile Remove="Utils\IAwaitable.cs" />
+		<Compile Remove="Utils\IAwaiter.cs" />
 		<Compile Remove="Utils\SerializationInfoExtensions.cs" />
 		<Compile Remove="Utils\StringExtensions.cs" />
 	</ItemGroup>

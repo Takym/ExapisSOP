@@ -180,4 +180,7 @@
   <data name="LoggerExtension_ArgumentException" xml:space="preserve">
     <value>指定されたログレベル「{0}」は無効です。</value>
   </data>
+  <data name="CustomPipelineProcess_InvalidOperationException" xml:space="preserve">
+    <value>正しく初期化されなかったため処理オブジェクト「{0}」は実行されませんでした。</value>
+  </data>
 </root>

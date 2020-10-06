@@ -115,6 +115,15 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   CustomPipelineProcess_InvalidOperationException {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CustomPipelineProcess_InvalidOperationException {
+            get {
+                return ResourceManager.GetString("CustomPipelineProcess_InvalidOperationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   DefaultHostRunner_Exception に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DefaultHostRunner_Exception {
