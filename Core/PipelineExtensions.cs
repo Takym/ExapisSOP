@@ -16,6 +16,8 @@ namespace ExapisSOP.Core
 	/// </summary>
 	public static class PipelineExtensions
 	{
+		#region 拡張関数
+
 		/// <summary>
 		///  指定された処理を表すデリゲートを指定されたパイプラインの末尾に追加します。
 		/// </summary>
@@ -104,6 +106,10 @@ namespace ExapisSOP.Core
 			return pipeline.Append(new ExceptionHandler<TParam, TResult>(processFunc));
 		}
 
+		#endregion
+
+		#region 委託型定義
+
 		/// <summary>
 		///  次に実行すべき処理を表します。
 		/// </summary>
@@ -131,6 +137,10 @@ namespace ExapisSOP.Core
 		/// <param name="next">次に実行すべき処理です。</param>
 		/// <returns>戻り値を含むこの処理を表す非同期操作です。</returns>
 		public delegate Task<TResult> ProcessFunc<TParam, TResult>(IContext context, TParam arg, NextProcessFunc next);
+
+		#endregion
+
+		#region ラッパー型定義
 
 		/// <summary>
 		///  <see cref="ExapisSOP.Core.PipelineExtensions.ProcessFunc"/>を<see cref="ExapisSOP.IProcess"/>として扱います。
@@ -280,5 +290,7 @@ namespace ExapisSOP.Core
 				}
 			}
 		}
+
+		#endregion
 	}
 }
