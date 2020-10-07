@@ -49,7 +49,7 @@ namespace ExapisSOP.IO.Logging
 			var trace = new StackTrace(1, false);
 			for (int i = 0; i < trace.FrameCount; ++i) {
 				var frame = trace.GetFrame(i);
-				var t = frame?.GetMethod()?.ReflectedType;
+				var t     = frame?.GetMethod()?.ReflectedType;
 				if (t != null && !(t.Namespace?.StartsWith($"{nameof(ExapisSOP)}.{nameof(IO)}.{nameof(Logging)}") ?? true)) {
 					return new Logger(t.Name, this);
 				}
