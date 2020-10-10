@@ -12,8 +12,8 @@ using System.IO;
 namespace ExapisSOP.IO.Logging
 {
 	internal class BinaryLogFile : LogFile
-	{
-		private readonly BinaryWriter  _bw;
+	{ // 0x666C627800FF7F80
+		private readonly BinaryWriter _bw;
 
 		public override ulong Count => 0;
 
