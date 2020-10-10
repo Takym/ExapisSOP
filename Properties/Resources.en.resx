@@ -183,4 +183,7 @@
   <data name="CustomPipelineProcess_InvalidOperationException" xml:space="preserve">
     <value>The process object "{0}" does not have been run because it was not initialized.</value>
   </data>
+  <data name="BinaryLogFile_InvalidDataException" xml:space="preserve">
+    <value>The specified stream is not an ExapisSOP binary log file.</value>
+  </data>
 </root>

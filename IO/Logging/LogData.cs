@@ -8,6 +8,7 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization;
+using System.Security.Cryptography;
 using System.Xml;
 using ExapisSOP.Utils;
 
@@ -126,6 +127,22 @@ namespace ExapisSOP.IO.Logging
 			reader.ReadEndElement();
 		}
 
+		internal LogData(BinaryReader reader)
+		{
+			this.Created    = new DateTime(reader.ReadInt64());
+			this.Level      = ((LogLevel)(reader.ReadByte()));
+			this.LoggerName = reader.ReadString();
+			this.Message    = reader.ReadString();
+			byte x = reader.ReadByte();
+			if (x != 0) {
+				var t = Type.GetType(reader.ReadString());
+				if (t != null) {
+					this.Data = Activator.CreateInstance(t) as ILoggable;
+					this.Data?.FromBinary(reader.ReadBytes(reader.ReadInt32()));
+				}
+			}
+		}
+
 		/// <summary>
 		///  現在のログ情報を直列化します。
 		/// </summary>
@@ -179,6 +196,27 @@ namespace ExapisSOP.IO.Logging
 				writer.WriteEndElement();
 			}
 			writer.WriteEndElement();
+		}
+
+		/// <summary>
+		///  現在のログ情報をバイナリ形式で直列化します。
+		/// </summary>
+		/// <param name="writer">ログ情報の書き込み先のバイナリライターです。</param>
+		public void GetObjectBinary(BinaryWriter writer)
+		{
+			writer.Write(this.Created.Ticks);
+			writer.Write((byte)(this.Level));
+			writer.Write(this.LoggerName);
+			writer.Write(this.Message);
+			if (this.Data == null) {
+				writer.Write((byte)(0x00));
+			} else {
+				var data = this.Data.ToBinary() ?? Array.Empty<byte>();
+				writer.Write((byte)(0xFF));
+				writer.Write(this.Data.GetType().AssemblyQualifiedName!);
+				writer.Write(data.Length);
+				writer.Write(data);
+			}
 		}
 
 		/// <summary>

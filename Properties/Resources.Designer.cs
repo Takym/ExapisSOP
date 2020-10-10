@@ -61,6 +61,15 @@ namespace ExapisSOP.Properties {
         }
         
         /// <summary>
+        ///   BinaryLogFile_InvalidDataException に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string BinaryLogFile_InvalidDataException {
+            get {
+                return ResourceManager.GetString("BinaryLogFile_InvalidDataException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   CachedStream_ThrowOnOutOfRange に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CachedStream_ThrowOnOutOfRange {

@@ -13,7 +13,7 @@ namespace ExapisSOP.IO.Logging
 	///  ログレベルを表します。
 	/// </summary>
 	[Serializable()]
-	public enum LogLevel
+	public enum LogLevel : byte
 	{
 		/// <summary>
 		///  未指定のログレベルを表します。
