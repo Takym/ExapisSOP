@@ -64,5 +64,17 @@
 		<Content Include="Resources\Logo.png" Pack="true" PackagePath="Resources">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<EmbeddedResource Remove="_FailedWork\*" />
+		<EmbeddedResource Remove="_FailedWork\*\*" />
+		<EmbeddedResource Remove="_FailedWork\*\*\*" />
+		<EmbeddedResource Remove="_FailedWork\*\*\*\*" />
+		<Compile Remove="_FailedWork\*" />
+		<Compile Remove="_FailedWork\*\*" />
+		<Compile Remove="_FailedWork\*\*\*" />
+		<Compile Remove="_FailedWork\*\*\*\*" />
+		<None Remove="_FailedWork\*" />
+		<None Remove="_FailedWork\*\*" />
+		<None Remove="_FailedWork\*\*\*" />
+		<None Remove="_FailedWork\*\*\*\*" />
 	</ItemGroup>
 </Project>

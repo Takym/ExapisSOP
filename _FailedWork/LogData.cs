@@ -9,7 +9,6 @@ using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
-using System.Xml.Serialization;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.IO.Logging
@@ -108,19 +107,11 @@ namespace ExapisSOP.IO.Logging
 				int.TryParse(reader.GetAttribute("size"), out int size);
 				string type = reader.GetAttribute("type");
 				reader.ReadStartElement();
-				byte[] buf = size == -1 ? new byte[size] : Array.Empty<byte>();
+				byte[] buf = new byte[size];
 				if (type == "!base64_serialized") {
 					reader.ReadContentAsBase64(buf, 0, buf.Length);
 					using (var ms = new MemoryStream(buf)) {
 						this.Data = VersionInfo._bf.Deserialize(ms) as ILoggable;
-					}
-				} else if (type.StartsWith("!xml:")) {
-					var t = Type.GetType(type.Substring(5));
-					if (t != null) {
-						this.Data = Activator.CreateInstance(t) as ILoggable;
-						if (this.Data is IXmlSerializable xs) {
-							xs.ReadXml(reader);
-						}
 					}
 				} else {
 					reader.ReadContentAsBinHex(buf, 0, buf.Length);
@@ -133,6 +124,22 @@ namespace ExapisSOP.IO.Logging
 				reader.ReadEndElement();
 			}
 			reader.ReadEndElement();
+		}
+
+		internal LogData(BinaryReader reader)
+		{
+			this.Created    = new DateTime(reader.ReadInt64());
+			this.Level      = ((LogLevel)(reader.ReadByte()));
+			this.LoggerName = reader.ReadString();
+			this.Message    = reader.ReadString();
+			byte x = reader.ReadByte();
+			if (x != 0) {
+				var t = Type.GetType(reader.ReadString());
+				if (t != null) {
+					this.Data = Activator.CreateInstance(t) as ILoggable;
+					this.Data?.FromBinary(reader.ReadBytes(reader.ReadInt32()));
+				}
+			}
 		}
 
 		/// <summary>
@@ -179,10 +186,6 @@ namespace ExapisSOP.IO.Logging
 					writer.WriteAttributeString("size", buf.Length.ToString());
 					writer.WriteAttributeString("type", "!base64_serialized");
 					writer.WriteBase64(buf, 0, buf.Length);
-				} else if (this.Data is IXmlSerializable xs) {
-					writer.WriteAttributeString("size", "-1");
-					writer.WriteAttributeString("type", "!xml:" + this.Data.GetType().AssemblyQualifiedName);
-					xs.WriteXml(writer);
 				} else {
 					buf = this.Data.ToBinary();
 					writer.WriteAttributeString("size", buf.Length.ToString());
@@ -192,6 +195,27 @@ namespace ExapisSOP.IO.Logging
 				writer.WriteEndElement();
 			}
 			writer.WriteEndElement();
+		}
+
+		/// <summary>
+		///  現在のログ情報をバイナリ形式で直列化します。
+		/// </summary>
+		/// <param name="writer">ログ情報の書き込み先のバイナリライターです。</param>
+		public void GetObjectBinary(BinaryWriter writer)
+		{
+			writer.Write(this.Created.Ticks);
+			writer.Write((byte)(this.Level));
+			writer.Write(this.LoggerName);
+			writer.Write(this.Message);
+			if (this.Data == null) {
+				writer.Write((byte)(0x00));
+			} else {
+				var data = this.Data.ToBinary() ?? Array.Empty<byte>();
+				writer.Write((byte)(0xFF));
+				writer.Write(this.Data.GetType().AssemblyQualifiedName!);
+				writer.Write(data.Length);
+				writer.Write(data);
+			}
 		}
 
 		/// <summary>
