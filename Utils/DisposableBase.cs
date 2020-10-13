@@ -105,6 +105,7 @@ namespace ExapisSOP.Utils
 			GC.SuppressFinalize(this);
 		}
 
+#if NETCOREAPP3_1
 		/// <summary>
 		///  現在のオブジェクトインスタンスと利用しているリソースを非同期的に破棄します。
 		/// </summary>
@@ -113,6 +114,7 @@ namespace ExapisSOP.Utils
 			this.Dispose();
 			await Task.CompletedTask;
 		}
+#endif
 
 		/// <summary>
 		///  現在のオブジェクトインスタンスと利用しているリソースを破棄します。

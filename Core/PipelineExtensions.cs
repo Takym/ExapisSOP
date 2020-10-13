@@ -279,7 +279,7 @@ namespace ExapisSOP.Core
 			protected async override Task<TResult> InvokeCore(IContext context, TParam arg)
 			{
 				try {
-					var value = await this.NextProcess.InvokeAsync(context, arg);
+					object? value = await this.NextProcess.InvokeAsync(context, arg);
 					if (value is TResult result) {
 						return result;
 					} else {
