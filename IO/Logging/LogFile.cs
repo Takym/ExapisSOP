@@ -51,10 +51,14 @@ namespace ExapisSOP.IO.Logging
 				var frame = trace.GetFrame(i);
 				var t     = frame?.GetMethod()?.ReflectedType;
 				if (t != null && !(t.Namespace?.StartsWith($"{nameof(ExapisSOP)}.{nameof(IO)}.{nameof(Logging)}") ?? true)) {
-					return new Logger(t.Name, this);
+					var result = new Logger(t.Name, this);
+					result.Info($"The new logger {result.Name} is created and set name automatically by the log file.");
+					return result;
 				}
 			}
-			return new Logger(Logger.Noname, this);
+			var result2 = new Logger(Logger.Noname, this);
+			result2.Warn($"The new logger is created but could not set a name.");
+			return result2;
 		}
 
 		/// <summary>
