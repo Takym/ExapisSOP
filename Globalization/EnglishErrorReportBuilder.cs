@@ -22,7 +22,7 @@ namespace ExapisSOP.Globalization
 		/// <param name="exception">作成するエラーレポートの例外オブジェクトです。</param>
 		/// <param name="option">
 		///  作成するエラーレポートのオプションです。
-		///  この引数は現在のバージョンでは利用されていません。
+		///  <c>S</c>は短い形式を表します。
 		/// </param>
 		/// <param name="detailProviders">追加情報を翻訳するオブジェクトの列挙体です。</param>
 		/// <exception cref="System.ArgumentNullException"/>
@@ -129,13 +129,24 @@ namespace ExapisSOP.Globalization
 			if (string.IsNullOrEmpty(methodName) && string.IsNullOrEmpty(className)) {
 				return "Target site    : ";
 			} else if (string.IsNullOrEmpty(methodName)) {
-				return $"Target site    : The type \"{className}\"";
+				if (this.Option == "S") {
+					return $"Target site    : [T] {className}";
+				} else {
+					return $"Target site    : The type \"{className}\"";
+				}
 			} else if (string.IsNullOrEmpty(className)) {
-				return $"Target site    : The function \"{methodName}\"";
+				if (this.Option == "S") {
+					return $"Target site    : [M] {methodName}";
+				} else {
+					return $"Target site    : The function \"{methodName}\"";
+				}
 			} else {
-				return $"Target site    : The function \"{methodName}\" in the type \"{className}\"";
+				if (this.Option == "S") {
+					return $"Target site    : {className}.{methodName}";
+				} else {
+					return $"Target site    : The function \"{methodName}\" in the type \"{className}\"";
+				}
 			}
-			//return $"Target site    : {className}.{methodName}";
 		}
 
 		/// <summary>
@@ -156,7 +167,9 @@ namespace ExapisSOP.Globalization
 		/// <returns>翻訳済みの文字列です。</returns>
 		protected override string GetLocalizedBodyLine7_Data(string content)
 		{
-			if (content == "<null>") {
+			if (this.Option == "S") {
+				return $"Data          : {content}";
+			} else if (content == "<null>") {
 				return "Data          : no data";
 			} else if (content == "<empty>") {
 				return "Data          : zero entry";
@@ -165,7 +178,6 @@ namespace ExapisSOP.Globalization
 			} else {
 				return $"Data          : {content} entries";
 			}
-			//return $"Data          : {content}";
 		}
 
 		/// <summary>

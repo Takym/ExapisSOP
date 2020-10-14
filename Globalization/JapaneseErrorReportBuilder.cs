@@ -22,7 +22,7 @@ namespace ExapisSOP.Globalization
 		/// <param name="exception">作成するエラーレポートの例外オブジェクトです。</param>
 		/// <param name="option">
 		///  作成するエラーレポートのオプションです。
-		///  この引数は現在のバージョンでは利用されていません。
+		///  <c>S</c>は短い形式、<c>L</c>は長い形式を表します。
 		/// </param>
 		/// <param name="detailProviders">追加情報を翻訳するオブジェクトの列挙体です。</param>
 		/// <exception cref="System.ArgumentNullException"/>
@@ -45,9 +45,14 @@ namespace ExapisSOP.Globalization
 		/// <returns>翻訳済みの文字列です。</returns>
 		protected override string GetLocalizedHeaderLine2_Created(DateTime dt)
 		{
-			return $"作成日時：{dt:yyyy年MM月dd日 HH時mm分ss.fffffff秒}";
-			//return $"作成日時：{dt:yyyy/MM/dd HH:mm:ss.fffffff}";
-			//return $"作成日時：{dt:ggyyyy年MM月dd日(dddd)tthh時mm分ss.fffffff秒}";
+			switch (this.Option) {
+			case "S":
+				return $"作成日時：{dt:yyyy/MM/dd HH:mm:ss.fffffff}";
+			case "L":
+				return $"作成日時：{dt:ggyyyy年MM月dd日(dddd)tthh時mm分ss.fffffff秒}";
+			default:
+				return $"作成日時：{dt:yyyy年MM月dd日 HH時mm分ss.fffffff秒}";
+			}
 		}
 
 		/// <summary>
@@ -131,13 +136,24 @@ namespace ExapisSOP.Globalization
 			if (string.IsNullOrEmpty(methodName) && string.IsNullOrEmpty(className)) {
 				return "発生場所        ：";
 			} else if (string.IsNullOrEmpty(methodName)) {
-				return $"発生場所        ：型「{className}」";
+				if (this.Option == "S") {
+					return $"発生場所        ：[T] {className}";
+				} else {
+					return $"発生場所        ：型「{className}」";
+				}
 			} else if (string.IsNullOrEmpty(className)) {
-				return $"発生場所        ：関数「{methodName}」";
+				if (this.Option == "S") {
+					return $"発生場所        ：[M] {methodName}";
+				} else {
+					return $"発生場所        ：関数「{methodName}」";
+				}
 			} else {
-				return $"発生場所        ：型「{className}」内の関数「{methodName}」";
+				if (this.Option == "S") {
+					return $"発生場所        ：{className}.{methodName}";
+				} else {
+					return $"発生場所        ：型「{className}」内の関数「{methodName}」";
+				}
 			}
-			//return $"発生場所        ：{className}.{methodName}";
 		}
 
 		/// <summary>
@@ -158,14 +174,15 @@ namespace ExapisSOP.Globalization
 		/// <returns>翻訳済みの文字列です。</returns>
 		protected override string GetLocalizedBodyLine7_Data(string content)
 		{
-			if (content == "<null>") {
+			if (this.Option == "S") {
+				return $"データ          ：{content}";
+			} else if (content == "<null>") {
 				return "データ          ：空";
 			} else if (content == "<empty>") {
 				return "データ          ：0個";
 			} else {
 				return $"データ          ：{content}個";
 			}
-			//return $"発生場所        ：{content}";
 		}
 
 		/// <summary>
