@@ -9,8 +9,6 @@ using System;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.IO;
-using ExapisSOP.IO.Settings;
-using ExapisSOP.IO.Settings.CommandLine;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.DemoApp
@@ -29,30 +27,6 @@ namespace ExapisSOP.DemoApp
 		{
 			Console.WriteLine(VersionInfo.Caption);
 			Console.WriteLine(VersionInfo.Copyright);
-			ConsoleUtil.WriteHorizontalRule();
-
-			var conv = new CommandLineConverter();
-			conv.CaseSensitive = false;
-			conv.ResultTypes.Add(typeof(FileNameList));
-			conv.ResultTypes.Add(typeof(EnvironmentSettings));
-			bool isValid = conv.TryConvert(conv.Convert("/settIngs", "-output-readable-xml", "-lang", "zh-CN", "-logging:enabled"), out var result);
-			//bool isValid = conv.TryConvert(conv.Convert("/S", "-x", "-l", "en", "-g"), out var result);
-			//bool isValid = conv.TryConvert(conv.Convert("cmd", "-opt", "/S", "-x", "/hello"), out var result);
-			//bool isValid = conv.TryConvert(conv.Convert("cmd", "-opt", "/S", "$-aaa", "-x"), out var result);
-			//bool isValid = conv.TryConvert(conv.Convert(e.Context.GetHostRunner().Arguments), out var result);
-			//bool isValid = conv.TryConvert(conv.Convert("aaa.bbb", "ccc.ddd", "-i", "input.src", "-o", "output.dst"), out var result);
-			if (isValid) {
-				Console.WriteLine("Valid!");
-			} else {
-				Console.WriteLine("Invalid...");
-			}
-			var result2 = result.GetValue<EnvironmentSettings?>();
-			Console.WriteLine($"OutputReadableXML: {result2?.OutputReadableXML}");
-			Console.WriteLine($"Locale           : {result2?.Locale}");
-			Console.WriteLine($"EnableLogging    : {result2?.EnableLogging}");
-			var result3 = result.GetValue<FileNameList?>();
-			ConsoleUtil.WriteHorizontalRule();
-			Console.WriteLine(CommandLineParser.Parse("@README.md").GetCommandName());
 			ConsoleUtil.WriteHorizontalRule();
 		}
 
