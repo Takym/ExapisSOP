@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExapisSOP.Resources.Globalization {
+namespace ExapisSOP.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExapisSOP.Resources.Globalization {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExapisSOP.Resources.Globalization.ERBRes", typeof(ERBRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExapisSOP.Properties.ERBRes", typeof(ERBRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

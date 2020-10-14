@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using ExapisSOP.Globalization;
-using ExapisSOP.Resources.Globalization;
+using ExapisSOP.Properties;
 
 namespace ExapisSOP.IO.Logging
 {
