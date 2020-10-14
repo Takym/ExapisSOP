@@ -155,7 +155,9 @@ namespace ExapisSOP.IO.Logging
 		protected override void OnUpdate(ContextEventArgs e)
 		{
 			base.OnUpdate(e);
-			_sysLogger?.Trace($"The host runner called {nameof(this.OnUpdate)} method.");
+			if (_options.LogOnUpdate) {
+				_sysLogger?.Trace($"The host runner called {nameof(this.OnUpdate)} method.");
+			}
 		}
 
 		protected override void OnShutdown(ContextEventArgs e)

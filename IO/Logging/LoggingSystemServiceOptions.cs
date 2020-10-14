@@ -51,6 +51,12 @@ namespace ExapisSOP.IO.Logging
 		public bool CheckServiceState { get; set; }
 
 		/// <summary>
+		///  <see cref="ExapisSOP.AppWorker.OnUpdate(ContextEventArgs)"/>
+		///  呼び出し時にログ出力を行う場合は<see langword="true"/>、行わない場合は<see langword="false"/>を設定します。
+		/// </summary>
+		public bool LogOnUpdate { get; set; }
+
+		/// <summary>
 		///  型'<see cref="ExapisSOP.IO.Logging.LoggingSystemServiceOptions"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		public LoggingSystemServiceOptions()
@@ -58,6 +64,7 @@ namespace ExapisSOP.IO.Logging
 			_file_type             = LogFileType.Text;
 			_file_factory          = null;
 			this.CheckServiceState = true;
+			this.LogOnUpdate       = false;
 		}
 
 		/// <summary>
