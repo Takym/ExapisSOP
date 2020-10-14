@@ -61,5 +61,6 @@
 		<Compile Include="Utils\IAwaiter.cs" />
 		<Compile Include="Utils\SerializationInfoExtensions.cs" />
 		<Compile Include="Utils\StringExtensions.cs" />
+		<Compile Remove="IO\Logging\HResultDetailProvider.cs" />
 	</ItemGroup>
 </Project>

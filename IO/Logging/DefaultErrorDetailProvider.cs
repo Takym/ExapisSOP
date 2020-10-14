@@ -24,6 +24,11 @@ namespace ExapisSOP.IO.Logging
 	public sealed class DefaultErrorDetailProvider : ICustomErrorDetailProvider
 	{
 		/// <summary>
+		///  型'<see cref="ExapisSOP.IO.Logging.DefaultErrorDetailProvider"/>'の新しいインスタンスを生成します。
+		/// </summary>
+		public DefaultErrorDetailProvider() { }
+
+		/// <summary>
 		///  追加情報を可読な翻訳済みの文字列へ変換します。
 		/// </summary>
 		/// <param name="exception">変換するデータを保持している例外オブジェクトです。</param>
