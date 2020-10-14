@@ -8,6 +8,7 @@
 		<Nullable>enable</Nullable>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
