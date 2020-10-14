@@ -57,6 +57,12 @@ namespace ExapisSOP.IO.Logging
 		public bool LogOnUpdate { get; set; }
 
 		/// <summary>
+		///  ログファイルとエラーレポートファイルのファイル名を長い形式にする場合は<see langword="true"/>、しない場合は<see langword="false"/>を設定します。
+		///  既定値は<see langword="false"/>です。
+		/// </summary>
+		public bool UseLongName { get; set; }
+
+		/// <summary>
 		///  型'<see cref="ExapisSOP.IO.Logging.LoggingSystemServiceOptions"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		public LoggingSystemServiceOptions()
@@ -65,6 +71,7 @@ namespace ExapisSOP.IO.Logging
 			_file_factory          = null;
 			this.CheckServiceState = true;
 			this.LogOnUpdate       = false;
+			this.UseLongName       = false;
 		}
 
 		/// <summary>

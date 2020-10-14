@@ -42,6 +42,9 @@ namespace ExapisSOP.IO.Logging
 			// Load the options
 			await _optionsCallBack(_options);
 
+			// Set the file name mode
+			UseLongName = _options.UseLongName;
+
 			// Create a log file
 			if (context?.Settings?.EnableLogging ?? true) {
 				_logStream = context?.GetFileSystem()?.OpenLogFile(CreateFileName());
@@ -234,6 +237,8 @@ namespace ExapisSOP.IO.Logging
 
 		#region 静的
 
+		internal static bool UseLongName { get; private set; }
+
 		internal static string CreateFileName(string? tag = null)
 		{
 			return CreateFileName(DateTime.Now, Process.GetCurrentProcess(), tag);
@@ -251,10 +256,18 @@ namespace ExapisSOP.IO.Logging
 
 		internal static string CreateFileName(DateTime dt, Process proc, string? tag = null)
 		{
-			if (string.IsNullOrEmpty(tag)) {
-				return $"{dt:yyyy-MM-dd_HH-mm-ss+fffffff}.[{proc.Id}].log";
+			if (UseLongName) {
+				if (string.IsNullOrEmpty(tag)) {
+					return $"{dt:yyyy-MM-dd_HH-mm-ss+fffffff}.[{proc.Id}].log";
+				} else {
+					return $"{dt:yyyy-MM-dd_HH-mm-ss+fffffff}.[{proc.Id}].{tag}.log";
+				}
 			} else {
-				return $"{dt:yyyy-MM-dd_HH-mm-ss+fffffff}.[{proc.Id}].{tag}.log";
+				if (string.IsNullOrEmpty(tag)) {
+					return $"{dt:yyyyMMddHHmmssfffffff}.[{proc.Id}].log";
+				} else {
+					return $"{dt:yyyyMMddHHmmssfffffff}.[{proc.Id}].{tag}.log";
+				}
 			}
 		}
 
