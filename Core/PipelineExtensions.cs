@@ -7,6 +7,8 @@
 
 using System;
 using System.Threading.Tasks;
+using ExapisSOP.IO.Logging;
+using ExapisSOP.Properties;
 
 namespace ExapisSOP.Core
 {
@@ -104,6 +106,23 @@ namespace ExapisSOP.Core
 				throw new ArgumentNullException(nameof(processFunc));
 			}
 			return pipeline.Append(new ExceptionHandler<TParam, TResult>(processFunc));
+		}
+
+		/// <summary>
+		///  ログ出力処理を指定されたパイプラインの末尾に追加します。
+		/// </summary>
+		/// <param name="pipeline">登録先のパイプラインです。</param>
+		/// <returns>
+		///  <paramref name="pipeline"/>そのもの、または、
+		///  指定された処理が追加された新しい<paramref name="pipeline"/>のコピーです。
+		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
+		public static IPipeline AppendLoggingProcess(this IPipeline pipeline)
+		{
+			if (pipeline == null) {
+				throw new ArgumentNullException(nameof(pipeline));
+			}
+			return pipeline.Append(new LoggingProcess());
 		}
 
 		#endregion
@@ -288,6 +307,75 @@ namespace ExapisSOP.Core
 				} catch (Exception e) {
 					return await _func(context, (e, arg), new NextProcessFunc(this.NextProcess.InvokeAsync));
 				}
+			}
+		}
+
+		/// <summary>
+		///  次の処理についてログ出力を行います。
+		/// </summary>
+		public class LoggingProcess : IProcess
+		{
+			private static SystemLogger? _logger;
+
+			/// <summary>
+			///  この処理が実行可能な状態かどうかを表す論理値を取得します。
+			/// </summary>
+			/// <remarks>
+			///  この値が<see langword="false"/>になった場合は<see cref="ExapisSOP.IProcess.Init"/>を呼び出さなければなりません。
+			/// </remarks>
+			public bool IsExecutable => _logger != null;
+
+			/// <summary>
+			///  この処理の次に実行すべき処理を取得または設定します。
+			/// </summary>
+			public IProcess NextProcess { get; set; }
+
+			/// <summary>
+			///  型'<see cref="ExapisSOP.Core.PipelineExtensions.LoggingProcess"/>'の新しいインスタンスを生成します。
+			/// </summary>
+			public LoggingProcess()
+			{
+				this.NextProcess = TerminationProcess.Empty;
+			}
+
+			/// <summary>
+			///  この処理を実行可能な状態に初期化します。
+			///  <see cref="ExapisSOP.IProcess.IsExecutable"/>を<see langword="true"/>に設定します。
+			/// </summary>
+			/// <param name="context">現在の文脈情報です。</param>
+			public void Init(IContext context)
+			{
+				if (_logger == null) {
+					_logger = new SystemLogger(context.LogFile ?? EmptyLogFile.Instance, "pipeline");
+					_logger.Info("The pipeline logger is created.");
+				}
+			}
+
+			/// <summary>
+			///  この処理の実行を非同期的に開始します。
+			/// </summary>
+			/// <param name="context">実行に必要な文脈情報です。</param>
+			/// <param name="arg">処理に必要な引数です。</param>
+			/// <returns>戻り値を含むこの処理を表す非同期操作です。</returns>
+			/// <exception cref="System.InvalidOperationException">
+			///  <see cref="ExapisSOP.IProcess.IsExecutable"/>が<see langword="false"/>の時に発生します。
+			/// </exception>
+			public async Task<object?> InvokeAsync(IContext context, object? arg)
+			{
+				if (!this.IsExecutable) {
+					throw new InvalidOperationException(
+						string.Format(Resources.CustomPipelineProcess_InvalidOperationException, this.GetType().FullName));
+				}
+				_logger?.Trace($"{this.NextProcess.GetType().FullName}: begin");
+				object? result;
+				try {
+					result = await this.NextProcess.InvokeAsync(context, arg);
+				} catch (Exception e) {
+					_logger?.UnhandledException(e);
+					throw;
+				}
+				_logger?.Trace($"{this.NextProcess.GetType().FullName}: end");
+				return result;
 			}
 		}
 

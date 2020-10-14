@@ -9,9 +9,7 @@ namespace ExapisSOP.IO.Logging
 {
 	internal sealed class SystemLogger : Logger
 	{
-		internal const string Prefix = "system";
-
-		internal SystemLogger(ILogFile logfile)              : base(Prefix,              logfile) { }
-		internal SystemLogger(ILogFile logfile, string name) : base(Prefix + "_" + name, logfile) { }
+		internal SystemLogger(ILogFile logfile)              : base("system",      logfile) { }
+		internal SystemLogger(ILogFile logfile, string name) : base("sys_" + name, logfile) { }
 	}
 }

@@ -21,7 +21,7 @@ namespace ExapisSOP.Core
 		public bool     IsExecutable { get; }
 		public IProcess NextProcess  { get; set; }
 
-		public void Init()
+		public void Init(IContext context)
 		{
 			// do nothing
 		}

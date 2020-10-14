@@ -92,7 +92,7 @@ namespace ExapisSOP.Core
 					procs[i].NextProcess = TerminationProcess.Empty;
 				}
 				if (!procs[i].IsExecutable) {
-					procs[i].Init();
+					procs[i].Init(context);
 				}
 			}
 			var value = await procs[0].InvokeAsync(context, arg);

@@ -46,7 +46,8 @@ namespace ExapisSOP.Core
 		///  上書きされた場合、この処理を実行可能な状態に初期化します。
 		///  <see cref="ExapisSOP.IProcess.IsExecutable"/>を<see langword="true"/>に設定します。
 		/// </summary>
-		public virtual void Init()
+		/// <param name="context">現在の文脈情報です。</param>
+		public void Init(IContext context)
 		{
 			// do nothing
 		}

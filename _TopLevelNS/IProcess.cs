@@ -32,7 +32,8 @@ namespace ExapisSOP
 		///  この処理を実行可能な状態に初期化します。
 		///  <see cref="ExapisSOP.IProcess.IsExecutable"/>を<see langword="true"/>に設定します。
 		/// </summary>
-		void Init();
+		/// <param name="context">現在の文脈情報です。</param>
+		void Init(IContext context);
 
 		/// <summary>
 		///  この処理の実行を非同期的に開始します。
