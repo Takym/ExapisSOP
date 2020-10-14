@@ -172,7 +172,7 @@ namespace ExapisSOP.IO.Logging
 			if (ex.Data == null) {
 				sb.AppendLine(this.GetLocalizedBodyLine7_Data("<null>"));
 			} else if (ex.Data.Count == 0) {
-				sb.AppendLine(this.GetLocalizedBodyLine7_Data("<count>"));
+				sb.AppendLine(this.GetLocalizedBodyLine7_Data("<empty>"));
 			} else {
 				sb.AppendLine(this.GetLocalizedBodyLine7_Data(ex.Data.Count.ToString()));
 				var dictenum = ex.Data.GetEnumerator();

@@ -13,6 +13,7 @@
 		<EmbeddedResource Remove="_TopLevelNS\*" />
 		<EmbeddedResource Remove="Binary\*" />
 		<EmbeddedResource Remove="Core\*" />
+		<EmbeddedResource Remove="Globalization\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
 		<EmbeddedResource Remove="IO\*\*\*" />
@@ -29,6 +30,7 @@
 		<Compile Remove="_TopLevelNS\*" />
 		<Compile Remove="Binary\*" />
 		<Compile Remove="Core\*" />
+		<Compile Remove="Globalization\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
 		<Compile Remove="IO\*\*\*" />
@@ -45,6 +47,7 @@
 		<None Remove="_TopLevelNS\*" />
 		<None Remove="Binary\*" />
 		<None Remove="Core\*" />
+		<None Remove="Globalization\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
 		<None Remove="IO\*\*\*" />
