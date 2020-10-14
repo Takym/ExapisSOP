@@ -116,6 +116,9 @@ namespace ExapisSOP.IO
 		{
 			if (arg is PathString path) {
 				format ??= string.Empty;
+				if (format.Length == 0) {
+					return path.ToString();
+				}
 				var  formatted = new StringBuilder();
 				bool ignore    = false;
 				for (int i = 0; i < format.Length; ++i) {
