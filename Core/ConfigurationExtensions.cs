@@ -8,6 +8,7 @@
 using System;
 using System.Threading.Tasks;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Logging;
 using ExapisSOP.IO.Settings;
 using ExapisSOP.IO.Settings.CommandLine;
 
@@ -58,7 +59,7 @@ namespace ExapisSOP.Core
 			if (config == null) {
 				throw new ArgumentNullException(nameof(config));
 			}
-			return config.AddService(new FileSystemService(_ => Task.CompletedTask));
+			return config.AddService(new FileSystemService(DefaultOptions));
 		}
 
 		/// <summary>
@@ -97,7 +98,7 @@ namespace ExapisSOP.Core
 			if (config == null) {
 				throw new ArgumentNullException(nameof(config));
 			}
-			return config.AddService(new SettingsSystemService(_ => Task.CompletedTask));
+			return config.AddService(new SettingsSystemService(DefaultOptions));
 		}
 
 		/// <summary>
@@ -137,7 +138,7 @@ namespace ExapisSOP.Core
 			if (config == null) {
 				throw new ArgumentNullException(nameof(config));
 			}
-			return config.AddService(new CommandLineService(_ => Task.CompletedTask));
+			return config.AddService(new CommandLineService(DefaultOptions));
 		}
 
 		/// <summary>
@@ -160,6 +161,134 @@ namespace ExapisSOP.Core
 				throw new ArgumentNullException(nameof(callBackFunc));
 			}
 			return config.AddService(new CommandLineService(callBackFunc));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>をサービスとして実行環境に登録します。
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>より後に登録しなければなりません。
+		///  また、<see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>を登録する場合、
+		///  このサービスはその後に登録しなければなりません。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  <see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
+		public static IConfiguration AddLoggingSystem(this IConfiguration config)
+		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			return config.AddService(new LoggingSystemService(DefaultOptions));
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>をサービスとして実行環境に登録します。
+		///  <see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>より後に登録しなければなりません。
+		///  また、<see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>を登録する場合、
+		///  このサービスはその後に登録しなければなりません。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <param name="callBackFunc">サービスの設定を行います。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  <see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>がサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		/// </returns>
+		/// <exception cref="System.ArgumentNullException" />
+		public static IConfiguration AddLoggingSystem(this IConfiguration config, Func<LoggingSystemServiceOptions, Task> callBackFunc)
+		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			if (callBackFunc == null) {
+				throw new ArgumentNullException(nameof(callBackFunc));
+			}
+			return config.AddService(new LoggingSystemService(callBackFunc));
+		}
+
+		/// <summary>
+		///  全てのシステムサービスを既定の設定で実行環境に登録します。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  下記のサービスがサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		///  <list type="number">
+		///   <item><see cref="ExapisSOP.IO.IFileSystemService"/></item>
+		///   <item><see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/></item>
+		///   <item><see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/></item>
+		///   <item><see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/></item>
+		///  </list>
+		/// </returns>
+		public static IConfiguration AddSystemServices(this IConfiguration config)
+		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			return config
+				.AddFileSystem()
+				.AddSettingsSystem()
+				.AddCommandLine()
+				.AddLoggingSystem();
+		}
+
+		/// <summary>
+		///  全てのシステムサービスを既定の設定で実行環境に登録します。
+		/// </summary>
+		/// <param name="config">登録先の構成設定です。</param>
+		/// <param name="fileSystemOptions"><see cref="ExapisSOP.IO.IFileSystemService"/>の設定を行います。</param>
+		/// <param name="settingsSystemOptions"><see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/>の設定を行います。</param>
+		/// <param name="commandLineOptions"><see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>の設定を行います。</param>
+		/// <param name="loggingSystemOptions"><see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>の設定を行います。</param>
+		/// <returns>
+		///  <paramref name="config"/>そのもの、または、
+		///  下記のサービスがサービスリストに追加された新しい<paramref name="config"/>のコピーです。
+		///  <list type="number">
+		///   <item><see cref="ExapisSOP.IO.IFileSystemService"/></item>
+		///   <item><see cref="ExapisSOP.IO.Settings.ISettingsSystemService"/></item>
+		///   <item><see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/></item>
+		///   <item><see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/></item>
+		///  </list>
+		/// </returns>
+		public static IConfiguration AddSystemServices(this IConfiguration config,
+			Func<FileSystemServiceOptions,     Task>? fileSystemOptions     = null,
+			Func<SettingsSystemServiceOptions, Task>? settingsSystemOptions = null,
+			Func<CommandLineServiceOptions,    Task>? commandLineOptions    = null,
+			Func<LoggingSystemServiceOptions,  Task>? loggingSystemOptions  = null)
+		{
+			if (config == null) {
+				throw new ArgumentNullException(nameof(config));
+			}
+			fileSystemOptions     ??= DefaultOptions;
+			settingsSystemOptions ??= DefaultOptions;
+			commandLineOptions    ??= DefaultOptions;
+			loggingSystemOptions  ??= DefaultOptions;
+			return config
+				.AddFileSystem    (fileSystemOptions)
+				.AddSettingsSystem(settingsSystemOptions)
+				.AddCommandLine   (commandLineOptions)
+				.AddLoggingSystem (loggingSystemOptions);
+		}
+
+		private static Task DefaultOptions(FileSystemServiceOptions _)
+		{
+			return Task.CompletedTask;
+		}
+
+		private static Task DefaultOptions(SettingsSystemServiceOptions _)
+		{
+			return Task.CompletedTask;
+		}
+
+		private static Task DefaultOptions(CommandLineServiceOptions _)
+		{
+			return Task.CompletedTask;
+		}
+
+		private static Task DefaultOptions(LoggingSystemServiceOptions _)
+		{
+			return Task.CompletedTask;
 		}
 	}
 }

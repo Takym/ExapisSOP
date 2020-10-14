@@ -53,6 +53,7 @@ namespace ExapisSOP.DemoApp
 					})
 					.AddSettingsSystem()
 					.AddCommandLine()
+					.AddLoggingSystem()
 					.AddUtility()
 					.AddAppWorker<Program>()
 			).Build().RunAsync();

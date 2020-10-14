@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Logging;
 using ExapisSOP.IO.Settings;
 using ExapisSOP.IO.Settings.CommandLine;
 
@@ -201,6 +202,18 @@ namespace ExapisSOP.Core
 		public static ICommandLineService? GetCommandLine(this IContext context)
 		{
 			return context?.GetService<ICommandLineService>();
+		}
+
+		/// <summary>
+		///  サービスリストから最初に見つかった<see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>を取得します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  <see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>を実装したサービスオブジェクトです。
+		/// </returns>
+		public static ILoggingSystemService? GetLoggingSystem(this IContext context)
+		{
+			return context?.GetService<ILoggingSystemService>();
 		}
 	}
 }
