@@ -82,15 +82,15 @@ namespace ExapisSOP.Core
 							await (task = _app_workers[i].OnStartupAsync(context));
 						} catch (TerminationException te) {
 							loop = false;
-							var e1 = await _app_workers[i].OnTerminateAsync(te);
-							var e2 = await _config        .OnTerminateAsync(te);
+							var e1 = await _app_workers[i].OnTerminateAsync(te, context);
+							var e2 = await _config        .OnTerminateAsync(te, context);
 							if (te.HResult != 0) ret = te.HResult;
 							if (e1 != null) ret = e1.HResult;
 							if (e2 != null) ret = e2.HResult;
 						} catch (Exception e) {
 							var error = task.Exception ?? e;
-							bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error);
-							bool cfg  = await _config        .OnUnhandledErrorAsync(error);
+							bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error, context);
+							bool cfg  = await _config        .OnUnhandledErrorAsync(error, context);
 							if (aw || cfg) {
 								ret = e.HResult;
 								if (ret == 0) ret = -1;
@@ -132,17 +132,17 @@ namespace ExapisSOP.Core
 						try {
 							await (task = _app_workers[i].OnShutdownAsync(context));
 						} catch (TerminationException te) {
-							await _app_workers[i].OnTerminateAsync(te);
-							await _config        .OnTerminateAsync(te);
-							var e1 = await _app_workers[i].OnTerminateAsync(te);
-							var e2 = await _config        .OnTerminateAsync(te);
+							await _app_workers[i].OnTerminateAsync(te, context);
+							await _config        .OnTerminateAsync(te, context);
+							var e1 = await _app_workers[i].OnTerminateAsync(te, context);
+							var e2 = await _config        .OnTerminateAsync(te, context);
 							if (te.HResult != 0) ret = te.HResult;
 							if (e1 != null) ret = e1.HResult;
 							if (e2 != null) ret = e2.HResult;
 						} catch (Exception e) {
 							var error = task.Exception ?? e;
-							bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error);
-							bool cfg  = await _config        .OnUnhandledErrorAsync(error);
+							bool aw   = await _app_workers[i].OnUnhandledErrorAsync(error, context);
+							bool cfg  = await _config        .OnUnhandledErrorAsync(error, context);
 							if (aw || cfg) {
 								ret = e.HResult;
 								if (ret == 0) ret = -1;
