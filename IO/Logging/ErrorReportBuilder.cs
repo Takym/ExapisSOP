@@ -63,7 +63,7 @@ namespace ExapisSOP.IO.Logging
 		///  <see cref="ExapisSOP.IO.Logging.ErrorReportBuilder.LastCreationError"/>を保存します。
 		/// </summary>
 		/// <param name="paths">ログファイルの既定の場所を表すパス文字列を格納したオブジェクトです。</param>
-		public static void SaveERBC(Paths paths)
+		public static void SaveERBC(IPathList paths)
 		{
 			// ERBC = ErrorReportBuilder Creation
 			LastCreationError?.Save(paths, "ERBC");
@@ -107,6 +107,9 @@ namespace ExapisSOP.IO.Logging
 			if (exception == null) {
 				throw new ArgumentNullException(nameof(exception));
 			}
+			if (detailProviders == null) {
+				throw new ArgumentNullException(nameof(detailProviders));
+			}
 			this.DateTime        = DateTime.Now;
 			this.Exception       = exception;
 			this.Option          = option;
@@ -119,7 +122,7 @@ namespace ExapisSOP.IO.Logging
 		/// <param name="paths">ログファイルの既定の場所を表すパス文字列を格納したオブジェクトです。</param>
 		/// <param name="name">エラーレポートの名前です。</param>
 		/// <returns>自動生成された保存先のファイルパスです。</returns>
-		public PathString Save(Paths paths, string? name = null)
+		public PathString Save(IPathList paths, string? name = null)
 		{
 			if (string.IsNullOrEmpty(name)) {
 				name = "ErrorReport";

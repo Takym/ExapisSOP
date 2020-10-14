@@ -12,7 +12,7 @@ namespace ExapisSOP
 	/// <summary>
 	///  <see cref="ExapisSOP.TerminationException"/>が格納されたイベントデータを表します。
 	/// </summary>
-	public class TerminationEventArgs : EventArgs
+	public class TerminationEventArgs : ContextEventArgs
 	{
 		/// <summary>
 		///  処理を終了させた例外を取得します。
@@ -28,7 +28,8 @@ namespace ExapisSOP
 		///  型'<see cref="ExapisSOP.TerminationEventArgs"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		/// <param name="te">終了例外オブジェクトです。</param>
-		public TerminationEventArgs(TerminationException te)
+		/// <param name="context">現在の文脈情報です。</param>
+		public TerminationEventArgs(TerminationException te, IContext context) : base(context)
 		{
 			this.Exception = te;
 		}

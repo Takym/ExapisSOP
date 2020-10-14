@@ -7,6 +7,7 @@
 
 using System;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Logging;
 using ExapisSOP.IO.Settings;
 using ExapisSOP.IO.Settings.CommandLine;
 using ExapisSOP.Properties;
@@ -21,6 +22,7 @@ namespace ExapisSOP.Core
 		public           IPathList?           Paths     { get; internal set; }
 		public           EnvironmentSettings? Settings  { get; internal set; }
 		public           Switch[]?            Arguments { get; internal set; }
+		public           ILogFile?            LogFile   { get; internal set; }
 
 		internal InitFinalContext(DefaultHostRunner runner, InitFinalContext? initContext)
 		{
@@ -30,6 +32,7 @@ namespace ExapisSOP.Core
 			this.Paths     = initContext?.Paths;
 			this.Settings  = initContext?.Settings;
 			this.Arguments = initContext?.Arguments;
+			this.LogFile   = initContext?.LogFile;
 			if (initContext?.IsFinalizationPhase() ?? false) {
 				throw new InvalidOperationException(Resources.InitFinalContext_InvalidOperationException);
 			}

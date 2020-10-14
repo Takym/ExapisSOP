@@ -33,20 +33,20 @@ namespace ExapisSOP.Core
 			return _runner._services.ToArray();
 		}
 
-		internal async Task<bool> OnUnhandledErrorAsync(Exception e)
+		internal async Task<bool> OnUnhandledErrorAsync(Exception e, IContext context)
 		{
-			var args = new UnhandledErrorEventArgs(e);
+			var args = new UnhandledErrorEventArgs(e, context);
 			this.UnhandledError?.Invoke(this, args);
 			return await Task.FromResult(args.Abort);
 		}
 
-		internal async Task<Exception?> OnTerminateAsync(TerminationException te)
+		internal async Task<Exception?> OnTerminateAsync(TerminationException te, IContext context)
 		{
 			try {
-				this.Terminate?.Invoke(this, new TerminationEventArgs(te));
+				this.Terminate?.Invoke(this, new TerminationEventArgs(te, context));
 				return null;
 			} catch (Exception e) {
-				await this.OnUnhandledErrorAsync(e);
+				await this.OnUnhandledErrorAsync(e, context);
 				return e;
 			}
 		}

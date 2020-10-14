@@ -7,6 +7,7 @@
 
 using System;
 using ExapisSOP.IO;
+using ExapisSOP.IO.Logging;
 using ExapisSOP.IO.Settings;
 using ExapisSOP.IO.Settings.CommandLine;
 using ExapisSOP.Properties;
@@ -23,6 +24,7 @@ namespace ExapisSOP.Core
 		public            IPathList?           Paths     { get; }
 		public            EnvironmentSettings? Settings  { get; }
 		public            Switch[]?            Arguments { get; }
+		public            ILogFile?            LogFile   { get; }
 
 		internal EventLoopContext(DefaultHostRunner runner, IContext context)
 		{
@@ -47,6 +49,7 @@ namespace ExapisSOP.Core
 			this.Paths     = context.Paths;
 			this.Settings  = context.Settings;
 			this.Arguments = context.Arguments;
+			this.LogFile   = context.LogFile;
 		}
 
 		internal EventLoopContext? GetPrev()

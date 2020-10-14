@@ -26,12 +26,19 @@ namespace ExapisSOP
 		public bool Abort { get; set; }
 
 		/// <summary>
+		///  現在の文脈情報を取得します。
+		/// </summary>
+		public IContext Context { get; }
+
+		/// <summary>
 		///  型'<see cref="ExapisSOP.UnhandledErrorEventArgs"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		/// <param name="exception">例外オブジェクトです。</param>
-		public UnhandledErrorEventArgs(Exception exception) : base(exception, false)
+		/// <param name="context">現在の文脈情報です。</param>
+		public UnhandledErrorEventArgs(Exception exception, IContext context) : base(exception, false)
 		{
 			this.Exception = exception;
+			this.Context   = context;
 		}
 	}
 }

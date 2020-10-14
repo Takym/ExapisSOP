@@ -6,6 +6,7 @@
 ****/
 
 using ExapisSOP.IO;
+using ExapisSOP.IO.Logging;
 using ExapisSOP.IO.Settings;
 using ExapisSOP.IO.Settings.CommandLine;
 
@@ -33,6 +34,12 @@ namespace ExapisSOP
 		///  <see cref="ExapisSOP.IO.Settings.CommandLine.ICommandLineService"/>が初期化されていない場合は<see langword="null"/>を返します。
 		/// </summary>
 		Switch[]? Arguments { get; }
+
+		/// <summary>
+		///  既定のログファイルを取得します。
+		///  <see cref="ExapisSOP.IO.Logging.ILoggingSystemService"/>が初期化されていない場合は<see langword="null"/>を返します。
+		/// </summary>
+		ILogFile? LogFile { get; }
 
 		/// <summary>
 		///  現在実行中の実行環境を取得します。
