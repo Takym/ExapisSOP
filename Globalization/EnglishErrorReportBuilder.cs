@@ -17,7 +17,7 @@ namespace ExapisSOP.Globalization
 	public class EnglishErrorReportBuilder : ErrorReportBuilder
 	{
 		/// <summary>
-		///  型'<see cref="ExapisSOP.Globalization.JapaneseErrorReportBuilder"/>'の新しいインスタンスを生成します。
+		///  型'<see cref="ExapisSOP.Globalization.EnglishErrorReportBuilder"/>'の新しいインスタンスを生成します。
 		/// </summary>
 		/// <param name="exception">作成するエラーレポートの例外オブジェクトです。</param>
 		/// <param name="option">

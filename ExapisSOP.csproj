@@ -46,6 +46,15 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>Resources.resx</DependentUpon>
 		</Compile>
+		<EmbeddedResource Update="Resources\Globalization\ERBRes.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>ERBRes.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<Compile Update="Resources\Globalization\ERBRes.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ERBRes.resx</DependentUpon>
+		</Compile>
 		<EmbeddedResource Include="IO\Settings\EnvironmentSettings.xsd">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</EmbeddedResource>

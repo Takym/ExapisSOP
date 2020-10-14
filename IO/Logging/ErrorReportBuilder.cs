@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using ExapisSOP.Globalization;
+using ExapisSOP.Resources.Globalization;
 
 namespace ExapisSOP.IO.Logging
 {
@@ -19,6 +21,54 @@ namespace ExapisSOP.IO.Logging
 	/// </summary>
 	public abstract class ErrorReportBuilder
 	{
+		private static readonly DefaultErrorDetailProvider _default_detailProvider = new DefaultErrorDetailProvider();
+
+		/// <summary>
+		///  前回の <see cref="ExapisSOP.IO.Logging.ErrorReportBuilder.Create(Exception, ICustomErrorDetailProvider[])"/>
+		///  の呼び出しで発生したエラーを取得します。成功した場合は<see langword="null"/>を返します。
+		/// </summary>
+		public static ErrorReportBuilder? LastCreationError { get; private set; }
+
+		/// <summary>
+		///  現在のカルチャに合致する型'<see cref="ExapisSOP.IO.Logging.ErrorReportBuilder"/>'のインスタンスを生成します。
+		/// </summary>
+		/// <param name="exception">作成するエラーレポートの例外です。</param>
+		/// <returns>新しい翻訳された<see cref="ExapisSOP.IO.Logging.ErrorReportBuilder"/>のインスタンスです。</returns>
+		public static ErrorReportBuilder Create(Exception exception)
+		{
+			return Create(exception, _default_detailProvider);
+		}
+
+		/// <summary>
+		///  現在のカルチャに合致する型'<see cref="ExapisSOP.IO.Logging.ErrorReportBuilder"/>'のインスタンスを生成します。
+		/// </summary>
+		/// <param name="exception">作成するエラーレポートの例外です。</param>
+		/// <param name="detailProviders">追加情報を翻訳するオブジェクトの配列です。</param>
+		/// <returns>新しい翻訳された<see cref="ExapisSOP.IO.Logging.ErrorReportBuilder"/>のインスタンスです。</returns>
+		public static ErrorReportBuilder Create(Exception exception, params ICustomErrorDetailProvider[] detailProviders)
+		{
+			LastCreationError = null;
+			detailProviders ??= Array.Empty<ICustomErrorDetailProvider>();
+			try {
+				var t = Type.GetType(ERBRes.Type, false, true) ?? typeof(EnglishErrorReportBuilder);
+				var o = Activator.CreateInstance(t, exception, ERBRes.Option, detailProviders) as ErrorReportBuilder;
+				return o ?? new EnglishErrorReportBuilder(exception, "S", detailProviders);
+			} catch (Exception e) {
+				LastCreationError = new JapaneseErrorReportBuilder(e, "S", detailProviders);
+				return new EnglishErrorReportBuilder(exception, "S", detailProviders);
+			}
+		}
+
+		/// <summary>
+		///  <see cref="ExapisSOP.IO.Logging.ErrorReportBuilder.LastCreationError"/>を保存します。
+		/// </summary>
+		/// <param name="paths">ログファイルの既定の場所を表すパス文字列を格納したオブジェクトです。</param>
+		public static void SaveERBC(Paths paths)
+		{
+			// ERBC = ErrorReportBuilder Creation
+			LastCreationError?.Save(paths, "ERBC");
+		}
+
 		private string? _text;
 
 		/// <summary>
