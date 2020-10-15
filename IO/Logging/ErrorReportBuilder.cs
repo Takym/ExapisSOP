@@ -244,7 +244,7 @@ namespace ExapisSOP.IO.Logging
 				var exs = aggregateException.InnerExceptions;
 				for (int i = 0; i < exs.Count; ++i) {
 					sb.AppendLine($"++++++++ {i,10} >>>");
-					this.BuildBody(sb, exs[i]);
+					this.BuildBody(sb, exs[i], 0);
 					sb.AppendLine($"++++++++ {i,10} <<<");
 					sb.AppendLine();
 				}
@@ -258,7 +258,7 @@ namespace ExapisSOP.IO.Logging
 				}
 				sb.AppendLine();
 				sb.AppendLine(this.GetLocalizedBodyLine8_InnerException());
-				this.BuildBody(sb, ex.InnerException);
+				this.BuildBody(sb, ex.InnerException, index + 1);
 			}
 		}
 
