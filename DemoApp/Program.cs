@@ -6,16 +6,9 @@
 ****/
 
 using System;
-using System.ComponentModel;
-using System.Globalization;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Xml;
 using ExapisSOP.Core;
 using ExapisSOP.IO;
-using ExapisSOP.IO.Logging;
 using ExapisSOP.Utils;
 
 namespace ExapisSOP.DemoApp
@@ -53,14 +46,13 @@ namespace ExapisSOP.DemoApp
 		{
 			return await HostRunner.Create(args).Configure(
 				config => config
-					.AddFileSystem(async (options) => {
-						options.SetDataPath(DefaultPath.Application);
-						options.CreateLockFile = true;
-						await Task.CompletedTask;
-					})
-					.AddSettingsSystem()
-					.AddCommandLine()
-					.AddLoggingSystem()
+					.AddSystemServices(
+						fileSystemOptions: async (options) => {
+							options.SetDataPath(DefaultPath.Application);
+							options.CreateLockFile = true;
+							await Task.CompletedTask;
+						}
+					)
 					.AddUtility()
 					.AddAppWorker<Program>()
 			).Build().RunAsync();
