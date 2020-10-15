@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP", "ExapisSOP.csproj", "{18CFF209-50D2-43B1-9F59-E16C9D935D02}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation and Packages", "Documentation and Packages", "{D0AB9DC8-C485-4233-95A6-9F38C8578134}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.DemoApp", "ExapisSOP.DemoApp.csproj", "{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docs.gen", "docs.gen\docs.gen.csproj", "{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBC0FDDE-4044-4DC6-BFAC-EC0CEBC40E89}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		ExapisSOP.ProjectSettings.csproj = ExapisSOP.ProjectSettings.csproj
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP", "ExapisSOP.csproj", "{18CFF209-50D2-43B1-9F59-E16C9D935D02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.DemoApp", "ExapisSOP.DemoApp.csproj", "{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.NativeWrapper.Windows", "ExapisSOP.NativeWrapper.Windows.csproj", "{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}"
 EndProject
@@ -95,13 +99,32 @@ Global
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Release|Intel 32 Bit.Build.0 = Release|x86
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Release|Intel 64 Bit.ActiveCfg = Release|x64
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Release|Intel 64 Bit.Build.0 = Release|x64
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|ARM.Build.0 = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 32 Bit.ActiveCfg = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 32 Bit.Build.0 = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 64 Bit.ActiveCfg = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 64 Bit.Build.0 = Debug|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|ARM.ActiveCfg = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|ARM.Build.0 = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 32 Bit.ActiveCfg = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 32 Bit.Build.0 = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 64 Bit.ActiveCfg = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 64 Bit.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422} = {D0AB9DC8-C485-4233-95A6-9F38C8578134}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
-		RESX_NeutralResourcesLanguage = iv-IV
 		RESX_Rules = {"EnabledRules":[]}
+		RESX_NeutralResourcesLanguage = iv-IV
+		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
 	EndGlobalSection
 EndGlobal

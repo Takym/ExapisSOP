@@ -1,0 +1,48 @@
+﻿{{#inPackage}}
+パッケージ {{name.0.value}}
+{{/inPackage}}
+{{#inNamespace}}
+名前空間 {{name.0.value}}
+{{/inNamespace}}
+{{#inClass}}
+クラス {{name.0.value}}
+{{/inClass}}
+{{#inStruct}}
+構造体 {{name.0.value}}
+{{/inStruct}}
+{{#inInterface}}
+インターフェース {{name.0.value}}
+{{/inInterface}}
+{{#inEnum}}
+列挙体 {{name.0.value}}
+{{/inEnum}}
+{{#inDelegate}}
+デリゲート {{name.0.value}}
+{{/inDelegate}}
+{{#inConstructor}}
+コンストラクタ {{name.0.value}}
+{{/inConstructor}}
+{{#inField}}
+フィールド {{name.0.value}}
+{{/inField}}
+{{#inProperty}}
+プロパティ {{name.0.value}}
+{{/inProperty}}
+{{#inMethod}}
+メソッド {{name.0.value}}
+{{/inMethod}}
+{{#inEvent}}
+イベント {{name.0.value}}
+{{/inEvent}}
+{{#inOperator}}
+演算子 {{name.0.value}}
+{{/inOperator}}
+{{#inEii}}
+明示的なインターフェース実装 {{name.0.value}}
+{{/inEii}}
+{{#inVariable}}
+変数 {{name.0.value}}
+{{/inVariable}}
+{{#inTypeAlias}}
+型の別名 {{name.0.value}}
+{{/inTypeAlias}}

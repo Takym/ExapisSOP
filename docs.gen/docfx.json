@@ -1,0 +1,47 @@
+{
+	"metadata": [
+		{
+			"src": [
+				{
+					"files": [
+						"**.csproj"
+					],
+					"src": "..\\"
+				}
+			],
+			"dest": "api",
+			"disableGitFeatures": false,
+			"disableDefaultFilter": false
+		}
+	],
+	"build": {
+		"content": [
+			{
+				"files": [
+					"api/**.yml",
+					"api/index.md"
+				]
+			},
+			{
+				"files": [
+					"toc.yml",
+					"*.md"
+				]
+			}
+		],
+		"dest": "..\\docs\\latest",
+		"globalMetadataFiles": [],
+		"fileMetadataFiles": [],
+		"template": [
+			"statictoc",
+			"memberpage.2.56.3/content",
+			"template"
+		],
+		"postProcessors": [],
+		"markdownEngineName": "markdig",
+		"noLangKeyword": false,
+		"keepFileLink": false,
+		"cleanupCacheHistory": false,
+		"disableGitFeatures": false
+	}
+}
