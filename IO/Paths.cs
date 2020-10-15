@@ -17,7 +17,7 @@ namespace ExapisSOP.IO
 	/// </summary>
 	public sealed class Paths : IPathList
 	{
-		private static string AsmName => Assembly.GetExecutingAssembly().GetName().Name ?? VersionInfo.Name;
+		private static string AsmName => Assembly.GetEntryAssembly()?.GetName()?.Name ?? VersionInfo.Name;
 
 		/// <summary>
 		///  既定のデータパスを取得します。
