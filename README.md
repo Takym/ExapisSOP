@@ -44,8 +44,11 @@ namespace Example
 		private static async Task<int> Main(string[] args)
 		{
 			// Configure how to run the application:
+			// (If you change the order, it does not work correctly.)
 			return await HostRunner.Create(args).Configure(
-				config => config.AddAppWorker<Program>() // Adds Program as an AppWorker
+				config => config
+					.AddSystemServices()     // Adds system services
+					.AddAppWorker<Program>() // Adds Program as an AppWorker
 			).Build().RunAsync();
 		}
 	}
@@ -117,8 +120,11 @@ namespace Example
 		private static async Task<int> Main(string[] args)
 		{
 			// アプリケーションの実行に関する設定を行います。
+			// (順番を変えると正しく動作しない可能性があります。)
 			return await HostRunner.Create(args).Configure(
-				config => config.AddAppWorker<Program>() // Program を AppWorker として追加します。
+				config => config
+					.AddSystemServices()     // 標準のサービスを追加します。
+					.AddAppWorker<Program>() // Program を AppWorker として追加します。
 			).Build().RunAsync();
 		}
 	}
