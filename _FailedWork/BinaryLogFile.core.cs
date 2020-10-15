@@ -1,4 +1,11 @@
-﻿using System.IO;
+﻿/****
+ * ExapisSOP
+ * Copyright (C) 2020 Takym.
+ * 
+ * distributed under the MIT License.
+****/
+
+using System.IO;
 using ExapisSOP.Properties;
 
 namespace ExapisSOP.IO.Logging

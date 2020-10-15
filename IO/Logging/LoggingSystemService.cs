@@ -75,9 +75,6 @@ namespace ExapisSOP.IO.Logging
 			// Create the system logger
 			_sysLogger = new SystemLogger(_logFile);
 			_sysLogger.Info("The logging system service is initialized successfully.");
-
-			// Create the injection logger
-			InjectionLogger = new SystemLogger(_logFile, "injection");
 		}
 
 		protected override void OnStartup(ContextEventArgs e)
@@ -242,7 +239,6 @@ namespace ExapisSOP.IO.Logging
 		#region 静的
 
 		internal static bool          UseLongName     { get; private set; }
-		internal static SystemLogger? InjectionLogger { get; private set; }
 
 		internal static string CreateFileName(string? tag = null)
 		{
