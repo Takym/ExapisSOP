@@ -26,7 +26,7 @@ namespace ExapisSOP.IO.Logging
 		private           ILogFile                                _logFile;
 		private           SystemLogger?                           _sysLogger;
 		private  readonly DefaultErrorDetailProvider              _default_detailProvider;
-		internal          bool                                    LogOnUpdate     => _options.LogOnUpdate;
+		internal          bool                                    LogOnUpdate => _options.LogOnUpdate;
 
 		internal LoggingSystemService(Func<LoggingSystemServiceOptions, Task> callBackFunc)
 		{
@@ -238,7 +238,7 @@ namespace ExapisSOP.IO.Logging
 
 		#region 静的
 
-		internal static bool          UseLongName     { get; private set; }
+		internal static bool UseLongName { get; private set; }
 
 		internal static string CreateFileName(string? tag = null)
 		{
