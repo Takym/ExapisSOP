@@ -7,6 +7,7 @@ Copyright (C) 2020 Takym.
 # <a id="en"></a>English
 ## Summary
 This framework library, also known as TakymLib or DotnetExlib, provides the service-oriented programming.
+[View more specification](https://takym.github.io/ExapisSOP/) (Japanese).
 
 ## Get Started
 ```csharp
@@ -79,6 +80,7 @@ Please note below when you propose a pull request (PR):
 # <a id="ja"></a>日本語
 ## 概要
 このフレームワークライブラリ(TakymLib、DotnetExlibとも呼びます)はサービス指向プログラミングに必要な機能を提供します。
+[詳細な仕様はこちらからご覧ください](https://takym.github.io/ExapisSOP/)。
 
 ## 使い方
 ```csharp
