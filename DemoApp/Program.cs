@@ -40,64 +40,6 @@ namespace ExapisSOP.DemoApp
 		private void Program_Update(object? sender, ContextEventArgs e)
 		{
 			Console.WriteLine("Hello, World!!");
-
-			var e0 = new AggregateException(
-				new NullReferenceException(),
-				new NotImplementedException(),
-				new ObjectDisposedException("abcd"),
-				new TerminationException(),
-				new ArgumentOutOfRangeException(
-					"引数", "値", "メッセージ"
-				),
-				new CultureNotFoundException(
-					"引数", "iv", "メッセージ"
-				),
-				new Exception(
-					"内部例外を持つ例外1",
-					new ApplicationException(
-						"アプリエラー",
-						new Win32Exception(123, "めっせーじ")
-					)
-				),
-				new Exception(
-					"内部例外を持つ例外2",
-					new FileNotFoundException(
-						"メッセージ", "ファイル名",
-						new FileLoadException(
-							"メッセージ", "ファイル名",
-							new InvalidPathFormatException(
-								"ファイルパス",
-								new TerminationException(
-									new TerminationException(
-										"メッセージ",
-										TerminationReason.NoCompatible,
-										CancellationToken.None
-									)
-								)
-							)
-						)
-					)
-				),
-				new XmlException("xmlerror", new SerializationException(), 12, 34),
-				new DivideByZeroException(),
-				new StackOverflowException(),
-				new PlatformNotSupportedException(
-					"テスト",
-					new InvalidOperationException(
-						"メッセージ",
-						new InvalidCastException()
-					)
-				),
-				new InvalidOperationException()
-			);
-			var e1 = new Exception("エラーメッセージ", e0);
-
-			try {
-				throw e1;
-			} catch (Exception e2) {
-				e.Context.GetLoggingSystem()?.SaveErrorReport(e.Context, e2, new HResultDetailProvider());
-			}
-
 			throw new TerminationException();
 		}
 
