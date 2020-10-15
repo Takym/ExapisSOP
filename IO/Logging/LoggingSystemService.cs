@@ -20,12 +20,13 @@ namespace ExapisSOP.IO.Logging
 	{
 		#region 動的
 
-		private readonly LoggingSystemServiceOptions             _options;
-		private readonly Func<LoggingSystemServiceOptions, Task> _optionsCallBack;
-		private          FileStream?                             _logStream;
-		private          ILogFile                                _logFile;
-		private          SystemLogger?                           _sysLogger;
-		private readonly DefaultErrorDetailProvider              _default_detailProvider;
+		private  readonly LoggingSystemServiceOptions             _options;
+		private  readonly Func<LoggingSystemServiceOptions, Task> _optionsCallBack;
+		private           FileStream?                             _logStream;
+		private           ILogFile                                _logFile;
+		private           SystemLogger?                           _sysLogger;
+		private  readonly DefaultErrorDetailProvider              _default_detailProvider;
+		internal          bool                                    LogOnUpdate => _options.LogOnUpdate;
 
 		internal LoggingSystemService(Func<LoggingSystemServiceOptions, Task> callBackFunc)
 		{

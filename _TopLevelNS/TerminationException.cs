@@ -32,7 +32,7 @@ namespace ExapisSOP
 			: base(Resources.TerminationException)
 		{
 			this.Reason  = TerminationReason.WorkCompleted;
-			this.HResult = 0;
+			this.HResult = 0; // この操作を正しく終了しました。
 		}
 
 		/// <summary>
