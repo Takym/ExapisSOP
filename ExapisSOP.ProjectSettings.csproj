@@ -4,7 +4,7 @@
 		<TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
 		<RuntimeIdentifiers>any;win7-x86;win7-x64</RuntimeIdentifiers>
 		<!-- win7-86;win7-x64 is to suppress a build error. -->
-		<Platforms>AnyCPU;x86;x64;ARM;ARM64</Platforms>
+		<Platforms>AnyCPU;x86;x64;ARM</Platforms>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -57,10 +57,6 @@
 	<PropertyGroup Condition="'$(Platform)'=='ARM'">
 		<DefineConstants>ARM</DefineConstants>
 		<PlatformTarget>ARM</PlatformTarget>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Platform)'=='ARM64'">
-		<DefineConstants>ARM64</DefineConstants>
-		<PlatformTarget>ARM64</PlatformTarget>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Remove=".gitattributes" />

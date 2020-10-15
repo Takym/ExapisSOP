@@ -100,9 +100,7 @@ namespace ExapisSOP
 #elif x64
 		private const string Platform = "x64 (Intel 64 Bit)";
 #elif ARM
-		private const string Platform = "ARM (ARM 32 Bit)";
-#elif ARM64
-		private const string Platform = "ARM64 (ARM 64 Bit)";
+		private const string Platform = "ARM";
 #else
 		private const string Platform = "Any CPU";
 #endif
