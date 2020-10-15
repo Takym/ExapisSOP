@@ -15,6 +15,7 @@ namespace ExapisSOP.IO.Logging
 	{
 		private readonly List<LogData> _logs;
 		private readonly TextWriter    _tw;
+		private          int           _a;
 
 		public override ulong Count => unchecked((ulong)(_logs.Count));
 
@@ -25,6 +26,7 @@ namespace ExapisSOP.IO.Logging
 			}
 			_logs = new List<LogData>();
 			_tw   = TextWriter.Synchronized(tw);
+			_a    = 0;
 		}
 
 		protected override void AddLogCore(LogData data)
@@ -33,6 +35,11 @@ namespace ExapisSOP.IO.Logging
 				_logs.Add(data);
 			}
 			_tw.WriteLine(data.ToString());
+			++_a;
+			if (_a > 0x10) {
+				_tw.Flush();
+				_a = 0;
+			}
 		}
 
 		protected override LogData GetLogCore(ulong index)

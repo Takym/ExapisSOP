@@ -9,6 +9,8 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using System.Threading.Tasks;
 using ExapisSOP.Core;
 using ExapisSOP.IO.Settings;
@@ -26,7 +28,8 @@ namespace ExapisSOP.IO.Logging
 		private           ILogFile                                _logFile;
 		private           SystemLogger?                           _sysLogger;
 		private  readonly DefaultErrorDetailProvider              _default_detailProvider;
-		internal          bool                                    LogOnUpdate => _options.LogOnUpdate;
+		internal          bool                                    LogOnUpdate     => _options.LogOnUpdate;
+		internal          SystemLogger?                           InjectionLogger { get; private set;}
 
 		internal LoggingSystemService(Func<LoggingSystemServiceOptions, Task> callBackFunc)
 		{
@@ -75,6 +78,9 @@ namespace ExapisSOP.IO.Logging
 			// Create the system logger
 			_sysLogger = new SystemLogger(_logFile);
 			_sysLogger.Info("The logging system service is initialized successfully.");
+
+			// Create the injection logger
+			this.InjectionLogger = new SystemLogger(_logFile, "injection");
 		}
 
 		protected override void OnStartup(ContextEventArgs e)
@@ -271,6 +277,31 @@ namespace ExapisSOP.IO.Logging
 				}
 			}
 		}
+
+		internal static void InjectLoggerCore()
+		{
+			var asms = AppDomain.CurrentDomain.GetAssemblies();
+			var ab   = AssemblyBuilder.DefineDynamicAssembly(new AssemblyName("InjectLogger"), AssemblyBuilderAccess.Run);
+			var mb   = ab.DefineDynamicModule("InjectLogger");
+			for (int i = 0; i < asms.Length; ++i) {
+				var types = asms[i].GetTypes();
+				for (int j = 0; j < types.Length; ++j) {
+					if (types[j].GetCustomAttribute<InjectLoggerAttribute>() is InjectLoggerAttribute attr && !types[j].IsSealed) {
+						var tb = mb.DefineType(types[j].Name + "L", types[j].Attributes, types[j]);
+						var funcs = types[j].GetMethods();
+						for (int k = 0; k < funcs.Length; ++k) {
+							if (funcs[i].IsVirtual) {
+								var fb  = tb.DefineMethod(funcs[i].Name, _default_ma);
+								var ilg = fb.GetILGenerator();
+								//
+							}
+						}
+					}
+				}
+			}
+		}
+
+		private const MethodAttributes _default_ma = MethodAttributes.PrivateScope | MethodAttributes.Public | MethodAttributes.Virtual | MethodAttributes.HideBySig;
 
 		#endregion
 	}
