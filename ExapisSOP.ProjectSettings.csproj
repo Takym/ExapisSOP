@@ -2,8 +2,9 @@
 	<PropertyGroup>
 		<RootNamespace>ExapisSOP</RootNamespace>
 		<TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
-		<RuntimeIdentifiers>any;win7-x86</RuntimeIdentifiers>
-		<!-- win7-86 is to suppress a build error. -->
+		<RuntimeIdentifiers>any;win7-x86;win7-x64</RuntimeIdentifiers>
+		<!-- win7-86;win7-x64 is to suppress a build error. -->
+		<Platforms>AnyCPU;x86;x64;ARM;ARM64</Platforms>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -30,17 +31,36 @@
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>StrongNameKey.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
 		<DefineConstants>DEBUG;TRACE</DefineConstants>
 		<Optimize>false</Optimize>
 		<DebugType>portable</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
 		<DefineConstants>TRACE</DefineConstants>
 		<Optimize>true</Optimize>
 		<DebugType>none</DebugType>
 		<DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
+		<PlatformTarget>AnyCPU</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Platform)'=='x86'">
+		<DefineConstants>x86</DefineConstants>
+		<PlatformTarget>x86</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Platform)'=='x64'">
+		<DefineConstants>x64</DefineConstants>
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Platform)'=='ARM'">
+		<DefineConstants>ARM</DefineConstants>
+		<PlatformTarget>ARM</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Platform)'=='ARM64'">
+		<DefineConstants>ARM64</DefineConstants>
+		<PlatformTarget>ARM64</PlatformTarget>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Remove=".gitattributes" />

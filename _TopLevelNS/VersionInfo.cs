@@ -75,5 +75,36 @@ namespace ExapisSOP
 		///  <see cref="ExapisSOP"/>の開発者を取得します。
 		/// </summary>
 		public static string Developers => _asm.GetCustomAttribute<Authors>()?.Company!;
+
+		/// <summary>
+		///  現在実行中のプログラムのシステムの種類を取得します。
+		/// </summary>
+		public static string SystemType => $"{BuildConfig} {Runtime} {Platform}";
+
+#if DEBUG
+		private const string BuildConfig = "Debug";
+#else
+		private const string BuildConfig = "Release";
+#endif
+
+#if NETCOREAPP3_1
+		private const string Runtime = ".NET Core 3.1";
+#elif NET48
+		private const string Runtime = ".NET Framework 4.8";
+#else
+		private const string Runtime = "Unknown Runtime";
+#endif
+
+#if x86
+		private const string Platform = "x86 (Intel 32 Bit)";
+#elif x64
+		private const string Platform = "x64 (Intel 64 Bit)";
+#elif ARM
+		private const string Platform = "ARM (ARM 32 Bit)";
+#elif ARM64
+		private const string Platform = "ARM64 (ARM 64 Bit)";
+#else
+		private const string Platform = "Any CPU";
+#endif
 	}
 }
