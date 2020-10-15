@@ -1,38 +1,25 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help us improve.
 title: ''
-labels: ''
+labels: ['Feedback: bug','Feedback: vulnerability']
 assignees: ''
-
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## What is problem?
+**Please describe specifically.**
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Steps to produce a bug:
+1. ...
+2. ...
+3. ...
+4. Thrown exception:
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Expected behavior:
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+## Your Environment:
+* **OS:** Windows, Linux, ...
+* **Platform:** Any CPU, x86, x64, ARM, ...
+* **Runtime:** .NET Framework 4.8, .NET Core 3.1, ...
+* **IDE:** Visual Studio Community 2019, Visual Studio Code, ...
+* **Version:**

@@ -1,20 +1,24 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for this project.
 title: ''
-labels: ''
+labels: ['Feedback: new feature','Feedback: changing feature']
 assignees: ''
-
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## What feature do you want?
+**Please describe specifically.**
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Why do you want that?
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Describe more specifically function:
+1. ...
+2. ...
+3. ...
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Your Environment:
+* **OS:** Windows, Linux, ...
+* **Platform:** Any CPU, x86, x64, ARM, ...
+* **Runtime:** .NET Framework 4.8, .NET Core 3.1, ...
+* **IDE:** Visual Studio Community 2019, Visual Studio Code, ...
+* **Version:**
