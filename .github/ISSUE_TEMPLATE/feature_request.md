@@ -1,9 +1,10 @@
 ---
 name: Feature request
 about: Suggest an idea for this project.
-title: ''
-labels: ''
+title: 'Feature: [please describe a feature shortly]'
+labels: 'Feedback: new feature, Feedback: changing feature'
 assignees: ''
+
 ---
 
 ## What feature do you want?

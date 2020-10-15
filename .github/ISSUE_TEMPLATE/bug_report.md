@@ -1,9 +1,10 @@
 ---
 name: Bug report
 about: Create a report to help us improve.
-title: ''
-labels: ''
+title: 'Bug: [please describe a bug shortly]'
+labels: 'Feedback: bug, Feedback: vulnerability'
 assignees: ''
+
 ---
 
 ## What is problem?

@@ -4,6 +4,7 @@ about: This is an empty template.
 title: ''
 labels: ''
 assignees: ''
+
 ---
 
 ## Your Environment:
