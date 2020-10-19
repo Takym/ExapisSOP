@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		.gitmodules = .gitmodules
 		ExapisSOP.ProjectSettings.csproj = ExapisSOP.ProjectSettings.csproj
 	EndProjectSection
 EndProject
@@ -126,8 +127,8 @@ Global
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422} = {D0AB9DC8-C485-4233-95A6-9F38C8578134}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
-		RESX_NeutralResourcesLanguage = iv-IV
 		RESX_Rules = {"EnabledRules":[]}
+		RESX_NeutralResourcesLanguage = iv-IV
+		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
 	EndGlobalSection
 EndGlobal
