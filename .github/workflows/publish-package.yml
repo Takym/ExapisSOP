@@ -9,9 +9,12 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
       with:
-        dotnet-version: 3.1.301
+        nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+        nuget-version: latest
+    - name: Add Source
+      run: nuget sources Add -Source https://nuget.pkg.github.com/Takym/index.json -Name "github" -UserName Takym -Password ${{ secrets.GITHUB_TOKEN }}
     - name: Publish
-      run: dotnet nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source "https://nuget.pkg.github.com/Takym/index.json" --skip-duplicate
+      run: nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" -Source "github" --SkipDuplicate
