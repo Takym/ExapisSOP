@@ -1,48 +1,48 @@
 ﻿{{#inPackage}}
-パッケージ {{name.0.value}}
+{{name.0.value}} パッケージ
 {{/inPackage}}
 {{#inNamespace}}
-名前空間 {{name.0.value}}
+{{name.0.value}} 名前空間
 {{/inNamespace}}
 {{#inClass}}
-クラス {{name.0.value}}
+{{name.0.value}} クラス
 {{/inClass}}
 {{#inStruct}}
-構造体 {{name.0.value}}
+{{name.0.value}} 構造体
 {{/inStruct}}
 {{#inInterface}}
-インターフェース {{name.0.value}}
+{{name.0.value}} インターフェース
 {{/inInterface}}
 {{#inEnum}}
-列挙体 {{name.0.value}}
+{{name.0.value}} 列挙体
 {{/inEnum}}
 {{#inDelegate}}
-デリゲート {{name.0.value}}
+{{name.0.value}} デリゲート
 {{/inDelegate}}
 {{#inConstructor}}
-コンストラクタ {{name.0.value}}
+{{name.0.value}} コンストラクタ
 {{/inConstructor}}
 {{#inField}}
-フィールド {{name.0.value}}
+{{name.0.value}} フィールド
 {{/inField}}
 {{#inProperty}}
-プロパティ {{name.0.value}}
+{{name.0.value}} プロパティ
 {{/inProperty}}
 {{#inMethod}}
-メソッド {{name.0.value}}
+{{name.0.value}} メソッド
 {{/inMethod}}
 {{#inEvent}}
-イベント {{name.0.value}}
+{{name.0.value}} イベント
 {{/inEvent}}
 {{#inOperator}}
-演算子 {{name.0.value}}
+{{name.0.value}} 演算子
 {{/inOperator}}
 {{#inEii}}
-明示的なインターフェース実装 {{name.0.value}}
+{{name.0.value}} 明示的なインターフェース実装
 {{/inEii}}
 {{#inVariable}}
-変数 {{name.0.value}}
+{{name.0.value}} 変数
 {{/inVariable}}
 {{#inTypeAlias}}
-型の別名 {{name.0.value}}
+{{name.0.value}} 型の別名
 {{/inTypeAlias}}

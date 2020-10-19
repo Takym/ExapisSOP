@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace ExapisSOP
 {
 	/// <summary>
-	///  アプリケーションに必要な機能を提供します。
+	///  アプリケーションの実行に必要な機能を提供します。
 	///  このクラスは抽象クラスです。
 	/// </summary>
 	public abstract class AppWorker : IService
