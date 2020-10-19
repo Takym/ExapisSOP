@@ -1,5 +1,8 @@
 # ExapisSOP
-Copyright (C) 2020 Takym.
+Copyright (C) 2020 Takym
+
+![.NET Core](https://github.com/Takym/ExapisSOP/workflows/.NET%20Core/badge.svg)
+![Publish NuGet Package](https://github.com/Takym/ExapisSOP/workflows/Publish%20NuGet%20Package/badge.svg)
 
 [日本語](#ja)
 [English](#en)
@@ -58,6 +61,7 @@ namespace Example
 ## Latest Version History
 |Version |Code Name|Date      |Description       |
 |:------:|:--------|:---------|:-----------------|
+|v0.0.0.1|xsop00a1 |2020/00/00|                  |
 |v0.0.0.0|xsop00a0 |2020/10/20|The first release.|
 ||||For more history, please see [CHANGES.en.md](./CHANGES.en.md) file.|
 
@@ -134,6 +138,7 @@ namespace Example
 ## 最近の更新履歴
 |バージョン|開発コード名|日付      |説明                |
 |:--------:|:-----------|:---------|:-------------------|
+|v0.0.0.1  |xsop00a1    |2020/00/00|                    |
 |v0.0.0.0  |xsop00a0    |2020/10/20|最初のリリースです。|
 ||||過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。|
 
