@@ -1,0 +1,1597 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Takym/ExapisSOP/docs.gen",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.AppWorker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.AppWorker.html",
+          "hash": "vG0m6WRRD1ol4BzYSVpJGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Binary.DataValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Binary.DataValue.html",
+          "hash": "HPIcC/DB1DWMt50hlzHKkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Binary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Binary.html",
+          "hash": "+KyIImvFYF6CWplM1gGmww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ContextEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ContextEventArgs.html",
+          "hash": "dwmyjN7zg6f7jam5wKk4EA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.ConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.ConfigurationExtensions.html",
+          "hash": "PkSAquq1o4Qq5TyD726d1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.ContextExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.ContextExtensions.html",
+          "hash": "GDrhgtI3mvLsSfCNVQRd3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.CustomPipelineProcess-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.CustomPipelineProcess-2.html",
+          "hash": "kc4qG2TN+UFAy+zRFIOO5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.ImmutablePipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.ImmutablePipeline.html",
+          "hash": "PsqVc7z6ObfvRHctDiuGXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.Pipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.Pipeline.html",
+          "hash": "E0ouYS3uqAme+K9+R9eGpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.html",
+          "hash": "NodmuSvuvrFNDdj/gQGKwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.ExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ExceptionHandler.html",
+          "hash": "K3EU2nLn/jRd9wVyrHE1qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.LoggingProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.LoggingProcess.html",
+          "hash": "97D730DwPCKpbWfMvQQDMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.NextProcessFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.NextProcessFunc.html",
+          "hash": "E/FByv4Gg0XY+HehK1MNNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFunc-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFunc-2.html",
+          "hash": "3dWGA8d3fxW8xzdRPF9pIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFunc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFunc.html",
+          "hash": "u9cfUncsx3r65B7w8q8+kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.html",
+          "hash": "b3farstlMCzZGVuF+rMgEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.html",
+          "hash": "UPdheaz+uTABlKL1MObH9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.PipelineExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.PipelineExtensions.html",
+          "hash": "/V2b/NfeMxB9/M/f/W1rFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Core.html",
+          "hash": "f4nMWZaheQieoHyamwszAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Globalization.EnglishErrorReportBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Globalization.EnglishErrorReportBuilder.html",
+          "hash": "OppxgJOwgTgxsw8bH9S6KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Globalization.JapaneseErrorReportBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Globalization.JapaneseErrorReportBuilder.html",
+          "hash": "JIOgb/JPyHp07QvxxrfqKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Globalization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Globalization.html",
+          "hash": "AIIPCGdYMK8J19zoWqpI2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.HostRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.HostRunner.html",
+          "hash": "/Q3bG424+rPCpsdvDN0/7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IConfiguration.html",
+          "hash": "QPw7DSLjxSs/CcmikbiPaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IContext.html",
+          "hash": "+i4rPs4SDcNBIvikRC8V8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.CachedStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.CachedStream.html",
+          "hash": "jrZo0hsKsV0+5cdaa/f1Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.DefaultPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.DefaultPath.html",
+          "hash": "naZXf50wChADEUgIUmIMJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.FileSystemServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.FileSystemServiceOptions.html",
+          "hash": "iesEpMFeqp3lrGRys9jQ3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.FileSystemServiceOptionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.FileSystemServiceOptionsExtensions.html",
+          "hash": "vLaE5vmfBPuoyW9fY9oWdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.IFileSystemService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.IFileSystemService.html",
+          "hash": "QjxvXiiRKVFLx43dLOzwaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.IPathList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.IPathList.html",
+          "hash": "67Ww6Hi026TYXKWE42mpVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.InvalidPathFormatException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.InvalidPathFormatException.html",
+          "hash": "aWEnPi84iZeWKhZzK+OaHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ConsoleLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ConsoleLogger.html",
+          "hash": "3ypgm+KX2XR0avrzj5/kng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.DefaultErrorDetailProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.DefaultErrorDetailProvider.html",
+          "hash": "/jTEosrCGCgXt9O8dpL5OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ErrorReportBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ErrorReportBuilder.html",
+          "hash": "Q7+Gj7rnSsaGKOO4TAJ7Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ExceptionRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ExceptionRecord.html",
+          "hash": "YCJnsD8LJI3l2r7w7xfH9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.HResultDetailProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.HResultDetailProvider.html",
+          "hash": "LXJvLwONe6dJ0Y4VbPEO6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ICustomErrorDetailProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ICustomErrorDetailProvider.html",
+          "hash": "speVJkJ/01AdTnWyUAd5EA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ILogFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ILogFile.html",
+          "hash": "cIa+FKLKkhQcC+DAQjgdvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ILoggable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ILoggable.html",
+          "hash": "wXkvJCJ0NicBDupP7oaclw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ILogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ILogger.html",
+          "hash": "q9YNWQrdLvYNJGW1D7yn7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.ILoggingSystemService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.ILoggingSystemService.html",
+          "hash": "/ADyBpKyGiWVHhYBf+J5Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LogData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LogData.html",
+          "hash": "D1wu28ds9DXRSCdBnJ9ZdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LogFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LogFile.html",
+          "hash": "AZNi701ZXNoJQOL9DW1L9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LogFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LogFileType.html",
+          "hash": "rGti2/iKLORrAG0hKw2YyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LogLevel.html",
+          "hash": "SmppdiBHntS/A0YTYRgEkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.Logger.html",
+          "hash": "/gbVm1x1dlU95BQe1BarYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LoggerExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LoggerExtension.html",
+          "hash": "NlpyQLWO+jOSiQpG/ylsyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LoggingSystemServiceOptions.CreateLogFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LoggingSystemServiceOptions.CreateLogFile.html",
+          "hash": "vLXUcyeOxV2cKbN5Vw/AMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LoggingSystemServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LoggingSystemServiceOptions.html",
+          "hash": "ooFOHzCUrakM7zUw0y4XkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.LongMessageRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.LongMessageRecord.html",
+          "hash": "sh4+oy5EaWioH+XkFYZRtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.MultipleLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.MultipleLogger.html",
+          "hash": "QSNgqlMyQC5QsxdKa42xMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.OutputStreamLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.OutputStreamLogger.html",
+          "hash": "A8YgB7sDAcHM1rjcO+pEHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Logging.html",
+          "hash": "SYbc8+zZHMK1a5hReFsM5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.PathString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.PathString.html",
+          "hash": "pSGTFjrghORa8My7Z4ZrJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.PathStringFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.PathStringFormatter.html",
+          "hash": "GId+rLXpWrKWX48r65YrpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Paths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Paths.html",
+          "hash": "nmCmJAqJVhAgDYFrjSeaPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.html",
+          "hash": "5oOyJDRvLxc9TmsdDrNhGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineParser.html",
+          "hash": "Kt1fhMdSrXZZjh6RKH3iIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.CreateConverterMappingTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.CreateConverterMappingTable.html",
+          "hash": "J25tbs1Cn4xrbmQ8+T0BRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.html",
+          "hash": "r0wY1o988DVDu/ZDxxpFqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.FileNameList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.FileNameList.html",
+          "hash": "GT5m+cF9y4ORxz6T36fzJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.IArgumentConverter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.IArgumentConverter-1.html",
+          "hash": "/2AQlTdCyswttlgb5QGIdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.html",
+          "hash": "P22wjpqESKMdd1hyLR3nXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.ICommandLineService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.ICommandLineService.html",
+          "hash": "Bro+xF5elEI5bV76z4DDBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.ManualAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.ManualAttribute.html",
+          "hash": "EURmLwIPVgwV+eKAga/eQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Option.Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Option.Value.html",
+          "hash": "DpqUpP9euyBc0+uWfAeLYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Option.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Option.html",
+          "hash": "4nc9IOjdFocrXHMGyj3T3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.OptionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.OptionAttribute.html",
+          "hash": "/KCOUPPabUYELJFnFcUNqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Switch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Switch.html",
+          "hash": "3wHX4Dj9CivZW9X5hWYGGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.html",
+          "hash": "Qv+gb2g8hamv5ThNUOjixA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CommandLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.html",
+          "hash": "gJyD5ikxPfvQdAeQPRR4bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.CustomSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.CustomSettings.html",
+          "hash": "gIiGDGTva1fz2v4+m7DKNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.DataStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.DataStore.html",
+          "hash": "NyLQAsinMEDitlyA0kzniw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.DefaultSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.DefaultSettings.html",
+          "hash": "tBt5kF1d5HvHPpmbua1aiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.EnvironmentSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.EnvironmentSettings.html",
+          "hash": "sUzepXl1rOP5TePYuc+tEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.ISettingsSystemService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.ISettingsSystemService.html",
+          "hash": "1nyDdp6magTa9X2RO8Axew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.OptimizedSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.OptimizedSettings.html",
+          "hash": "cYw3D39K52KobN1hyn89fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.ConfirmVersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.ConfirmVersionInfo.html",
+          "hash": "lExWIqKfPme0ryKFzdk57w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.GetVersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.GetVersionInfo.html",
+          "hash": "juOZTM5XgRu/plInv6QHTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.html",
+          "hash": "6r9gpG9c02xZxXYCBGnZuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.Settings.html",
+          "hash": "5tC2wy3KOeY1svs6ceCTaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IO.html",
+          "hash": "2/T1mG/ps7+MXsWRjM3n3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IPipeline.html",
+          "hash": "CoT6PnojVb73Yrnzs6rIrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IProcess-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IProcess-2.html",
+          "hash": "YROKv2bgcxls58C8EMtVzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IProcess.html",
+          "hash": "lx7/YAWRT+P6EPRCYKi9Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.IService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.IService.html",
+          "hash": "qPT7+FlwUjFbGNvyv07a2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.NativeWrapper.INativeCaller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.NativeWrapper.INativeCaller.html",
+          "hash": "Ilcv4S2xK8UcFDvdD6TNpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.NativeWrapper.WinAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.NativeWrapper.WinAPI.html",
+          "hash": "yoMgn6C4/IyYt4mALV2fJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.NativeWrapper.Windows.Kernel32.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.NativeWrapper.Windows.Kernel32.html",
+          "hash": "6gSG1xystHsLXxOi0DHb3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.NativeWrapper.Windows.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.NativeWrapper.Windows.html",
+          "hash": "js8EpmGW42/x5T+ymaicNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.NativeWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.NativeWrapper.html",
+          "hash": "Xej2kuWyJnqny/Gu1IZjmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.CryptionRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.CryptionRandom.html",
+          "hash": "93O6/GaIDuxNBFU+HLtHsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.IRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.IRandom.html",
+          "hash": "J/TQMW0MhBMuZPsCRD5/Hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.LinearCongruentialGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.LinearCongruentialGenerator.html",
+          "hash": "SRbclg2u0IxL2ftSR4rkEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.RandomExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.RandomExtension.html",
+          "hash": "sKt/2m3KxqxC/SFFUkDHOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.SerializableRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.SerializableRandom.html",
+          "hash": "rgA/CNX/EuGxvv7eakUtqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.SystemRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.SystemRandom.html",
+          "hash": "HfPB/TbtunWkVkFC0fTHBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.Xorshift.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.Xorshift.html",
+          "hash": "rrWNCD1XIK9otFvvHotwxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.Xorshift2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.Xorshift2.html",
+          "hash": "dp7vTBaASQPHP0XcyCCLOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Numerics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Numerics.html",
+          "hash": "o6bxz/d4hlCESSMyo/ar2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.TerminationEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.TerminationEventArgs.html",
+          "hash": "7KzeTzK4HCfhbN/c6Red3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.TerminationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.TerminationException.html",
+          "hash": "r20az89cLZijvJXTvGadSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.TerminationReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.TerminationReason.html",
+          "hash": "RI9681MaXZUtDruaKWPdqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Text.SimpleEncoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Text.SimpleEncoding.html",
+          "hash": "959TbrxvynZ/9cdn5mYXww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Text.SimpleString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Text.SimpleString.html",
+          "hash": "bHvZgdTQP5S2ULDo5qfpBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Text.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Text.html",
+          "hash": "WI6ivYEbjV4JOYeQ0IscnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.UnhandledErrorEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.UnhandledErrorEventArgs.html",
+          "hash": "wJ8tViFnlpFpNQx2blaYgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.ArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.ArrayExtensions.html",
+          "hash": "xFMI/jDE6mwm3P9AODSI3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.ConsoleUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.ConsoleUtil.html",
+          "hash": "iTXBihaAFRMWgvaPChaBZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.DisposableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.DisposableBase.html",
+          "hash": "Ce41NKMHAjZxwJr2BU+1Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.IAwaitable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.IAwaitable-1.html",
+          "hash": "1Sb+85pm2J4nz6TmczecTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.IAwaiter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.IAwaiter-1.html",
+          "hash": "T8T20m3vcY59aiZacvyPnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.IUtilityService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.IUtilityService.html",
+          "hash": "Ek8MDHLFY9iNZSFTW3NgaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.SecureStringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.SecureStringExtensions.html",
+          "hash": "6ljeXQZV6z29owrjztMujw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.SerializationInfoExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.SerializationInfoExtensions.html",
+          "hash": "N4HpJLSHit+MOBsncViEbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.StringExtensions.html",
+          "hash": "2dH/d74VHjKiuKrfRzbJ/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.StringUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.StringUtil.html",
+          "hash": "pkB0EyTA8e9k0gKG2HqyeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.UtilityConfigurationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.UtilityConfigurationExtensions.html",
+          "hash": "GyHLiCWyS7IzDH+NSwLbRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.UtilityContextExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.UtilityContextExtensions.html",
+          "hash": "Fo+tS7A7kp2Iv6HphMNZSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.Utils.html",
+          "hash": "9y+iCjvV3kTWipvzb2xJlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.VersionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.VersionInfo.html",
+          "hash": "tNzDCdgEwjMuCTPscbHM9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.html",
+          "hash": "j406AePuFkDOaiK3yLBtDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "gFxeiAPWRM0daIy9UlXp6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "architecture/concepts.md",
+      "output": {
+        ".html": {
+          "relative_path": "architecture/concepts.html",
+          "hash": "ypZv7Zmdf+ThY4WW8cRqDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "architecture/images/service_and_config_model.drawio",
+      "output": {
+        "resource": {
+          "relative_path": "architecture/images/service_and_config_model.drawio"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "architecture/images/service_and_config_model.png",
+      "output": {
+        "resource": {
+          "relative_path": "architecture/images/service_and_config_model.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "EGG9kY9OLnsZw+Zo852obw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 123,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
