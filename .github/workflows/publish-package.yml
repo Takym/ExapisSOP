@@ -1,0 +1,19 @@
+name: Publish NuGet Package
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.301
+    - name: Add Source
+      run: dotnet nuget add source https://nuget.pkg.github.com/Takym/index.json -n github -u Takym -p ${{ secrets.GITHUB_TOKEN }}
+    - name: Publish
+      run: dotnet nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s "github" --skip-duplicate
