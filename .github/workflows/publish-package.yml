@@ -17,4 +17,4 @@ jobs:
     - name: Add Source
       run: nuget sources Add -Source https://nuget.pkg.github.com/Takym/index.json -Name "github" -UserName Takym -Password ${{ secrets.GITHUB_TOKEN }}
     - name: Publish
-      run: nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" -Source "github" --SkipDuplicate
+      run: nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" -Source "github" -SkipDuplicate
