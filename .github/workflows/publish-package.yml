@@ -16,4 +16,4 @@ jobs:
     - name: Add Source
       run: dotnet nuget add source https://nuget.pkg.github.com/Takym/index.json -n github -u Takym -p ${{ secrets.GITHUB_TOKEN }}
     - name: Publish
-      run: dotnet nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s "github" --skip-duplicate
+      run: dotnet nuget push ".\.packages\Release_AnyCPU\ExapisSOP.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} --source "github" --skip-duplicate
