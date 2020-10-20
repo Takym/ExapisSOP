@@ -61,9 +61,17 @@ namespace ExapisSOP.IO.Settings
 
 		/// <summary>
 		///  プログラムが初回起動の場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。
+		///  この情報はファイルに保存されません。
 		/// </summary>
 		[XmlIgnore()]
 		public bool FirstBoot { get; internal set; }
+
+		/// <summary>
+		///  互換性のない設定ファイルが保存されていた場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。
+		///  この情報はファイルに保存されません。
+		/// </summary>
+		[XmlIgnore()]
+		public bool NoCompatible { get; internal set; }
 
 		/// <summary>
 		///  型'<see cref="ExapisSOP.IO.Settings.EnvironmentSettings"/>'の新しいインスタンスを生成します。
@@ -88,9 +96,9 @@ namespace ExapisSOP.IO.Settings
 		///  指定された設定情報から現在インスタンスへ設定情報をコピーします。
 		/// </summary>
 		/// <param name="settings">コピー元の設定情報です。</param>
-		/// <param name="copyFirstBoot"><see cref="ExapisSOP.IO.Settings.EnvironmentSettings.FirstBoot"/>の値をコピーするかどうかを表す論理値です。</param>
+		/// <param name="copyDeeply">ファイルに保存されない値をコピーするかどうかを表す論理値です。</param>
 		/// <exception cref="System.ArgumentNullException" />
-		public virtual void CopyFrom(EnvironmentSettings settings, bool copyFirstBoot = true)
+		public virtual void CopyFrom(EnvironmentSettings settings, bool copyDeeply = true)
 		{
 			if (settings == null) {
 				throw new ArgumentNullException(nameof(settings));
@@ -99,8 +107,9 @@ namespace ExapisSOP.IO.Settings
 			this.Locale            = settings.Locale;
 			this.EnableLogging     = settings.EnableLogging;
 			this.DataStore         = settings.DataStore?.Clone();
-			if (copyFirstBoot) {
-				this.FirstBoot = settings.FirstBoot;
+			if (copyDeeply) {
+				this.FirstBoot    = settings.FirstBoot;
+				this.NoCompatible = settings.NoCompatible;
 			}
 		}
 

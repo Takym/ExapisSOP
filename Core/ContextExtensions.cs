@@ -69,6 +69,20 @@ namespace ExapisSOP.Core
 		}
 
 		/// <summary>
+		///  設定ファイルと現在のバージョンに互換性がないかどうか判定します。
+		/// </summary>
+		/// <param name="context">現在の文脈情報です。</param>
+		/// <returns>
+		///  互換性がない場合は<see langword="true"/>、
+		///  互換性がある場合は<see langword="false"/>、
+		///  判定できなかった場合は<see langword="null"/>を返します。
+		/// </returns>
+		public static bool? HasNoCompatible(this IContext context)
+		{
+			return context?.Settings?.NoCompatible;
+		}
+
+		/// <summary>
 		///  プログラム初期化時に利用された文脈情報を取得します。
 		/// </summary>
 		/// <remarks>

@@ -120,23 +120,28 @@ namespace ExapisSOP.IO.Settings
 				libversion  != VersionInfo.VersionString ||
 				libcodename != VersionInfo.CodeName) {
 				_abort = true;
-				return;
+				_settings = new EnvironmentSettings() {
+					EnableLogging = true,
+					NoCompatible  = true
+				};
 			}
 
 			// Load or create a settings
-			if (firstBoot) {
-				_settings = _options.CreateNewSettings();
-				_settings.FirstBoot = firstBoot;
-			} else {
-				_settings = _xs.Deserialize(_env_r) as EnvironmentSettings
-					?? _options.CreateNewSettings();
+			if (!_abort) {
+				if (firstBoot) {
+					_settings = _options.CreateNewSettings();
+					_settings.FirstBoot = firstBoot;
+				} else {
+					_settings = _xs.Deserialize(_env_r) as EnvironmentSettings
+						?? _options.CreateNewSettings();
+				}
 			}
 
 			// Set the settings to the context
 			if (context is InitFinalContext initContext && initContext.IsInitializationPhase()) {
 				initContext.Settings = _settings;
 			} else if (context.Settings != null) {
-				context.Settings.CopyFrom(_settings);
+				context.Settings.CopyFrom(_settings ?? _options.CreateNewSettings());
 				_settings = context.Settings;
 			}
 		}

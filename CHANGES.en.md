@@ -7,6 +7,9 @@ Copyright (C) 2020 Takym.
 ## [v0.0.0.1] - xsop00a1
  * Date: 2020
  * The specification (Japanese): [https://takym.github.io/ExapisSOP/v0.0.0.1/index.html](https://takym.github.io/ExapisSOP/v0.0.0.1/index.html)
+ * Added a log output about settings files compatibility.
+ * Fixed the determination of settings files compatibility.
+ * Fixed dependencies of the NuGet packages.
 
 ## [v0.0.0.0] - xsop00a0
  * Date: October 20th, 2020

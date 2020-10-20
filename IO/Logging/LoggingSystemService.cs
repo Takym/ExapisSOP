@@ -113,6 +113,15 @@ namespace ExapisSOP.IO.Logging
 					} else {
 						_sysLogger?.Warn("Is first boot? null");
 					}
+					if (e.Context.HasNoCompatible().HasValue) {
+						if (e.Context.HasNoCompatible()!.Value) {
+							_sysLogger?.Warn("Has no compatible? true");
+						} else {
+							_sysLogger?.Info("Has no compatible? false");
+						}
+					} else {
+						_sysLogger?.Warn("Has no compatible? null");
+					}
 					_sysLogger?.Info ($"{nameof(e.Context.Settings.OutputReadableXML)} = {e.Context.Settings?.OutputReadableXML}");
 					_sysLogger?.Info ($"{nameof(e.Context.Settings.Locale)}            = {e.Context.Settings?.Locale}");
 					_sysLogger?.Debug($"{nameof(e.Context.Settings.EnableLogging)}     = {e.Context.Settings?.EnableLogging}");
