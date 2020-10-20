@@ -6,6 +6,7 @@ Copyright (C) 2020 Takym.
  
 ## [v0.0.0.1] - xsop00a1
  * 更新日：2020年00月00日
+ * 設定ファイルの互換性に関する不具合とパッケージの依存関係を修正。
  * 仕様書：[https://takym.github.io/ExapisSOP/v0.0.0.1/index.html](https://takym.github.io/ExapisSOP/v0.0.0.1/index.html)
  * 設定ファイルの互換性の有無をログ出力。
  * 設定ファイルの互換性の判定方法を修正。

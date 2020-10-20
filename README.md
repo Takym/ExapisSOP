@@ -58,10 +58,10 @@ namespace Example
 ```
 
 ## Latest Version History
-|Version |Code Name|Date      |Description       |
-|:------:|:--------|:---------|:-----------------|
-|v0.0.0.1|xsop00a1 |2020/00/00|                  |
-|v0.0.0.0|xsop00a0 |2020/10/20|The first release.|
+|Version |Code Name|Date      |Description                                                            |
+|:------:|:--------|:---------|:----------------------------------------------------------------------|
+|v0.0.0.1|xsop00a1 |2020/10/21|Fixed a bug about settings file compatibility and package dependencies.|
+|v0.0.0.0|xsop00a0 |2020/10/20|The first release.                                                     |
 ||||For more history, please see [CHANGES.en.md](./CHANGES.en.md) file.|
 
 ## Terms of Use
@@ -135,10 +135,10 @@ namespace Example
 ```
 
 ## 最近の更新履歴
-|バージョン|開発コード名|日付      |説明                |
-|:--------:|:-----------|:---------|:-------------------|
-|v0.0.0.1  |xsop00a1    |2020/00/00|                    |
-|v0.0.0.0  |xsop00a0    |2020/10/20|最初のリリースです。|
+|バージョン|開発コード名|日付      |説明                                                            |
+|:--------:|:-----------|:---------|:---------------------------------------------------------------|
+|v0.0.0.1  |xsop00a1    |2020/10/21|設定ファイルの互換性に関する不具合とパッケージの依存関係を修正。|
+|v0.0.0.0  |xsop00a0    |2020/10/20|最初のリリースです。                                            |
 ||||過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。|
 
 ## 利用規約
