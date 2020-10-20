@@ -105,6 +105,14 @@ namespace ExapisSOP.IO.Settings
 			string? libcodename = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("no lib ver"));
 			string? appversion  = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("?.?.?.?"));
 			string? appcodename = await (_ver_r?.ReadLineAsync() ?? Task.FromResult<string?>("no app ver"));
+			if ((libversion ?.StartsWith("0.0.0")   ?? false) &&
+				(libcodename?.StartsWith("xsop00a") ?? false)) {
+				// 設定ファイル保存時のバージョンが「0.0.0」から始まり、
+				// 且つ、開発コード名が「xsop00a」から始まる場合は、
+				// 互換性があるものと見做す。
+				libversion  = VersionInfo.VersionString;
+				libcodename = VersionInfo.CodeName;
+			}
 			if (libversion == null) {
 				firstBoot = true;
 				await this.WriteSavedVersion();
