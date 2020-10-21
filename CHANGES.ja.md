@@ -31,6 +31,7 @@ Copyright (C) 2020 Takym.
 
  
 [master]: https://github.com/Takym/ExapisSOP/tree/master
+[v0.0.1.1]: https://github.com/Takym/ExapisSOP/releases/tag/xsop00b1
 [v0.0.1.0]: https://github.com/Takym/ExapisSOP/releases/tag/xsop00b0
 [v0.0.0.1]: https://github.com/Takym/ExapisSOP/releases/tag/xsop00a1
 [v0.0.0.0]: https://github.com/Takym/ExapisSOP/releases/tag/xsop00a0
