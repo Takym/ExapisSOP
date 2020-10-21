@@ -86,6 +86,8 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP");
 					break;
 				}
+				stream.Position = 0;
+				stream.SetLength(0);
 				xd.Save(stream);
 			}
 			logger?.Info($"copying from {src} to {dst}...");
