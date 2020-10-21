@@ -1526,12 +1526,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "EGG9kY9OLnsZw+Zo852obw=="
+          "hash": "zSVJrBjubrk+fRgPSaRsTA=="
         }
       },
       "is_incremental": false,
