@@ -60,6 +60,7 @@ namespace Example
 ## Latest Version History
 |Version |Code Name|Date      |Description                                                            |
 |:------:|:--------|:---------|:----------------------------------------------------------------------|
+|v0.0.1.1|xsop00b1 |2020/10/21|Fixed a bug in the tool "ExapisSOP.Tools.PackageDependencyFixer".      |
 |v0.0.1.0|xsop00b0 |2020/10/21|Created the tool "ExapisSOP.Tools.PackageDependencyFixer".             |
 |v0.0.0.1|xsop00a1 |2020/10/21|Fixed a bug about settings file compatibility and package dependencies.|
 |v0.0.0.0|xsop00a0 |2020/10/20|The first release.                                                     |
@@ -138,6 +139,7 @@ namespace Example
 ## 最近の更新履歴
 |バージョン|開発コード名|日付      |説明                                                            |
 |:--------:|:-----------|:---------|:---------------------------------------------------------------|
+|v0.0.1.1  |xsop00b1    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」の不具合修正。  |
 |v0.0.1.0  |xsop00b0    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」作成。          |
 |v0.0.0.1  |xsop00a1    |2020/10/21|設定ファイルの互換性に関する不具合とパッケージの依存関係を修正。|
 |v0.0.0.0  |xsop00a0    |2020/10/20|最初のリリースです。                                            |

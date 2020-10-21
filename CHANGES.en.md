@@ -4,6 +4,11 @@ Copyright (C) 2020 Takym.
 ## [master]
  * The specification (Japanese): [https://takym.github.io/ExapisSOP/latest/index.html](https://takym.github.io/ExapisSOP/latest/index.html)
 
+## [v0.0.1.1] - xsop00b1
+ * **Date:** October 21th, 2020
+ * Fixed a bug in the tool "ExapisSOP.Tools.PackageDependencyFixer".
+ * The specification (Japanese): [https://takym.github.io/ExapisSOP/v0.0.1.1/index.html](https://takym.github.io/ExapisSOP/v0.0.1.1/index.html)
+
 ## [v0.0.1.0] - xsop00b0
  * **Date:** October 21th, 2020
  * Created the tool "ExapisSOP.Tools.PackageDependencyFixer".
