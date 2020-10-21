@@ -89,7 +89,7 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 				xd.Save(stream);
 			}
 			logger?.Info($"copying from {src} to {dst}...");
-			File.Copy(src, dst);
+			File.Copy(src, dst, true);
 		}
 
 		private static ZipArchive OpenNupkgFile(PathString zipfile)
