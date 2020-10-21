@@ -9,6 +9,7 @@ Copyright (C) 2020 Takym.
  * ツール「ExapisSOP.Tools.PackageDependencyFixer」作成。
  * 仕様書：[https://takym.github.io/ExapisSOP/v0.0.1.0/index.html](https://takym.github.io/ExapisSOP/v0.0.1.0/index.html)
  * NuGetパッケージの依存関係の循環参照対策用ツールの作成。
+ * EnglishErrorReportBuilder の書式を修正。
 
 ## [v0.0.0.1] - xsop00a1
  * **更新日：**2020年10月21日

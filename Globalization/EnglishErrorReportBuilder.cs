@@ -127,24 +127,24 @@ namespace ExapisSOP.Globalization
 		protected override string GetLocalizedBodyLine5_TargetSite(string? methodName, string? className)
 		{
 			if (string.IsNullOrEmpty(methodName) && string.IsNullOrEmpty(className)) {
-				return "Target site    : ";
+				return "Target site   : ";
 			} else if (string.IsNullOrEmpty(methodName)) {
 				if (this.Option == "S") {
-					return $"Target site    : [T] {className}";
+					return $"Target site   : [T] {className}";
 				} else {
-					return $"Target site    : The type \"{className}\"";
+					return $"Target site   : The type \"{className}\"";
 				}
 			} else if (string.IsNullOrEmpty(className)) {
 				if (this.Option == "S") {
-					return $"Target site    : [M] {methodName}";
+					return $"Target site   : [M] {methodName}";
 				} else {
-					return $"Target site    : The function \"{methodName}\"";
+					return $"Target site   : The function \"{methodName}\"";
 				}
 			} else {
 				if (this.Option == "S") {
-					return $"Target site    : {className}.{methodName}";
+					return $"Target site   : {className}.{methodName}";
 				} else {
-					return $"Target site    : The function \"{methodName}\" in the type \"{className}\"";
+					return $"Target site   : The function \"{methodName}\" in the type \"{className}\"";
 				}
 			}
 		}

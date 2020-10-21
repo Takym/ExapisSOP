@@ -9,6 +9,7 @@ Copyright (C) 2020 Takym.
  * Created the tool "ExapisSOP.Tools.PackageDependencyFixer".
  * The specification (Japanese): [https://takym.github.io/ExapisSOP/v0.0.1.0/index.html](https://takym.github.io/ExapisSOP/v0.0.1.0/index.html)
  * Added the strategy tool to remove a circular reference of the NuGet packages dependencies.
+ * Fixed the text format in the EnglishErrorReportBuilder class.
 
 ## [v0.0.0.1] - xsop00a1
  * **Date:** October 21th, 2020
