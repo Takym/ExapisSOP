@@ -104,7 +104,7 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 			return nupkgfile.GetEntry(entryname).Open();
 		}
 
-		private static XmlElement CreateGroupElement(XmlDocument doc, XmlNode dep, string runtime)
+		private static XmlElement CreateGroupElement(XmlDocument doc, XmlElement dep, string runtime)
 		{
 			var group = doc.CreateElement("group");
 			var attr  = doc.CreateAttribute("targetFramework");
