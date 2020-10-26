@@ -13,8 +13,8 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-		<Version>0.0.1.2</Version>
-		<InformationalVersion>xsop00b2</InformationalVersion>
+		<Version>0.1.0.0</Version>
+		<InformationalVersion>xsop01a0</InformationalVersion>
 		<Authors>Takym</Authors>
 		<Copyright>Copyright (C) 2020 Takym.</Copyright>
 		<PackageIcon>Resources/Logo.png</PackageIcon>

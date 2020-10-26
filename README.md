@@ -60,6 +60,7 @@ namespace Example
 ## Latest Version History
 |Version |Code Name|Date      |Description                                                            |
 |:------:|:--------|:---------|:----------------------------------------------------------------------|
+|v0.1.0.0|xsop01a0 |2020/00/00|                                                                       |
 |v0.0.1.2|xsop00b2 |2020/10/26|Implemented the connection model interfaces and classes.               |
 |v0.0.1.1|xsop00b1 |2020/10/21|Fixed a bug in the tool "ExapisSOP.Tools.PackageDependencyFixer".      |
 |v0.0.1.0|xsop00b0 |2020/10/21|Created the tool "ExapisSOP.Tools.PackageDependencyFixer".             |
@@ -140,6 +141,7 @@ namespace Example
 ## 最近の更新履歴
 |バージョン|開発コード名|日付      |説明                                                            |
 |:--------:|:-----------|:---------|:---------------------------------------------------------------|
+|v0.1.0.0  |xsop01a0    |2020/00/00|                                                                |
 |v0.0.1.2  |xsop00b2    |2020/10/26|接続可能なオブジェクトを実装。                                  |
 |v0.0.1.1  |xsop00b1    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」の不具合修正。  |
 |v0.0.1.0  |xsop00b0    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」作成。          |
