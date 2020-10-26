@@ -28,6 +28,7 @@
 		<RepositoryType>Public, Sources, C#, CSharp</RepositoryType>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)'!='Workflow'">
+		<DefineConstants>NotWorkflow</DefineConstants>
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>StrongNameKey.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
