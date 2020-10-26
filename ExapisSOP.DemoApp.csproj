@@ -3,10 +3,11 @@
 		<AssemblyName>ExapisSOP.DemoApp</AssemblyName>
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
-	<Import Project="ExapisSOP.ProjectSettings.csproj" />
+	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<ProjectReference Include="ExapisSOP.NativeWrapper.Windows.csproj" />
+		<ProjectReference Include="ExapisSOP.Tools.PackageDependencyFixer.csproj" />
 		<ProjectReference Include="ExapisSOP.Utils.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
 		<EmbeddedResource Remove="_SystemAttributes\*" />

@@ -3,7 +3,7 @@
 		<AssemblyName>ExapisSOP.Tools.PackageDependencyFixer</AssemblyName>
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
-	<Import Project="ExapisSOP.ProjectSettings.csproj" />
+	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<ProjectReference Include="ExapisSOP.NativeWrapper.Windows.csproj" />

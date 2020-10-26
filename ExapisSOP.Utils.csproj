@@ -3,7 +3,7 @@
 		<AssemblyName>ExapisSOP.Utils</AssemblyName>
 		<OutputType>Library</OutputType>
 	</PropertyGroup>
-	<Import Project="ExapisSOP.ProjectSettings.csproj" />
+	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<EmbeddedResource Remove="Properties\*" />

@@ -58,15 +58,15 @@ namespace Example
 ```
 
 ## Latest Version History
-|Version |Code Name|Date      |Description                                                            |
-|:------:|:--------|:---------|:----------------------------------------------------------------------|
-|v0.1.0.0|xsop01a0 |2020/00/00|                                                                       |
-|v0.0.1.2|xsop00b2 |2020/10/26|Implemented the connection model interfaces and classes.               |
-|v0.0.1.1|xsop00b1 |2020/10/21|Fixed a bug in the tool "ExapisSOP.Tools.PackageDependencyFixer".      |
-|v0.0.1.0|xsop00b0 |2020/10/21|Created the tool "ExapisSOP.Tools.PackageDependencyFixer".             |
-|v0.0.0.1|xsop00a1 |2020/10/21|Fixed a bug about settings file compatibility and package dependencies.|
-|v0.0.0.0|xsop00a0 |2020/10/20|The first release.                                                     |
-||||For more history, please see [CHANGES.en.md](./CHANGES.en.md) file.|
+| # |Version |Code Name|Date      |Description                                                            |
+|--:|:------:|:--------|:---------|:----------------------------------------------------------------------|
+|  5|v0.1.0.0|xsop01a0 |2020/00/00|                                                                       |
+|  4|v0.0.1.2|xsop00b2 |2020/10/26|Implemented the connection model interfaces and classes.               |
+|  3|v0.0.1.1|xsop00b1 |2020/10/21|Fixed a bug in the tool "ExapisSOP.Tools.PackageDependencyFixer".      |
+|  2|v0.0.1.0|xsop00b0 |2020/10/21|Created the tool "ExapisSOP.Tools.PackageDependencyFixer".             |
+|  1|v0.0.0.1|xsop00a1 |2020/10/21|Fixed a bug about settings file compatibility and package dependencies.|
+|  0|v0.0.0.0|xsop00a0 |2020/10/20|The first release.                                                     |
+|||||For more history, please see [CHANGES.en.md](./CHANGES.en.md) file.|
 
 ## Terms of Use
 This library is released and distributed under the MIT License.
@@ -139,15 +139,15 @@ namespace Example
 ```
 
 ## 最近の更新履歴
-|バージョン|開発コード名|日付      |説明                                                            |
-|:--------:|:-----------|:---------|:---------------------------------------------------------------|
-|v0.1.0.0  |xsop01a0    |2020/00/00|                                                                |
-|v0.0.1.2  |xsop00b2    |2020/10/26|接続可能なオブジェクトを実装。                                  |
-|v0.0.1.1  |xsop00b1    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」の不具合修正。  |
-|v0.0.1.0  |xsop00b0    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」作成。          |
-|v0.0.0.1  |xsop00a1    |2020/10/21|設定ファイルの互換性に関する不具合とパッケージの依存関係を修正。|
-|v0.0.0.0  |xsop00a0    |2020/10/20|最初のリリースです。                                            |
-||||過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。|
+| # |バージョン|開発コード名|日付      |説明                                                            |
+|--:|:--------:|:-----------|:---------|:---------------------------------------------------------------|
+|  5|v0.1.0.0  |xsop01a0    |2020/00/00|                                                                |
+|  4|v0.0.1.2  |xsop00b2    |2020/10/26|接続可能なオブジェクトを実装。                                  |
+|  3|v0.0.1.1  |xsop00b1    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」の不具合修正。  |
+|  2|v0.0.1.0  |xsop00b0    |2020/10/21|ツール「ExapisSOP.Tools.PackageDependencyFixer」作成。          |
+|  1|v0.0.0.1  |xsop00a1    |2020/10/21|設定ファイルの互換性に関する不具合とパッケージの依存関係を修正。|
+|  0|v0.0.0.0  |xsop00a0    |2020/10/20|最初のリリースです。                                            |
+|||||過去の更新は[CHANGES.ja.md](./CHANGES.ja.md)をご覧ください。|
 
 ## 利用規約
 このライブラリはMITライセンスの下で公開・配布されています。

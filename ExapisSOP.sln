@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation and Packages", "Documentation and Packages", "{D0AB9DC8-C485-4233-95A6-9F38C8578134}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D0AB9DC8-C485-4233-95A6-9F38C8578134}"
 	ProjectSection(SolutionItems) = preProject
 		docs\_config.yml = docs\_config.yml
+		CHANGES.en.md = CHANGES.en.md
+		CHANGES.ja.md = CHANGES.ja.md
 		docs\compatibility.md = docs\compatibility.md
+		CONTRIBUTORS.md = CONTRIBUTORS.md
 		docs\index.md = docs\index.md
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docs.gen", "docs.gen\docs.gen.csproj", "{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}"
@@ -24,7 +29,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		.gitmodules = .gitmodules
-		ExapisSOP.ProjectSettings.csproj = ExapisSOP.ProjectSettings.csproj
+		ExapisSOP._ProjectSettings.csproj = ExapisSOP._ProjectSettings.csproj
+		ExapisSOP.csproj = ExapisSOP.csproj
+		ExapisSOP.DemoApp.csproj = ExapisSOP.DemoApp.csproj
+		ExapisSOP.NativeWrapper.Windows.csproj = ExapisSOP.NativeWrapper.Windows.csproj
+		ExapisSOP.Tools.PackageDependencyFixer.csproj = ExapisSOP.Tools.PackageDependencyFixer.csproj
+		ExapisSOP.Utils.csproj = ExapisSOP.Utils.csproj
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP", "ExapisSOP.csproj", "{18CFF209-50D2-43B1-9F59-E16C9D935D02}"
@@ -153,8 +163,8 @@ Global
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422} = {D0AB9DC8-C485-4233-95A6-9F38C8578134}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_Rules = {"EnabledRules":[]}
-		RESX_NeutralResourcesLanguage = iv-IV
 		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
+		RESX_NeutralResourcesLanguage = iv-IV
+		RESX_Rules = {"EnabledRules":[]}
 	EndGlobalSection
 EndGlobal

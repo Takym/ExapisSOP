@@ -72,6 +72,7 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 				case "ExapisSOP.DemoApp":
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP");
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.NativeWrapper.Windows");
+					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.Tools.PackageDependencyFixer");
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.Utils");
 					break;
 				case "ExapisSOP.NativeWrapper.Windows":

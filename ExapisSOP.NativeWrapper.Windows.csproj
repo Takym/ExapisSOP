@@ -5,7 +5,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<NoWarn>CS1591;CS1701;CS1702</NoWarn>
 	</PropertyGroup>
-	<Import Project="ExapisSOP.ProjectSettings.csproj" />
+	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
