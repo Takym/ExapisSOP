@@ -57,10 +57,10 @@ Global
 		Release|ARM = Release|ARM
 		Release|Intel 32 Bit = Release|Intel 32 Bit
 		Release|Intel 64 Bit = Release|Intel 64 Bit
-		Workflow|Any CPU = Debug|Any CPU
-		Workflow|ARM = Debug|ARM
-		Workflow|Intel 32 Bit = Debug|Intel 32 Bit
-		Workflow|Intel 64 Bit = Debug|Intel 64 Bit
+		Workflow|Any CPU = Workflow|Any CPU
+		Workflow|ARM = Workflow|ARM
+		Workflow|Intel 32 Bit = Workflow|Intel 32 Bit
+		Workflow|Intel 64 Bit = Workflow|Intel 64 Bit
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
