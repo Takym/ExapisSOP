@@ -27,7 +27,7 @@
 		<RepositoryUrl>https://github.com/Takym/ExapisSOP.git</RepositoryUrl>
 		<RepositoryType>Public, Sources, C#, CSharp</RepositoryType>
 	</PropertyGroup>
-	<PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'!='Workflow'">
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>StrongNameKey.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
