@@ -151,8 +151,8 @@ Global
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422} = {D0AB9DC8-C485-4233-95A6-9F38C8578134}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_Rules = {"EnabledRules":[]}
-		RESX_NeutralResourcesLanguage = iv-IV
 		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
+		RESX_NeutralResourcesLanguage = iv-IV
+		RESX_Rules = {"EnabledRules":[]}
 	EndGlobalSection
 EndGlobal
