@@ -1,0 +1,2676 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Finalize メソッド
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Finalize メソッド
+   ">
+    <meta name="generator" content="docfx 2.56.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../api/index.html" title="API&#12502;&#12521;&#12454;&#12470;">API&#12502;&#12521;&#12454;&#12470;</a>
+                      </li>
+                      <li>
+                          <a href="../architecture/concepts.html" title="&#35373;&#35336;&#24605;&#24819;">&#35373;&#35336;&#24605;&#24819;</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+        	<a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle"></a>
+        	<div class="sidetoggle collapse" id="sidetoggle">
+        		<div>
+        			<div class="sidefilter">
+        				<form class="toc-filter">
+        					<span class="glyphicon glyphicon-filter filter-icon"></span>
+        					<input type="text" id="toc_filter_input" placeholder="&#26908;&#32034;..." onkeypress="if(event.keyCode==13) {return false;}">
+        				</form>
+        			</div>
+        			<div class="sidetoc">
+        				<div class="toc" id="toc">
+        						
+        						<ul class="nav level1">
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.html" title="ExapisSOP" class="">ExapisSOP</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.AppWorker.html" title="AppWorker" class="">AppWorker</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.-ctor.html" title="AppWorker" class="">AppWorker</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.FinalizeAsync.html" title="FinalizeAsync" class="">FinalizeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.InitializeAsync.html" title="InitializeAsync" class="">InitializeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.OnShutdown.html" title="OnShutdown" class="">OnShutdown</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.OnStartup.html" title="OnStartup" class="">OnStartup</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.OnTerminate.html" title="OnTerminate" class="">OnTerminate</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.OnUnhandledError.html" title="OnUnhandledError" class="">OnUnhandledError</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.OnUpdate.html" title="OnUpdate" class="">OnUpdate</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.Shutdown.html#ExapisSOP_AppWorker_Shutdown" title="Shutdown" class="">Shutdown</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.Startup.html#ExapisSOP_AppWorker_Startup" title="Startup" class="">Startup</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.Terminate.html#ExapisSOP_AppWorker_Terminate" title="Terminate" class="">Terminate</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.UnhandledError.html#ExapisSOP_AppWorker_UnhandledError" title="UnhandledError" class="">UnhandledError</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.AppWorker.Update.html#ExapisSOP_AppWorker_Update" title="Update" class="">Update</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ContextEventArgs.html" title="ContextEventArgs" class="">ContextEventArgs</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ContextEventArgs.Context.html" title="Context" class="">Context</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.ContextEventArgs.-ctor.html" title="ContextEventArgs" class="">ContextEventArgs</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.HostRunner.html" title="HostRunner" class="">HostRunner</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.Arguments.html" title="Arguments" class="">Arguments</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.Build.html" title="Build" class="">Build</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.Configure.html" title="Configure" class="">Configure</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.ConfigureCallBackFunc.html" title="ConfigureCallBackFunc" class="">ConfigureCallBackFunc</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.Create.html" title="Create" class="">Create</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.-ctor.html" title="HostRunner" class="">HostRunner</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.Run.html" title="Run" class="">Run</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.HostRunner.RunAsync.html" title="RunAsync" class="">RunAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IConfiguration.html" title="IConfiguration" class="">IConfiguration</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IConfiguration.AddService.html" title="AddService" class="">AddService</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IConfiguration.GetServices.html" title="GetServices" class="">GetServices</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IConfiguration.Terminate.html#ExapisSOP_IConfiguration_Terminate" title="Terminate" class="">Terminate</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IConfiguration.UnhandledError.html#ExapisSOP_IConfiguration_UnhandledError" title="UnhandledError" class="">UnhandledError</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IContext.html" title="IContext" class="">IContext</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.Arguments.html" title="Arguments" class="">Arguments</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.GetHostRunner.html" title="GetHostRunner" class="">GetHostRunner</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.GetMessage.html" title="GetMessage" class="">GetMessage</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.GetService.html" title="GetService" class="">GetService</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.LogFile.html" title="LogFile" class="">LogFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.Paths.html" title="Paths" class="">Paths</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.SetMessage.html" title="SetMessage" class="">SetMessage</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IContext.Settings.html" title="Settings" class="">Settings</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IPipeline.html" title="IPipeline" class="">IPipeline</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IPipeline.Append.html" title="Append" class="">Append</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IPipeline.GetProcesses.html" title="GetProcesses" class="">GetProcesses</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IPipeline.RunAsync.html" title="RunAsync" class="">RunAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IProcess.html" title="IProcess" class="">IProcess</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IProcess.Init.html" title="Init" class="">Init</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IProcess.InvokeAsync.html" title="InvokeAsync" class="">InvokeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IProcess.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IProcess.NextProcess.html" title="NextProcess" class="">NextProcess</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IProcess-2.html" title="IProcess&lt;TParam, TResult&gt;" class="">IProcess&lt;TParam, TResult&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IProcess-2.InvokeAsync.html" title="InvokeAsync" class="">InvokeAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IService.html" title="IService" class="">IService</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="active">
+        						                <a href="ExapisSOP.IService.Finalize.html" title="Finalize" class="active">Finalize</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IService.FinalizeAsync.html" title="FinalizeAsync" class="">FinalizeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IService.Initialize.html" title="Initialize" class="">Initialize</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IService.InitializeAsync.html" title="InitializeAsync" class="">InitializeAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.TerminationEventArgs.html" title="TerminationEventArgs" class="">TerminationEventArgs</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.TerminationEventArgs.Exception.html" title="Exception" class="">Exception</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.TerminationEventArgs.Reason.html" title="Reason" class="">Reason</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.TerminationEventArgs.-ctor.html" title="TerminationEventArgs" class="">TerminationEventArgs</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.TerminationException.html" title="TerminationException" class="">TerminationException</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.TerminationException.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.TerminationException.Reason.html" title="Reason" class="">Reason</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.TerminationException.-ctor.html" title="TerminationException" class="">TerminationException</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.TerminationReason.html" title="TerminationReason" class="">TerminationReason</a>
+        						        </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.UnhandledErrorEventArgs.html" title="UnhandledErrorEventArgs" class="">UnhandledErrorEventArgs</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.UnhandledErrorEventArgs.Abort.html" title="Abort" class="">Abort</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.UnhandledErrorEventArgs.Context.html" title="Context" class="">Context</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.UnhandledErrorEventArgs.Exception.html" title="Exception" class="">Exception</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.UnhandledErrorEventArgs.-ctor.html" title="UnhandledErrorEventArgs" class="">UnhandledErrorEventArgs</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.VersionInfo.html" title="VersionInfo" class="">VersionInfo</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.Caption.html#ExapisSOP_VersionInfo_Caption" title="Caption" class="">Caption</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.CodeName.html" title="CodeName" class="">CodeName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.Copyright.html" title="Copyright" class="">Copyright</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.Developers.html" title="Developers" class="">Developers</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.Guid.html" title="Guid" class="">Guid</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.GuidString.html#ExapisSOP_VersionInfo_GuidString" title="GuidString" class="">GuidString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.Name.html#ExapisSOP_VersionInfo_Name" title="Name" class="">Name</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.SystemType.html" title="SystemType" class="">SystemType</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.Version.html" title="Version" class="">Version</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.VersionInfo.VersionString.html" title="VersionString" class="">VersionString</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.Binary.html" title="ExapisSOP.Binary" class="">ExapisSOP.Binary</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Binary.DataValue.html" title="DataValue" class="">DataValue</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.-ctor.html" title="DataValue" class="">DataValue</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.Equals.html" title="Equals" class="">Equals</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.FromObject.html" title="FromObject" class="">FromObject</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.GetHashCode.html" title="GetHashCode" class="">GetHashCode</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.Read.html" title="Read" class="">Read</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.ToObject.html" title="ToObject" class="">ToObject</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.ToString.html" title="ToString" class="">ToString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.Value.html" title="Value" class="">Value</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Binary.DataValue.Write.html" title="Write" class="">Write</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.ConnectionModel.html" title="ExapisSOP.ConnectionModel" class="">ExapisSOP.ConnectionModel</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ConnectionModel.ConnectableExtensions.html" title="ConnectableExtensions" class="">ConnectableExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.ConnectableExtensions.Run.html" title="Run" class="">Run</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync.html" title="RunAsync" class="">RunAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ConnectionModel.ConnectorExtensions.html" title="ConnectorExtensions" class="">ConnectorExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync.html" title="RunAsync" class="">RunAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ConnectionModel.IConnectable.html" title="IConnectable" class="">IConnectable</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnectable.ConnectWith.html" title="ConnectWith" class="">ConnectWith</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnectable.Disconnect.html" title="Disconnect" class="">Disconnect</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnectable.GetConnector.html" title="GetConnector" class="">GetConnector</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ConnectionModel.IConnectable-2.html" title="IConnectable&lt;TIn, TOut&gt;" class="">IConnectable&lt;TIn, TOut&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnectable-2.GetConnector.html" title="GetConnector" class="">GetConnector</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnectable-2.ExapisSOP-ConnectionModel-IConnectable-GetConnector.html" title="IConnectable.GetConnector" class="">IConnectable.GetConnector</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ConnectionModel.IConnector.html" title="IConnector" class="">IConnector</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnector.Run.html" title="Run" class="">Run</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.ConnectionModel.IConnector-2.html" title="IConnector&lt;TIn, TOut&gt;" class="">IConnector&lt;TIn, TOut&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnector-2.ExapisSOP-ConnectionModel-IConnector-Run.html" title="IConnector.Run" class="">IConnector.Run</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.ConnectionModel.IConnector-2.Run.html" title="Run" class="">Run</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.Core.html" title="ExapisSOP.Core" class="">ExapisSOP.Core</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ConfigurationExtensions.AddAppWorker.html" title="AddAppWorker" class="">AddAppWorker</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ConfigurationExtensions.AddCommandLine.html" title="AddCommandLine" class="">AddCommandLine</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ConfigurationExtensions.AddFileSystem.html" title="AddFileSystem" class="">AddFileSystem</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ConfigurationExtensions.AddLoggingSystem.html" title="AddLoggingSystem" class="">AddLoggingSystem</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ConfigurationExtensions.AddSettingsSystem.html" title="AddSettingsSystem" class="">AddSettingsSystem</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ConfigurationExtensions.AddSystemServices.html" title="AddSystemServices" class="">AddSystemServices</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.ContextExtensions.html" title="ContextExtensions" class="">ContextExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.DefaultKeyName.html#ExapisSOP_Core_ContextExtensions_DefaultKeyName" title="DefaultKeyName" class="">DefaultKeyName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetCommandLine.html" title="GetCommandLine" class="">GetCommandLine</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetData.html" title="GetData" class="">GetData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetFileSystem.html" title="GetFileSystem" class="">GetFileSystem</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetInitialContext.html" title="GetInitialContext" class="">GetInitialContext</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetLoggingSystem.html" title="GetLoggingSystem" class="">GetLoggingSystem</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetPaths.html" title="GetPaths" class="">GetPaths</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetPreviousContext.html" title="GetPreviousContext" class="">GetPreviousContext</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.GetSettingsSystem.html" title="GetSettingsSystem" class="">GetSettingsSystem</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.HasNoCompatible.html" title="HasNoCompatible" class="">HasNoCompatible</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.IsFirstBoot.html" title="IsFirstBoot" class="">IsFirstBoot</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.IsMultipleBoot.html" title="IsMultipleBoot" class="">IsMultipleBoot</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ContextExtensions.SetData.html" title="SetData" class="">SetData</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.CustomPipelineProcess-2.html" title="CustomPipelineProcess&lt;TParam, TResult&gt;" class="">CustomPipelineProcess&lt;TParam, TResult&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.-ctor.html" title="CustomPipelineProcess" class="">CustomPipelineProcess</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.Init.html" title="Init" class="">Init</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.InvokeAsync.html" title="InvokeAsync" class="">InvokeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.InvokeCore.html" title="InvokeCore" class="">InvokeCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.ExapisSOP-IProcess-InvokeAsync.html" title="IProcess.InvokeAsync" class="">IProcess.InvokeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.CustomPipelineProcess-2.NextProcess.html" title="NextProcess" class="">NextProcess</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.ImmutablePipeline.html" title="ImmutablePipeline" class="">ImmutablePipeline</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ImmutablePipeline.Append.html" title="Append" class="">Append</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ImmutablePipeline.GetProcesses.html" title="GetProcesses" class="">GetProcesses</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ImmutablePipeline.-ctor.html" title="ImmutablePipeline" class="">ImmutablePipeline</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.ImmutablePipeline.RunAsync.html" title="RunAsync" class="">RunAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.Pipeline.html" title="Pipeline" class="">Pipeline</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.Pipeline.Append.html" title="Append" class="">Append</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.Pipeline.Create.html" title="Create" class="">Create</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.Pipeline.GetProcesses.html" title="GetProcesses" class="">GetProcesses</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.Pipeline.-ctor.html" title="Pipeline" class="">Pipeline</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.Pipeline.RunAsync.html" title="RunAsync" class="">RunAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.PipelineExtensions.html" title="PipelineExtensions" class="">PipelineExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.Append.html" title="Append" class="">Append</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.AppendExceptionHandler.html" title="AppendExceptionHandler" class="">AppendExceptionHandler</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.AppendLoggingProcess.html" title="AppendLoggingProcess" class="">AppendLoggingProcess</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler.html" title="PipelineExtensions.ExceptionHandler" class="">PipelineExtensions.ExceptionHandler</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler.-ctor.html" title="ExceptionHandler" class="">ExceptionHandler</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler.InvokeCore.html" title="InvokeCore" class="">InvokeCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.html" title="PipelineExtensions.ExceptionHandler&lt;TParam, TResult&gt;" class="">PipelineExtensions.ExceptionHandler&lt;TParam, TResult&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.-ctor.html" title="ExceptionHandler" class="">ExceptionHandler</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.InvokeCore.html" title="InvokeCore" class="">InvokeCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.PipelineExtensions.LoggingProcess.html" title="PipelineExtensions.LoggingProcess" class="">PipelineExtensions.LoggingProcess</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.LoggingProcess.Init.html" title="Init" class="">Init</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.LoggingProcess.InvokeAsync.html" title="InvokeAsync" class="">InvokeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.LoggingProcess.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.LoggingProcess.-ctor.html" title="LoggingProcess" class="">LoggingProcess</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.LoggingProcess.NextProcess.html" title="NextProcess" class="">NextProcess</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.Core.PipelineExtensions.NextProcessFunc.html" title="PipelineExtensions.NextProcessFunc" class="">PipelineExtensions.NextProcessFunc</a>
+        						        </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.Core.PipelineExtensions.ProcessFunc.html" title="PipelineExtensions.ProcessFunc" class="">PipelineExtensions.ProcessFunc</a>
+        						        </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.Core.PipelineExtensions.ProcessFunc-2.html" title="PipelineExtensions.ProcessFunc&lt;TParam, TResult&gt;" class="">PipelineExtensions.ProcessFunc&lt;TParam, TResult&gt;</a>
+        						        </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.html" title="PipelineExtensions.ProcessFuncWrapper" class="">PipelineExtensions.ProcessFuncWrapper</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.InvokeCore.html" title="InvokeCore" class="">InvokeCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.-ctor.html" title="ProcessFuncWrapper" class="">ProcessFuncWrapper</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.html" title="PipelineExtensions.ProcessFuncWrapper&lt;TParam, TResult&gt;" class="">PipelineExtensions.ProcessFuncWrapper&lt;TParam, TResult&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.InvokeCore.html" title="InvokeCore" class="">InvokeCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.IsExecutable.html" title="IsExecutable" class="">IsExecutable</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.-ctor.html" title="ProcessFuncWrapper" class="">ProcessFuncWrapper</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.Globalization.html" title="ExapisSOP.Globalization" class="">ExapisSOP.Globalization</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.html" title="EnglishErrorReportBuilder" class="">EnglishErrorReportBuilder</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.-ctor.html" title="EnglishErrorReportBuilder" class="">EnglishErrorReportBuilder</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine0_TypeName.html" title="GetLocalizedBodyLine0_TypeName" class="">GetLocalizedBodyLine0_TypeName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine1_Message.html" title="GetLocalizedBodyLine1_Message" class="">GetLocalizedBodyLine1_Message</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine2_HResult.html" title="GetLocalizedBodyLine2_HResult" class="">GetLocalizedBodyLine2_HResult</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine3_HelpLink.html" title="GetLocalizedBodyLine3_HelpLink" class="">GetLocalizedBodyLine3_HelpLink</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine4_Source.html" title="GetLocalizedBodyLine4_Source" class="">GetLocalizedBodyLine4_Source</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine5_TargetSite.html" title="GetLocalizedBodyLine5_TargetSite" class="">GetLocalizedBodyLine5_TargetSite</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine6_StackTrace.html" title="GetLocalizedBodyLine6_StackTrace" class="">GetLocalizedBodyLine6_StackTrace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine7_Data.html" title="GetLocalizedBodyLine7_Data" class="">GetLocalizedBodyLine7_Data</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedBodyLine8_InnerException.html" title="GetLocalizedBodyLine8_InnerException" class="">GetLocalizedBodyLine8_InnerException</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedHeaderLine1_Caption.html" title="GetLocalizedHeaderLine1_Caption" class="">GetLocalizedHeaderLine1_Caption</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedHeaderLine2_Created.html" title="GetLocalizedHeaderLine2_Created" class="">GetLocalizedHeaderLine2_Created</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedHeaderLine3_ProcessId.html" title="GetLocalizedHeaderLine3_ProcessId" class="">GetLocalizedHeaderLine3_ProcessId</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.EnglishErrorReportBuilder.GetLocalizedHeaderLine4_Notice.html" title="GetLocalizedHeaderLine4_Notice" class="">GetLocalizedHeaderLine4_Notice</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.html" title="JapaneseErrorReportBuilder" class="">JapaneseErrorReportBuilder</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine0_TypeName.html" title="GetLocalizedBodyLine0_TypeName" class="">GetLocalizedBodyLine0_TypeName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine1_Message.html" title="GetLocalizedBodyLine1_Message" class="">GetLocalizedBodyLine1_Message</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine2_HResult.html" title="GetLocalizedBodyLine2_HResult" class="">GetLocalizedBodyLine2_HResult</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine3_HelpLink.html" title="GetLocalizedBodyLine3_HelpLink" class="">GetLocalizedBodyLine3_HelpLink</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine4_Source.html" title="GetLocalizedBodyLine4_Source" class="">GetLocalizedBodyLine4_Source</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine5_TargetSite.html" title="GetLocalizedBodyLine5_TargetSite" class="">GetLocalizedBodyLine5_TargetSite</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine6_StackTrace.html" title="GetLocalizedBodyLine6_StackTrace" class="">GetLocalizedBodyLine6_StackTrace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine7_Data.html" title="GetLocalizedBodyLine7_Data" class="">GetLocalizedBodyLine7_Data</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedBodyLine8_InnerException.html" title="GetLocalizedBodyLine8_InnerException" class="">GetLocalizedBodyLine8_InnerException</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedHeaderLine1_Caption.html" title="GetLocalizedHeaderLine1_Caption" class="">GetLocalizedHeaderLine1_Caption</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedHeaderLine2_Created.html" title="GetLocalizedHeaderLine2_Created" class="">GetLocalizedHeaderLine2_Created</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedHeaderLine3_ProcessId.html" title="GetLocalizedHeaderLine3_ProcessId" class="">GetLocalizedHeaderLine3_ProcessId</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.GetLocalizedHeaderLine4_Notice.html" title="GetLocalizedHeaderLine4_Notice" class="">GetLocalizedHeaderLine4_Notice</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Globalization.JapaneseErrorReportBuilder.-ctor.html" title="JapaneseErrorReportBuilder" class="">JapaneseErrorReportBuilder</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.IO.html" title="ExapisSOP.IO" class="">ExapisSOP.IO</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.CachedStream.html" title="CachedStream" class="">CachedStream</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.-ctor.html" title="CachedStream" class="">CachedStream</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.CanRead.html" title="CanRead" class="">CanRead</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.CanSeek.html" title="CanSeek" class="">CanSeek</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.CanWrite.html" title="CanWrite" class="">CanWrite</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Capacity.html" title="Capacity" class="">Capacity</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Count.html" title="Count" class="">Count</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Dispose.html" title="Dispose" class="">Dispose</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Flush.html" title="Flush" class="">Flush</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.IsDisposed.html" title="IsDisposed" class="">IsDisposed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Length.html" title="Length" class="">Length</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Peek.html" title="Peek" class="">Peek</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.PeekAsync.html" title="PeekAsync" class="">PeekAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Position.html" title="Position" class="">Position</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Read.html" title="Read" class="">Read</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.ReadByte.html" title="ReadByte" class="">ReadByte</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Refresh.html" title="Refresh" class="">Refresh</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.RefreshAsync.html" title="RefreshAsync" class="">RefreshAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Seek.html" title="Seek" class="">Seek</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.SetLength.html" title="SetLength" class="">SetLength</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.Write.html" title="Write" class="">Write</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.CachedStream.WriteByte.html" title="WriteByte" class="">WriteByte</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.DefaultPath.html" title="DefaultPath" class="">DefaultPath</a>
+        						        </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.FileSystemServiceOptions.html" title="FileSystemServiceOptions" class="">FileSystemServiceOptions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.FileSystemServiceOptions.CreateLockFile.html" title="CreateLockFile" class="">CreateLockFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.FileSystemServiceOptions.DataPath.html" title="DataPath" class="">DataPath</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.FileSystemServiceOptions.-ctor.html" title="FileSystemServiceOptions" class="">FileSystemServiceOptions</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.FileSystemServiceOptionsExtensions.html" title="FileSystemServiceOptionsExtensions" class="">FileSystemServiceOptionsExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.FileSystemServiceOptionsExtensions.SetDataPath.html" title="SetDataPath" class="">SetDataPath</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.IFileSystemService.html" title="IFileSystemService" class="">IFileSystemService</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.AddBufferingLayer.html" title="AddBufferingLayer" class="">AddBufferingLayer</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.CloseStream.html" title="CloseStream" class="">CloseStream</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.CloseStreamAsync.html" title="CloseStreamAsync" class="">CloseStreamAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.OpenCachedMemory.html" title="OpenCachedMemory" class="">OpenCachedMemory</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.OpenDataFile.html" title="OpenDataFile" class="">OpenDataFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.OpenLogFile.html" title="OpenLogFile" class="">OpenLogFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.OpenMemory.html" title="OpenMemory" class="">OpenMemory</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.OpenSettingFile.html" title="OpenSettingFile" class="">OpenSettingFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IFileSystemService.OpenTempFile.html" title="OpenTempFile" class="">OpenTempFile</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.InvalidPathFormatException.html" title="InvalidPathFormatException" class="">InvalidPathFormatException</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.InvalidPathFormatException.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.InvalidPathFormatException.InvalidPath.html" title="InvalidPath" class="">InvalidPath</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.InvalidPathFormatException.-ctor.html" title="InvalidPathFormatException" class="">InvalidPathFormatException</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.IPathList.html" title="IPathList" class="">IPathList</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IPathList.Caches.html" title="Caches" class="">Caches</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IPathList.DataRoot.html" title="DataRoot" class="">DataRoot</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IPathList.Logs.html" title="Logs" class="">Logs</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IPathList.Settings.html" title="Settings" class="">Settings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.IPathList.Temporary.html" title="Temporary" class="">Temporary</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Paths.html" title="Paths" class="">Paths</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.Caches.html" title="Caches" class="">Caches</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.DataRoot.html" title="DataRoot" class="">DataRoot</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.ExistsLockFile.html" title="ExistsLockFile" class="">ExistsLockFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.GetDefaultPath.html" title="GetDefaultPath" class="">GetDefaultPath</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.Logs.html" title="Logs" class="">Logs</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.Settings.html" title="Settings" class="">Settings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Paths.Temporary.html" title="Temporary" class="">Temporary</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.PathString.html" title="PathString" class="">PathString</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_Addition.html" title="Addition" class="">Addition</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.AsUri.html" title="AsUri" class="">AsUri</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.BasePath.html" title="BasePath" class="">BasePath</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.ChangeExtension.html" title="ChangeExtension" class="">ChangeExtension</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.ChangeFileName.html" title="ChangeFileName" class="">ChangeFileName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.Combine.html" title="Combine" class="">Combine</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.CompareTo.html" title="CompareTo" class="">CompareTo</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.EnsureNotFound.html" title="EnsureNotFound" class="">EnsureNotFound</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_Equality.html" title="Equality" class="">Equality</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.Equals.html" title="Equals" class="">Equals</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.Exists.html" title="Exists" class="">Exists</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_Explicit.html" title="Explicit" class="">Explicit</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetDirectoryName.html" title="GetDirectoryName" class="">GetDirectoryName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetExtension.html" title="GetExtension" class="">GetExtension</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetFileName.html" title="GetFileName" class="">GetFileName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetFileNameWithoutExtension.html" title="GetFileNameWithoutExtension" class="">GetFileNameWithoutExtension</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetHashCode.html" title="GetHashCode" class="">GetHashCode</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetOriginalString.html" title="GetOriginalString" class="">GetOriginalString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetRelativePath.html" title="GetRelativePath" class="">GetRelativePath</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.GetRootPath.html" title="GetRootPath" class="">GetRootPath</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_GreaterThan.html" title="GreaterThan" class="">GreaterThan</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_GreaterThanOrEqual.html" title="GreaterThanOrEqual" class="">GreaterThanOrEqual</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_Implicit.html" title="Implicit" class="">Implicit</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_Inequality.html" title="Inequality" class="">Inequality</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.IsDirectory.html" title="IsDirectory" class="">IsDirectory</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.IsDrive.html" title="IsDrive" class="">IsDrive</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.IsFile.html" title="IsFile" class="">IsFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.IsRoot.html" title="IsRoot" class="">IsRoot</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_LessThan.html" title="LessThan" class="">LessThan</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_LessThanOrEqual.html" title="LessThanOrEqual" class="">LessThanOrEqual</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.-ctor.html" title="PathString" class="">PathString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.op_Subtraction.html" title="Subtraction" class="">Subtraction</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathString.ToString.html" title="ToString" class="">ToString</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.PathStringFormatter.html" title="PathStringFormatter" class="">PathStringFormatter</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathStringFormatter.Format.html" title="Format" class="">Format</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathStringFormatter.GetFormat.html" title="GetFormat" class="">GetFormat</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.PathStringFormatter.-ctor.html" title="PathStringFormatter" class="">PathStringFormatter</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.IO.Logging.html" title="ExapisSOP.IO.Logging" class="">ExapisSOP.IO.Logging</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ConsoleLogger.html" title="ConsoleLogger" class="">ConsoleLogger</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.-ctor.html" title="ConsoleLogger" class="">ConsoleLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.Debug.html" title="Debug" class="">Debug</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.Error.html" title="Error" class="">Error</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.Fatal.html" title="Fatal" class="">Fatal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.Info.html" title="Info" class="">Info</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.Trace.html" title="Trace" class="">Trace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ConsoleLogger.Warn.html" title="Warn" class="">Warn</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.DefaultErrorDetailProvider.html" title="DefaultErrorDetailProvider" class="">DefaultErrorDetailProvider</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.DefaultErrorDetailProvider.-ctor.html" title="DefaultErrorDetailProvider" class="">DefaultErrorDetailProvider</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.DefaultErrorDetailProvider.GetLocalizedDetail.html" title="GetLocalizedDetail" class="">GetLocalizedDetail</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.html" title="ErrorReportBuilder" class="">ErrorReportBuilder</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.Build.html" title="Build" class="">Build</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.BuildBody.html" title="BuildBody" class="">BuildBody</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.BuildHeader.html" title="BuildHeader" class="">BuildHeader</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.Create.html" title="Create" class="">Create</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.DateTime.html" title="DateTime" class="">DateTime</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.DetailProviders.html" title="DetailProviders" class="">DetailProviders</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.-ctor.html" title="ErrorReportBuilder" class="">ErrorReportBuilder</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.Exception.html" title="Exception" class="">Exception</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine0_TypeName.html" title="GetLocalizedBodyLine0_TypeName" class="">GetLocalizedBodyLine0_TypeName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine1_Message.html" title="GetLocalizedBodyLine1_Message" class="">GetLocalizedBodyLine1_Message</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine2_HResult.html" title="GetLocalizedBodyLine2_HResult" class="">GetLocalizedBodyLine2_HResult</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine3_HelpLink.html" title="GetLocalizedBodyLine3_HelpLink" class="">GetLocalizedBodyLine3_HelpLink</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine4_Source.html" title="GetLocalizedBodyLine4_Source" class="">GetLocalizedBodyLine4_Source</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine5_TargetSite.html" title="GetLocalizedBodyLine5_TargetSite" class="">GetLocalizedBodyLine5_TargetSite</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine6_StackTrace.html" title="GetLocalizedBodyLine6_StackTrace" class="">GetLocalizedBodyLine6_StackTrace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine7_Data.html" title="GetLocalizedBodyLine7_Data" class="">GetLocalizedBodyLine7_Data</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedBodyLine8_InnerException.html" title="GetLocalizedBodyLine8_InnerException" class="">GetLocalizedBodyLine8_InnerException</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedHeaderLine1_Caption.html" title="GetLocalizedHeaderLine1_Caption" class="">GetLocalizedHeaderLine1_Caption</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedHeaderLine2_Created.html" title="GetLocalizedHeaderLine2_Created" class="">GetLocalizedHeaderLine2_Created</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedHeaderLine3_ProcessId.html" title="GetLocalizedHeaderLine3_ProcessId" class="">GetLocalizedHeaderLine3_ProcessId</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.GetLocalizedHeaderLine4_Notice.html" title="GetLocalizedHeaderLine4_Notice" class="">GetLocalizedHeaderLine4_Notice</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.LastCreationError.html" title="LastCreationError" class="">LastCreationError</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.Option.html" title="Option" class="">Option</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.Save.html" title="Save" class="">Save</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ErrorReportBuilder.SaveERBC.html" title="SaveERBC" class="">SaveERBC</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ExceptionRecord.html" title="ExceptionRecord" class="">ExceptionRecord</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ExceptionRecord.Exception.html" title="Exception" class="">Exception</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ExceptionRecord.-ctor.html" title="ExceptionRecord" class="">ExceptionRecord</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ExceptionRecord.FromBinary.html" title="FromBinary" class="">FromBinary</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ExceptionRecord.ToBinary.html" title="ToBinary" class="">ToBinary</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.HResultDetailProvider.html" title="HResultDetailProvider" class="">HResultDetailProvider</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.HResultDetailProvider.GetLocalizedDetail.html" title="GetLocalizedDetail" class="">GetLocalizedDetail</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.HResultDetailProvider.-ctor.html" title="HResultDetailProvider" class="">HResultDetailProvider</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ICustomErrorDetailProvider.html" title="ICustomErrorDetailProvider" class="">ICustomErrorDetailProvider</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ICustomErrorDetailProvider.GetLocalizedDetail.html" title="GetLocalizedDetail" class="">GetLocalizedDetail</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ILogFile.html" title="ILogFile" class="">ILogFile</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogFile.AddLog.html" title="AddLog" class="">AddLog</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogFile.Count.html" title="Count" class="">Count</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogFile.CreateLogger.html" title="CreateLogger" class="">CreateLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogFile.GetConsoleLogger.html" title="GetConsoleLogger" class="">GetConsoleLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogFile.GetLog.html" title="GetLog" class="">GetLog</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ILoggable.html" title="ILoggable" class="">ILoggable</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILoggable.FromBinary.html" title="FromBinary" class="">FromBinary</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILoggable.ToBinary.html" title="ToBinary" class="">ToBinary</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ILogger.html" title="ILogger" class="">ILogger</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Debug.html" title="Debug" class="">Debug</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Error.html" title="Error" class="">Error</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Fatal.html" title="Fatal" class="">Fatal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Info.html" title="Info" class="">Info</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.LogFile.html" title="LogFile" class="">LogFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Name.html" title="Name" class="">Name</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Trace.html" title="Trace" class="">Trace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILogger.Warn.html" title="Warn" class="">Warn</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.ILoggingSystemService.html" title="ILoggingSystemService" class="">ILoggingSystemService</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.ILoggingSystemService.SaveErrorReport.html" title="SaveErrorReport" class="">SaveErrorReport</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.LogData.html" title="LogData" class="">LogData</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.Created.html" title="Created" class="">Created</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.Data.html" title="Data" class="">Data</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.Equals.html" title="Equals" class="">Equals</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.GetHashCode.html" title="GetHashCode" class="">GetHashCode</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.GetObjectXML.html" title="GetObjectXML" class="">GetObjectXML</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.Level.html" title="Level" class="">Level</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.-ctor.html" title="LogData" class="">LogData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.Logger.html" title="Logger" class="">Logger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.LoggerName.html" title="LoggerName" class="">LoggerName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.Message.html" title="Message" class="">Message</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogData.ToString.html" title="ToString" class="">ToString</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.LogFile.html" title="LogFile" class="">LogFile</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.AddLog.html" title="AddLog" class="">AddLog</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.AddLogCore.html" title="AddLogCore" class="">AddLogCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.Count.html" title="Count" class="">Count</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.CreateLogger.html" title="CreateLogger" class="">CreateLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.CreateSerializedFile.html" title="CreateSerializedFile" class="">CreateSerializedFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.CreateTextFile.html" title="CreateTextFile" class="">CreateTextFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.CreateXmlFile.html" title="CreateXmlFile" class="">CreateXmlFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.GetConsoleLogger.html" title="GetConsoleLogger" class="">GetConsoleLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.GetEnumerator.html" title="GetEnumerator" class="">GetEnumerator</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.GetLog.html" title="GetLog" class="">GetLog</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.GetLogCore.html" title="GetLogCore" class="">GetLogCore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.System-Collections-IEnumerable-GetEnumerator.html" title="IEnumerable.GetEnumerator" class="">IEnumerable.GetEnumerator</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LogFile.-ctor.html" title="LogFile" class="">LogFile</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.Logging.LogFileType.html" title="LogFileType" class="">LogFileType</a>
+        						        </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.Logger.html" title="Logger" class="">Logger</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Debug.html" title="Debug" class="">Debug</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Error.html" title="Error" class="">Error</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Fatal.html" title="Fatal" class="">Fatal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Info.html" title="Info" class="">Info</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.LogFile.html" title="LogFile" class="">LogFile</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.-ctor.html" title="Logger" class="">Logger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Name.html" title="Name" class="">Name</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Trace.html" title="Trace" class="">Trace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.Warn.html" title="Warn" class="">Warn</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.Logger.WriteLog.html" title="WriteLog" class="">WriteLog</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.LoggerExtension.html" title="LoggerExtension" class="">LoggerExtension</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Debug.html" title="Debug" class="">Debug</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Error.html" title="Error" class="">Error</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Exception.html" title="Exception" class="">Exception</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Fatal.html" title="Fatal" class="">Fatal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Info.html" title="Info" class="">Info</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.LongMessage.html" title="LongMessage" class="">LongMessage</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Trace.html" title="Trace" class="">Trace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.UnhandledException.html" title="UnhandledException" class="">UnhandledException</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggerExtension.Warn.html" title="Warn" class="">Warn</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.html" title="LoggingSystemServiceOptions" class="">LoggingSystemServiceOptions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.CheckServiceState.html" title="CheckServiceState" class="">CheckServiceState</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.FileFactory.html" title="FileFactory" class="">FileFactory</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.FileType.html" title="FileType" class="">FileType</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.-ctor.html" title="LoggingSystemServiceOptions" class="">LoggingSystemServiceOptions</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.LogOnUpdate.html" title="LogOnUpdate" class="">LogOnUpdate</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.UseLongName.html" title="UseLongName" class="">UseLongName</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.Logging.LoggingSystemServiceOptions.CreateLogFile.html" title="LoggingSystemServiceOptions.CreateLogFile" class="">LoggingSystemServiceOptions.CreateLogFile</a>
+        						        </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.Logging.LogLevel.html" title="LogLevel" class="">LogLevel</a>
+        						        </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.LongMessageRecord.html" title="LongMessageRecord" class="">LongMessageRecord</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.FromBinary.html" title="FromBinary" class="">FromBinary</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.GetSchema.html" title="GetSchema" class="">GetSchema</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.-ctor.html" title="LongMessageRecord" class="">LongMessageRecord</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.Message.html" title="Message" class="">Message</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.ReadXml.html" title="ReadXml" class="">ReadXml</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.ToBinary.html" title="ToBinary" class="">ToBinary</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.LongMessageRecord.WriteXml.html" title="WriteXml" class="">WriteXml</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.MultipleLogger.html" title="MultipleLogger" class="">MultipleLogger</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.Debug.html" title="Debug" class="">Debug</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.Error.html" title="Error" class="">Error</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.Fatal.html" title="Fatal" class="">Fatal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.Info.html" title="Info" class="">Info</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.LogFiles.html" title="LogFiles" class="">LogFiles</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.-ctor.html" title="MultipleLogger" class="">MultipleLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.Trace.html" title="Trace" class="">Trace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.MultipleLogger.Warn.html" title="Warn" class="">Warn</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Logging.OutputStreamLogger.html" title="OutputStreamLogger" class="">OutputStreamLogger</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Debug.html" title="Debug" class="">Debug</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Error.html" title="Error" class="">Error</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Fatal.html" title="Fatal" class="">Fatal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Info.html" title="Info" class="">Info</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.-ctor.html" title="OutputStreamLogger" class="">OutputStreamLogger</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Trace.html" title="Trace" class="">Trace</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Warn.html" title="Warn" class="">Warn</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Logging.OutputStreamLogger.Writer.html" title="Writer" class="">Writer</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.IO.Settings.html" title="ExapisSOP.IO.Settings" class="">ExapisSOP.IO.Settings</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CustomSettings.html" title="CustomSettings" class="">CustomSettings</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CustomSettings.-ctor.html" title="CustomSettings" class="">CustomSettings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CustomSettings.Default.html" title="Default" class="">Default</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CustomSettings.Reset.html" title="Reset" class="">Reset</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.DataStore.html" title="DataStore" class="">DataStore</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.Clone.html" title="Clone" class="">Clone</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.-ctor.html" title="DataStore" class="">DataStore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.Dictionary.html" title="Dictionary" class="">Dictionary</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.GetSchema.html" title="GetSchema" class="">GetSchema</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.System-ICloneable-Clone.html" title="ICloneable.Clone" class="">ICloneable.Clone</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.Item.html" title="Item" class="">Item</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.ReadXml.html" title="ReadXml" class="">ReadXml</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DataStore.WriteXml.html" title="WriteXml" class="">WriteXml</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.DefaultSettings.html" title="DefaultSettings" class="">DefaultSettings</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DefaultSettings.-ctor.html" title="DefaultSettings" class="">DefaultSettings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.DefaultSettings.Reset.html" title="Reset" class="">Reset</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.EnvironmentSettings.html" title="EnvironmentSettings" class="">EnvironmentSettings</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.CopyFrom.html" title="CopyFrom" class="">CopyFrom</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.DataStore.html" title="DataStore" class="">DataStore</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.EnableLogging.html" title="EnableLogging" class="">EnableLogging</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.-ctor.html" title="EnvironmentSettings" class="">EnvironmentSettings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.FirstBoot.html" title="FirstBoot" class="">FirstBoot</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.GetCulture.html" title="GetCulture" class="">GetCulture</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.Locale.html" title="Locale" class="">Locale</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.NoCompatible.html" title="NoCompatible" class="">NoCompatible</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.OutputReadableXML.html" title="OutputReadableXML" class="">OutputReadableXML</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.Reset.html" title="Reset" class="">Reset</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.EnvironmentSettings.SetCulture.html" title="SetCulture" class="">SetCulture</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.ISettingsSystemService.html" title="ISettingsSystemService" class="">ISettingsSystemService</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.ISettingsSystemService.Apply.html" title="Apply" class="">Apply</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.ISettingsSystemService.GetApplicationVersion.html" title="GetApplicationVersion" class="">GetApplicationVersion</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.ISettingsSystemService.GetLibraryVersion.html" title="GetLibraryVersion" class="">GetLibraryVersion</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.ISettingsSystemService.Reload.html" title="Reload" class="">Reload</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.ISettingsSystemService.Save.html" title="Save" class="">Save</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.OptimizedSettings.html" title="OptimizedSettings" class="">OptimizedSettings</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.OptimizedSettings.-ctor.html" title="OptimizedSettings" class="">OptimizedSettings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.OptimizedSettings.Reset.html" title="Reset" class="">Reset</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.html" title="SettingsSystemServiceOptions" class="">SettingsSystemServiceOptions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.CreateNewSettings.html" title="CreateNewSettings" class="">CreateNewSettings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.GetCurrentVersion.html" title="GetCurrentVersion" class="">GetCurrentVersion</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.HasCompatibleWith.html" title="HasCompatibleWith" class="">HasCompatibleWith</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.-ctor.html" title="SettingsSystemServiceOptions" class="">SettingsSystemServiceOptions</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.ConfirmVersionInfo.html" title="SettingsSystemServiceOptions.ConfirmVersionInfo" class="">SettingsSystemServiceOptions.ConfirmVersionInfo</a>
+        						        </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.Settings.SettingsSystemServiceOptions.GetVersionInfo.html" title="SettingsSystemServiceOptions.GetVersionInfo" class="">SettingsSystemServiceOptions.GetVersionInfo</a>
+        						        </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.IO.Settings.CommandLine.html" title="ExapisSOP.IO.Settings.CommandLine" class="">ExapisSOP.IO.Settings.CommandLine</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.html" title="CommandLineConverter" class="">CommandLineConverter</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.CaseSensitive.html" title="CaseSensitive" class="">CaseSensitive</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.-ctor.html" title="CommandLineConverter" class="">CommandLineConverter</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.Convert.html" title="Convert" class="">Convert</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.Converters.html" title="Converters" class="">Converters</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ResultTypes.html" title="ResultTypes" class="">ResultTypes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.TryConvert.html" title="TryConvert" class="">TryConvert</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.html" title="CommandLineParser" class="">CommandLineParser</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.Convert.html" title="Convert" class="">Convert</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.DoShowHelp.html" title="DoShowHelp" class="">DoShowHelp</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.DoShowVersion.html" title="DoShowVersion" class="">DoShowVersion</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.GetCommandName.html" title="GetCommandName" class="">GetCommandName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.GetValue.html" title="GetValue" class="">GetValue</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineParser.Parse.html" title="Parse" class="">Parse</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.html" title="CommandLineServiceOptions" class="">CommandLineServiceOptions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.AllowOverrideSettings.html" title="AllowOverrideSettings" class="">AllowOverrideSettings</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.CaseSensitive.html" title="CaseSensitive" class="">CaseSensitive</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.-ctor.html" title="CommandLineServiceOptions" class="">CommandLineServiceOptions</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.ConvertToObject.html" title="ConvertToObject" class="">ConvertToObject</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.GetConverters.html" title="GetConverters" class="">GetConverters</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.ResultTypes.html" title="ResultTypes" class="">ResultTypes</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.CreateConverterMappingTable.html" title="CommandLineServiceOptions.CreateConverterMappingTable" class="">CommandLineServiceOptions.CreateConverterMappingTable</a>
+        						        </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.FileNameList.html" title="FileNameList" class="">FileNameList</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.FileNameList.-ctor.html" title="FileNameList" class="">FileNameList</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.FileNameList.FileNames.html" title="FileNames" class="">FileNames</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.FileNameList.InputFiles.html" title="InputFiles" class="">InputFiles</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.FileNameList.OutputFiles.html" title="OutputFiles" class="">OutputFiles</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.html" title="IArgumentConverter" class="">IArgumentConverter</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert.html" title="Convert" class="">Convert</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.IArgumentConverter-1.html" title="IArgumentConverter&lt;T&gt;" class="">IArgumentConverter&lt;T&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.IArgumentConverter-1.Convert.html" title="Convert" class="">Convert</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.IArgumentConverter-1.ExapisSOP-IO-Settings-CommandLine-IArgumentConverter-Convert.html" title="IArgumentConverter.Convert" class="">IArgumentConverter.Convert</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.ICommandLineService.html" title="ICommandLineService" class="">ICommandLineService</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ICommandLineService.GetValues.html" title="GetValues" class="">GetValues</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ICommandLineService.PrintManuals.html" title="PrintManuals" class="">PrintManuals</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ICommandLineService.TerminateWhenError.html" title="TerminateWhenError" class="">TerminateWhenError</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.ManualAttribute.html" title="ManualAttribute" class="">ManualAttribute</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ManualAttribute.CultureInfo.html" title="CultureInfo" class="">CultureInfo</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ManualAttribute.Description.html" title="Description" class="">Description</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ManualAttribute.Locale.html" title="Locale" class="">Locale</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.ManualAttribute.-ctor.html" title="ManualAttribute" class="">ManualAttribute</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.Option.html" title="Option" class="">Option</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Option.Name.html" title="Name" class="">Name</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Option.-ctor.html" title="Option" class="">Option</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Option.Values.html" title="Values" class="">Values</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.Option.Value.html" title="Option.Value" class="">Option.Value</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Option.Value.Source.html" title="Source" class="">Source</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Option.Value.Text.html" title="Text" class="">Text</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Option.Value.-ctor.html" title="Value" class="">Value</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.OptionAttribute.html" title="OptionAttribute" class="">OptionAttribute</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.OptionAttribute.AltName.html" title="AltName" class="">AltName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.OptionAttribute.ArgumentConverter.html" title="ArgumentConverter" class="">ArgumentConverter</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.OptionAttribute.LongName.html" title="LongName" class="">LongName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.OptionAttribute.-ctor.html" title="OptionAttribute" class="">OptionAttribute</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.OptionAttribute.ShortName.html" title="ShortName" class="">ShortName</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.Switch.html" title="Switch" class="">Switch</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Switch.Name.html" title="Name" class="">Name</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Switch.Options.html" title="Options" class="">Options</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.Switch.-ctor.html" title="Switch" class="">Switch</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.html" title="SwitchAttribute" class="">SwitchAttribute</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.AltName.html" title="AltName" class="">AltName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.LongName.html" title="LongName" class="">LongName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.ShortName.html" title="ShortName" class="">ShortName</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.-ctor.html" title="SwitchAttribute" class="">SwitchAttribute</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.NativeWrapper.html" title="ExapisSOP.NativeWrapper" class="">ExapisSOP.NativeWrapper</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.NativeWrapper.INativeCaller.html" title="INativeCaller" class="">INativeCaller</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.INativeCaller.IsSupported.html" title="IsSupported" class="">IsSupported</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.NativeWrapper.WinAPI.html" title="WinAPI" class="">WinAPI</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.WinAPI.GetErrorMessage.html" title="GetErrorMessage" class="">GetErrorMessage</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.WinAPI.Instance.html#ExapisSOP_NativeWrapper_WinAPI_Instance" title="Instance" class="">Instance</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.WinAPI.IsSupported.html" title="IsSupported" class="">IsSupported</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.NativeWrapper.Windows.html" title="ExapisSOP.NativeWrapper.Windows" class="">ExapisSOP.NativeWrapper.Windows</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.html" title="Kernel32" class="">Kernel32</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.AllocConsole.html" title="AllocConsole" class="">AllocConsole</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.FORMAT_MESSAGE_ALLOCATE_BUFFER.html#ExapisSOP_NativeWrapper_Windows_Kernel32_FORMAT_MESSAGE_ALLOCATE_BUFFER" title="FORMAT_MESSAGE_ALLOCATE_BUFFER" class="">FORMAT_MESSAGE_ALLOCATE_BUFFER</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.FORMAT_MESSAGE_FROM_SYSTEM.html#ExapisSOP_NativeWrapper_Windows_Kernel32_FORMAT_MESSAGE_FROM_SYSTEM" title="FORMAT_MESSAGE_FROM_SYSTEM" class="">FORMAT_MESSAGE_FROM_SYSTEM</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.FORMAT_MESSAGE_IGNORE_INSERTS.html#ExapisSOP_NativeWrapper_Windows_Kernel32_FORMAT_MESSAGE_IGNORE_INSERTS" title="FORMAT_MESSAGE_IGNORE_INSERTS" class="">FORMAT_MESSAGE_IGNORE_INSERTS</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.FormatMessageW.html" title="FormatMessageW" class="">FormatMessageW</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.FreeConsole.html" title="FreeConsole" class="">FreeConsole</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.GetConsoleWindow.html" title="GetConsoleWindow" class="">GetConsoleWindow</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.GetLastError.html" title="GetLastError" class="">GetLastError</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.LANG_NEUTRAL.html#ExapisSOP_NativeWrapper_Windows_Kernel32_LANG_NEUTRAL" title="LANG_NEUTRAL" class="">LANG_NEUTRAL</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.MAKELANGID.html" title="MAKELANGID" class="">MAKELANGID</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.Path.html#ExapisSOP_NativeWrapper_Windows_Kernel32_Path" title="Path" class="">Path</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.NativeWrapper.Windows.Kernel32.SUBLANG_DEFAULT.html#ExapisSOP_NativeWrapper_Windows_Kernel32_SUBLANG_DEFAULT" title="SUBLANG_DEFAULT" class="">SUBLANG_DEFAULT</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.Numerics.html" title="ExapisSOP.Numerics" class="">ExapisSOP.Numerics</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.CryptionRandom.html" title="CryptionRandom" class="">CryptionRandom</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.CanGetSeed.html" title="CanGetSeed" class="">CanGetSeed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.-ctor.html" title="CryptionRandom" class="">CryptionRandom</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.Dispose.html" title="Dispose" class="">Dispose</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.Finalize.html" title="Finalize" class="">Finalize</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.IsDisposed.html" title="IsDisposed" class="">IsDisposed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.NextBytes.html" title="NextBytes" class="">NextBytes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.NextDouble.html" title="NextDouble" class="">NextDouble</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.NextNonZeroBytes.html" title="NextNonZeroBytes" class="">NextNonZeroBytes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.CryptionRandom.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.IRandom.html" title="IRandom" class="">IRandom</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.IRandom.NextBytes.html" title="NextBytes" class="">NextBytes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.IRandom.NextDouble.html" title="NextDouble" class="">NextDouble</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.IRandom.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.IRandom.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.LinearCongruentialGenerator.html" title="LinearCongruentialGenerator" class="">LinearCongruentialGenerator</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.LinearCongruentialGenerator.CanGetSeed.html" title="CanGetSeed" class="">CanGetSeed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.LinearCongruentialGenerator.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.LinearCongruentialGenerator.-ctor.html" title="LinearCongruentialGenerator" class="">LinearCongruentialGenerator</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.LinearCongruentialGenerator.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.LinearCongruentialGenerator.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.RandomExtension.html" title="RandomExtension" class="">RandomExtension</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextDecimal.html" title="NextDecimal" class="">NextDecimal</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextDouble.html" title="NextDouble" class="">NextDouble</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextSingle.html" title="NextSingle" class="">NextSingle</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextSInt16.html" title="NextSInt16" class="">NextSInt16</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextSInt32.html" title="NextSInt32" class="">NextSInt32</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextSInt8.html" title="NextSInt8" class="">NextSInt8</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextUInt16.html" title="NextUInt16" class="">NextUInt16</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextUInt32.html" title="NextUInt32" class="">NextUInt32</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextUInt64.html" title="NextUInt64" class="">NextUInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.RandomExtension.NextUInt8.html" title="NextUInt8" class="">NextUInt8</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.SerializableRandom.html" title="SerializableRandom" class="">SerializableRandom</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.CanGetSeed.html" title="CanGetSeed" class="">CanGetSeed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.NextBytes.html" title="NextBytes" class="">NextBytes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.NextDouble.html" title="NextDouble" class="">NextDouble</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SerializableRandom.-ctor.html" title="SerializableRandom" class="">SerializableRandom</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.SystemRandom.html" title="SystemRandom" class="">SystemRandom</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SystemRandom.NextBytes.html" title="NextBytes" class="">NextBytes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SystemRandom.NextDouble.html" title="NextDouble" class="">NextDouble</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SystemRandom.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SystemRandom.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.SystemRandom.-ctor.html" title="SystemRandom" class="">SystemRandom</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.Xorshift.html" title="Xorshift" class="">Xorshift</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift.CanGetSeed.html" title="CanGetSeed" class="">CanGetSeed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift.-ctor.html" title="Xorshift" class="">Xorshift</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Numerics.Xorshift2.html" title="Xorshift2" class="">Xorshift2</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift2.GetObjectData.html" title="GetObjectData" class="">GetObjectData</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift2.NextSInt64.html" title="NextSInt64" class="">NextSInt64</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift2.Seed.html" title="Seed" class="">Seed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Numerics.Xorshift2.-ctor.html" title="Xorshift2" class="">Xorshift2</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.Text.html" title="ExapisSOP.Text" class="">ExapisSOP.Text</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Text.SimpleEncoding.html" title="SimpleEncoding" class="">SimpleEncoding</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.GetByteCount.html" title="GetByteCount" class="">GetByteCount</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.GetBytes.html" title="GetBytes" class="">GetBytes</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.GetCharCount.html" title="GetCharCount" class="">GetCharCount</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.GetChars.html" title="GetChars" class="">GetChars</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.GetMaxByteCount.html" title="GetMaxByteCount" class="">GetMaxByteCount</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.GetMaxCharCount.html" title="GetMaxCharCount" class="">GetMaxCharCount</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleEncoding.-ctor.html" title="SimpleEncoding" class="">SimpleEncoding</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Text.SimpleString.html" title="SimpleString" class="">SimpleString</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.Equals.html" title="Equals" class="">Equals</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.FromString.html" title="FromString" class="">FromString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.GetHashCode.html" title="GetHashCode" class="">GetHashCode</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.-ctor.html" title="SimpleString" class="">SimpleString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.ToString.html" title="ToString" class="">ToString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.ToStringWithoutNull.html" title="ToStringWithoutNull" class="">ToStringWithoutNull</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Text.SimpleString.Value.html" title="Value" class="">Value</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						  <li class="">
+        						    <span class="expand-stub"></span>
+        						    <a href="ExapisSOP.Utils.html" title="ExapisSOP.Utils" class="">ExapisSOP.Utils</a>
+        						      
+        						      <ul class="nav level2">
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.ArrayExtensions.html" title="ArrayExtensions" class="">ArrayExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.ArrayExtensions.Join.html" title="Join" class="">Join</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.ArrayExtensions.JoinAsync.html" title="JoinAsync" class="">JoinAsync</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.ConsoleUtil.html" title="ConsoleUtil" class="">ConsoleUtil</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.ConsoleUtil.Pause.html" title="Pause" class="">Pause</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.ConsoleUtil.ReadPassword.html" title="ReadPassword" class="">ReadPassword</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.ConsoleUtil.ReadYesNo.html" title="ReadYesNo" class="">ReadYesNo</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.ConsoleUtil.WriteHorizontalRule.html" title="WriteHorizontalRule" class="">WriteHorizontalRule</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.DisposableBase.html" title="DisposableBase" class="">DisposableBase</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.Delete.html" title="Delete" class="">Delete</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.-ctor.html" title="DisposableBase" class="">DisposableBase</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.DisposableObjects.html" title="DisposableObjects" class="">DisposableObjects</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.Dispose.html" title="Dispose" class="">Dispose</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.DisposeAsync.html" title="DisposeAsync" class="">DisposeAsync</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.EnsureNotDisposed.html" title="EnsureNotDisposed" class="">EnsureNotDisposed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.Finalize.html" title="Finalize" class="">Finalize</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.IsDisposed.html" title="IsDisposed" class="">IsDisposed</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.DisposableBase.ThrowOnObjectDisposed.html" title="ThrowOnObjectDisposed" class="">ThrowOnObjectDisposed</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.IAwaitable-1.html" title="IAwaitable&lt;T&gt;" class="">IAwaitable&lt;T&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IAwaitable-1.GetAwaiter.html" title="GetAwaiter" class="">GetAwaiter</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.IAwaiter-1.html" title="IAwaiter&lt;T&gt;" class="">IAwaiter&lt;T&gt;</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IAwaiter-1.GetResult.html" title="GetResult" class="">GetResult</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IAwaiter-1.IsCompleted.html" title="IsCompleted" class="">IsCompleted</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.IUtilityService.html" title="IUtilityService" class="">IUtilityService</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IUtilityService.CreateDataValue.html" title="CreateDataValue" class="">CreateDataValue</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IUtilityService.CreateRandom.html" title="CreateRandom" class="">CreateRandom</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IUtilityService.CreateSimpleString.html" title="CreateSimpleString" class="">CreateSimpleString</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.IUtilityService.SimpleEncoding.html" title="SimpleEncoding" class="">SimpleEncoding</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.SecureStringExtensions.html" title="SecureStringExtensions" class="">SecureStringExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.SecureStringExtensions.IsEqualWith.html" title="IsEqualWith" class="">IsEqualWith</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.SerializationInfoExtensions.html" title="SerializationInfoExtensions" class="">SerializationInfoExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.SerializationInfoExtensions.GetValue.html" title="GetValue" class="">GetValue</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.StringExtensions.html" title="StringExtensions" class="">StringExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.StringExtensions.Abridge.html" title="Abridge" class="">Abridge</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.StringExtensions.FitToLine.html" title="FitToLine" class="">FitToLine</a>
+        						              </li>
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.StringExtensions.TryToBoolean.html" title="TryToBoolean" class="">TryToBoolean</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.StringUtil.html" title="StringUtil" class="">StringUtil</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.StringUtil.GetRandomText.html" title="GetRandomText" class="">GetRandomText</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.UtilityConfigurationExtensions.html" title="UtilityConfigurationExtensions" class="">UtilityConfigurationExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.UtilityConfigurationExtensions.AddUtility.html" title="AddUtility" class="">AddUtility</a>
+        						              </li>
+        						            </ul>  </li>
+        						        <li class="">
+        						          <span class="expand-stub"></span>
+        						          <a href="ExapisSOP.Utils.UtilityContextExtensions.html" title="UtilityContextExtensions" class="">UtilityContextExtensions</a>
+        						            
+        						            <ul class="nav level3">
+        						              <li class="">
+        						                <a href="ExapisSOP.Utils.UtilityContextExtensions.GetUtility.html" title="GetUtility" class="">GetUtility</a>
+        						              </li>
+        						            </ul>  </li>
+        						      </ul>  </li>
+        						</ul>				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ExapisSOP.IService.Finalize*">
+
+<h1 id="ExapisSOP_IService_Finalize_" data-uid="ExapisSOP.IService.Finalize*">Finalize メソッド
+</h1>
+<div class="markdown level0 summary"></div>
+<div class="markdown level0 conceptual"></div>
+
+<span class="small pull-right mobile-hide">
+  <span class="divider">|</span>
+  <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IService_Finalize_ExapisSOP_IContext_.md&amp;value=---%0Auid%3A%20ExapisSOP.IService.Finalize(ExapisSOP.IContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
+</span>
+<span class="small pull-right mobile-hide">
+  <a href="https://github.com/Takym/ExapisSOP/blob/master/_TopLevelNS/IService.cs/#L55">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
+</span>
+<a id="ExapisSOP_IService_Finalize_" data-uid="ExapisSOP.IService.Finalize*"></a>
+<h4 id="ExapisSOP_IService_Finalize_ExapisSOP_IContext_" data-uid="ExapisSOP.IService.Finalize(ExapisSOP.IContext)">Finalize(IContext)</h4>
+<div class="markdown level1 summary"><p>サービスの破棄処理を同期的に実行します。
+この関数内で例外を発生させてはいけません。</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="decalaration">&#23459;&#35328;</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">virtual void Finalize(IContext context)</code></pre>
+</div>
+<h5 class="parameters">&#24341;&#25968;</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>&#22411;</th>
+      <th>&#21517;&#21069;</th>
+      <th>&#35500;&#26126;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="ExapisSOP.IContext.html">IContext</a></td>
+      <td><span class="parametername">context</span></td>
+      <td><p>文脈情報です。</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IService_Finalize_.md&amp;value=---%0Auid%3A%20ExapisSOP.IService.Finalize*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#32232;&#38598;/&#25552;&#26696;</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Takym/ExapisSOP/blob/master/_TopLevelNS/IService.cs/#L55" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>&#12371;&#12398;&#35352;&#20107;&#12398;&#24773;&#22577;</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+      	<div class="grad-bottom"></div>
+      	<div class="footer">
+      		<div class="container">
+      			<span class="pull-right">
+      				<a href="#top">&#12506;&#12540;&#12472;&#12398;&#20808;&#38957;&#12408;</a>
+      			</span>
+      			
+      				<span>Copyright (C) 2020 Takym.</span>
+      				<br>
+      				<span>Generated by <strong>DocFX</strong></span>
+      		</div>
+      	</div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-99298946-3"></script>
+    <script>
+    	window.dataLayer = window.dataLayer || [];
+    	function gtag() { dataLayer.push(arguments); }
+    	gtag('js', new Date());
+    	gtag('config', 'UA-99298946-3');
+    </script>
+  </body>
+</html>
