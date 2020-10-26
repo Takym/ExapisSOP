@@ -1,4 +1,4 @@
-﻿# [概念](concepts.md)
+# [概念](concepts.md)
 ## [実行環境とサービス](concepts.md#hostrunner)
 ## [AppWorker クラスについて](concepts.md#appworker)
 ## [文脈情報](concepts.md#context)

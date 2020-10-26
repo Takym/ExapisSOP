@@ -1,4 +1,4 @@
-﻿# ExapisSOP - List of Contributors
+# ExapisSOP - List of Contributors
 Copyright (C) 2020 Takym.
 
 ## Core Collaborators

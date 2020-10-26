@@ -1,7 +1,7 @@
 /****
  * ExapisSOP
  * Copyright (C) 2020 Takym.
- * 
+ *
  * distributed under the MIT License.
 ****/
 

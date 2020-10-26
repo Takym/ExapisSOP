@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP</AssemblyName>
 		<OutputType>Library</OutputType>
@@ -63,6 +63,7 @@
 		</Compile>
 		<EmbeddedResource Include="IO\Settings\EnvironmentSettings.xsd">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<SubType>Designer</SubType>
 		</EmbeddedResource>
 		<Compile Update="IO\Settings\EnvironmentSettings.cs">
 			<DependentUpon>EnvironmentSettings.xsd</DependentUpon>

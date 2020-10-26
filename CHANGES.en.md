@@ -1,10 +1,10 @@
-﻿# ExapisSOP - Change Logs
+# ExapisSOP - Change Logs
 Copyright (C) 2020 Takym.
 
 ## [master]
  * The specification (Japanese): [https://takym.github.io/ExapisSOP/latest/index.html](https://takym.github.io/ExapisSOP/latest/index.html)
  * The comparing: [https://github.com/Takym/ExapisSOP/compare/xsop00b2...master](https://github.com/Takym/ExapisSOP/compare/xsop00b2...master)
- 
+
 ## [v0.0.1.2] - xsop00b2
  * **Date:** October 26th, 2020
  * Implemented the connection model interfaces and classes.

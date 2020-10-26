@@ -1,7 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP.Tools.PackageDependencyFixer</AssemblyName>
 		<OutputType>Exe</OutputType>
+		<ActiveDebugFramework>netcoreapp3.1</ActiveDebugFramework>
 	</PropertyGroup>
 	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>

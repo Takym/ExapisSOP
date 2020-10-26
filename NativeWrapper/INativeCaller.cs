@@ -1,7 +1,7 @@
 /****
  * ExapisSOP
  * Copyright (C) 2020 Takym.
- * 
+ *
  * distributed under the MIT License.
 ****/
 
@@ -15,22 +15,22 @@ using System.Reflection;
 namespace ExapisSOP.NativeWrapper
 {
 	/// <summary>
-	///  ���Ɉˑ��������@�Ńl�C�e�B�u�R�[�h���Ăяo���@�\��񋟂��܂��B
+	///  環境に依存した方法でネイティブコードを呼び出す機能を提供します。
 	/// </summary>
 	public interface INativeCaller
 	{
 		/// <summary>
-		///  �l�C�e�B�u�R�[�h�̌Ăяo�������s�ł�������ǂ������肵�܂��B
+		///  ネイティブコードの呼び出しが実行できる環境かどうか判定します。
 		/// </summary>
-		/// <param name="reason">�T�|�[�g����Ȃ��ꍇ�A���̗��R��\����O�I�u�W�F�N�g��Ԃ��܂��B</param>
-		/// <returns>�T�|�[�g�����ꍇ��<see langword="true"/>�A����ȊO�̏ꍇ��<see langword="false"/>��Ԃ��܂��B</returns>
+		/// <param name="reason">サポートされない場合、その理由を表す例外オブジェクトを返します。</param>
+		/// <returns>サポートされる場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
 		bool IsSupported(out PlatformNotSupportedException? reason);
 
 #if NETCOREAPP3_1
 		/// <summary>
-		///  �l�C�e�B�u�R�[�h�̌Ăяo�������s�ł�������ǂ������肵�܂��B
+		///  ネイティブコードの呼び出しが実行できる環境かどうか判定します。
 		/// </summary>
-		/// <returns>�T�|�[�g�����ꍇ��<see langword="true"/>�A����ȊO�̏ꍇ��<see langword="false"/>��Ԃ��܂��B</returns>
+		/// <returns>サポートされる場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
 		public bool IsSupported()
 		{
 			return this.IsSupported(out _);
@@ -40,14 +40,14 @@ namespace ExapisSOP.NativeWrapper
 
 #if NET48
 	/// <summary>
-	///  .NET Framework�p��<see cref="ExapisSOP.NativeWrapper.INativeCaller"/>���g�����܂��B
-	///  ���̃N���X�͐ÓI�N���X�ł��B
+	///  .NET Framework用に<see cref="ExapisSOP.NativeWrapper.INativeCaller"/>を拡張します。
+	///  このクラスは静的クラスです。
 	/// </summary>
 	/// <remarks>
-	///  .NET Framework �Ŋ���̃C���^�[�t�F�[�X�����̌Ăяo���ƌ݊��������R�[�h�������ׂ̃N���X�ł��B
-	///  �݊�����ۂׂɂ��̃N���X���璼�ڌĂяo������Ɋg�����\�b�h�𗘗p���Ă��������B
+	///  .NET Framework で既定のインターフェース実装の呼び出しと互換性を持つコードを書く為のクラスです。
+	///  互換性を保つ為にこのクラスから直接呼び出す代わりに拡張メソッドを利用してください。
 	/// </remarks>
-	[Obsolete("����Ɋg�����\�b�h�𗘗p���Ă��������B", true)]
+	[Obsolete("代わりに拡張メソッドを利用してください。", true)]
 	public static class NetframeworkINativeCallerExtensions
 	{
 		private delegate bool Method();
@@ -74,10 +74,10 @@ namespace ExapisSOP.NativeWrapper
 		}
 
 		/// <summary>
-		///  �l�C�e�B�u�R�[�h�̌Ăяo�������s�ł�������ǂ������肵�܂��B
+		///  ネイティブコードの呼び出しが実行できる環境かどうか判定します。
 		/// </summary>
-		/// <param name="nativeCaller">���ۂ̏������i�[�����I�u�W�F�N�g�ł��B</param>
-		/// <returns>�T�|�[�g�����ꍇ��<see langword="true"/>�A����ȊO�̏ꍇ��<see langword="false"/>��Ԃ��܂��B</returns>
+		/// <param name="nativeCaller">実際の処理を格納したオブジェクトです。</param>
+		/// <returns>サポートされる場合は<see langword="true"/>、それ以外の場合は<see langword="false"/>を返します。</returns>
 		public static bool IsSupported(this INativeCaller nativeCaller)
 		{
 			var m = GetMethod(nativeCaller, nativeCaller.GetType());

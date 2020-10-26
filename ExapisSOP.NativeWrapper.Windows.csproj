@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP.NativeWrapper.Windows</AssemblyName>
 		<OutputType>Library</OutputType>
