@@ -23,7 +23,7 @@ host.Configure((config) => { // 構成設定を書き換える関数を実行環
 ExapisSOP ではコマンドライン引数は**コマンド行引数**と省略します。
 
 <a id="appworker"></a>
-## AppWorker
+## AppWorker クラスについて
 アプリケーションは<xref:ExapisSOP.AppWorker>の派生クラスを一つ以上作成しそこに処理を記述します。
 <xref:ExapisSOP.AppWorker>もサービスです。以下のコードの様に記述します。
 ```csharp
@@ -66,7 +66,7 @@ class Program : AppWorker
 	}
 }
 ```
-<xref:ExapisSOP.AppWorker>は`AddAppWorker<TAppWorker>()`を利用し実行環境へ登録します。
+<xref:ExapisSOP.AppWorker>は<xref:ExapisSOP.Core.ConfigurationExtensions.AddAppWorker``1(ExapisSOP.IConfiguration)>を利用し実行環境へ登録します。
 `TAppWorker`は<xref:ExapisSOP.AppWorker>から派生したクラスを表します。
 ```csharp
 // string[] args にコマンド行引数が格納されていると仮定します。

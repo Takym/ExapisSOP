@@ -1,6 +1,6 @@
 ﻿# [概念](concepts.md)
 ## [実行環境とサービス](concepts.md#hostrunner)
-## [AppWorker](concepts.md#appworker)
+## [AppWorker クラスについて](concepts.md#appworker)
 ## [文脈情報](concepts.md#context)
 ## [ファイル管理サービス](concepts.md#file_system)
 ## [設定情報管理サービス](concepts.md#settings_system)

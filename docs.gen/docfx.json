@@ -40,8 +40,8 @@
 		"globalMetadataFiles": [],
 		"fileMetadataFiles": [],
 		"template": [
-			"default",
-			"packages/memberpage/2.56.3/content",
+			"statictoc",
+			"packages/memberpage/2.56.4/content",
 			"template"
 		],
 		"postProcessors": [],
