@@ -365,3 +365,6 @@ desktop.ini
 # XML Documentation Comments
 /ExapisSOP.xml
 /ExapisSOP.*.xml
+
+# Gemfile.lock
+**/Gemfile.lock

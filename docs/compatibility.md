@@ -1,24 +1,24 @@
-# ExapisSOP - �݊����Ɋւ�����
+# ExapisSOP - 互換性に関する情報
 Copyright (C) 2020 Takym.
 
-* [xsop�n��](#xsop)
-	* [xsop02�n��](#xsop02)
-	* [xsop01�n��](#xsop01)
-	* [xsop00�n��](#xsop00)
+* [xsop系列](#xsop)
+	* [xsop02系列](#xsop02)
+	* [xsop01系列](#xsop01)
+	* [xsop00系列](#xsop00)
 
-## <a id="xsop"></a>xsop�n��
-* **xsop�n��**��`v0.x.x.x`�ƕ\�L�����o�[�W�����̃p�b�P�[�W�̎��ł��B
-### <a id="xsop02"></a>xsop02�n��
-* `v0.2`�ȏ�`v0.3`�����̃o�[�W�����͈���o�[�W�����ł��B
-* xsop01�n��̎��Ɍ��J�����\��̃o�[�W�����ł��B
-* **xsop02�n��**���ł̌݊����͕ۏ؂���܂��B
-### <a id="xsop01"></a>xsop01�n��
-* `v0.1`�ȏ�`v0.2`�����̃o�[�W�����͊J���o�[�W�����ł��B
-* ���삪���肵����`v0.2`(**xsop02�n��**)�Ƃ��Č��J�����\��ł��B
-* �݊����͕ۏ؂��܂���B
-	* �������A**xsop01a�n��**�̐ݒ�t�@�C����**xsop00**�n��Ƃ̌���݊����͂���܂��B
-		* �ߋ��̃o�[�W�����ō쐬���ꂽ�ݒ�t�@�C���̓ǂݍ��݂�ۏ؂��܂��B
-### <a id="xsop00"></a>xsop00�n��ixsop00a0�Axsop00a1�Axsop00b0�Axsop00b1�Axsop00b2�j
-* `v0.0.0.0`����`v0.0.1.2`�܂ł̃o�[�W�����̓p�b�P�[�W�����̎����p�Ƃ��Č��J���܂����B
-* ���삪�s����Ȃ̂ŗ��p�͐������܂���B
-* ���ꂼ��API�݊����͕ۏ؂���܂��񂪁A�ݒ�t�@�C���̌���݊����͂���܂��B
+## <a id="xsop"></a>xsop系列
+* **xsop系列**は`v0.x.x.x`と表記されるバージョンのパッケージの事です。
+### <a id="xsop02"></a>xsop02系列
+* `v0.2`以上`v0.3`未満のバージョンは安定バージョンです。
+* xsop01系列の次に公開される予定のバージョンです。
+* **xsop02系列**内での互換性は保証されます。
+### <a id="xsop01"></a>xsop01系列
+* `v0.1`以上`v0.2`未満のバージョンは開発バージョンです。
+* 動作が安定したら`v0.2`(**xsop02系列**)として公開される予定です。
+* 互換性は保証しません。
+	* ただし、**xsop01a系列**の設定ファイルは**xsop00**系列との後方互換性はあります。
+		* 過去のバージョンで作成された設定ファイルの読み込みを保証します。
+### <a id="xsop00"></a>xsop00系列（xsop00a0、xsop00a1、xsop00b0、xsop00b1、xsop00b2）
+* `v0.0.0.0`から`v0.0.1.2`までのバージョンはパッケージ生成の実験用として公開しました。
+* 動作が不安定なので利用は推奨しません。
+* それぞれAPI互換性は保証されませんが、設定ファイルの後方互換性はあります。
