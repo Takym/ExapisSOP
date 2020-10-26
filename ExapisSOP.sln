@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation and Packages", "Documentation and Packages", "{D0AB9DC8-C485-4233-95A6-9F38C8578134}"
 	ProjectSection(SolutionItems) = preProject
+		docs\_config.yml = docs\_config.yml
+		docs\compatibility.md = docs\compatibility.md
 		docs\index.md = docs\index.md
 	EndProjectSection
 EndProject
@@ -151,8 +153,8 @@ Global
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422} = {D0AB9DC8-C485-4233-95A6-9F38C8578134}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
-		RESX_NeutralResourcesLanguage = iv-IV
 		RESX_Rules = {"EnabledRules":[]}
+		RESX_NeutralResourcesLanguage = iv-IV
+		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
 	EndGlobalSection
 EndGlobal
