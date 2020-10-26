@@ -18,4 +18,4 @@ jobs:
     - name: Build
       run: dotnet build ExapisSOP.sln --configuration Workflow --no-restore
     - name: Test
-      run: dotnet test ExapisSOP.sln --no-restore --verbosity normal
+      run: dotnet test ExapisSOP.sln --configuration Workflow --no-restore --verbosity normal
