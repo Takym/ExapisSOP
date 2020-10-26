@@ -16,6 +16,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore ExapisSOP.sln
     - name: Build
-      run: dotnet build ExapisSOP.sln --configuration Debug --no-restore
+      run: dotnet build ExapisSOP.sln --configuration Workflow --no-restore
     - name: Test
       run: dotnet test ExapisSOP.sln --no-restore --verbosity normal
