@@ -1,6 +1,7 @@
 # ExapisSOP
 Copyright (C) 2020 Takym
 
+![.NET Core](https://github.com/Takym/ExapisSOP/workflows/.NET%20Core/badge.svg)
 ![Publish NuGet Package](https://github.com/Takym/ExapisSOP/workflows/Publish%20NuGet%20Package/badge.svg)
 
 [日本語](#ja)
