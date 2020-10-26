@@ -35,11 +35,13 @@ namespace ExapisSOP.ConnectionModel
 		/// <returns>実行結果を表すオブジェクトです。</returns>
 		TOut Run(TIn arg);
 
+#if NETCOREAPP3_1
 		void IConnector.Run(object arg)
 		{
 			if (arg is TIn objIn) {
 				this.Run(objIn);
 			}
 		}
+#endif
 	}
 }

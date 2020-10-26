@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.AppWorker.html",
-          "hash": "vG0m6WRRD1ol4BzYSVpJGA=="
+          "hash": "sL9Jvulcb/zbrJGxjWjjgw=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Binary.DataValue.html",
-          "hash": "HPIcC/DB1DWMt50hlzHKkQ=="
+          "hash": "7rAkm41p2Meu8aN6v/DUHg=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,91 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Binary.html",
-          "hash": "+KyIImvFYF6CWplM1gGmww=="
+          "hash": "SyXYQoU72iLRLenCO1FUJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.ConnectableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.ConnectableExtensions.html",
+          "hash": "pMuFeZuep0bIykoVIvTRnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.ConnectorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.ConnectorExtensions.html",
+          "hash": "h89faTI2+w/zlUVraS7Whw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.IConnectable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.IConnectable-2.html",
+          "hash": "kDLMYZ5fGiLhtyxIxzobiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.IConnectable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.IConnectable.html",
+          "hash": "jOkNZbkF8PDxPZnloWJOXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.IConnector-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.IConnector-2.html",
+          "hash": "XLPpj4GaC9LG+wQdifMcFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.IConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.IConnector.html",
+          "hash": "Hoh3XDjvjrRRFaPO82WA6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ExapisSOP.ConnectionModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ExapisSOP.ConnectionModel.html",
+          "hash": "x0lNSgJ+gNDnHeaZVt/FfQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.ContextEventArgs.html",
-          "hash": "dwmyjN7zg6f7jam5wKk4EA=="
+          "hash": "QlTIk2jS36U2GTKKry2krA=="
         }
       },
       "is_incremental": false,
@@ -57,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.ConfigurationExtensions.html",
-          "hash": "PkSAquq1o4Qq5TyD726d1Q=="
+          "hash": "evidMp5GS+2/A2/QaXetyA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.ContextExtensions.html",
-          "hash": "bWx6HtfLuf/5K8764hylkA=="
+          "hash": "pkB8qv9fO6B4v1oANnFCWA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.CustomPipelineProcess-2.html",
-          "hash": "kc4qG2TN+UFAy+zRFIOO5Q=="
+          "hash": "Mfd0TfyIjqQ6FVKsyX3CwA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.ImmutablePipeline.html",
-          "hash": "PsqVc7z6ObfvRHctDiuGXQ=="
+          "hash": "6TysFDkLwavg7IYegZSqHw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.Pipeline.html",
-          "hash": "E0ouYS3uqAme+K9+R9eGpw=="
+          "hash": "PPBnb4iCm73XF1MRT2gmpg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ExceptionHandler-2.html",
-          "hash": "NodmuSvuvrFNDdj/gQGKwQ=="
+          "hash": "H8QvsMS54+gmvyKgiJR41w=="
         }
       },
       "is_incremental": false,
@@ -129,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ExceptionHandler.html",
-          "hash": "K3EU2nLn/jRd9wVyrHE1qg=="
+          "hash": "OByYXuxQFMziiLVrDTWv8g=="
         }
       },
       "is_incremental": false,
@@ -141,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.LoggingProcess.html",
-          "hash": "97D730DwPCKpbWfMvQQDMQ=="
+          "hash": "TJZGXMsKxgbrMVlFpxJazw=="
         }
       },
       "is_incremental": false,
@@ -153,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.NextProcessFunc.html",
-          "hash": "E/FByv4Gg0XY+HehK1MNNA=="
+          "hash": "bCNn2d+rLMd3+KE/TtUesg=="
         }
       },
       "is_incremental": false,
@@ -165,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFunc-2.html",
-          "hash": "3dWGA8d3fxW8xzdRPF9pIA=="
+          "hash": "WgtDg+419ZFwb2E2KsBeNw=="
         }
       },
       "is_incremental": false,
@@ -177,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFunc.html",
-          "hash": "u9cfUncsx3r65B7w8q8+kw=="
+          "hash": "/SSmqt7Ly2BemKcP8CboVA=="
         }
       },
       "is_incremental": false,
@@ -189,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper-2.html",
-          "hash": "b3farstlMCzZGVuF+rMgEQ=="
+          "hash": "Po4ahjIEJs9VZmgB9Hm2DA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.ProcessFuncWrapper.html",
-          "hash": "UPdheaz+uTABlKL1MObH9g=="
+          "hash": "CMEtOpvwwVVLzAx9gNJdzQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.PipelineExtensions.html",
-          "hash": "/V2b/NfeMxB9/M/f/W1rFA=="
+          "hash": "jYE93fF2xTGF4GCEbZHVcg=="
         }
       },
       "is_incremental": false,
@@ -225,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Core.html",
-          "hash": "f4nMWZaheQieoHyamwszAw=="
+          "hash": "qihQ/w+ifLBXL3nXPeRchA=="
         }
       },
       "is_incremental": false,
@@ -237,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Globalization.EnglishErrorReportBuilder.html",
-          "hash": "OppxgJOwgTgxsw8bH9S6KQ=="
+          "hash": "gBS7o0PjVlpCNoWwXdPJhw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Globalization.JapaneseErrorReportBuilder.html",
-          "hash": "JIOgb/JPyHp07QvxxrfqKw=="
+          "hash": "Cvu54Fd3ZVEXWnhEp4t1CQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Globalization.html",
-          "hash": "AIIPCGdYMK8J19zoWqpI2A=="
+          "hash": "wkey+FNAeP6CRmdrVDHKqw=="
         }
       },
       "is_incremental": false,
@@ -273,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.HostRunner.html",
-          "hash": "/Q3bG424+rPCpsdvDN0/7w=="
+          "hash": "qKk5+nq0x+MLYsbtc+h0WQ=="
         }
       },
       "is_incremental": false,
@@ -285,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IConfiguration.html",
-          "hash": "QPw7DSLjxSs/CcmikbiPaQ=="
+          "hash": "CXyo3t33o/Mz9l6n5Cfi/g=="
         }
       },
       "is_incremental": false,
@@ -297,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IContext.html",
-          "hash": "j9muyvfl3XtDIv6YgcE8UA=="
+          "hash": "DezgsFXeiHaz6RwvaYgnHA=="
         }
       },
       "is_incremental": false,
@@ -309,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.CachedStream.html",
-          "hash": "jrZo0hsKsV0+5cdaa/f1Sg=="
+          "hash": "vBkXTyFc/4+1XEIBxFdq5Q=="
         }
       },
       "is_incremental": false,
@@ -321,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.DefaultPath.html",
-          "hash": "naZXf50wChADEUgIUmIMJw=="
+          "hash": "OioWnOk0NA7IrkIjfE/1dw=="
         }
       },
       "is_incremental": false,
@@ -333,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.FileSystemServiceOptions.html",
-          "hash": "iesEpMFeqp3lrGRys9jQ3Q=="
+          "hash": "ri+JVhNbo5KRccFKGk65wQ=="
         }
       },
       "is_incremental": false,
@@ -345,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.FileSystemServiceOptionsExtensions.html",
-          "hash": "vLaE5vmfBPuoyW9fY9oWdw=="
+          "hash": "bRM8g2FzFKW9hCo4Kgq1cw=="
         }
       },
       "is_incremental": false,
@@ -357,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.IFileSystemService.html",
-          "hash": "QjxvXiiRKVFLx43dLOzwaQ=="
+          "hash": "x5ZXGYRrXbttH40KMJUPEw=="
         }
       },
       "is_incremental": false,
@@ -369,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.IPathList.html",
-          "hash": "67Ww6Hi026TYXKWE42mpVQ=="
+          "hash": "0zvV7nxRTx/igWgPiDbmHQ=="
         }
       },
       "is_incremental": false,
@@ -381,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.InvalidPathFormatException.html",
-          "hash": "aWEnPi84iZeWKhZzK+OaHg=="
+          "hash": "e2DDD7PJOWaq/aNMFULxeA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ConsoleLogger.html",
-          "hash": "3ypgm+KX2XR0avrzj5/kng=="
+          "hash": "SdNl+/uuswMplEKaSacC6g=="
         }
       },
       "is_incremental": false,
@@ -405,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.DefaultErrorDetailProvider.html",
-          "hash": "/jTEosrCGCgXt9O8dpL5OQ=="
+          "hash": "yuFk3fDpm0DtkLkdBEv6gA=="
         }
       },
       "is_incremental": false,
@@ -417,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ErrorReportBuilder.html",
-          "hash": "Q7+Gj7rnSsaGKOO4TAJ7Vw=="
+          "hash": "5GkzrYTpl1AeRe8zbp315Q=="
         }
       },
       "is_incremental": false,
@@ -429,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ExceptionRecord.html",
-          "hash": "YCJnsD8LJI3l2r7w7xfH9A=="
+          "hash": "8HVf2lUH79H1WBU+MDluuQ=="
         }
       },
       "is_incremental": false,
@@ -441,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.HResultDetailProvider.html",
-          "hash": "LXJvLwONe6dJ0Y4VbPEO6g=="
+          "hash": "n7MFG9yyTNt7xwZFa8e4+w=="
         }
       },
       "is_incremental": false,
@@ -453,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ICustomErrorDetailProvider.html",
-          "hash": "speVJkJ/01AdTnWyUAd5EA=="
+          "hash": "vUAQYrW3Wx5mqYc5ZPVO1A=="
         }
       },
       "is_incremental": false,
@@ -465,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ILogFile.html",
-          "hash": "cIa+FKLKkhQcC+DAQjgdvw=="
+          "hash": "oY4w2p4NAaXNasAxlz2ivQ=="
         }
       },
       "is_incremental": false,
@@ -477,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ILoggable.html",
-          "hash": "wXkvJCJ0NicBDupP7oaclw=="
+          "hash": "ldyvwGVGaWmCMJ/tn65DiA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ILogger.html",
-          "hash": "q9YNWQrdLvYNJGW1D7yn7w=="
+          "hash": "m/MCLTJV6pr71VNWu6qVyg=="
         }
       },
       "is_incremental": false,
@@ -501,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.ILoggingSystemService.html",
-          "hash": "/ADyBpKyGiWVHhYBf+J5Ow=="
+          "hash": "hEYkZlKZXBj8/UXUMVd/4Q=="
         }
       },
       "is_incremental": false,
@@ -513,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LogData.html",
-          "hash": "D1wu28ds9DXRSCdBnJ9ZdQ=="
+          "hash": "C8ZVVUJtpc7BNDid32rx9A=="
         }
       },
       "is_incremental": false,
@@ -525,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LogFile.html",
-          "hash": "AZNi701ZXNoJQOL9DW1L9w=="
+          "hash": "KhEnMKrqT/Bt2n/hVzwyFg=="
         }
       },
       "is_incremental": false,
@@ -537,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LogFileType.html",
-          "hash": "rGti2/iKLORrAG0hKw2YyA=="
+          "hash": "+H4iyCKwyAMMRYSPieoROw=="
         }
       },
       "is_incremental": false,
@@ -549,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LogLevel.html",
-          "hash": "SmppdiBHntS/A0YTYRgEkw=="
+          "hash": "AMcONo8CjJ6vZzZ+FO4swA=="
         }
       },
       "is_incremental": false,
@@ -561,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.Logger.html",
-          "hash": "/gbVm1x1dlU95BQe1BarYg=="
+          "hash": "ARN9ZlxAAWSelyhn9pjBtA=="
         }
       },
       "is_incremental": false,
@@ -573,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LoggerExtension.html",
-          "hash": "NlpyQLWO+jOSiQpG/ylsyg=="
+          "hash": "eoaILBTIswvll0sYZD1k/A=="
         }
       },
       "is_incremental": false,
@@ -585,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LoggingSystemServiceOptions.CreateLogFile.html",
-          "hash": "vLXUcyeOxV2cKbN5Vw/AMA=="
+          "hash": "z7u4OzSN/ny7JmaRM5Fcmg=="
         }
       },
       "is_incremental": false,
@@ -597,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LoggingSystemServiceOptions.html",
-          "hash": "ooFOHzCUrakM7zUw0y4XkA=="
+          "hash": "mOHXKOmdCmEISSV9pe4RJg=="
         }
       },
       "is_incremental": false,
@@ -609,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.LongMessageRecord.html",
-          "hash": "sh4+oy5EaWioH+XkFYZRtg=="
+          "hash": "TbBN3xNpPrSGbgBmnChgQw=="
         }
       },
       "is_incremental": false,
@@ -621,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.MultipleLogger.html",
-          "hash": "QSNgqlMyQC5QsxdKa42xMg=="
+          "hash": "HbOPpB+9u0CNgQtiqTJEWQ=="
         }
       },
       "is_incremental": false,
@@ -633,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.OutputStreamLogger.html",
-          "hash": "A8YgB7sDAcHM1rjcO+pEHA=="
+          "hash": "ROVDK0bt5tQIPzD432YNzA=="
         }
       },
       "is_incremental": false,
@@ -645,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Logging.html",
-          "hash": "SYbc8+zZHMK1a5hReFsM5A=="
+          "hash": "ZRrnOKMLVDOjc6n18DJShg=="
         }
       },
       "is_incremental": false,
@@ -657,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.PathString.html",
-          "hash": "pSGTFjrghORa8My7Z4ZrJQ=="
+          "hash": "Kva+zYp7ex81BMKP3JGMkg=="
         }
       },
       "is_incremental": false,
@@ -669,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.PathStringFormatter.html",
-          "hash": "GId+rLXpWrKWX48r65YrpQ=="
+          "hash": "3kE9Xw3OjxuyLurFWmZTuA=="
         }
       },
       "is_incremental": false,
@@ -681,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Paths.html",
-          "hash": "nmCmJAqJVhAgDYFrjSeaPg=="
+          "hash": "sQItI0o/JRt7eo2lxjxXQw=="
         }
       },
       "is_incremental": false,
@@ -693,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.html",
-          "hash": "5oOyJDRvLxc9TmsdDrNhGQ=="
+          "hash": "TGsjTjjmgjEIDNr3XOxHWA=="
         }
       },
       "is_incremental": false,
@@ -705,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineParser.html",
-          "hash": "Kt1fhMdSrXZZjh6RKH3iIA=="
+          "hash": "uTGitDr5XB7g+EVWUzWPag=="
         }
       },
       "is_incremental": false,
@@ -717,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.CreateConverterMappingTable.html",
-          "hash": "J25tbs1Cn4xrbmQ8+T0BRA=="
+          "hash": "eU/D+ZUMAIVhly3R4yfGbw=="
         }
       },
       "is_incremental": false,
@@ -729,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.CommandLineServiceOptions.html",
-          "hash": "r0wY1o988DVDu/ZDxxpFqw=="
+          "hash": "ggH6I0kO6SHDY6hVGd4jbQ=="
         }
       },
       "is_incremental": false,
@@ -741,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.FileNameList.html",
-          "hash": "GT5m+cF9y4ORxz6T36fzJg=="
+          "hash": "LhF+dmwWwHoX+ka0bhsssw=="
         }
       },
       "is_incremental": false,
@@ -753,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.IArgumentConverter-1.html",
-          "hash": "/2AQlTdCyswttlgb5QGIdg=="
+          "hash": "VtCcPgEg+PiAhRDgjth4HA=="
         }
       },
       "is_incremental": false,
@@ -765,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.html",
-          "hash": "P22wjpqESKMdd1hyLR3nXw=="
+          "hash": "UqT6MuqKMArIV1SnFJfu4A=="
         }
       },
       "is_incremental": false,
@@ -777,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.ICommandLineService.html",
-          "hash": "Bro+xF5elEI5bV76z4DDBw=="
+          "hash": "FxhTBUSfErgkOcQiomBlPg=="
         }
       },
       "is_incremental": false,
@@ -789,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.ManualAttribute.html",
-          "hash": "EURmLwIPVgwV+eKAga/eQg=="
+          "hash": "rwe0WpPCPD/6Ky+FH0BJ0g=="
         }
       },
       "is_incremental": false,
@@ -801,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Option.Value.html",
-          "hash": "DpqUpP9euyBc0+uWfAeLYQ=="
+          "hash": "EeYF9WEZ+ss/fTHSDSnl1w=="
         }
       },
       "is_incremental": false,
@@ -813,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Option.html",
-          "hash": "4nc9IOjdFocrXHMGyj3T3w=="
+          "hash": "JTUOTT4VI1JQoa1YLo8gtQ=="
         }
       },
       "is_incremental": false,
@@ -825,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.OptionAttribute.html",
-          "hash": "/KCOUPPabUYELJFnFcUNqg=="
+          "hash": "FGiVVyXDpQwQ7WOfWShKww=="
         }
       },
       "is_incremental": false,
@@ -837,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.Switch.html",
-          "hash": "3wHX4Dj9CivZW9X5hWYGGQ=="
+          "hash": "GxljXlz1wylI53ikRxwEGw=="
         }
       },
       "is_incremental": false,
@@ -849,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.SwitchAttribute.html",
-          "hash": "Qv+gb2g8hamv5ThNUOjixA=="
+          "hash": "/zFF0pBh/hj0wrFZPKaSHw=="
         }
       },
       "is_incremental": false,
@@ -861,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CommandLine.html",
-          "hash": "gJyD5ikxPfvQdAeQPRR4bQ=="
+          "hash": "8HiYBdAUKSMdzeow7pkZGA=="
         }
       },
       "is_incremental": false,
@@ -873,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.CustomSettings.html",
-          "hash": "WWDI7YSgR7vxZ0FLKTPkow=="
+          "hash": "DeUbw+856HRbBB4Z91nBEg=="
         }
       },
       "is_incremental": false,
@@ -885,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.DataStore.html",
-          "hash": "NyLQAsinMEDitlyA0kzniw=="
+          "hash": "w9uRroLMyCGNjmJrjkVJGQ=="
         }
       },
       "is_incremental": false,
@@ -897,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.DefaultSettings.html",
-          "hash": "BApXZiksfcG/R91EMbcw7w=="
+          "hash": "ec06x+D7Tevq9mG7KZBCmg=="
         }
       },
       "is_incremental": false,
@@ -909,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.EnvironmentSettings.html",
-          "hash": "boGbserwjan2eDrvH0erzA=="
+          "hash": "YNZa0yqCf2hjNCbo+PQtrw=="
         }
       },
       "is_incremental": false,
@@ -921,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.ISettingsSystemService.html",
-          "hash": "1nyDdp6magTa9X2RO8Axew=="
+          "hash": "15eb1g6L6dXtboebLA0wNw=="
         }
       },
       "is_incremental": false,
@@ -933,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.OptimizedSettings.html",
-          "hash": "kG3+FnL+3BkO8+zjyOPxKA=="
+          "hash": "IAtLtT8en3OYHFUgYB3edQ=="
         }
       },
       "is_incremental": false,
@@ -945,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.ConfirmVersionInfo.html",
-          "hash": "lExWIqKfPme0ryKFzdk57w=="
+          "hash": "qi89roh82nFmIGX+Ud06XA=="
         }
       },
       "is_incremental": false,
@@ -957,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.GetVersionInfo.html",
-          "hash": "juOZTM5XgRu/plInv6QHTg=="
+          "hash": "SGws6m3cukVXO5nbPoDSlw=="
         }
       },
       "is_incremental": false,
@@ -969,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.SettingsSystemServiceOptions.html",
-          "hash": "6r9gpG9c02xZxXYCBGnZuQ=="
+          "hash": "Ivz9Mb9H5TuSPV+kFMfT4Q=="
         }
       },
       "is_incremental": false,
@@ -981,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.Settings.html",
-          "hash": "5tC2wy3KOeY1svs6ceCTaQ=="
+          "hash": "qR0NKgPiqbrcisx9l1QstA=="
         }
       },
       "is_incremental": false,
@@ -993,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IO.html",
-          "hash": "2/T1mG/ps7+MXsWRjM3n3A=="
+          "hash": "3NqGj+3K38IZjsA+5WS8wA=="
         }
       },
       "is_incremental": false,
@@ -1005,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IPipeline.html",
-          "hash": "CoT6PnojVb73Yrnzs6rIrg=="
+          "hash": "4cwBFRxNOCErB7+XJWvHKQ=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IProcess-2.html",
-          "hash": "YROKv2bgcxls58C8EMtVzw=="
+          "hash": "rRV/bMaXFztvfTMAlYf5lQ=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IProcess.html",
-          "hash": "lx7/YAWRT+P6EPRCYKi9Xg=="
+          "hash": "MAkTqDsYEew8/CORnBYb8g=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.IService.html",
-          "hash": "qPT7+FlwUjFbGNvyv07a2g=="
+          "hash": "ACaQGixPerzhzw9AuPWVBQ=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.NativeWrapper.INativeCaller.html",
-          "hash": "Ilcv4S2xK8UcFDvdD6TNpA=="
+          "hash": "BoDpeXMyN6tAY1WG4ftv4w=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.NativeWrapper.WinAPI.html",
-          "hash": "yoMgn6C4/IyYt4mALV2fJw=="
+          "hash": "uwuOcqIuZmBPNRo/2+XIzg=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.NativeWrapper.Windows.Kernel32.html",
-          "hash": "6gSG1xystHsLXxOi0DHb3Q=="
+          "hash": "JhUBYV3S6ydNYb/Rinbp9A=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.NativeWrapper.Windows.html",
-          "hash": "js8EpmGW42/x5T+ymaicNg=="
+          "hash": "7lTilMGMbBHdUyaLwhwiGQ=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.NativeWrapper.html",
-          "hash": "Xej2kuWyJnqny/Gu1IZjmg=="
+          "hash": "SOY6zIr+3BlWwcRg9wqDsQ=="
         }
       },
       "is_incremental": false,
@@ -1113,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.CryptionRandom.html",
-          "hash": "93O6/GaIDuxNBFU+HLtHsw=="
+          "hash": "RUcOWVmbod7xg9bT657VGg=="
         }
       },
       "is_incremental": false,
@@ -1125,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.IRandom.html",
-          "hash": "J/TQMW0MhBMuZPsCRD5/Hw=="
+          "hash": "J4IdfyuSv2/IxHdQN+mGYw=="
         }
       },
       "is_incremental": false,
@@ -1137,7 +1221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.LinearCongruentialGenerator.html",
-          "hash": "SRbclg2u0IxL2ftSR4rkEQ=="
+          "hash": "xPXGqbexuZWXlmk3zLdyEQ=="
         }
       },
       "is_incremental": false,
@@ -1149,7 +1233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.RandomExtension.html",
-          "hash": "sKt/2m3KxqxC/SFFUkDHOg=="
+          "hash": "92mxGlbvsmersBALuPocwg=="
         }
       },
       "is_incremental": false,
@@ -1161,7 +1245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.SerializableRandom.html",
-          "hash": "rgA/CNX/EuGxvv7eakUtqA=="
+          "hash": "H9J/YY15TNYU9uSTcwIJ3g=="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.SystemRandom.html",
-          "hash": "HfPB/TbtunWkVkFC0fTHBA=="
+          "hash": "6EaXS38jP6GlGhi4E1U8Uw=="
         }
       },
       "is_incremental": false,
@@ -1185,7 +1269,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.Xorshift.html",
-          "hash": "rrWNCD1XIK9otFvvHotwxQ=="
+          "hash": "7qHfpnSFTvxj2bOuP0sGJg=="
         }
       },
       "is_incremental": false,
@@ -1197,7 +1281,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.Xorshift2.html",
-          "hash": "dp7vTBaASQPHP0XcyCCLOA=="
+          "hash": "U01DdEqXq9NQFwAqnc9ARQ=="
         }
       },
       "is_incremental": false,
@@ -1209,7 +1293,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Numerics.html",
-          "hash": "o6bxz/d4hlCESSMyo/ar2Q=="
+          "hash": "NdcX7yMvt/s4hkbDwzKWLw=="
         }
       },
       "is_incremental": false,
@@ -1221,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.TerminationEventArgs.html",
-          "hash": "7KzeTzK4HCfhbN/c6Red3A=="
+          "hash": "Wg880IRZnoTZ9dvDuwOoKw=="
         }
       },
       "is_incremental": false,
@@ -1233,7 +1317,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.TerminationException.html",
-          "hash": "r20az89cLZijvJXTvGadSA=="
+          "hash": "r/A7hvCPGADynNOJCrmqKA=="
         }
       },
       "is_incremental": false,
@@ -1245,7 +1329,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.TerminationReason.html",
-          "hash": "RI9681MaXZUtDruaKWPdqg=="
+          "hash": "S+JzLPJY9hAVpzSvWlEmMQ=="
         }
       },
       "is_incremental": false,
@@ -1257,7 +1341,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Text.SimpleEncoding.html",
-          "hash": "959TbrxvynZ/9cdn5mYXww=="
+          "hash": "uKlcsaUd7cfIhY4AXiY3jw=="
         }
       },
       "is_incremental": false,
@@ -1269,7 +1353,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Text.SimpleString.html",
-          "hash": "bHvZgdTQP5S2ULDo5qfpBA=="
+          "hash": "5K4VFt9lZnfrsSH8xt9hHg=="
         }
       },
       "is_incremental": false,
@@ -1281,7 +1365,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Text.html",
-          "hash": "WI6ivYEbjV4JOYeQ0IscnA=="
+          "hash": "ashKuGzakuDv/ENV3GQpxg=="
         }
       },
       "is_incremental": false,
@@ -1293,7 +1377,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.UnhandledErrorEventArgs.html",
-          "hash": "wJ8tViFnlpFpNQx2blaYgw=="
+          "hash": "Bb9PCGu1H2XMCHdq7kojig=="
         }
       },
       "is_incremental": false,
@@ -1305,7 +1389,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.ArrayExtensions.html",
-          "hash": "xFMI/jDE6mwm3P9AODSI3g=="
+          "hash": "8nH/xdsF5/uO99aZmuoSBw=="
         }
       },
       "is_incremental": false,
@@ -1317,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.ConsoleUtil.html",
-          "hash": "iTXBihaAFRMWgvaPChaBZw=="
+          "hash": "5ihBVV7MbzuM7FZZUGU1IQ=="
         }
       },
       "is_incremental": false,
@@ -1329,7 +1413,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.DisposableBase.html",
-          "hash": "Ce41NKMHAjZxwJr2BU+1Mg=="
+          "hash": "yrbgHgaJj6AlipqHQuSVFw=="
         }
       },
       "is_incremental": false,
@@ -1341,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.IAwaitable-1.html",
-          "hash": "1Sb+85pm2J4nz6TmczecTA=="
+          "hash": "HmMCCiq/hqnKIxrYCkz4tg=="
         }
       },
       "is_incremental": false,
@@ -1353,7 +1437,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.IAwaiter-1.html",
-          "hash": "T8T20m3vcY59aiZacvyPnw=="
+          "hash": "PiDBg02qVXRkySwUDC6xpg=="
         }
       },
       "is_incremental": false,
@@ -1365,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.IUtilityService.html",
-          "hash": "Ek8MDHLFY9iNZSFTW3NgaA=="
+          "hash": "4FQAubMCKSs11uqnXHWZDw=="
         }
       },
       "is_incremental": false,
@@ -1377,7 +1461,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.SecureStringExtensions.html",
-          "hash": "6ljeXQZV6z29owrjztMujw=="
+          "hash": "uXHMAzfPlQ1nAZyghnuYDw=="
         }
       },
       "is_incremental": false,
@@ -1389,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.SerializationInfoExtensions.html",
-          "hash": "N4HpJLSHit+MOBsncViEbA=="
+          "hash": "BiVRJO4cIPBoJ47pflCj6Q=="
         }
       },
       "is_incremental": false,
@@ -1401,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.StringExtensions.html",
-          "hash": "2dH/d74VHjKiuKrfRzbJ/g=="
+          "hash": "FJ6ZCnAF9K/4kxHcGCgX9Q=="
         }
       },
       "is_incremental": false,
@@ -1413,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.StringUtil.html",
-          "hash": "pkB0EyTA8e9k0gKG2HqyeA=="
+          "hash": "th71SwDiyBHWoOLphcWmwQ=="
         }
       },
       "is_incremental": false,
@@ -1425,7 +1509,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.UtilityConfigurationExtensions.html",
-          "hash": "GyHLiCWyS7IzDH+NSwLbRw=="
+          "hash": "bIukgSHjPOPcEqIq0PVB8Q=="
         }
       },
       "is_incremental": false,
@@ -1437,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.UtilityContextExtensions.html",
-          "hash": "Fo+tS7A7kp2Iv6HphMNZSg=="
+          "hash": "auJ3B/6XndSiAQRBvlO87g=="
         }
       },
       "is_incremental": false,
@@ -1449,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.Utils.html",
-          "hash": "9y+iCjvV3kTWipvzb2xJlA=="
+          "hash": "b4zayBInJPTO/JnTUfxOng=="
         }
       },
       "is_incremental": false,
@@ -1461,7 +1545,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.VersionInfo.html",
-          "hash": "tNzDCdgEwjMuCTPscbHM9Q=="
+          "hash": "ISvdPD+Or0Bb9eAbH52bQA=="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1557,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ExapisSOP.html",
-          "hash": "j406AePuFkDOaiK3yLBtDg=="
+          "hash": "+inbOkD/VaEt2U7iBHxjGQ=="
         }
       },
       "is_incremental": false,
@@ -1485,7 +1569,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "gFxeiAPWRM0daIy9UlXp6w=="
+          "hash": "ifqvwBgzwodcMo6tatQkLA=="
         }
       },
       "is_incremental": false,
@@ -1561,7 +1645,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 123,
+          "total_file_count": 130,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

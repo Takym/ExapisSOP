@@ -282,6 +282,244 @@ references:
   isSpec: "True"
   fullName: ExapisSOP.Binary.DataValue.Write
   nameWithType: DataValue.Write
+- uid: ExapisSOP.ConnectionModel
+  name: ExapisSOP.ConnectionModel
+  href: api/ExapisSOP.ConnectionModel.html
+  commentId: N:ExapisSOP.ConnectionModel
+  fullName: ExapisSOP.ConnectionModel
+  nameWithType: ExapisSOP.ConnectionModel
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions
+  name: ConnectableExtensions
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html
+  commentId: T:ExapisSOP.ConnectionModel.ConnectableExtensions
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions
+  nameWithType: ConnectableExtensions
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions.Run(ExapisSOP.ConnectionModel.IConnectable,System.Object)
+  name: Run(IConnectable, Object)
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html#ExapisSOP_ConnectionModel_ConnectableExtensions_Run_ExapisSOP_ConnectionModel_IConnectable_System_Object_
+  commentId: M:ExapisSOP.ConnectionModel.ConnectableExtensions.Run(ExapisSOP.ConnectionModel.IConnectable,System.Object)
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions.Run(ExapisSOP.ConnectionModel.IConnectable, System.Object)
+  nameWithType: ConnectableExtensions.Run(IConnectable, Object)
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions.Run*
+  name: Run
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html#ExapisSOP_ConnectionModel_ConnectableExtensions_Run_
+  commentId: Overload:ExapisSOP.ConnectionModel.ConnectableExtensions.Run
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions.Run
+  nameWithType: ConnectableExtensions.Run
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions.Run``2(ExapisSOP.ConnectionModel.IConnectable{``0,``1},``0)
+  name: Run<TIn, TOut>(IConnectable<TIn, TOut>, TIn)
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html#ExapisSOP_ConnectionModel_ConnectableExtensions_Run__2_ExapisSOP_ConnectionModel_IConnectable___0___1____0_
+  commentId: M:ExapisSOP.ConnectionModel.ConnectableExtensions.Run``2(ExapisSOP.ConnectionModel.IConnectable{``0,``1},``0)
+  name.vb: Run(Of TIn, TOut)(IConnectable(Of TIn, TOut), TIn)
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions.Run<TIn, TOut>(ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>, TIn)
+  fullName.vb: ExapisSOP.ConnectionModel.ConnectableExtensions.Run(Of TIn, TOut)(ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut), TIn)
+  nameWithType: ConnectableExtensions.Run<TIn, TOut>(IConnectable<TIn, TOut>, TIn)
+  nameWithType.vb: ConnectableExtensions.Run(Of TIn, TOut)(IConnectable(Of TIn, TOut), TIn)
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync(ExapisSOP.ConnectionModel.IConnectable,System.Object)
+  name: RunAsync(IConnectable, Object)
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html#ExapisSOP_ConnectionModel_ConnectableExtensions_RunAsync_ExapisSOP_ConnectionModel_IConnectable_System_Object_
+  commentId: M:ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync(ExapisSOP.ConnectionModel.IConnectable,System.Object)
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync(ExapisSOP.ConnectionModel.IConnectable, System.Object)
+  nameWithType: ConnectableExtensions.RunAsync(IConnectable, Object)
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync*
+  name: RunAsync
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html#ExapisSOP_ConnectionModel_ConnectableExtensions_RunAsync_
+  commentId: Overload:ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync
+  nameWithType: ConnectableExtensions.RunAsync
+- uid: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync``2(ExapisSOP.ConnectionModel.IConnectable{``0,``1},``0)
+  name: RunAsync<TIn, TOut>(IConnectable<TIn, TOut>, TIn)
+  href: api/ExapisSOP.ConnectionModel.ConnectableExtensions.html#ExapisSOP_ConnectionModel_ConnectableExtensions_RunAsync__2_ExapisSOP_ConnectionModel_IConnectable___0___1____0_
+  commentId: M:ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync``2(ExapisSOP.ConnectionModel.IConnectable{``0,``1},``0)
+  name.vb: RunAsync(Of TIn, TOut)(IConnectable(Of TIn, TOut), TIn)
+  fullName: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync<TIn, TOut>(ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>, TIn)
+  fullName.vb: ExapisSOP.ConnectionModel.ConnectableExtensions.RunAsync(Of TIn, TOut)(ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut), TIn)
+  nameWithType: ConnectableExtensions.RunAsync<TIn, TOut>(IConnectable<TIn, TOut>, TIn)
+  nameWithType.vb: ConnectableExtensions.RunAsync(Of TIn, TOut)(IConnectable(Of TIn, TOut), TIn)
+- uid: ExapisSOP.ConnectionModel.ConnectorExtensions
+  name: ConnectorExtensions
+  href: api/ExapisSOP.ConnectionModel.ConnectorExtensions.html
+  commentId: T:ExapisSOP.ConnectionModel.ConnectorExtensions
+  fullName: ExapisSOP.ConnectionModel.ConnectorExtensions
+  nameWithType: ConnectorExtensions
+- uid: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync(ExapisSOP.ConnectionModel.IConnector,System.Object)
+  name: RunAsync(IConnector, Object)
+  href: api/ExapisSOP.ConnectionModel.ConnectorExtensions.html#ExapisSOP_ConnectionModel_ConnectorExtensions_RunAsync_ExapisSOP_ConnectionModel_IConnector_System_Object_
+  commentId: M:ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync(ExapisSOP.ConnectionModel.IConnector,System.Object)
+  fullName: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync(ExapisSOP.ConnectionModel.IConnector, System.Object)
+  nameWithType: ConnectorExtensions.RunAsync(IConnector, Object)
+- uid: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync*
+  name: RunAsync
+  href: api/ExapisSOP.ConnectionModel.ConnectorExtensions.html#ExapisSOP_ConnectionModel_ConnectorExtensions_RunAsync_
+  commentId: Overload:ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync
+  nameWithType: ConnectorExtensions.RunAsync
+- uid: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync``2(ExapisSOP.ConnectionModel.IConnector{``0,``1},``0)
+  name: RunAsync<TIn, TOut>(IConnector<TIn, TOut>, TIn)
+  href: api/ExapisSOP.ConnectionModel.ConnectorExtensions.html#ExapisSOP_ConnectionModel_ConnectorExtensions_RunAsync__2_ExapisSOP_ConnectionModel_IConnector___0___1____0_
+  commentId: M:ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync``2(ExapisSOP.ConnectionModel.IConnector{``0,``1},``0)
+  name.vb: RunAsync(Of TIn, TOut)(IConnector(Of TIn, TOut), TIn)
+  fullName: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync<TIn, TOut>(ExapisSOP.ConnectionModel.IConnector<TIn, TOut>, TIn)
+  fullName.vb: ExapisSOP.ConnectionModel.ConnectorExtensions.RunAsync(Of TIn, TOut)(ExapisSOP.ConnectionModel.IConnector(Of TIn, TOut), TIn)
+  nameWithType: ConnectorExtensions.RunAsync<TIn, TOut>(IConnector<TIn, TOut>, TIn)
+  nameWithType.vb: ConnectorExtensions.RunAsync(Of TIn, TOut)(IConnector(Of TIn, TOut), TIn)
+- uid: ExapisSOP.ConnectionModel.IConnectable
+  name: IConnectable
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html
+  commentId: T:ExapisSOP.ConnectionModel.IConnectable
+  fullName: ExapisSOP.ConnectionModel.IConnectable
+  nameWithType: IConnectable
+- uid: ExapisSOP.ConnectionModel.IConnectable.ConnectWith(ExapisSOP.ConnectionModel.IConnectable)
+  name: ConnectWith(IConnectable)
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html#ExapisSOP_ConnectionModel_IConnectable_ConnectWith_ExapisSOP_ConnectionModel_IConnectable_
+  commentId: M:ExapisSOP.ConnectionModel.IConnectable.ConnectWith(ExapisSOP.ConnectionModel.IConnectable)
+  fullName: ExapisSOP.ConnectionModel.IConnectable.ConnectWith(ExapisSOP.ConnectionModel.IConnectable)
+  nameWithType: IConnectable.ConnectWith(IConnectable)
+- uid: ExapisSOP.ConnectionModel.IConnectable.ConnectWith*
+  name: ConnectWith
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html#ExapisSOP_ConnectionModel_IConnectable_ConnectWith_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnectable.ConnectWith
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.IConnectable.ConnectWith
+  nameWithType: IConnectable.ConnectWith
+- uid: ExapisSOP.ConnectionModel.IConnectable.Disconnect(ExapisSOP.ConnectionModel.IConnectable)
+  name: Disconnect(IConnectable)
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html#ExapisSOP_ConnectionModel_IConnectable_Disconnect_ExapisSOP_ConnectionModel_IConnectable_
+  commentId: M:ExapisSOP.ConnectionModel.IConnectable.Disconnect(ExapisSOP.ConnectionModel.IConnectable)
+  fullName: ExapisSOP.ConnectionModel.IConnectable.Disconnect(ExapisSOP.ConnectionModel.IConnectable)
+  nameWithType: IConnectable.Disconnect(IConnectable)
+- uid: ExapisSOP.ConnectionModel.IConnectable.Disconnect*
+  name: Disconnect
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html#ExapisSOP_ConnectionModel_IConnectable_Disconnect_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnectable.Disconnect
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.IConnectable.Disconnect
+  nameWithType: IConnectable.Disconnect
+- uid: ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  name: GetConnector()
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html#ExapisSOP_ConnectionModel_IConnectable_GetConnector
+  commentId: M:ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  fullName: ExapisSOP.ConnectionModel.IConnectable.GetConnector()
+  nameWithType: IConnectable.GetConnector()
+- uid: ExapisSOP.ConnectionModel.IConnectable.GetConnector*
+  name: GetConnector
+  href: api/ExapisSOP.ConnectionModel.IConnectable.html#ExapisSOP_ConnectionModel_IConnectable_GetConnector_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  nameWithType: IConnectable.GetConnector
+- uid: ExapisSOP.ConnectionModel.IConnectable`2
+  name: IConnectable<TIn, TOut>
+  href: api/ExapisSOP.ConnectionModel.IConnectable-2.html
+  commentId: T:ExapisSOP.ConnectionModel.IConnectable`2
+  name.vb: IConnectable(Of TIn, TOut)
+  fullName: ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>
+  fullName.vb: ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut)
+  nameWithType: IConnectable<TIn, TOut>
+  nameWithType.vb: IConnectable(Of TIn, TOut)
+- uid: ExapisSOP.ConnectionModel.IConnectable`2.ExapisSOP#ConnectionModel#IConnectable#GetConnector
+  name: IConnectable.GetConnector()
+  href: api/ExapisSOP.ConnectionModel.IConnectable-2.html#ExapisSOP_ConnectionModel_IConnectable_2_ExapisSOP_ConnectionModel_IConnectable_GetConnector
+  commentId: M:ExapisSOP.ConnectionModel.IConnectable`2.ExapisSOP#ConnectionModel#IConnectable#GetConnector
+  name.vb: ExapisSOP.ConnectionModel.IConnectable.GetConnector()
+  fullName: ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>.ExapisSOP.ConnectionModel.IConnectable.GetConnector()
+  fullName.vb: ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnectable.GetConnector()
+  nameWithType: IConnectable<TIn, TOut>.IConnectable.GetConnector()
+  nameWithType.vb: IConnectable(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnectable.GetConnector()
+- uid: ExapisSOP.ConnectionModel.IConnectable`2.ExapisSOP#ConnectionModel#IConnectable#GetConnector*
+  name: IConnectable.GetConnector
+  href: api/ExapisSOP.ConnectionModel.IConnectable-2.html#ExapisSOP_ConnectionModel_IConnectable_2_ExapisSOP_ConnectionModel_IConnectable_GetConnector_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnectable`2.ExapisSOP#ConnectionModel#IConnectable#GetConnector
+  isSpec: "True"
+  name.vb: ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  fullName: ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>.ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  fullName.vb: ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnectable.GetConnector
+  nameWithType: IConnectable<TIn, TOut>.IConnectable.GetConnector
+  nameWithType.vb: IConnectable(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnectable.GetConnector
+- uid: ExapisSOP.ConnectionModel.IConnectable`2.GetConnector
+  name: GetConnector()
+  href: api/ExapisSOP.ConnectionModel.IConnectable-2.html#ExapisSOP_ConnectionModel_IConnectable_2_GetConnector
+  commentId: M:ExapisSOP.ConnectionModel.IConnectable`2.GetConnector
+  fullName: ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>.GetConnector()
+  fullName.vb: ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut).GetConnector()
+  nameWithType: IConnectable<TIn, TOut>.GetConnector()
+  nameWithType.vb: IConnectable(Of TIn, TOut).GetConnector()
+- uid: ExapisSOP.ConnectionModel.IConnectable`2.GetConnector*
+  name: GetConnector
+  href: api/ExapisSOP.ConnectionModel.IConnectable-2.html#ExapisSOP_ConnectionModel_IConnectable_2_GetConnector_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnectable`2.GetConnector
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.IConnectable<TIn, TOut>.GetConnector
+  fullName.vb: ExapisSOP.ConnectionModel.IConnectable(Of TIn, TOut).GetConnector
+  nameWithType: IConnectable<TIn, TOut>.GetConnector
+  nameWithType.vb: IConnectable(Of TIn, TOut).GetConnector
+- uid: ExapisSOP.ConnectionModel.IConnector
+  name: IConnector
+  href: api/ExapisSOP.ConnectionModel.IConnector.html
+  commentId: T:ExapisSOP.ConnectionModel.IConnector
+  fullName: ExapisSOP.ConnectionModel.IConnector
+  nameWithType: IConnector
+- uid: ExapisSOP.ConnectionModel.IConnector.Run(System.Object)
+  name: Run(Object)
+  href: api/ExapisSOP.ConnectionModel.IConnector.html#ExapisSOP_ConnectionModel_IConnector_Run_System_Object_
+  commentId: M:ExapisSOP.ConnectionModel.IConnector.Run(System.Object)
+  fullName: ExapisSOP.ConnectionModel.IConnector.Run(System.Object)
+  nameWithType: IConnector.Run(Object)
+- uid: ExapisSOP.ConnectionModel.IConnector.Run*
+  name: Run
+  href: api/ExapisSOP.ConnectionModel.IConnector.html#ExapisSOP_ConnectionModel_IConnector_Run_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnector.Run
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.IConnector.Run
+  nameWithType: IConnector.Run
+- uid: ExapisSOP.ConnectionModel.IConnector`2
+  name: IConnector<TIn, TOut>
+  href: api/ExapisSOP.ConnectionModel.IConnector-2.html
+  commentId: T:ExapisSOP.ConnectionModel.IConnector`2
+  name.vb: IConnector(Of TIn, TOut)
+  fullName: ExapisSOP.ConnectionModel.IConnector<TIn, TOut>
+  fullName.vb: ExapisSOP.ConnectionModel.IConnector(Of TIn, TOut)
+  nameWithType: IConnector<TIn, TOut>
+  nameWithType.vb: IConnector(Of TIn, TOut)
+- uid: ExapisSOP.ConnectionModel.IConnector`2.ExapisSOP#ConnectionModel#IConnector#Run(System.Object)
+  name: IConnector.Run(Object)
+  href: api/ExapisSOP.ConnectionModel.IConnector-2.html#ExapisSOP_ConnectionModel_IConnector_2_ExapisSOP_ConnectionModel_IConnector_Run_System_Object_
+  commentId: M:ExapisSOP.ConnectionModel.IConnector`2.ExapisSOP#ConnectionModel#IConnector#Run(System.Object)
+  name.vb: ExapisSOP.ConnectionModel.IConnector.Run(Object)
+  fullName: ExapisSOP.ConnectionModel.IConnector<TIn, TOut>.ExapisSOP.ConnectionModel.IConnector.Run(System.Object)
+  fullName.vb: ExapisSOP.ConnectionModel.IConnector(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnector.Run(System.Object)
+  nameWithType: IConnector<TIn, TOut>.IConnector.Run(Object)
+  nameWithType.vb: IConnector(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnector.Run(Object)
+- uid: ExapisSOP.ConnectionModel.IConnector`2.ExapisSOP#ConnectionModel#IConnector#Run*
+  name: IConnector.Run
+  href: api/ExapisSOP.ConnectionModel.IConnector-2.html#ExapisSOP_ConnectionModel_IConnector_2_ExapisSOP_ConnectionModel_IConnector_Run_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnector`2.ExapisSOP#ConnectionModel#IConnector#Run
+  isSpec: "True"
+  name.vb: ExapisSOP.ConnectionModel.IConnector.Run
+  fullName: ExapisSOP.ConnectionModel.IConnector<TIn, TOut>.ExapisSOP.ConnectionModel.IConnector.Run
+  fullName.vb: ExapisSOP.ConnectionModel.IConnector(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnector.Run
+  nameWithType: IConnector<TIn, TOut>.IConnector.Run
+  nameWithType.vb: IConnector(Of TIn, TOut).ExapisSOP.ConnectionModel.IConnector.Run
+- uid: ExapisSOP.ConnectionModel.IConnector`2.Run(`0)
+  name: Run(TIn)
+  href: api/ExapisSOP.ConnectionModel.IConnector-2.html#ExapisSOP_ConnectionModel_IConnector_2_Run__0_
+  commentId: M:ExapisSOP.ConnectionModel.IConnector`2.Run(`0)
+  fullName: ExapisSOP.ConnectionModel.IConnector<TIn, TOut>.Run(TIn)
+  fullName.vb: ExapisSOP.ConnectionModel.IConnector(Of TIn, TOut).Run(TIn)
+  nameWithType: IConnector<TIn, TOut>.Run(TIn)
+  nameWithType.vb: IConnector(Of TIn, TOut).Run(TIn)
+- uid: ExapisSOP.ConnectionModel.IConnector`2.Run*
+  name: Run
+  href: api/ExapisSOP.ConnectionModel.IConnector-2.html#ExapisSOP_ConnectionModel_IConnector_2_Run_
+  commentId: Overload:ExapisSOP.ConnectionModel.IConnector`2.Run
+  isSpec: "True"
+  fullName: ExapisSOP.ConnectionModel.IConnector<TIn, TOut>.Run
+  fullName.vb: ExapisSOP.ConnectionModel.IConnector(Of TIn, TOut).Run
+  nameWithType: IConnector<TIn, TOut>.Run
+  nameWithType.vb: IConnector(Of TIn, TOut).Run
 - uid: ExapisSOP.ContextEventArgs
   name: ContextEventArgs
   href: api/ExapisSOP.ContextEventArgs.html

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OutputStreamLogger クラス
+    <title>IConnector&lt;TIn, TOut&gt; インターフェース
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="OutputStreamLogger クラス
+    <meta name="title" content="IConnector&lt;TIn, TOut&gt; インターフェース
    ">
     <meta name="generator" content="docfx 2.56.3.0">
     
@@ -158,8 +158,8 @@
                           <li class="">
                             <a href="ExapisSOP.ConnectionModel.IConnector.html" title="IConnector" class="">IConnector</a>
                           </li>
-                          <li class="">
-                            <a href="ExapisSOP.ConnectionModel.IConnector-2.html" title="IConnector&lt;TIn, TOut&gt;" class="">IConnector&lt;TIn, TOut&gt;</a>
+                          <li class="active">
+                            <a href="ExapisSOP.ConnectionModel.IConnector-2.html" title="IConnector&lt;TIn, TOut&gt;" class="active">IConnector&lt;TIn, TOut&gt;</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -323,8 +323,8 @@
                           <li class="">
                             <a href="ExapisSOP.IO.Logging.MultipleLogger.html" title="MultipleLogger" class="">MultipleLogger</a>
                           </li>
-                          <li class="active">
-                            <a href="ExapisSOP.IO.Logging.OutputStreamLogger.html" title="OutputStreamLogger" class="active">OutputStreamLogger</a>
+                          <li class="">
+                            <a href="ExapisSOP.IO.Logging.OutputStreamLogger.html" title="OutputStreamLogger" class="">OutputStreamLogger</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -520,219 +520,47 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger">
+            <article class="content wrap" id="_content" data-uid="ExapisSOP.ConnectionModel.IConnector`2">
   
   
-  <h1 id="ExapisSOP_IO_Logging_OutputStreamLogger" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger" class="text-break">OutputStreamLogger クラス
+  <h1 id="ExapisSOP_ConnectionModel_IConnector_2" data-uid="ExapisSOP.ConnectionModel.IConnector`2" class="text-break">IConnector&lt;TIn, TOut&gt; インターフェース
   </h1>
-  <div class="markdown level0 summary"><p>出力ストリームとログファイルの両方にログ出力を行います。
-このクラスではストリームの解放は行いません。</p>
+  <div class="markdown level0 summary"><p>接続可能なオブジェクトの戻り値を返す接続子を提供します。</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>&#32153;&#25215;</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="ExapisSOP.IO.Logging.Logger.html">Logger</a></div>
-    <div class="level2"><span class="xref">OutputStreamLogger</span></div>
-      <div class="level3"><a class="xref" href="ExapisSOP.IO.Logging.ConsoleLogger.html">ConsoleLogger</a></div>
-  </div>
-  <div classs="implements">
-    <h5>&#23455;&#35013;</h5>
-    <div><a class="xref" href="ExapisSOP.IO.Logging.ILogger.html">ILogger</a></div>
-  </div>
   <div class="inheritedMembers">
     <h5>&#32153;&#25215;&#12373;&#12428;&#12383;&#12513;&#12531;&#12496;&#12540;</h5>
     <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Name">Logger.Name</a>
+      <a class="xref" href="ExapisSOP.ConnectionModel.IConnector.html#ExapisSOP_ConnectionModel_IConnector_Run_System_Object_">IConnector.Run(Object)</a>
     </div>
     <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_LogFile">Logger.LogFile</a>
-    </div>
-    <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_WriteLog_ExapisSOP_IO_Logging_LogLevel_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.WriteLog(LogLevel, String, ILoggable)</a>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">System.IDisposable.Dispose()</span>
     </div>
   </div>
-  <h6><strong>&#21517;&#21069;&#31354;&#38291;</strong>: <a class="xref" href="ExapisSOP.IO.Logging.html">ExapisSOP.IO.Logging</a></h6>
+  <h6><strong>&#21517;&#21069;&#31354;&#38291;</strong>: <a class="xref" href="ExapisSOP.ConnectionModel.html">ExapisSOP.ConnectionModel</a></h6>
   <h6><strong>&#12450;&#12475;&#12531;&#12502;&#12522;</strong>: ExapisSOP.dll</h6>
-  <h5 id="ExapisSOP_IO_Logging_OutputStreamLogger_syntax">&#27083;&#25991;</h5>
+  <h5 id="ExapisSOP_ConnectionModel_IConnector_2_syntax">&#27083;&#25991;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OutputStreamLogger : Logger, ILogger</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IConnector&lt;in TIn, out TOut&gt; : IConnector, IDisposable</code></pre>
   </div>
-  <h3 id="constructors">&#12467;&#12531;&#12473;&#12488;&#12521;&#12463;&#12479; &#19968;&#35239;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger__ctor_System_IO_Stream_System_String_ExapisSOP_IO_Logging_ILogFile_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.%23ctor(System.IO.Stream%2CSystem.String%2CExapisSOP.IO.Logging.ILogFile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L31">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger__ctor_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.#ctor*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger__ctor_System_IO_Stream_System_String_ExapisSOP_IO_Logging_ILogFile_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.#ctor(System.IO.Stream,System.String,ExapisSOP.IO.Logging.ILogFile)">OutputStreamLogger(Stream, String, ILogFile)</h4>
-  <div class="markdown level1 summary"><p>型'<a class="xref" href="ExapisSOP.IO.Logging.OutputStreamLogger.html">OutputStreamLogger</a>'の新しいインスタンスを生成します。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutputStreamLogger(Stream stream, string name, ILogFile logfile)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
+  <h5 class="typeParameters">&#22411;&#24341;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>&#22411;</th>
         <th>&#21517;&#21069;</th>
         <th>&#35500;&#26126;</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.IO.Stream</span></td>
-        <td><span class="parametername">stream</span></td>
-        <td><p>出力先のストリームです。</p>
+        <td><span class="parametername">TIn</span></td>
+        <td><p>引数の型です。</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>ロガーの名前です。一意である必要はありません。</p>
+        <td><span class="parametername">TOut</span></td>
+        <td><p>戻り値の型です。</p>
 </td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILogFile.html">ILogFile</a></td>
-        <td><span class="parametername">logfile</span></td>
-        <td><p>出力先のログファイルです。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">&#20363;&#22806;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#26465;&#20214;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentNullException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger__ctor_System_IO_TextWriter_System_String_ExapisSOP_IO_Logging_ILogFile_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.%23ctor(System.IO.TextWriter%2CSystem.String%2CExapisSOP.IO.Logging.ILogFile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L46">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger__ctor_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.#ctor*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger__ctor_System_IO_TextWriter_System_String_ExapisSOP_IO_Logging_ILogFile_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.#ctor(System.IO.TextWriter,System.String,ExapisSOP.IO.Logging.ILogFile)">OutputStreamLogger(TextWriter, String, ILogFile)</h4>
-  <div class="markdown level1 summary"><p>型'<a class="xref" href="ExapisSOP.IO.Logging.OutputStreamLogger.html">OutputStreamLogger</a>'の新しいインスタンスを生成します。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OutputStreamLogger(TextWriter writer, string name, ILogFile logfile)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#35500;&#26126;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IO.TextWriter</span></td>
-        <td><span class="parametername">writer</span></td>
-        <td><p>出力先のライターです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>ロガーの名前です。一意である必要はありません。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILogFile.html">ILogFile</a></td>
-        <td><span class="parametername">logfile</span></td>
-        <td><p>出力先のログファイルです。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">&#20363;&#22806;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#26465;&#20214;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentNullException</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">&#12503;&#12525;&#12497;&#12486;&#12451; &#19968;&#35239;
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Writer.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Writer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L22">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Writer_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Writer*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Writer" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Writer">Writer</h4>
-  <div class="markdown level1 summary"><p>コンストラクタに渡されたストリームから作成したライターを取得します。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected TextWriter Writer { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">&#12503;&#12525;&#12497;&#12486;&#12451;&#20516;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#35500;&#26126;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IO.TextWriter</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -740,19 +568,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Debug_System_String_ExapisSOP_IO_Logging_ILoggable_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Debug(System.String%2CExapisSOP.IO.Logging.ILoggable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
+    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_ConnectionModel_IConnector_2_Run__0_.md&amp;value=---%0Auid%3A%20ExapisSOP.ConnectionModel.IConnector%602.Run(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L70">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
+    <a href="https://github.com/Takym/ExapisSOP/blob/master/ConnectionModel/IConnector.cs/#L36">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
   </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Debug_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Debug*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Debug_System_String_ExapisSOP_IO_Logging_ILoggable_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Debug(System.String,ExapisSOP.IO.Logging.ILoggable)">Debug(String, ILoggable)</h4>
-  <div class="markdown level1 summary"><p>指定されたメッセージを<a class="xref" href="ExapisSOP.IO.Logging.LogLevel.html#ExapisSOP_IO_Logging_LogLevel_Debug">Debug</a>レベルでログファイルとコンストラクタに渡されたストリームに書き込みます。</p>
+  <a id="ExapisSOP_ConnectionModel_IConnector_2_Run_" data-uid="ExapisSOP.ConnectionModel.IConnector`2.Run*"></a>
+  <h4 id="ExapisSOP_ConnectionModel_IConnector_2_Run__0_" data-uid="ExapisSOP.ConnectionModel.IConnector`2.Run(`0)">Run(TIn)</h4>
+  <div class="markdown level1 summary"><p>処理を実行します。</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#23459;&#35328;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Debug(string message, ILoggable additionalData = null)</code></pre>
+    <pre><code class="lang-csharp hljs">TOut Run(TIn arg)</code></pre>
   </div>
   <h5 class="parameters">&#24341;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -765,36 +593,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>書き込むメッセージです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILoggable.html">ILoggable</a></td>
-        <td><span class="parametername">additionalData</span></td>
-        <td><p>追加情報です。</p>
+        <td><span class="xref">TIn</span></td>
+        <td><span class="parametername">arg</span></td>
+        <td><p>処理の実行に必要な引数です。</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">&#19978;&#26360;&#12365;</h5>
-  <div><a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Debug_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.Debug(String, ILoggable)</a></div>
+  <h5 class="returns">&#25147;&#12426;&#20516;</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>&#22411;</th>
+        <th>&#35500;&#26126;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TOut</span></td>
+        <td><p>実行結果を表すオブジェクトです。</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">&#26126;&#31034;&#30340;&#12394;&#12452;&#12531;&#12479;&#12540;&#12501;&#12455;&#12540;&#12473;&#23455;&#35013; &#19968;&#35239;
+  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Error_System_String_ExapisSOP_IO_Logging_ILoggable_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Error(System.String%2CExapisSOP.IO.Logging.ILoggable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
+    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_ConnectionModel_IConnector_2_ExapisSOP_ConnectionModel_IConnector_Run_System_Object_.md&amp;value=---%0Auid%3A%20ExapisSOP.ConnectionModel.IConnector%602.ExapisSOP%23ConnectionModel%23IConnector%23Run(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L103">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
+    <a href="https://github.com/Takym/ExapisSOP/blob/master/ConnectionModel/IConnector.cs/#L39">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
   </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Error_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Error*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Error_System_String_ExapisSOP_IO_Logging_ILoggable_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Error(System.String,ExapisSOP.IO.Logging.ILoggable)">Error(String, ILoggable)</h4>
-  <div class="markdown level1 summary"><p>指定されたメッセージを<a class="xref" href="ExapisSOP.IO.Logging.LogLevel.html#ExapisSOP_IO_Logging_LogLevel_Error">Error</a>レベルでログファイルとコンストラクタに渡されたストリームに書き込みます。</p>
-</div>
+  <a id="ExapisSOP_ConnectionModel_IConnector_2_ExapisSOP_ConnectionModel_IConnector_Run_" data-uid="ExapisSOP.ConnectionModel.IConnector`2.ExapisSOP#ConnectionModel#IConnector#Run*"></a>
+  <h4 id="ExapisSOP_ConnectionModel_IConnector_2_ExapisSOP_ConnectionModel_IConnector_Run_System_Object_" data-uid="ExapisSOP.ConnectionModel.IConnector`2.ExapisSOP#ConnectionModel#IConnector#Run(System.Object)">IConnector.Run(Object)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">&#23459;&#35328;</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Error(string message, ILoggable additionalData = null)</code></pre>
+    <pre><code class="lang-csharp hljs">void IConnector.Run(object arg)</code></pre>
   </div>
   <h5 class="parameters">&#24341;&#25968;</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -807,220 +644,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>書き込むメッセージです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILoggable.html">ILoggable</a></td>
-        <td><span class="parametername">additionalData</span></td>
-        <td><p>追加情報です。</p>
-</td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">arg</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">&#19978;&#26360;&#12365;</h5>
-  <div><a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Error_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.Error(String, ILoggable)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Fatal_System_String_ExapisSOP_IO_Logging_ILoggable_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Fatal(System.String%2CExapisSOP.IO.Logging.ILoggable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L114">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Fatal_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Fatal*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Fatal_System_String_ExapisSOP_IO_Logging_ILoggable_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Fatal(System.String,ExapisSOP.IO.Logging.ILoggable)">Fatal(String, ILoggable)</h4>
-  <div class="markdown level1 summary"><p>指定されたメッセージを<a class="xref" href="ExapisSOP.IO.Logging.LogLevel.html#ExapisSOP_IO_Logging_LogLevel_Fatal">Fatal</a>レベルでログファイルとコンストラクタに渡されたストリームに書き込みます。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Fatal(string message, ILoggable additionalData = null)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#35500;&#26126;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>書き込むメッセージです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILoggable.html">ILoggable</a></td>
-        <td><span class="parametername">additionalData</span></td>
-        <td><p>追加情報です。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#19978;&#26360;&#12365;</h5>
-  <div><a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Fatal_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.Fatal(String, ILoggable)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Info_System_String_ExapisSOP_IO_Logging_ILoggable_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Info(System.String%2CExapisSOP.IO.Logging.ILoggable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L81">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Info_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Info*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Info_System_String_ExapisSOP_IO_Logging_ILoggable_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Info(System.String,ExapisSOP.IO.Logging.ILoggable)">Info(String, ILoggable)</h4>
-  <div class="markdown level1 summary"><p>指定されたメッセージを<a class="xref" href="ExapisSOP.IO.Logging.LogLevel.html#ExapisSOP_IO_Logging_LogLevel_Info">Info</a>レベルでログファイルとコンストラクタに渡されたストリームに書き込みます。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Info(string message, ILoggable additionalData = null)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#35500;&#26126;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>書き込むメッセージです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILoggable.html">ILoggable</a></td>
-        <td><span class="parametername">additionalData</span></td>
-        <td><p>追加情報です。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#19978;&#26360;&#12365;</h5>
-  <div><a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Info_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.Info(String, ILoggable)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Trace_System_String_ExapisSOP_IO_Logging_ILoggable_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Trace(System.String%2CExapisSOP.IO.Logging.ILoggable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L59">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Trace_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Trace*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Trace_System_String_ExapisSOP_IO_Logging_ILoggable_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Trace(System.String,ExapisSOP.IO.Logging.ILoggable)">Trace(String, ILoggable)</h4>
-  <div class="markdown level1 summary"><p>指定されたメッセージを<a class="xref" href="ExapisSOP.IO.Logging.LogLevel.html#ExapisSOP_IO_Logging_LogLevel_Trace">Trace</a>レベルでログファイルとコンストラクタに渡されたストリームに書き込みます。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Trace(string message, ILoggable additionalData = null)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#35500;&#26126;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>書き込むメッセージです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILoggable.html">ILoggable</a></td>
-        <td><span class="parametername">additionalData</span></td>
-        <td><p>追加情報です。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#19978;&#26360;&#12365;</h5>
-  <div><a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Trace_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.Trace(String, ILoggable)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger_Warn_System_String_ExapisSOP_IO_Logging_ILoggable_.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger.Warn(System.String%2CExapisSOP.IO.Logging.ILoggable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">&#32232;&#38598;/&#25552;&#26696;</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L92">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
-  </span>
-  <a id="ExapisSOP_IO_Logging_OutputStreamLogger_Warn_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Warn*"></a>
-  <h4 id="ExapisSOP_IO_Logging_OutputStreamLogger_Warn_System_String_ExapisSOP_IO_Logging_ILoggable_" data-uid="ExapisSOP.IO.Logging.OutputStreamLogger.Warn(System.String,ExapisSOP.IO.Logging.ILoggable)">Warn(String, ILoggable)</h4>
-  <div class="markdown level1 summary"><p>指定されたメッセージを<a class="xref" href="ExapisSOP.IO.Logging.LogLevel.html#ExapisSOP_IO_Logging_LogLevel_Warn">Warn</a>レベルでログファイルとコンストラクタに渡されたストリームに書き込みます。</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">&#23459;&#35328;</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Warn(string message, ILoggable additionalData = null)</code></pre>
-  </div>
-  <h5 class="parameters">&#24341;&#25968;</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>&#22411;</th>
-        <th>&#21517;&#21069;</th>
-        <th>&#35500;&#26126;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>書き込むメッセージです。</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ExapisSOP.IO.Logging.ILoggable.html">ILoggable</a></td>
-        <td><span class="parametername">additionalData</span></td>
-        <td><p>追加情報です。</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">&#19978;&#26360;&#12365;</h5>
-  <div><a class="xref" href="ExapisSOP.IO.Logging.Logger.html#ExapisSOP_IO_Logging_Logger_Warn_System_String_ExapisSOP_IO_Logging_ILoggable_">Logger.Warn(String, ILoggable)</a></div>
-  <h3 id="implements">&#23455;&#35013;</h3>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.ILogger.html">ILogger</a>
-  </div>
   <h3 id="extensionmethods">&#25313;&#24373;&#38306;&#25968; &#19968;&#35239;</h3>
   <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Trace_ExapisSOP_IO_Logging_ILogger_System_String_System_Object___">LoggerExtension.Trace(ILogger, String, Object[])</a>
+      <a class="xref" href="ExapisSOP.ConnectionModel.ConnectorExtensions.html#ExapisSOP_ConnectionModel_ConnectorExtensions_RunAsync_ExapisSOP_ConnectionModel_IConnector_System_Object_">ConnectorExtensions.RunAsync(IConnector, Object)</a>
   </div>
   <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Debug_ExapisSOP_IO_Logging_ILogger_System_String_System_Object___">LoggerExtension.Debug(ILogger, String, Object[])</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Info_ExapisSOP_IO_Logging_ILogger_System_String_System_Object___">LoggerExtension.Info(ILogger, String, Object[])</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Warn_ExapisSOP_IO_Logging_ILogger_System_String_System_Object___">LoggerExtension.Warn(ILogger, String, Object[])</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Error_ExapisSOP_IO_Logging_ILogger_System_String_System_Object___">LoggerExtension.Error(ILogger, String, Object[])</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Fatal_ExapisSOP_IO_Logging_ILogger_System_String_System_Object___">LoggerExtension.Fatal(ILogger, String, Object[])</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_LongMessage_ExapisSOP_IO_Logging_ILogger_ExapisSOP_IO_Logging_LogLevel_System_String_System_String_">LoggerExtension.LongMessage(ILogger, LogLevel, String, String)</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_Exception_ExapisSOP_IO_Logging_ILogger_System_Exception_">LoggerExtension.Exception(ILogger, Exception)</a>
-  </div>
-  <div>
-      <a class="xref" href="ExapisSOP.IO.Logging.LoggerExtension.html#ExapisSOP_IO_Logging_LoggerExtension_UnhandledException_ExapisSOP_IO_Logging_ILogger_System_Exception_System_Boolean_">LoggerExtension.UnhandledException(ILogger, Exception, Boolean)</a>
+      <a class="xref" href="ExapisSOP.ConnectionModel.ConnectorExtensions.html#ExapisSOP_ConnectionModel_ConnectorExtensions_RunAsync__2_ExapisSOP_ConnectionModel_IConnector___0___1____0_">ConnectorExtensions.RunAsync&lt;TIn, TOut&gt;(IConnector&lt;TIn, TOut&gt;, TIn)</a>
   </div>
 </article>
           </div>
@@ -1030,10 +665,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_IO_Logging_OutputStreamLogger.md&amp;value=---%0Auid%3A%20ExapisSOP.IO.Logging.OutputStreamLogger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#32232;&#38598;/&#25552;&#26696;</a>
+                    <a href="https://github.com/Takym/ExapisSOP/new/master/apiSpec/new?filename=ExapisSOP_ConnectionModel_IConnector_2.md&amp;value=---%0Auid%3A%20ExapisSOP.ConnectionModel.IConnector%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">&#32232;&#38598;/&#25552;&#26696;</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Takym/ExapisSOP/blob/master/IO/Logging/OutputStreamLogger.cs/#L17" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
+                    <a href="https://github.com/Takym/ExapisSOP/blob/master/ConnectionModel/IConnector.cs/#L29" class="contribution-link">&#12477;&#12540;&#12473;&#12434;&#34920;&#31034;</a>
                   </li>
                 </ul>
               </div>

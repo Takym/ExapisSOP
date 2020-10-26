@@ -45,9 +45,11 @@ namespace ExapisSOP.ConnectionModel
 		/// <returns>現在のオブジェクトの接続子を提供するオブジェクトです。</returns>
 		new IConnector<TIn, TOut> GetConnector();
 
+#if NETCOREAPP3_1
 		IConnector IConnectable.GetConnector()
 		{
 			return this.GetConnector();
 		}
+#endif
 	}
 }
