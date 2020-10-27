@@ -36,10 +36,6 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 			Fix(logger, path + "bin\\ARM\\Release",  path + ".packages\\Release_ARM");
 			Fix(logger, path + "bin\\x64\\Release",  path + ".packages\\Release_x64");
 			Fix(logger, path + "bin\\x86\\Release",  path + ".packages\\Release_x86");
-			Fix(logger, path + "bin\\Workflow",      path + ".packages\\Workflow_AnyCPU");
-			Fix(logger, path + "bin\\ARM\\Workflow", path + ".packages\\Workflow_ARM");
-			Fix(logger, path + "bin\\x64\\Workflow", path + ".packages\\Workflow_x64");
-			Fix(logger, path + "bin\\x86\\Workflow", path + ".packages\\Workflow_x86");
 			logger?.Info("finish!");
 		}
 
