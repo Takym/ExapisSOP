@@ -5334,23 +5334,6 @@ references:
   commentId: Overload:ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.Converters
   fullName: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.Converters
   nameWithType: CommandLineConverter.Converters
-- uid: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert(System.String[])
-  name: IArgumentConverter.Convert(String[])
-  href: api_net48/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP-IO-Settings-CommandLine-IArgumentConverter-Convert.html#ExapisSOP_IO_Settings_CommandLine_CommandLineConverter_ExapisSOP_IO_Settings_CommandLine_IArgumentConverter_Convert_System_String___
-  commentId: M:ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert(System.String[])
-  name.vb: ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(String())
-  fullName: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(System.String[])
-  fullName.vb: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(System.String())
-  nameWithType: CommandLineConverter.IArgumentConverter.Convert(String[])
-  nameWithType.vb: CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(String())
-- uid: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert*
-  name: IArgumentConverter.Convert
-  href: api_net48/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP-IO-Settings-CommandLine-IArgumentConverter-Convert.html
-  commentId: Overload:ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert
-  name.vb: ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert
-  fullName: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert
-  nameWithType: CommandLineConverter.IArgumentConverter.Convert
-  nameWithType.vb: CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert
 - uid: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ResultTypes
   name: ResultTypes
   href: api/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ResultTypes.html#ExapisSOP_IO_Settings_CommandLine_CommandLineConverter_ResultTypes
@@ -6810,24 +6793,6 @@ references:
   commentId: Overload:ExapisSOP.NativeWrapper.INativeCaller.IsSupported
   fullName: ExapisSOP.NativeWrapper.INativeCaller.IsSupported
   nameWithType: INativeCaller.IsSupported
-- uid: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions
-  name: NetframeworkINativeCallerExtensions
-  href: api_net48/ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.html
-  commentId: T:ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions
-  fullName: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions
-  nameWithType: NetframeworkINativeCallerExtensions
-- uid: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported(ExapisSOP.NativeWrapper.INativeCaller)
-  name: IsSupported(INativeCaller)
-  href: api_net48/ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported.html#ExapisSOP_NativeWrapper_NetframeworkINativeCallerExtensions_IsSupported_ExapisSOP_NativeWrapper_INativeCaller_
-  commentId: M:ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported(ExapisSOP.NativeWrapper.INativeCaller)
-  fullName: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported(ExapisSOP.NativeWrapper.INativeCaller)
-  nameWithType: NetframeworkINativeCallerExtensions.IsSupported(INativeCaller)
-- uid: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported*
-  name: IsSupported
-  href: api_net48/ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported.html
-  commentId: Overload:ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported
-  fullName: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported
-  nameWithType: NetframeworkINativeCallerExtensions.IsSupported
 - uid: ExapisSOP.NativeWrapper.WinAPI
   name: WinAPI
   href: api/ExapisSOP.NativeWrapper.WinAPI.html
@@ -6999,36 +6964,6 @@ references:
   commentId: F:ExapisSOP.NativeWrapper.Windows.Kernel32.SUBLANG_DEFAULT
   fullName: ExapisSOP.NativeWrapper.Windows.Kernel32.SUBLANG_DEFAULT
   nameWithType: Kernel32.SUBLANG_DEFAULT
-- uid: ExapisSOP.NetframeworkIServiceExtensions
-  name: NetframeworkIServiceExtensions
-  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.html
-  commentId: T:ExapisSOP.NetframeworkIServiceExtensions
-  fullName: ExapisSOP.NetframeworkIServiceExtensions
-  nameWithType: NetframeworkIServiceExtensions
-- uid: ExapisSOP.NetframeworkIServiceExtensions.Finalize(ExapisSOP.IService,ExapisSOP.IContext)
-  name: Finalize(IService, IContext)
-  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Finalize.html#ExapisSOP_NetframeworkIServiceExtensions_Finalize_ExapisSOP_IService_ExapisSOP_IContext_
-  commentId: M:ExapisSOP.NetframeworkIServiceExtensions.Finalize(ExapisSOP.IService,ExapisSOP.IContext)
-  fullName: ExapisSOP.NetframeworkIServiceExtensions.Finalize(ExapisSOP.IService, ExapisSOP.IContext)
-  nameWithType: NetframeworkIServiceExtensions.Finalize(IService, IContext)
-- uid: ExapisSOP.NetframeworkIServiceExtensions.Finalize*
-  name: Finalize
-  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Finalize.html
-  commentId: Overload:ExapisSOP.NetframeworkIServiceExtensions.Finalize
-  fullName: ExapisSOP.NetframeworkIServiceExtensions.Finalize
-  nameWithType: NetframeworkIServiceExtensions.Finalize
-- uid: ExapisSOP.NetframeworkIServiceExtensions.Initialize(ExapisSOP.IService,ExapisSOP.IContext)
-  name: Initialize(IService, IContext)
-  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Initialize.html#ExapisSOP_NetframeworkIServiceExtensions_Initialize_ExapisSOP_IService_ExapisSOP_IContext_
-  commentId: M:ExapisSOP.NetframeworkIServiceExtensions.Initialize(ExapisSOP.IService,ExapisSOP.IContext)
-  fullName: ExapisSOP.NetframeworkIServiceExtensions.Initialize(ExapisSOP.IService, ExapisSOP.IContext)
-  nameWithType: NetframeworkIServiceExtensions.Initialize(IService, IContext)
-- uid: ExapisSOP.NetframeworkIServiceExtensions.Initialize*
-  name: Initialize
-  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Initialize.html
-  commentId: Overload:ExapisSOP.NetframeworkIServiceExtensions.Initialize
-  fullName: ExapisSOP.NetframeworkIServiceExtensions.Initialize
-  nameWithType: NetframeworkIServiceExtensions.Initialize
 - uid: ExapisSOP.Numerics
   name: ExapisSOP.Numerics
   href: api/ExapisSOP.Numerics.html

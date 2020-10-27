@@ -13,23 +13,7 @@
 			"disableGitFeatures": false,
 			"disableDefaultFilter": false,
 			"properties": {
-				"TargetFramework": "netcoreapp3.1"
-			}
-		},
-		{
-			"src": [
-				{
-					"files": [
-						"**.csproj"
-					],
-					"src": "..\\"
-				}
-			],
-			"dest": "api_net48",
-			"disableGitFeatures": false,
-			"disableDefaultFilter": false,
-			"properties": {
-				"TargetFramework": "net48"
+				"TargetFrameworks": "netcoreapp3.1"
 			}
 		}
 	],
