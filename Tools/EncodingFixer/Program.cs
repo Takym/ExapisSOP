@@ -87,7 +87,7 @@ namespace ExapisSOP.Tools.EncodingFixer
 
 		private static void Config_UnhandledError(object? sender, UnhandledErrorEventArgs e)
 		{
-			var path = e.Context.GetLoggingSystem()?.SaveErrorReport(e.Context, e.Exception, new HResultDetailProvider());
+			var path = e.Context.GetLoggingSystem()?.SaveErrorReport(e.Context, e.Exception);
 			if (e.Context.Paths is IPathList paths) {
 				ErrorReportBuilder.SaveERBC(paths);
 			}

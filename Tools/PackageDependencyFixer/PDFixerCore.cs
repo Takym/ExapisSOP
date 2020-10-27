@@ -86,7 +86,6 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 					break;
 				case "ExapisSOP.Tools.EncodingFixer":
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP");
-					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.NativeWrapper.Windows");
 					break;
 				case "ExapisSOP.Tools.PackageDependencyFixer":
 					CreateDependencyElement(xd, null,   group2, "4.3.0", "System.IO.Compression");

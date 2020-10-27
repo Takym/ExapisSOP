@@ -7,7 +7,6 @@
 	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
-		<ProjectReference Include="ExapisSOP.NativeWrapper.Windows.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
 		<EmbeddedResource Remove="_SystemAttributes\*" />
 		<EmbeddedResource Remove="_TopLevelNS\*" />
