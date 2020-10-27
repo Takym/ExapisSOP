@@ -9,10 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Runtime.Serialization;
+using ExapisSOP.Properties;
 
 #if NET48
 using System.Text;
-using ExapisSOP.Properties;
 #endif
 
 namespace ExapisSOP.IO
@@ -25,11 +26,13 @@ namespace ExapisSOP.IO
 	///  <see cref="System.IO.Path"/>クラスと併用してください。
 	/// </remarks>
 	[TypeConverter(typeof(PathStringConverter))]
-	public sealed class PathString : IFormattable, IEquatable<PathString?>, IEquatable<string?>, IComparable, IComparable<PathString?>, IComparable<string?>
+	public sealed partial class PathString : IFormattable, IEquatable<PathString?>, IEquatable<string?>, IComparable, IComparable<PathString?>, IComparable<string?>
 	{
-		private readonly string _org_path;
-		private readonly string _path;
-		private readonly Uri    _uri;
+		private readonly string          _org_path;
+		private readonly string          _path;
+		private readonly Uri             _uri;
+		private          FileSystemInfo? _fsinfo;
+		private          DriveInfo?      _dinfo;
 
 		/// <summary>
 		///  基底のパス文字列を取得します。
@@ -391,6 +394,166 @@ namespace ExapisSOP.IO
 				throw new PlatformNotSupportedException(Resources.PathString_PlatformNotSupportedException, e);
 			}
 #endif
+		}
+
+		/// <summary>
+		///  現在のディレクトリからディレクトリパスとファイルパスの配列を取得します。
+		/// </summary>
+		/// <returns>
+		///  現在のパスが有効なディレクトリを指し示している場合は配列、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.IO.IOException"/>
+		/// <exception cref="System.UnauthorizedAccessException"/>
+		/// <exception cref="System.Security.SecurityException"/>
+		public PathString[]? GetEntryArray()
+		{
+			var entries = this.GetEntries();
+			if (entries == null) {
+				return null;
+			} else {
+				return new List<PathString>(entries).ToArray();
+			}
+		}
+
+		/// <summary>
+		///  現在のディレクトリからディレクトリパスとファイルパスの列挙体を取得します。
+		/// </summary>
+		/// <param name="searchPattern">ファイルとディレクトリの検索に利用するパターン文字列です。</param>
+		/// <returns>
+		///  現在のパスが有効なディレクトリを指し示している場合は列挙体オブジェクト、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.ArgumentException"/>
+		/// <exception cref="System.IO.IOException"/>
+		/// <exception cref="System.UnauthorizedAccessException"/>
+		/// <exception cref="System.Security.SecurityException"/>
+		public IEnumerable<PathString>? GetEntries(string searchPattern = "*")
+		{
+			if (this.IsDirectory) {
+				searchPattern ??= "*";
+				return this.GetEntriesCore(Directory.EnumerateFileSystemEntries(_path, searchPattern));
+			} else {
+				return null;
+			}
+		}
+
+		/// <summary>
+		///  現在のディレクトリからディレクトリパスとファイルパスの列挙体を取得します。
+		/// </summary>
+		/// <param name="searchPattern">ファイルとディレクトリの検索に利用するパターン文字列です。</param>
+		/// <param name="searchOption">子ディレクトリを検索に含めるかどうか設定します。</param>
+		/// <returns>
+		///  現在のパスが有効なディレクトリを指し示している場合は列挙体オブジェクト、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.ArgumentException"/>
+		/// <exception cref="System.ArgumentOutOfRangeException"/>
+		/// <exception cref="System.IO.IOException"/>
+		/// <exception cref="System.UnauthorizedAccessException"/>
+		/// <exception cref="System.Security.SecurityException"/>
+		public IEnumerable<PathString>? GetEntries(string searchPattern, SearchOption searchOption)
+		{
+			if (this.IsDirectory) {
+				searchPattern ??= "*";
+				return this.GetEntriesCore(Directory.EnumerateFileSystemEntries(_path, searchPattern, searchOption));
+			} else {
+				return null;
+			}
+		}
+
+#if NETCOREAPP3_1
+		/// <summary>
+		///  現在のディレクトリからディレクトリパスとファイルパスの列挙体を取得します。
+		/// </summary>
+		/// <param name="searchPattern">ファイルとディレクトリの検索に利用するパターン文字列です。</param>
+		/// <param name="enumerationOptions">検索方法を指定します。</param>
+		/// <returns>
+		///  現在のパスが有効なディレクトリを指し示している場合は列挙体オブジェクト、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.ArgumentException"/>
+		/// <exception cref="System.ArgumentNullException"/>
+		/// <exception cref="System.IO.IOException"/>
+		/// <exception cref="System.UnauthorizedAccessException"/>
+		/// <exception cref="System.Security.SecurityException"/>
+		public IEnumerable<PathString>? GetEntries(string searchPattern, EnumerationOptions enumerationOptions)
+		{
+			if (enumerationOptions == null) {
+				throw new ArgumentNullException(nameof(enumerationOptions));
+			}
+			if (this.IsDirectory) {
+				searchPattern ??= "*";
+				return this.GetEntriesCore(Directory.EnumerateFileSystemEntries(_path, searchPattern, enumerationOptions));
+			} else {
+				return null;
+			}
+		}
+#endif
+
+		private IEnumerable<PathString> GetEntriesCore(IEnumerable<string> pathList)
+		{
+			return new FileSystemEntryList(pathList);
+		}
+
+		/// <summary>
+		///  現在のパスのディレクトリ情報を取得します。
+		/// </summary>
+		/// <returns>
+		///  現在のパスが有効なディレクトリを指し示している場合は<see cref="System.IO.DirectoryInfo"/>オブジェクト、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.IO.IOException"/>
+		public DirectoryInfo? GetDirectoryInfo()
+		{
+			this.EnsureFileSystemInfo();
+			return _fsinfo as DirectoryInfo;
+		}
+
+		/// <summary>
+		///  現在のパスのファイル情報を取得します。
+		/// </summary>
+		/// <returns>
+		///  現在のパスが有効なファイルを指し示している場合は<see cref="System.IO.FileInfo"/>オブジェクト、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.IO.IOException"/>
+		public FileInfo? GetFileInfo()
+		{
+			this.EnsureFileSystemInfo();
+			return _fsinfo as FileInfo;
+		}
+
+		/// <summary>
+		///  現在のパスのファイルシステム情報を取得します。
+		/// </summary>
+		/// <returns>
+		///  現在のパスが有効なファイルまたはディレクトリを指し示している場合は<see cref="System.IO.FileSystemInfo"/>オブジェクト、
+		///  それ以外の場合は<see langword="null"/>を返します。
+		/// </returns>
+		/// <exception cref="System.IO.IOException"/>
+		public FileSystemInfo? GetFileSystemInfo()
+		{
+			this.EnsureFileSystemInfo();
+			return _fsinfo;
+		}
+
+		private void EnsureFileSystemInfo()
+		{
+			try {
+				if (_fsinfo == null) {
+					if (this.IsDirectory) {
+						_fsinfo = new DirectoryInfo(_path);
+					} else if (this.IsFile) {
+						_fsinfo = new FileInfo(_path);
+					}
+				}
+				if (this.IsDrive && _dinfo == null) {
+					_dinfo = new DriveInfo(_path);
+				}
+			} catch (Exception e) {
+				throw new IOException(string.Format(Resources.PathString_EnsureFileSystemInfo_IOException, _path), e);
+			}
 		}
 
 		/// <summary>
