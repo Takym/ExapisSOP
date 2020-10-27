@@ -66,7 +66,11 @@ namespace ExapisSOP.Tools.EncodingFixer
 					for (int i = 0; i < extensions.Length; ++i) {
 						if (ext == extensions[i]) {
 							logger?.Info("Matched.");
-							DetectAndConvertFileEncoding(logger, entry);
+							try {
+								DetectAndConvertFileEncoding(logger, entry);
+							} catch (Exception e) {
+								logger?.Exception(e);
+							}
 							goto next_entry;
 						}
 					}
@@ -164,7 +168,7 @@ next_entry:;
 						logger?.Info("The encoding is: Shift-JIS");
 						ConvertFileEncoding(logger, fs, Encoding.GetEncoding(932));
 					} else if (scoreUTF8 == scoreSJIS) {
-						logger?.Warn("Could not detect the encoding.");
+						logger?.Warn("Could not detect the encoding. Maybe this file is ASCII.");
 						logger?.Info("Skipped.");
 					} else {
 						logger?.Info("The encoding is: UTF-8");
