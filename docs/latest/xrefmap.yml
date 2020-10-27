@@ -4833,6 +4833,18 @@ references:
   commentId: Overload:ExapisSOP.IO.PathString.Exists
   fullName: ExapisSOP.IO.PathString.Exists
   nameWithType: PathString.Exists
+- uid: ExapisSOP.IO.PathString.GetDirectoryInfo
+  name: GetDirectoryInfo()
+  href: api/ExapisSOP.IO.PathString.GetDirectoryInfo.html#ExapisSOP_IO_PathString_GetDirectoryInfo
+  commentId: M:ExapisSOP.IO.PathString.GetDirectoryInfo
+  fullName: ExapisSOP.IO.PathString.GetDirectoryInfo()
+  nameWithType: PathString.GetDirectoryInfo()
+- uid: ExapisSOP.IO.PathString.GetDirectoryInfo*
+  name: GetDirectoryInfo
+  href: api/ExapisSOP.IO.PathString.GetDirectoryInfo.html
+  commentId: Overload:ExapisSOP.IO.PathString.GetDirectoryInfo
+  fullName: ExapisSOP.IO.PathString.GetDirectoryInfo
+  nameWithType: PathString.GetDirectoryInfo
 - uid: ExapisSOP.IO.PathString.GetDirectoryName
   name: GetDirectoryName()
   href: api/ExapisSOP.IO.PathString.GetDirectoryName.html#ExapisSOP_IO_PathString_GetDirectoryName
@@ -4845,6 +4857,42 @@ references:
   commentId: Overload:ExapisSOP.IO.PathString.GetDirectoryName
   fullName: ExapisSOP.IO.PathString.GetDirectoryName
   nameWithType: PathString.GetDirectoryName
+- uid: ExapisSOP.IO.PathString.GetEntries(System.String)
+  name: GetEntries(String)
+  href: api/ExapisSOP.IO.PathString.GetEntries.html#ExapisSOP_IO_PathString_GetEntries_System_String_
+  commentId: M:ExapisSOP.IO.PathString.GetEntries(System.String)
+  fullName: ExapisSOP.IO.PathString.GetEntries(System.String)
+  nameWithType: PathString.GetEntries(String)
+- uid: ExapisSOP.IO.PathString.GetEntries(System.String,System.IO.EnumerationOptions)
+  name: GetEntries(String, EnumerationOptions)
+  href: api/ExapisSOP.IO.PathString.GetEntries.html#ExapisSOP_IO_PathString_GetEntries_System_String_System_IO_EnumerationOptions_
+  commentId: M:ExapisSOP.IO.PathString.GetEntries(System.String,System.IO.EnumerationOptions)
+  fullName: ExapisSOP.IO.PathString.GetEntries(System.String, System.IO.EnumerationOptions)
+  nameWithType: PathString.GetEntries(String, EnumerationOptions)
+- uid: ExapisSOP.IO.PathString.GetEntries(System.String,System.IO.SearchOption)
+  name: GetEntries(String, SearchOption)
+  href: api/ExapisSOP.IO.PathString.GetEntries.html#ExapisSOP_IO_PathString_GetEntries_System_String_System_IO_SearchOption_
+  commentId: M:ExapisSOP.IO.PathString.GetEntries(System.String,System.IO.SearchOption)
+  fullName: ExapisSOP.IO.PathString.GetEntries(System.String, System.IO.SearchOption)
+  nameWithType: PathString.GetEntries(String, SearchOption)
+- uid: ExapisSOP.IO.PathString.GetEntries*
+  name: GetEntries
+  href: api/ExapisSOP.IO.PathString.GetEntries.html
+  commentId: Overload:ExapisSOP.IO.PathString.GetEntries
+  fullName: ExapisSOP.IO.PathString.GetEntries
+  nameWithType: PathString.GetEntries
+- uid: ExapisSOP.IO.PathString.GetEntryArray
+  name: GetEntryArray()
+  href: api/ExapisSOP.IO.PathString.GetEntryArray.html#ExapisSOP_IO_PathString_GetEntryArray
+  commentId: M:ExapisSOP.IO.PathString.GetEntryArray
+  fullName: ExapisSOP.IO.PathString.GetEntryArray()
+  nameWithType: PathString.GetEntryArray()
+- uid: ExapisSOP.IO.PathString.GetEntryArray*
+  name: GetEntryArray
+  href: api/ExapisSOP.IO.PathString.GetEntryArray.html
+  commentId: Overload:ExapisSOP.IO.PathString.GetEntryArray
+  fullName: ExapisSOP.IO.PathString.GetEntryArray
+  nameWithType: PathString.GetEntryArray
 - uid: ExapisSOP.IO.PathString.GetExtension
   name: GetExtension()
   href: api/ExapisSOP.IO.PathString.GetExtension.html#ExapisSOP_IO_PathString_GetExtension
@@ -4857,6 +4905,18 @@ references:
   commentId: Overload:ExapisSOP.IO.PathString.GetExtension
   fullName: ExapisSOP.IO.PathString.GetExtension
   nameWithType: PathString.GetExtension
+- uid: ExapisSOP.IO.PathString.GetFileInfo
+  name: GetFileInfo()
+  href: api/ExapisSOP.IO.PathString.GetFileInfo.html#ExapisSOP_IO_PathString_GetFileInfo
+  commentId: M:ExapisSOP.IO.PathString.GetFileInfo
+  fullName: ExapisSOP.IO.PathString.GetFileInfo()
+  nameWithType: PathString.GetFileInfo()
+- uid: ExapisSOP.IO.PathString.GetFileInfo*
+  name: GetFileInfo
+  href: api/ExapisSOP.IO.PathString.GetFileInfo.html
+  commentId: Overload:ExapisSOP.IO.PathString.GetFileInfo
+  fullName: ExapisSOP.IO.PathString.GetFileInfo
+  nameWithType: PathString.GetFileInfo
 - uid: ExapisSOP.IO.PathString.GetFileName
   name: GetFileName()
   href: api/ExapisSOP.IO.PathString.GetFileName.html#ExapisSOP_IO_PathString_GetFileName
@@ -4881,6 +4941,18 @@ references:
   commentId: Overload:ExapisSOP.IO.PathString.GetFileNameWithoutExtension
   fullName: ExapisSOP.IO.PathString.GetFileNameWithoutExtension
   nameWithType: PathString.GetFileNameWithoutExtension
+- uid: ExapisSOP.IO.PathString.GetFileSystemInfo
+  name: GetFileSystemInfo()
+  href: api/ExapisSOP.IO.PathString.GetFileSystemInfo.html#ExapisSOP_IO_PathString_GetFileSystemInfo
+  commentId: M:ExapisSOP.IO.PathString.GetFileSystemInfo
+  fullName: ExapisSOP.IO.PathString.GetFileSystemInfo()
+  nameWithType: PathString.GetFileSystemInfo()
+- uid: ExapisSOP.IO.PathString.GetFileSystemInfo*
+  name: GetFileSystemInfo
+  href: api/ExapisSOP.IO.PathString.GetFileSystemInfo.html
+  commentId: Overload:ExapisSOP.IO.PathString.GetFileSystemInfo
+  fullName: ExapisSOP.IO.PathString.GetFileSystemInfo
+  nameWithType: PathString.GetFileSystemInfo
 - uid: ExapisSOP.IO.PathString.GetHashCode
   name: GetHashCode()
   href: api/ExapisSOP.IO.PathString.GetHashCode.html#ExapisSOP_IO_PathString_GetHashCode
@@ -5262,6 +5334,23 @@ references:
   commentId: Overload:ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.Converters
   fullName: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.Converters
   nameWithType: CommandLineConverter.Converters
+- uid: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert(System.String[])
+  name: IArgumentConverter.Convert(String[])
+  href: api_net48/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP-IO-Settings-CommandLine-IArgumentConverter-Convert.html#ExapisSOP_IO_Settings_CommandLine_CommandLineConverter_ExapisSOP_IO_Settings_CommandLine_IArgumentConverter_Convert_System_String___
+  commentId: M:ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert(System.String[])
+  name.vb: ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(String())
+  fullName: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(System.String[])
+  fullName.vb: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(System.String())
+  nameWithType: CommandLineConverter.IArgumentConverter.Convert(String[])
+  nameWithType.vb: CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert(String())
+- uid: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert*
+  name: IArgumentConverter.Convert
+  href: api_net48/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP-IO-Settings-CommandLine-IArgumentConverter-Convert.html
+  commentId: Overload:ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP#IO#Settings#CommandLine#IArgumentConverter#Convert
+  name.vb: ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert
+  fullName: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert
+  nameWithType: CommandLineConverter.IArgumentConverter.Convert
+  nameWithType.vb: CommandLineConverter.ExapisSOP.IO.Settings.CommandLine.IArgumentConverter.Convert
 - uid: ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ResultTypes
   name: ResultTypes
   href: api/ExapisSOP.IO.Settings.CommandLine.CommandLineConverter.ResultTypes.html#ExapisSOP_IO_Settings_CommandLine_CommandLineConverter_ResultTypes
@@ -6721,6 +6810,24 @@ references:
   commentId: Overload:ExapisSOP.NativeWrapper.INativeCaller.IsSupported
   fullName: ExapisSOP.NativeWrapper.INativeCaller.IsSupported
   nameWithType: INativeCaller.IsSupported
+- uid: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions
+  name: NetframeworkINativeCallerExtensions
+  href: api_net48/ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.html
+  commentId: T:ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions
+  fullName: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions
+  nameWithType: NetframeworkINativeCallerExtensions
+- uid: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported(ExapisSOP.NativeWrapper.INativeCaller)
+  name: IsSupported(INativeCaller)
+  href: api_net48/ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported.html#ExapisSOP_NativeWrapper_NetframeworkINativeCallerExtensions_IsSupported_ExapisSOP_NativeWrapper_INativeCaller_
+  commentId: M:ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported(ExapisSOP.NativeWrapper.INativeCaller)
+  fullName: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported(ExapisSOP.NativeWrapper.INativeCaller)
+  nameWithType: NetframeworkINativeCallerExtensions.IsSupported(INativeCaller)
+- uid: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported*
+  name: IsSupported
+  href: api_net48/ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported.html
+  commentId: Overload:ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported
+  fullName: ExapisSOP.NativeWrapper.NetframeworkINativeCallerExtensions.IsSupported
+  nameWithType: NetframeworkINativeCallerExtensions.IsSupported
 - uid: ExapisSOP.NativeWrapper.WinAPI
   name: WinAPI
   href: api/ExapisSOP.NativeWrapper.WinAPI.html
@@ -6892,6 +6999,36 @@ references:
   commentId: F:ExapisSOP.NativeWrapper.Windows.Kernel32.SUBLANG_DEFAULT
   fullName: ExapisSOP.NativeWrapper.Windows.Kernel32.SUBLANG_DEFAULT
   nameWithType: Kernel32.SUBLANG_DEFAULT
+- uid: ExapisSOP.NetframeworkIServiceExtensions
+  name: NetframeworkIServiceExtensions
+  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.html
+  commentId: T:ExapisSOP.NetframeworkIServiceExtensions
+  fullName: ExapisSOP.NetframeworkIServiceExtensions
+  nameWithType: NetframeworkIServiceExtensions
+- uid: ExapisSOP.NetframeworkIServiceExtensions.Finalize(ExapisSOP.IService,ExapisSOP.IContext)
+  name: Finalize(IService, IContext)
+  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Finalize.html#ExapisSOP_NetframeworkIServiceExtensions_Finalize_ExapisSOP_IService_ExapisSOP_IContext_
+  commentId: M:ExapisSOP.NetframeworkIServiceExtensions.Finalize(ExapisSOP.IService,ExapisSOP.IContext)
+  fullName: ExapisSOP.NetframeworkIServiceExtensions.Finalize(ExapisSOP.IService, ExapisSOP.IContext)
+  nameWithType: NetframeworkIServiceExtensions.Finalize(IService, IContext)
+- uid: ExapisSOP.NetframeworkIServiceExtensions.Finalize*
+  name: Finalize
+  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Finalize.html
+  commentId: Overload:ExapisSOP.NetframeworkIServiceExtensions.Finalize
+  fullName: ExapisSOP.NetframeworkIServiceExtensions.Finalize
+  nameWithType: NetframeworkIServiceExtensions.Finalize
+- uid: ExapisSOP.NetframeworkIServiceExtensions.Initialize(ExapisSOP.IService,ExapisSOP.IContext)
+  name: Initialize(IService, IContext)
+  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Initialize.html#ExapisSOP_NetframeworkIServiceExtensions_Initialize_ExapisSOP_IService_ExapisSOP_IContext_
+  commentId: M:ExapisSOP.NetframeworkIServiceExtensions.Initialize(ExapisSOP.IService,ExapisSOP.IContext)
+  fullName: ExapisSOP.NetframeworkIServiceExtensions.Initialize(ExapisSOP.IService, ExapisSOP.IContext)
+  nameWithType: NetframeworkIServiceExtensions.Initialize(IService, IContext)
+- uid: ExapisSOP.NetframeworkIServiceExtensions.Initialize*
+  name: Initialize
+  href: api_net48/ExapisSOP.NetframeworkIServiceExtensions.Initialize.html
+  commentId: Overload:ExapisSOP.NetframeworkIServiceExtensions.Initialize
+  fullName: ExapisSOP.NetframeworkIServiceExtensions.Initialize
+  nameWithType: NetframeworkIServiceExtensions.Initialize
 - uid: ExapisSOP.Numerics
   name: ExapisSOP.Numerics
   href: api/ExapisSOP.Numerics.html

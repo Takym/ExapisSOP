@@ -35,7 +35,7 @@ namespace ExapisSOP.Tools.EncodingFixer
 
 #else
 
-		internal static void Fix(ILogger? logger, IContext context)
+		internal static void Fix(ILogger? logger)
 		{
 			logger?.Info($"Cannot run on this platform: {VersionInfo.SystemType}.");
 		}

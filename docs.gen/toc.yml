@@ -3,6 +3,6 @@
   homepage: api/index.md
 - name: APIブラウザ (.NET Framework 4.8)
   href: api_net48/
-  homepage: api/index.md
+  homepage: api_net48/index.md
 - name: 設計思想
   href: architecture/
