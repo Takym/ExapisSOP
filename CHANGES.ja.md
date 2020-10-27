@@ -4,6 +4,7 @@ Copyright (C) 2020 Takym.
 ## [master]
  * 仕様書：[https://takym.github.io/ExapisSOP/latest/index.html](https://takym.github.io/ExapisSOP/latest/index.html)
  * 比較：[https://github.com/Takym/ExapisSOP/compare/xsop00b2...master](https://github.com/Takym/ExapisSOP/compare/xsop00b2...master)
+ * ツール「ExapisSOP.Tools.EncodingFixer」作成。
 
 ## [v0.0.1.2] - xsop00b2
  * **更新日：** 2020年10月26日
