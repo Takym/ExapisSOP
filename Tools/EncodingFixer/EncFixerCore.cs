@@ -10,6 +10,7 @@ using System.IO;
 using System.Text;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Logging;
+using ExapisSOP.Utils;
 
 namespace ExapisSOP.Tools.EncodingFixer
 {
@@ -27,6 +28,8 @@ namespace ExapisSOP.Tools.EncodingFixer
 				return;
 			}
 			logger?.Info($"The solution path is: {path}");
+			logger?.Info($"Ready to run.");
+			ConsoleUtil.Pause();
 			LoadAndConvertFiles(logger, path,
 				// Git Configurations
 				".gitignore", ".gitattributes", ".gitmodules",
