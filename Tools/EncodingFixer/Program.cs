@@ -37,7 +37,7 @@ namespace ExapisSOP.Tools.EncodingFixer
 			var logger = e.Context.LogFile?.GetConsoleLogger();
 			logger?.Info("This tool fixes the source code encoding of ExapisSOP.");
 			Console.WriteLine();
-			//
+			EncFixerCore.Fix(logger, e.Context);
 			throw new TerminationException();
 		}
 
