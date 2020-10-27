@@ -83,8 +83,10 @@ namespace ExapisSOP
 
 #if DEBUG
 		private const string BuildConfig = "Debug";
-#else
+#elif NotWorkflow
 		private const string BuildConfig = "Release";
+#else
+		private const string BuildConfig = "Workflow";
 #endif
 
 #if NETCOREAPP3_1

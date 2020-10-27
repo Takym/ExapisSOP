@@ -1,4 +1,3 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
@@ -6,11 +5,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{D0AB9DC8-C485-4233-95A6-9F38C8578134}"
 	ProjectSection(SolutionItems) = preProject
 		docs\_config.yml = docs\_config.yml
-		docs\compatibility.md = docs\compatibility.md
-		docs\index.md = docs\index.md
 		CHANGES.en.md = CHANGES.en.md
 		CHANGES.ja.md = CHANGES.ja.md
+		docs\compatibility.md = docs\compatibility.md
 		CONTRIBUTORS.md = CONTRIBUTORS.md
+		docs\index.md = docs\index.md
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
@@ -33,6 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ExapisSOP.csproj = ExapisSOP.csproj
 		ExapisSOP.DemoApp.csproj = ExapisSOP.DemoApp.csproj
 		ExapisSOP.NativeWrapper.Windows.csproj = ExapisSOP.NativeWrapper.Windows.csproj
+		ExapisSOP.Tools.EncodingFixer.csproj = ExapisSOP.Tools.EncodingFixer.csproj
 		ExapisSOP.Tools.PackageDependencyFixer.csproj = ExapisSOP.Tools.PackageDependencyFixer.csproj
 		ExapisSOP.Utils.csproj = ExapisSOP.Utils.csproj
 	EndProjectSection
@@ -46,6 +46,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.Utils", "ExapisSOP.Utils.csproj", "{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.Tools.PackageDependencyFixer", "ExapisSOP.Tools.PackageDependencyFixer.csproj", "{CFD7978C-A190-4D9F-958A-ADC1CF509A36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExapisSOP.Tools.EncodingFixer", "ExapisSOP.Tools.EncodingFixer.csproj", "{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,30 +65,22 @@ Global
 		Workflow|Intel 64 Bit = Workflow|Intel 64 Bit
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|ARM.Build.0 = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 32 Bit.ActiveCfg = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 32 Bit.Build.0 = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 64 Bit.ActiveCfg = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 64 Bit.Build.0 = Debug|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|ARM.ActiveCfg = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|ARM.Build.0 = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 32 Bit.ActiveCfg = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 32 Bit.Build.0 = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 64 Bit.ActiveCfg = Release|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 64 Bit.Build.0 = Release|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.ActiveCfg = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Any CPU.Build.0 = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|ARM.ActiveCfg = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|ARM.Build.0 = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 32 Bit.ActiveCfg = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 32 Bit.Build.0 = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 64 Bit.ActiveCfg = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Debug|Intel 64 Bit.Build.0 = Docs|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Any CPU.ActiveCfg = Workflow|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|ARM.ActiveCfg = Workflow|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 32 Bit.ActiveCfg = Workflow|Any CPU
+		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Release|Intel 64 Bit.ActiveCfg = Workflow|Any CPU
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|ARM.ActiveCfg = Workflow|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|ARM.Build.0 = Workflow|Any CPU
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|Intel 32 Bit.Build.0 = Workflow|Any CPU
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|Any CPU
-		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422}.Workflow|Intel 64 Bit.Build.0 = Workflow|Any CPU
 		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -105,12 +99,12 @@ Global
 		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Release|Intel 64 Bit.Build.0 = Release|x64
 		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
 		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
-		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|ARM.ActiveCfg = Workflow|ARM
-		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|ARM.Build.0 = Workflow|ARM
-		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|x86
-		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 32 Bit.Build.0 = Workflow|x86
-		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|x64
-		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 64 Bit.Build.0 = Workflow|x64
+		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|ARM.ActiveCfg = Debug|ARM
+		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|ARM.Build.0 = Debug|ARM
+		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 32 Bit.ActiveCfg = Debug|x86
+		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 32 Bit.Build.0 = Debug|x86
+		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 64 Bit.ActiveCfg = Debug|x64
+		{18CFF209-50D2-43B1-9F59-E16C9D935D02}.Workflow|Intel 64 Bit.Build.0 = Debug|x64
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -129,12 +123,12 @@ Global
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Release|Intel 64 Bit.Build.0 = Release|x64
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
 		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
-		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|ARM.ActiveCfg = Workflow|ARM
-		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|ARM.Build.0 = Workflow|ARM
-		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|x86
-		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 32 Bit.Build.0 = Workflow|x86
-		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|x64
-		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 64 Bit.Build.0 = Workflow|x64
+		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|ARM.ActiveCfg = Debug|ARM
+		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|ARM.Build.0 = Debug|ARM
+		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 32 Bit.ActiveCfg = Debug|x86
+		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 32 Bit.Build.0 = Debug|x86
+		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 64 Bit.ActiveCfg = Debug|x64
+		{6AF10471-ACFD-4BE1-B60F-CC05AE3A2DD4}.Workflow|Intel 64 Bit.Build.0 = Debug|x64
 		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -153,12 +147,12 @@ Global
 		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Release|Intel 64 Bit.Build.0 = Release|x64
 		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
 		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
-		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|ARM.ActiveCfg = Workflow|ARM
-		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|ARM.Build.0 = Workflow|ARM
-		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|x86
-		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 32 Bit.Build.0 = Workflow|x86
-		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|x64
-		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 64 Bit.Build.0 = Workflow|x64
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|ARM.ActiveCfg = Debug|ARM
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|ARM.Build.0 = Debug|ARM
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 32 Bit.ActiveCfg = Debug|x86
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 32 Bit.Build.0 = Debug|x86
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 64 Bit.ActiveCfg = Debug|x64
+		{BAB89C52-F3D4-4B7C-ABD0-B88BF6784B2E}.Workflow|Intel 64 Bit.Build.0 = Debug|x64
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -177,12 +171,12 @@ Global
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Release|Intel 64 Bit.Build.0 = Release|x64
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
 		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
-		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|ARM.ActiveCfg = Workflow|ARM
-		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|ARM.Build.0 = Workflow|ARM
-		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|x86
-		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 32 Bit.Build.0 = Workflow|x86
-		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|x64
-		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 64 Bit.Build.0 = Workflow|x64
+		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|ARM.ActiveCfg = Debug|ARM
+		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|ARM.Build.0 = Debug|ARM
+		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 32 Bit.ActiveCfg = Debug|x86
+		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 32 Bit.Build.0 = Debug|x86
+		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 64 Bit.ActiveCfg = Debug|x64
+		{14545D6F-2C7B-4C31-BC98-64CDF8D5397B}.Workflow|Intel 64 Bit.Build.0 = Debug|x64
 		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Debug|ARM.ActiveCfg = Debug|ARM
@@ -201,12 +195,36 @@ Global
 		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Release|Intel 64 Bit.Build.0 = Release|x64
 		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
 		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
-		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|ARM.ActiveCfg = Workflow|ARM
-		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|ARM.Build.0 = Workflow|ARM
-		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|x86
-		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 32 Bit.Build.0 = Workflow|x86
-		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|x64
-		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 64 Bit.Build.0 = Workflow|x64
+		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|ARM.ActiveCfg = Debug|ARM
+		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|ARM.Build.0 = Debug|ARM
+		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 32 Bit.ActiveCfg = Debug|x86
+		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 32 Bit.Build.0 = Debug|x86
+		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 64 Bit.ActiveCfg = Debug|x64
+		{CFD7978C-A190-4D9F-958A-ADC1CF509A36}.Workflow|Intel 64 Bit.Build.0 = Debug|x64
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|ARM.Build.0 = Debug|ARM
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|Intel 32 Bit.ActiveCfg = Debug|Intel 32 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|Intel 32 Bit.Build.0 = Debug|Intel 32 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|Intel 64 Bit.ActiveCfg = Debug|Intel 64 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Debug|Intel 64 Bit.Build.0 = Debug|Intel 64 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|ARM.ActiveCfg = Release|ARM
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|ARM.Build.0 = Release|ARM
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|Intel 32 Bit.ActiveCfg = Release|Intel 32 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|Intel 32 Bit.Build.0 = Release|Intel 32 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|Intel 64 Bit.ActiveCfg = Release|Intel 64 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Release|Intel 64 Bit.Build.0 = Release|Intel 64 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|Any CPU.ActiveCfg = Workflow|Any CPU
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|Any CPU.Build.0 = Workflow|Any CPU
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|ARM.ActiveCfg = Workflow|ARM
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|ARM.Build.0 = Workflow|ARM
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|Intel 32 Bit.ActiveCfg = Workflow|Intel 32 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|Intel 32 Bit.Build.0 = Workflow|Intel 32 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|Intel 64 Bit.ActiveCfg = Workflow|Intel 64 Bit
+		{DBF06C7E-5BA6-4FC1-AA4B-358880BCA462}.Workflow|Intel 64 Bit.Build.0 = Workflow|Intel 64 Bit
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -215,8 +233,8 @@ Global
 		{FDCD9B7C-F219-4CE8-899D-033B1AB5C422} = {D0AB9DC8-C485-4233-95A6-9F38C8578134}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
-		RESX_NeutralResourcesLanguage = iv-IV
 		RESX_Rules = {"EnabledRules":[]}
+		RESX_NeutralResourcesLanguage = iv-IV
+		SolutionGuid = {F2AB8EA9-60C4-4430-A4C9-0D337AEDBDDA}
 	EndGlobalSection
 EndGlobal

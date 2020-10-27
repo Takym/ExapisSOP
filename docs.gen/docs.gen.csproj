@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<Configurations>Docs</Configurations>
+		<Nullable>enable</Nullable>
+		<Optimize>true</Optimize>
+		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="docfx.console" Version="2.56.4">

@@ -4,6 +4,7 @@
 		<TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
 		<RuntimeIdentifiers>any;win7-x86;win7-x64</RuntimeIdentifiers>
 		<!-- win7-86;win7-x64 is to suppress a build error. -->
+		<Configurations>Debug;Release;Workflow</Configurations>
 		<Platforms>AnyCPU;x86;x64;ARM</Platforms>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>

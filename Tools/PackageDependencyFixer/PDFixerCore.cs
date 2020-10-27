@@ -28,14 +28,18 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 				return;
 			}
 			logger?.Info($"The solution path is: {path}");
-			Fix(logger, path + "bin\\Debug",        path + ".packages\\Debug_AnyCPU");
-			Fix(logger, path + "bin\\ARM\\Debug",   path + ".packages\\Debug_ARM");
-			Fix(logger, path + "bin\\x64\\Debug",   path + ".packages\\Debug_x64");
-			Fix(logger, path + "bin\\x86\\Debug",   path + ".packages\\Debug_x86");
-			Fix(logger, path + "bin\\Release",      path + ".packages\\Release_AnyCPU");
-			Fix(logger, path + "bin\\ARM\\Release", path + ".packages\\Release_ARM");
-			Fix(logger, path + "bin\\x64\\Release", path + ".packages\\Release_x64");
-			Fix(logger, path + "bin\\x86\\Release", path + ".packages\\Release_x86");
+			Fix(logger, path + "bin\\Debug",         path + ".packages\\Debug_AnyCPU");
+			Fix(logger, path + "bin\\ARM\\Debug",    path + ".packages\\Debug_ARM");
+			Fix(logger, path + "bin\\x64\\Debug",    path + ".packages\\Debug_x64");
+			Fix(logger, path + "bin\\x86\\Debug",    path + ".packages\\Debug_x86");
+			Fix(logger, path + "bin\\Release",       path + ".packages\\Release_AnyCPU");
+			Fix(logger, path + "bin\\ARM\\Release",  path + ".packages\\Release_ARM");
+			Fix(logger, path + "bin\\x64\\Release",  path + ".packages\\Release_x64");
+			Fix(logger, path + "bin\\x86\\Release",  path + ".packages\\Release_x86");
+			Fix(logger, path + "bin\\Workflow",      path + ".packages\\Workflow_AnyCPU");
+			Fix(logger, path + "bin\\ARM\\Workflow", path + ".packages\\Workflow_ARM");
+			Fix(logger, path + "bin\\x64\\Workflow", path + ".packages\\Workflow_x64");
+			Fix(logger, path + "bin\\x86\\Workflow", path + ".packages\\Workflow_x86");
 			logger?.Info("finish!");
 		}
 
@@ -49,6 +53,7 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 			RewriteAndCopyNuspecFile(logger, sourcePath, targetPath, ver, "ExapisSOP");
 			RewriteAndCopyNuspecFile(logger, sourcePath, targetPath, ver, "ExapisSOP.DemoApp");
 			RewriteAndCopyNuspecFile(logger, sourcePath, targetPath, ver, "ExapisSOP.NativeWrapper.Windows");
+			RewriteAndCopyNuspecFile(logger, sourcePath, targetPath, ver, "ExapisSOP.Tools.EncodingFixer");
 			RewriteAndCopyNuspecFile(logger, sourcePath, targetPath, ver, "ExapisSOP.Tools.PackageDependencyFixer");
 			RewriteAndCopyNuspecFile(logger, sourcePath, targetPath, ver, "ExapisSOP.Utils");
 		}
@@ -72,11 +77,16 @@ namespace ExapisSOP.Tools.PackageDependencyFixer
 				case "ExapisSOP.DemoApp":
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP");
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.NativeWrapper.Windows");
+					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.Tools.EncodingFixer");
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.Tools.PackageDependencyFixer");
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.Utils");
 					break;
 				case "ExapisSOP.NativeWrapper.Windows":
 					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP");
+					break;
+				case "ExapisSOP.Tools.EncodingFixer":
+					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP");
+					CreateDependencyElement(xd, group1, group2, ver, "ExapisSOP.NativeWrapper.Windows");
 					break;
 				case "ExapisSOP.Tools.PackageDependencyFixer":
 					CreateDependencyElement(xd, null,   group2, "4.3.0", "System.IO.Compression");

@@ -1,22 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<AssemblyName>ExapisSOP.DemoApp</AssemblyName>
+		<AssemblyName>ExapisSOP.Tools.EncodingFixer</AssemblyName>
 		<OutputType>Exe</OutputType>
-		<ActiveDebugFramework>net48</ActiveDebugFramework>
+		<ActiveDebugFramework>netcoreapp3.1</ActiveDebugFramework>
 	</PropertyGroup>
 	<Import Project="ExapisSOP._ProjectSettings.csproj" />
 	<ItemGroup>
 		<ProjectReference Include="ExapisSOP.csproj" />
 		<ProjectReference Include="ExapisSOP.NativeWrapper.Windows.csproj" />
-		<ProjectReference Include="ExapisSOP.Tools.EncodingFixer.csproj" />
-		<ProjectReference Include="ExapisSOP.Tools.PackageDependencyFixer.csproj" />
-		<ProjectReference Include="ExapisSOP.Utils.csproj" />
 		<EmbeddedResource Remove="Properties\*" />
 		<EmbeddedResource Remove="_SystemAttributes\*" />
 		<EmbeddedResource Remove="_TopLevelNS\*" />
 		<EmbeddedResource Remove="Binary\*" />
 		<EmbeddedResource Remove="ConnectionModel\*" />
 		<EmbeddedResource Remove="Core\*" />
+		<EmbeddedResource Remove="DemoApp\*" />
 		<EmbeddedResource Remove="Globalization\*" />
 		<EmbeddedResource Remove="IO\*" />
 		<EmbeddedResource Remove="IO\*\*" />
@@ -29,7 +27,7 @@
 		<EmbeddedResource Remove="Resources\Utils\*" />
 		<EmbeddedResource Remove="Text\*" />
 		<EmbeddedResource Remove="Tools\*" />
-		<EmbeddedResource Remove="Tools\*\*" />
+		<EmbeddedResource Remove="Tools\PackageDependencyFixer\*" />
 		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
@@ -37,6 +35,7 @@
 		<Compile Remove="Binary\*" />
 		<Compile Remove="ConnectionModel\*" />
 		<Compile Remove="Core\*" />
+		<Compile Remove="DemoApp\*" />
 		<Compile Remove="Globalization\*" />
 		<Compile Remove="IO\*" />
 		<Compile Remove="IO\*\*" />
@@ -49,7 +48,7 @@
 		<Compile Remove="Resources\Utils\*" />
 		<Compile Remove="Text\*" />
 		<Compile Remove="Tools\*" />
-		<Compile Remove="Tools\*\*" />
+		<Compile Remove="Tools\PackageDependencyFixer\*" />
 		<Compile Remove="Utils\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
@@ -57,6 +56,7 @@
 		<None Remove="Binary\*" />
 		<None Remove="ConnectionModel\*" />
 		<None Remove="Core\*" />
+		<None Remove="DemoApp\*" />
 		<None Remove="Globalization\*" />
 		<None Remove="IO\*" />
 		<None Remove="IO\*\*" />
@@ -69,7 +69,7 @@
 		<None Remove="Resources\Utils\*" />
 		<None Remove="Text\*" />
 		<None Remove="Tools\*" />
-		<None Remove="Tools\*\*" />
+		<None Remove="Tools\PackageDependencyFixer\*" />
 		<None Remove="Utils\*" />
 	</ItemGroup>
 </Project>

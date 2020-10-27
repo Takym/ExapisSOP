@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>ExapisSOP.Tools.PackageDependencyFixer</AssemblyName>
 		<OutputType>Exe</OutputType>
@@ -27,6 +27,7 @@
 		<EmbeddedResource Remove="Resources\Utils\*" />
 		<EmbeddedResource Remove="Text\*" />
 		<EmbeddedResource Remove="Tools\*" />
+		<EmbeddedResource Remove="Tools\EncodingFixer\*" />
 		<EmbeddedResource Remove="Utils\*" />
 		<Compile Remove="Properties\*" />
 		<Compile Remove="_SystemAttributes\*" />
@@ -47,6 +48,7 @@
 		<Compile Remove="Resources\Utils\*" />
 		<Compile Remove="Text\*" />
 		<Compile Remove="Tools\*" />
+		<Compile Remove="Tools\EncodingFixer\*" />
 		<Compile Remove="Utils\*" />
 		<None Remove="Properties\*" />
 		<None Remove="_SystemAttributes\*" />
@@ -67,6 +69,7 @@
 		<None Remove="Resources\Utils\*" />
 		<None Remove="Text\*" />
 		<None Remove="Tools\*" />
+		<None Remove="Tools\EncodingFixer\*" />
 		<None Remove="Utils\*" />
 	</ItemGroup>
 	<ItemGroup>
