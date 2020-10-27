@@ -30,7 +30,7 @@ namespace ExapisSOP.IO.Logging
 		{
 			var foreColor = Console.ForegroundColor;
 			var backColor = Console.BackgroundColor;
-			Console.ForegroundColor = ConsoleColor.Green;
+			Console.ForegroundColor = ConsoleColor.DarkGreen;
 			Console.BackgroundColor = ConsoleColor.Gray;
 			base.Trace(message, additionalData);
 			Console.ForegroundColor = foreColor;
@@ -70,10 +70,10 @@ namespace ExapisSOP.IO.Logging
 		{
 			var foreColor = Console.ForegroundColor;
 			var backColor = Console.BackgroundColor;
-			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
 			Console.BackgroundColor = ConsoleColor.Gray;
 			this.Writer.WriteLine(message);
-			this.WriteLog(LogLevel.Info, message, additionalData);
+			this.WriteLog(LogLevel.Warn, message, additionalData);
 			Console.ForegroundColor = foreColor;
 			Console.BackgroundColor = backColor;
 		}

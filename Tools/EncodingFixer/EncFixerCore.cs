@@ -82,6 +82,7 @@ next_entry:;
 
 		private static void DetectAndConvertFileEncoding(ILogger? logger, PathString fname)
 		{
+			logger?.Trace($"Detecting the text encoding...");
 			using (var fs = new FileStream(fname, FileMode.Open, FileAccess.ReadWrite, FileShare.None)) {
 				byte[] bom = new byte[3];
 				int    len = fs.Read(bom, 0, 3);
@@ -180,6 +181,7 @@ next_entry:;
 
 		private static void ConvertFileEncoding(ILogger? logger, FileStream fs, Encoding enc)
 		{
+			logger?.Trace($"Converting the text encoding...");
 			try {
 				fs.Position = 0;
 				string text;
