@@ -1,5 +1,8 @@
-- name: APIブラウザ
+- name: APIブラウザ (.NET Core 3.1)
   href: api/
+  homepage: api/index.md
+- name: APIブラウザ (.NET Framework 4.8)
+  href: api_net48/
   homepage: api/index.md
 - name: 設計思想
   href: architecture/

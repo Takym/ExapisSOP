@@ -11,7 +11,26 @@
 			],
 			"dest": "api",
 			"disableGitFeatures": false,
-			"disableDefaultFilter": false
+			"disableDefaultFilter": false,
+			"properties": {
+				"TargetFramework": "netcoreapp3.1"
+			}
+		},
+		{
+			"src": [
+				{
+					"files": [
+						"**.csproj"
+					],
+					"src": "..\\"
+				}
+			],
+			"dest": "api_net48",
+			"disableGitFeatures": false,
+			"disableDefaultFilter": false,
+			"properties": {
+				"TargetFramework": "net48"
+			}
 		}
 	],
 	"build": {
@@ -20,6 +39,12 @@
 				"files": [
 					"api/**.yml",
 					"api/index.md"
+				]
+			},
+			{
+				"files": [
+					"api_net48/**.yml",
+					"api_net48/index.md"
 				]
 			},
 			{
