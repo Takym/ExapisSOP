@@ -13,6 +13,10 @@ using ExapisSOP.IO.Logging;
 using ExapisSOP.IO.Settings;
 using ExapisSOP.Utils;
 
+#if NETCOREAPP3_1
+using System.Text;
+#endif
+
 namespace ExapisSOP.Tools.EncodingFixer
 {
 	internal sealed class Program : AppWorker
@@ -27,6 +31,9 @@ namespace ExapisSOP.Tools.EncodingFixer
 
 		private void Program_Startup(object? sender, ContextEventArgs e)
 		{
+#if NETCOREAPP3_1
+			Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
 			Console.WriteLine(VersionInfo.Caption);
 			Console.WriteLine(VersionInfo.Copyright);
 			ConsoleUtil.WriteHorizontalRule();
