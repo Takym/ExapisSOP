@@ -7,6 +7,7 @@
 
 using System;
 using System.IO;
+using System.Text;
 using ExapisSOP.IO;
 using ExapisSOP.IO.Logging;
 
@@ -54,15 +55,15 @@ namespace ExapisSOP.Tools.EncodingFixer
 			foreach (var entry in entries) {
 				logger?.Info($"Loading {entry}...");
 				if (entry.IsDirectory) {
-					logger?.Info($"The entry is directory.");
+					logger?.Info($"The entry is a directory.");
 					LoadAndConvertFiles(logger, entry, extensions);
 				} else {
-					logger?.Info($"The entry is file.");
+					logger?.Info($"The entry is a file.");
 					string? ext = entry.GetExtension();
 					for (int i = 0; i < extensions.Length; ++i) {
 						if (ext == extensions[i]) {
 							logger?.Info("Matched.");
-							ConvertFile(logger, entry);
+							DetectAndConvertFileEncoding(logger, entry);
 							goto next_entry;
 						}
 					}
@@ -72,57 +73,119 @@ next_entry:;
 			}
 		}
 
-		private static void ConvertFile(ILogger? logger, PathString fname)
+		private static void DetectAndConvertFileEncoding(ILogger? logger, PathString fname)
 		{
 			using (var fs = new FileStream(fname, FileMode.Open, FileAccess.ReadWrite, FileShare.None)) {
 				byte[] bom = new byte[3];
 				int    len = fs.Read(bom, 0, 3);
 				if (len == 3 && bom[0] == 0xEF && bom[1] == 0xBB && bom[2] == 0xBF) {
 					logger?.Info("The encoding is: UTF-8 with BOM");
+					ConvertFileEncoding(logger, fs, Encoding.UTF8);
 				} else {
 					fs.Position = 0;
 					int b;
+					int scoreSJIS = 0, scoreUTF8 = 0;
 					while ((b = fs.ReadByte()) != -1) {
 						if ((0x00 <= b && b <= 0x08) ||
 							(0x0E <= b && b <= 0x1F) ||
 							(0xFD <= b && b <= 0xFF) ||
 							(b == 0x0B) || (b == 0x0C) || (b == 0x7F)) {
 							logger?.Warn("This file is maybe binary or not supported encoding.");
-							break;
-						} else if (0xC2 <= b && b <= 0xDF) {
-							b = fs.ReadByte();
-							if (0x80 <= b && b <= 0xBF) {
-								// UTF-8
-							}
-						} else if (0xE0 <= b && b <= 0xEF) {
-							b = fs.ReadByte();
-							if (0x80 <= b && b <= 0xBF) {
+							logger?.Info("Skipped.");
+							return;
+						} else if (0xA1 <= b && b <= 0xDF) {
+							if (0xC2 <= b && b <= 0xDF) {
 								b = fs.ReadByte();
 								if (0x80 <= b && b <= 0xBF) {
-									// UTF-8
+									++scoreUTF8;
+								} else {
+									--scoreUTF8;
+									fs.Position -= 1;
 								}
+							} else {
+								++scoreSJIS;
 							}
-						} else if (0xF0 <= b && b <= 0xE4) {
+						} else if (0x81 <= b && b <= 0x9F) {
 							b = fs.ReadByte();
-							if (0x80 <= b && b <= 0xBF) {
+							if ((0x40 <= b && b <= 0x7E) || (0x80 <= b && b <= 0xFC)) {
+								++scoreSJIS;
+							} else {
+								--scoreSJIS;
+							}
+						} else if (0xE0 <= b && b <= 0xFC) {
+							if (0xE0 <= b && b <= 0xEF) {
 								b = fs.ReadByte();
 								if (0x80 <= b && b <= 0xBF) {
 									b = fs.ReadByte();
 									if (0x80 <= b && b <= 0xBF) {
-										// UTF-8
+										scoreUTF8 += 2;
+									} else {
+										scoreUTF8 -= 2;
+										fs.Position -= 2;
 									}
+								} else {
+									scoreUTF8 -= 1;
+									fs.Position -= 1;
 								}
-							}
-						} else if (0xA1 <= b && 0xDF <= b) {
-							// Shift-JIS
-						} else if ((0x81 <= b && 0x9F <= b) || (0xE0 <= b && 0xFC <= b)) {
-							b = fs.ReadByte();
-							if ((0x40 <= b && 0x7E <= b) || (0x80 <= b && 0xFC <= b)) {
-								// Shift-JIS
+							} else if (0xF0 <= b && b <= 0xF4) {
+								b = fs.ReadByte();
+								if (0x80 <= b && b <= 0xBF) {
+									b = fs.ReadByte();
+									if (0x80 <= b && b <= 0xBF) {
+										b = fs.ReadByte();
+										if (0x80 <= b && b <= 0xBF) {
+											scoreUTF8 += 2;
+										} else {
+											scoreUTF8 -= 3;
+											fs.Position -= 3;
+										}
+									} else {
+										scoreUTF8 -= 2;
+										fs.Position -= 2;
+									}
+								} else {
+									scoreUTF8 -= 1;
+									fs.Position -= 1;
+								}
+							} else {
+								b = fs.ReadByte();
+								if ((0x40 <= b && b <= 0x7E) || (0x80 <= b && b <= 0xFC)) {
+									++scoreSJIS;
+								} else {
+									--scoreSJIS;
+								}
 							}
 						}
 					}
+					if (scoreUTF8 < scoreSJIS) {
+						logger?.Info("The encoding is: Shift-JIS");
+						ConvertFileEncoding(logger, fs, Encoding.GetEncoding(932));
+					} else if (scoreUTF8 == scoreSJIS) {
+						logger?.Warn("Could not detect the encoding.");
+						logger?.Info("Skipped.");
+					} else {
+						logger?.Info("The encoding is: UTF-8");
+						logger?.Info("Skipped.");
+					}
 				}
+			}
+		}
+
+		private static void ConvertFileEncoding(ILogger? logger, FileStream fs, Encoding enc)
+		{
+			try {
+				fs.Position = 0;
+				string text;
+				using (var sr = new StreamReader(fs, enc, true, -1, true)) {
+					text = sr.ReadToEnd();
+				}
+				fs.SetLength(0);
+				using (var sw = new StreamWriter(fs, new UTF8Encoding(false), -1, true)) {
+					sw.Write(text);
+				}
+				logger?.Info("Converted successfully.");
+			} catch (Exception e) {
+				logger?.Exception(e);
 			}
 		}
 
