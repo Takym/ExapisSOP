@@ -28,13 +28,9 @@ namespace ExapisSOP.IO.Logging
 		/// <param name="additionalData">追加情報です。</param>
 		public override void Trace(string message, ILoggable? additionalData = null)
 		{
-			var foreColor = Console.ForegroundColor;
-			var backColor = Console.BackgroundColor;
-			Console.ForegroundColor = ConsoleColor.DarkGreen;
-			Console.BackgroundColor = ConsoleColor.Gray;
+			Console.ForegroundColor = ConsoleColor.Green;
 			base.Trace(message, additionalData);
-			Console.ForegroundColor = foreColor;
-			Console.BackgroundColor = backColor;
+			Console.ResetColor();
 		}
 
 		/// <summary>
@@ -44,10 +40,9 @@ namespace ExapisSOP.IO.Logging
 		/// <param name="additionalData">追加情報です。</param>
 		public override void Debug(string message, ILoggable? additionalData = null)
 		{
-			var foreColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Blue;
 			base.Debug(message, additionalData);
-			Console.ForegroundColor = foreColor;
+			Console.ResetColor();
 		}
 
 		/// <summary>
@@ -68,14 +63,10 @@ namespace ExapisSOP.IO.Logging
 		/// <param name="additionalData">追加情報です。</param>
 		public override void Warn(string message, ILoggable? additionalData = null)
 		{
-			var foreColor = Console.ForegroundColor;
-			var backColor = Console.BackgroundColor;
-			Console.ForegroundColor = ConsoleColor.DarkYellow;
-			Console.BackgroundColor = ConsoleColor.Gray;
+			Console.ForegroundColor = ConsoleColor.Yellow;
 			this.Writer.WriteLine(message);
 			this.WriteLog(LogLevel.Warn, message, additionalData);
-			Console.ForegroundColor = foreColor;
-			Console.BackgroundColor = backColor;
+			Console.ResetColor();
 		}
 
 		/// <summary>
@@ -85,10 +76,9 @@ namespace ExapisSOP.IO.Logging
 		/// <param name="additionalData">追加情報です。</param>
 		public override void Error(string message, ILoggable? additionalData = null)
 		{
-			var foreColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Red;
 			base.Error(message, additionalData);
-			Console.ForegroundColor = foreColor;
+			Console.ResetColor();
 		}
 
 		/// <summary>
@@ -98,10 +88,9 @@ namespace ExapisSOP.IO.Logging
 		/// <param name="additionalData">追加情報です。</param>
 		public override void Fatal(string message, ILoggable? additionalData = null)
 		{
-			var foreColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Red;
 			base.Fatal(message, additionalData);
-			Console.ForegroundColor = foreColor;
+			Console.ResetColor();
 		}
 	}
 }
