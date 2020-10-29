@@ -57,7 +57,8 @@ namespace ExapisSOP.NativeWrapper
 		private static void EnsurePlatform()
 		{
 #if NETCOREAPP3_1
-			if (Environment.OSVersion.Platform != PlatformID.Win32NT) {
+			if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ||
+				Environment.OSVersion.Platform != PlatformID.Win32NT) {
 				throw new PlatformNotSupportedException(WinRes.PlatformNotSupportedException);
 			}
 #endif

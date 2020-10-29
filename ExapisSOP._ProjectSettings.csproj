@@ -18,13 +18,13 @@
 		<InformationalVersion>xsop01a1</InformationalVersion>
 		<Authors>Takym</Authors>
 		<Copyright>Copyright (C) 2020 Takym.</Copyright>
+		<Description>Extensible APIs for the Service-Oriented Programming.</Description>
 		<PackageIcon>Resources/Logo.png</PackageIcon>
 		<PackageTags>Service-Oriented, Framework</PackageTags>
 		<PackageProjectUrl>https://github.com/Takym/ExapisSOP</PackageProjectUrl>
 		<PackageReleaseNotes>Please see README.md, CHANGES.en.md, or CHANGES.ja.md.</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Description>Extensible APIs for the Service-Oriented Programming.</Description>
 		<RepositoryUrl>https://github.com/Takym/ExapisSOP.git</RepositoryUrl>
 		<RepositoryType>Public, Sources, C#, CSharp</RepositoryType>
 	</PropertyGroup>
